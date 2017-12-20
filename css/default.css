@@ -4,7 +4,9 @@ body {
     color: black;
     font-size: 14px;
     margin: 0px auto 0px auto;
-    width: 600px;
+    max-width: 640px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-family: 'Source Code Pro', monospace;
 }
 
@@ -12,6 +14,14 @@ div#header {
     border-bottom: 2px solid black;
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
+}
+
+#content {
+  line-height: 1.7em;
+}
+
+#content p {
+  margin-bottom: 30px;
 }
 
 div#logo a {
@@ -32,7 +42,6 @@ div#header #navigation a {
     font-weight: bold;
     margin-left: 12px;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 div#footer {
