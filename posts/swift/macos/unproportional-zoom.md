@@ -14,7 +14,7 @@ and vertically without moving from its center point. It was like this
 <h5 class="text-center">Zoom 100%</h5>
 <p class="image-container">
   <img
-    src="/images/swift/image-view/unproportional-zoom/zoom-100.png"
+    src="/assets/images/swift/image-view/unproportional-zoom/zoom-100.png"
     alt="NSImageView unproportional zoom">
 </p>
 
@@ -22,7 +22,7 @@ and vertically without moving from its center point. It was like this
 <h5 class="text-center">Zoom 140%</h5>
 <p class="image-container">
   <img
-    src="/images/swift/image-view/unproportional-zoom/zoom-140.png"
+    src="/assets/images/swift/image-view/unproportional-zoom/zoom-140.png"
     alt="NSImageView unproportional zoom">
 </p>
 
@@ -36,7 +36,7 @@ changing it to proportionally up or down will fix the problem.
 <h5 class="text-center">The culprit T_T</h5>
 <p class="image-container">
   <img
-    src="/images/swift/image-view/unproportional-zoom/proportionally-down.png" alt="NSImageView unproportional zoom"
+    src="/assets/images/swift/image-view/unproportional-zoom/proportionally-down.png" alt="NSImageView unproportional zoom"
     class="medium-size">
 </p>
 
@@ -44,7 +44,7 @@ changing it to proportionally up or down will fix the problem.
 <h5 class="text-center">Fixing it 🍻</h5>
 <p class="image-container">
   <img
-    src="/images/swift/image-view/unproportional-zoom/proportionally-up-or-down.png" alt="NSImageView unproportional zoom"
+    src="/assets/images/swift/image-view/unproportional-zoom/proportionally-up-or-down.png" alt="NSImageView unproportional zoom"
     class="medium-size">
 </p>
 

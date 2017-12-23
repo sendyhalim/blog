@@ -1,0 +1,12 @@
+.image-container {
+  text-align: center;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.image-container img.medium-size {
+  display: inline-block;
+  width: 60%;
+}

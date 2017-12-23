@@ -11,13 +11,13 @@ Here's a couple of screenshots of my terminal
 
 <p class="image-container">
   <img
-    src="/images/terminal/living-in-the-terminal/terminal-1.png"
+    src="/assets/images/terminal/living-in-the-terminal/terminal-1.png"
     alt="Terminal with vim">
 </p>
 
 <p class="image-container">
   <img
-    src="/images/terminal/living-in-the-terminal/terminal-2.png"
+    src="/assets/images/terminal/living-in-the-terminal/terminal-2.png"
     alt="Terminal splitted">
 </p>
 

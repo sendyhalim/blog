@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
+
+/* body { */
+    /* color: black; */
+    /* font-size: 14px; */
+    /* font-family: 'Source Code Pro', monospace; */
+/* } */
+body {
+  // Pasted from medium.com
+  letter-spacing: 0;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  color: rgba(0,0,0,.8);
+  font-family: 'Source Code Pro', monospace;
+  max-width: 640px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0px auto 0px auto;
+
+  /* font-family: */
+    /* -apple-system, */
+    /* BlinkMacSystemFont, */
+    /* "Segoe UI", */
+    /* Roboto, */
+    /* Oxygen, */
+    /* Ubuntu, */
+    /* Cantarell, */
+    /* "Open Sans", */
+    /* "Helvetica Neue", */
+    /* sans-serif; */
+}
+
+#post-list h2 {
+  max-width: 650px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+
+div#header {
+    border-bottom: 2px solid black;
+    margin-bottom: 30px;
+    padding: 12px 0px 12px 0px;
+}
+
+#content {
+  line-height: 1.7em;
+}
+
+#content p {
+  margin-bottom: 30px;
+}
+
+div#logo a {
+    color: black;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#header #navigation {
+    text-align: right;
+}
+
+div#header #navigation a {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 12px;
+    text-decoration: none;
+}
+
+div#footer {
+    border-top: solid 2px black;
+    color: #555;
+    font-size: 12px;
+    margin-top: 30px;
+    padding: 12px 0px 12px 0px;
+    text-align: right;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+div.info {
+    color: #555;
+    font-size: 14px;
+    font-style: italic;
+}

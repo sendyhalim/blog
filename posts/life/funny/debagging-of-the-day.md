@@ -17,7 +17,7 @@ dark aura surrounding Bill and somehow he jumped and debagged that male mannequi
 
 <div class="image-container">
   <img
-    src="/images/life/funny/debagging-of-the-day/debagged-mannequin.jpg"
+    src="/assets/images/life/funny/debagging-of-the-day/debagged-mannequin.jpg"
     alt="Debagged Mannequin"
     class="medium-size">
 </div>
