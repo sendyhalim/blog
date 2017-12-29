@@ -13,7 +13,7 @@ main = hakyll $ do
 
   match "assets/css/*" $ do
     route   idRoute
-    compile compressCssCompiler
+    compile copyFileCompiler
 
   match "assets/js/*" $ do
     route   idRoute
@@ -32,18 +32,18 @@ main = hakyll $ do
       >>= loadAndApplyTemplate "templates/default.html" postCtx
       >>= relativizeUrls
 
-  create ["archive.html"] $ do
+  create ["posts.html"] $ do
     route idRoute
     compile $ do
-      posts <- recentFirst =<< loadAll "posts/*"
-      let archiveCtx =
+      posts <- recentFirst =<< loadAll "posts/**/*"
+      let postsCtx =
             listField "posts" postCtx (return posts) <>
-            constField "title" "Archives" <>
+            constField "title" "Posts" <>
             defaultContext
 
       makeItem ""
-        >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-        >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+        >>= loadAndApplyTemplate "templates/posts.html" postsCtx
+        >>= loadAndApplyTemplate "templates/default.html" postsCtx
         >>= relativizeUrls
 
 

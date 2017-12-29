@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
 code {
   font-weight: normal;
 }
@@ -7,12 +9,13 @@ pre {
 }
 
 .post {
+  font-family: Lora, Georgia, Cambria, "Times New Roman", Times, serif;
   letter-spacing: .01rem;
   font-weight: 400;
   font-size: 19px;
 }
 
-#post-body p {
+.post-body p {
   line-height: 2em;
 }
 
@@ -44,12 +47,21 @@ pre {
   margin-left: 20px;
 }
 
-.post h2.headline {
+.post .headline {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: #aaa;
+  letter-spacing: 2px;
+  display: inline-block;
   text-transform: inherit;
 }
 
+.post-list h2 {
+  max-width: 650px;
+}
+
 .post h2.headline a,
-#post-list .tag-list-container .tag {
+.post-list .tag-list-container .tag {
   font-size: 13px;
   display: inline-block;
   margin-right: 8px;
