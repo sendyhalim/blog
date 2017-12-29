@@ -94,6 +94,7 @@ footer {
 pre {
   width: 100%;
   overflow-x: scroll;
+  border-radius: 3px;
 }
 
 code {
