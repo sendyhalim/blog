@@ -7,6 +7,10 @@ import           Hakyll
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
+  match "assets/images/*" $ do
+    route   idRoute
+    compile copyFileCompiler
+
   match "assets/images/**/*" $ do
     route   idRoute
     compile copyFileCompiler
