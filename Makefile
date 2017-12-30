@@ -11,13 +11,17 @@ watch: clean rebuild
 	stack exec site watch
 
 publish:
-	rm -rf _site/
-	git clone git@github.com:sendyhalim/blog --branch gh-pages _site/
+	make clean
 	make rebuild
-	cd _site/
+	git fetch origin
+	git checkout -b gh-pages origin/gh-pages
+	cp -r _site/* .
+	rm -rf _site
+	rm -rf _cache
 	git add .
 	git commit -m "Redeploy blog"
-	git push origin gh-pages -f
-	cd ..
+	git push origin gh-pages
+	git checkout master
+	git branch -D gh-pages
 
 .PHONY: clean, rebuild, build, watch, publish
