@@ -19,6 +19,24 @@ main = hakyll $ do
     route   idRoute
     compile copyFileCompiler
 
+  tags <- buildTags  "posts/**/*" $ fromCapture "tags/*.html"
+
+  tagsRules tags $ \tag pattern -> do
+    route idRoute
+    compile $ do
+      posts <- recentFirst =<< loadAll pattern
+      let title = "Posts tagged with " ++ tag
+      let ctx =
+            constField "title" title <>
+            constField "tag" tag <>
+            listField "posts" postCtx (return posts) <>
+            defaultContext
+
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/posts-by-tag.html" ctx
+        >>= loadAndApplyTemplate "templates/default.html" ctx
+        >>= relativizeUrls
+
   match (fromList ["about.rst", "contact.markdown"]) $ do
     route   $ setExtension "html"
     compile $ pandocCompiler
@@ -27,9 +45,11 @@ main = hakyll $ do
 
   match "posts/**/*" $ do
     route $ setExtension "html"
+    let ctx = tagsField "tags" tags <> postCtx
+
     compile $ pandocCompiler
-      >>= loadAndApplyTemplate "templates/post.html"  postCtx
-      >>= loadAndApplyTemplate "templates/default.html" postCtx
+      >>= loadAndApplyTemplate "templates/post.html" ctx
+      >>= loadAndApplyTemplate "templates/default.html" ctx
       >>= relativizeUrls
 
   create ["posts.html"] $ do
