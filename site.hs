@@ -1,7 +1,9 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid ((<>))
+import           Data.List
+import           Data.Monoid           ((<>))
 import           Hakyll
+import           System.FilePath.Posix
 
 
 --------------------------------------------------------------------------------
@@ -23,10 +25,10 @@ main = hakyll $ do
     route   idRoute
     compile copyFileCompiler
 
-  tags <- buildTags  "posts/**/*" $ fromCapture "tags/*.html"
+  tags <- buildTags  "posts/**/*" $ fromCapture "tags/*"
 
   tagsRules tags $ \tag pattern -> do
-    route idRoute
+    route cleanRoute
     compile $ do
       posts <- recentFirst =<< loadAll pattern
       let title = "Posts tagged with " ++ tag
@@ -40,24 +42,30 @@ main = hakyll $ do
         >>= loadAndApplyTemplate "templates/posts-by-tag.html" ctx
         >>= loadAndApplyTemplate "templates/default.html" ctx
         >>= relativizeUrls
+        >>= cleanIndexUrls
+
 
   match (fromList ["about.rst", "contact.markdown"]) $ do
-    route   $ setExtension "html"
+    route cleanRoute
     compile $ pandocCompiler
       >>= loadAndApplyTemplate "templates/default.html" defaultContext
       >>= relativizeUrls
+      >>= cleanIndexUrls
+
 
   match "posts/**/*" $ do
-    route $ setExtension "html"
+    route cleanRoute
     let ctx = tagsField "tags" tags <> postCtx
 
     compile $ pandocCompiler
       >>= loadAndApplyTemplate "templates/post.html" ctx
       >>= loadAndApplyTemplate "templates/default.html" ctx
       >>= relativizeUrls
+      >>= cleanIndexUrls
+
 
   create ["posts.html"] $ do
-    route idRoute
+    route cleanRoute
     compile $ do
       posts <- recentFirst =<< loadAll "posts/**/*"
       let postsCtx =
@@ -69,6 +77,7 @@ main = hakyll $ do
         >>= loadAndApplyTemplate "templates/posts.html" postsCtx
         >>= loadAndApplyTemplate "templates/default.html" postsCtx
         >>= relativizeUrls
+        >>= cleanIndexUrls
 
 
   match "index.html" $ do
@@ -84,6 +93,7 @@ main = hakyll $ do
         >>= applyAsTemplate indexCtx
         >>= loadAndApplyTemplate "templates/default.html" indexCtx
         >>= relativizeUrls
+        >>= cleanIndexUrls
 
   match "templates/*" $ compile templateBodyCompiler
 
@@ -93,3 +103,24 @@ postCtx :: Context String
 postCtx =
   dateField "date" "%B %e, %Y" <>
   defaultContext
+
+cleanRoute :: Routes
+cleanRoute = customRoute createIndexRoute
+  where
+    createIndexRoute ident = takeDirectory p </> takeBaseName p </> "index.html"
+                            where p = toFilePath ident
+
+cleanIndexUrls :: Item String -> Compiler (Item String)
+cleanIndexUrls = return . fmap (withUrls cleanIndex)
+
+cleanIndexHtmls :: Item String -> Compiler (Item String)
+cleanIndexHtmls = return . fmap (replaceAll pattern replacement)
+    where
+      pattern = "/index.html"
+      replacement = const "/"
+
+cleanIndex :: String -> String
+cleanIndex url
+    | idx `isSuffixOf` url = take (length url - length idx) url
+    | otherwise            = url
+  where idx = "index.html"
