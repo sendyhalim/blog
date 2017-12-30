@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+code {
+  font-weight: normal;
+}
+
+pre {
+  background-color: #1d1f21;
+}
+
+.post {
+  font-family: Lora, Georgia, Cambria, "Times New Roman", Times, serif;
+  letter-spacing: .01rem;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+.post-body p {
+  line-height: 2em;
+}
+
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.post p {
+  margin-bottom: 25px;
+}
+
+.post ol,
+.post ul {
+  margin-bottom: 20px;
+}
+
+.post li {
+  list-style-type: inherit;
+}
+
+.post li > ol,
+.post li > ul {
+  margin-left: 20px;
+}
+
+.post .headline {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: #aaa;
+  letter-spacing: 2px;
+  display: inline-block;
+  text-transform: inherit;
+}
+
+.post-list h2 {
+  max-width: 650px;
+}
+
+.post h2.headline a,
+.post-list .tag-list-container .tag {
+  font-size: 13px;
+  display: inline-block;
+  margin-right: 8px;
+  color: #5694f1;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+.post h2.headline a {
+  margin-top: 10px;
+}
+
+.post h2.headline a:hover {
+  border-color: #BBBBBB;
+}
+
+.post h2.headline a:before {
+  content: '#';
+}
+
+.post .hljs {
+  min-width: 700px;
+}
+
+@media (max-width: 540px) {
+  .post {
+    font-size: 16px;
+  }
+}
