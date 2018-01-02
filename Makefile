@@ -10,7 +10,7 @@ build:
 watch: clean rebuild
 	stack exec site watch
 
-publish:
+deploy:
 	make clean
 	make rebuild
 	git fetch origin
