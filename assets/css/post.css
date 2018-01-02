@@ -54,6 +54,7 @@ pre {
   letter-spacing: 2px;
   display: inline-block;
   text-transform: inherit;
+  font-size: 0.8em;
 }
 
 .post-list h2 {
