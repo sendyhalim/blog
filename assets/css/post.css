@@ -86,7 +86,7 @@ pre {
   min-width: 700px;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 640px) {
   .post {
     font-size: 16px;
   }

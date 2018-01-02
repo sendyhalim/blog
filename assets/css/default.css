@@ -112,3 +112,9 @@ code {
   font-size: 14px;
   padding: 4px;
 }
+
+@media (max-width: 640px) {
+  body {
+    padding-top: 50px;
+  }
+}
