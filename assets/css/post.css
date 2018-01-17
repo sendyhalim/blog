@@ -28,6 +28,8 @@ pre {
 .post h6 {
   margin-top: 30px;
   margin-bottom: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
 .post p {
@@ -48,14 +50,18 @@ pre {
   margin-left: 20px;
 }
 
+.post .title {
+  text-align: center;
+}
+
 .post .headline {
   margin-top: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   color: #aaa;
   letter-spacing: 2px;
-  display: inline-block;
   text-transform: inherit;
   font-size: 0.8em;
+  text-align: center;
 }
 
 .post-list h2 {
@@ -69,7 +75,8 @@ pre {
 
 .post-list .post-date {
   color: #333;
-  font-weight: 700;
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .post-title .post-date {
