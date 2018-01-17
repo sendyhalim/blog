@@ -1,15 +1,16 @@
 $partial("templates/navigation.html")$
 
 <div class="post">
-  <h1>$title$</h1>
+  <h1 class="title">$title$</h1>
 
-
-  <h6 class="headline">
-    Posted on $date$
+  <div class="headline">
     <div>
-      Tags: $tags$
+      $date$
     </div>
-  </h6>
+    <div>
+      $tags$
+    </div>
+  </div>
 
   <div class="post-body">
     $body$
