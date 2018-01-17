@@ -36,15 +36,16 @@
 
 
 <div class="post">
-  <h1>Make NSCollectionViewItem Responsive Width and Height</h1>
+  <h1 class="title">Make NSCollectionViewItem Responsive Width and Height</h1>
 
-
-  <h6 class="headline">
-    Posted on Mar 04, 2017
+  <div class="headline">
     <div>
-      Tags: <a href="../../../../tags/swift/">swift</a>, <a href="../../../../tags/nscollectionview/">nscollectionview</a>, <a href="../../../../tags/nscollectionviewitem/">nscollectionviewitem</a>, <a href="../../../../tags/appkit/">appkit</a>
+      Mar 04, 2017
     </div>
-  </h6>
+    <div>
+      <a href="../../../../tags/swift/">swift</a>, <a href="../../../../tags/nscollectionview/">nscollectionview</a>, <a href="../../../../tags/nscollectionviewitem/">nscollectionviewitem</a>, <a href="../../../../tags/appkit/">appkit</a>
+    </div>
+  </div>
 
   <div class="post-body">
     <p>I had a hard time figuring out how to make <code>NSCollectionViewItem</code> width to be responsive. The problem was that I wanted my <code>NSCollectionViewItem</code> to follow its parent width. Maybe I didn’t google the right keywords, I didn’t find any solution on the internet. I found the solution after reading <code>NSCollectionViewDelegateFlowLayout</code>, it wasn’t straight forward. When the window is resized, <code>NSCollectionView</code> will follow the its parent width by default, but not the cells inside it. Turns out that we need to invalidate the cells layout manually and tell <code>NSCollectionViewDelegateFlowLayout</code> our cells preferred size.</p>

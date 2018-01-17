@@ -36,15 +36,16 @@
 
 
 <div class="post">
-  <h1>RxSwift Race Condition on Cells</h1>
+  <h1 class="title">RxSwift Race Condition on Cells</h1>
 
-
-  <h6 class="headline">
-    Posted on Jul 04, 2016
+  <div class="headline">
     <div>
-      Tags: <a href="../../../tags/swift/">swift</a>, <a href="../../../tags/rxswift/">rxswift</a>, <a href="../../../tags/macOS/">macOS</a>
+      Jul 04, 2016
     </div>
-  </h6>
+    <div>
+      <a href="../../../tags/swift/">swift</a>, <a href="../../../tags/rxswift/">rxswift</a>, <a href="../../../tags/macOS/">macOS</a>
+    </div>
+  </div>
 
   <div class="post-body">
     <p>A few days ago I wrote a simple code to asynchronously load an image using <a href="https://github.com/Moya/Moya#rxswift"><code>RxMoya</code></a>. <code>RxMoya</code> is an <a href="https://github.com/ReactiveX/RxSwift"><code>RxSwift</code></a> wrapper for <a href="https://github.com/Moya/Moya"><code>Moya</code></a>. The flow is simple, everytime collection view asks for <code>NSCollectionViewItem</code> (yes, I’m building a macOS app), I need to load the image asynchronously. Here’s a part of the implementation:</p>
