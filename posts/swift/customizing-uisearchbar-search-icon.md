@@ -8,7 +8,7 @@ tags: ["swift", "uiview", "uisearchbar"]
 
 Sometimes we want to customize the search icon of a `UISearchBar` for iOS, one way to do this is by creating a subclass of `UISearchBar` and customize the search icon inside its `willMove(toSuperView:)` method.
 
-I had 2 tasks:
+In this post, we'll try to do 2 things
 
 - Set border radius for `UISearchBar`
 - Set custom search icon for `UISearchBar`
