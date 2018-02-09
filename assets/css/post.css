@@ -3,6 +3,7 @@
 
 code {
   font-weight: normal;
+  color: #054269;
 }
 
 pre {
@@ -29,7 +30,7 @@ pre {
   margin-top: 30px;
   margin-bottom: 10px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .post p {
