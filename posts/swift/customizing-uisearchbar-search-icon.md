@@ -13,13 +13,6 @@ In this post, we'll try to do 2 things
 - Set border radius for `UISearchBar`
 - Set custom search icon for `UISearchBar`
 
-The end result should look like this
-
-<p class="image-container">
-  <img
-    src="/assets/images/swift/customizing-uisearchbar-search-icon/end-result.png" alt="Customizing UISearchBar Icon End Result"
-    class="medium-size">
-</p>
 
 Initial State
 ------------------------------
@@ -147,6 +140,14 @@ override func willMove(toSuperview newSuperview: UIView?) {
   textField.textColor = UIColor(hex: "#555555")
 }
 ```
+
+The end result should look like this
+
+<p class="image-container">
+  <img
+    src="/assets/images/swift/customizing-uisearchbar-search-icon/end-result.png" alt="Customizing UISearchBar Icon End Result"
+    class="medium-size">
+</p>
 
 You can find the full code
 <a href="https://github.com/sendyhalim/iYomu/blob/master/Yomu/Common/SearchBar.swift" target="_blank">here</a>
