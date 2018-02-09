@@ -54,10 +54,6 @@
 <li>Set border radius for <code>UISearchBar</code></li>
 <li>Set custom search icon for <code>UISearchBar</code></li>
 </ul>
-<p>The end result should look like this</p>
-<p class="image-container">
-<img src="../../../assets/images/swift/customizing-uisearchbar-search-icon/end-result.png" alt="Customizing UISearchBar Icon End Result" class="medium-size">
-</p>
 <h2 id="initial-state">Initial State</h2>
 <p>First, we need to subclass <code>UISearchBar</code>, let’s create one</p>
 <pre class="swift"><code>import UIKit
@@ -147,6 +143,10 @@ class SearchBar: UISearchBar {
   textField.layer.borderColor = textField.backgroundColor!.cgColor
   textField.textColor = UIColor(hex: &quot;#555555&quot;)
 }</code></pre>
+<p>The end result should look like this</p>
+<p class="image-container">
+<img src="../../../assets/images/swift/customizing-uisearchbar-search-icon/end-result.png" alt="Customizing UISearchBar Icon End Result" class="medium-size">
+</p>
 <p>You can find the full code <a href="https://github.com/sendyhalim/iYomu/blob/master/Yomu/Common/SearchBar.swift" target="_blank">here</a></p>
   </div>
 </div>
