@@ -1,13 +1,12 @@
 ---
-title: "Customizing UISearchBar Search Icon"
+title: "Customizing UISearchBar"
 date: "2018-02-10T03:19:00+07:00"
-description: "Tutorial to customize UISearchBar search icon"
-tags: ["swift", "uiview", "uisearchbar"]
+description: "Tutorial to customize UISearchBar"
+tags: ["swift", "uisearchbar", "ios", "uiview"]
 ---
 
 
-Sometimes we want to customize the search icon of a `UISearchBar` for iOS, one way to do this is by creating a subclass of `UISearchBar` and customize the search icon inside its `willMove(toSuperView:)` method.
-
+The default view of `UISearchBar` is kind of boring, one way to customize it is by subclassing `UISearchBar` and put the customization code in `willMove(toSuperView:)` method.
 In this post, we'll try to do 2 things
 
 - Set border radius for `UISearchBar`
@@ -34,7 +33,7 @@ Then set your search bar class to `SearchBar`
 
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar-search-icon/interface-builder-search-bar.png" alt="Customizing UISearchBar Icon Interface Builder Search Bar"
+    src="/assets/images/swift/customizing-uisearchbar/interface-builder-search-bar.png" alt="Customizing UISearchBar Icon Interface Builder Search Bar"
     class="medium-size">
 </p>
 
@@ -42,7 +41,7 @@ Let's take a look at our initial state, our `SearchBar` should look like this
 
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar-search-icon/initial-state.png" alt="Customizing UISearchBar Icon Initial State"
+    src="/assets/images/swift/customizing-uisearchbar/initial-state.png" alt="Customizing UISearchBar Icon Initial State"
     class="medium-size">
 </p>
 
@@ -62,7 +61,7 @@ override func willMove(toSuperview newSuperview: UIView?) {
 
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar-search-icon/minimal.png" alt="Customizing UISearchBar Icon Minimal"
+    src="/assets/images/swift/customizing-uisearchbar/minimal.png" alt="Customizing UISearchBar Icon Minimal"
     class="medium-size">
 </p>
 
@@ -96,7 +95,7 @@ override func willMove(toSuperview newSuperview: UIView?) {
 
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar-search-icon/borderless.png" alt="Customizing UISearchBar Icon Borderless"
+    src="/assets/images/swift/customizing-uisearchbar/borderless.png" alt="Customizing UISearchBar Icon Borderless"
     class="medium-size">
 </p>
 
@@ -145,7 +144,7 @@ The end result should look like this
 
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar-search-icon/end-result.png" alt="Customizing UISearchBar Icon End Result"
+    src="/assets/images/swift/customizing-uisearchbar/end-result.png" alt="Customizing UISearchBar Icon End Result"
     class="medium-size">
 </p>
 
