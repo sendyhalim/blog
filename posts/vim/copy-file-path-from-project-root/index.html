@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Sendy Halim">
+		<meta name="description" content="Sendy Halim's blog">
+    <title>Vim Copy File Path From Project Root</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/highlight-js.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/image.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/post.css" />
+  </head>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80328765-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-80328765-1');
+  </script>
+
+  <body>
+    <div id="content">
+      <nav>
+  <a href="../../../">
+    <span class="arrow">←</span> Home
+  </a>
+</nav>
+
+
+
+<div class="post">
+  <h1 class="title">Vim Copy File Path From Project Root</h1>
+
+  <div class="headline">
+    <div>
+      Feb 12, 2018
+    </div>
+    <div>
+      <a href="../../../tags/vim/">vim</a>, <a href="../../../tags/productivity/">productivity</a>
+    </div>
+  </div>
+
+  <div class="post-body">
+    <p>I often found myself typing file path manually when explaining code implementation and its use cases to my teammates. The task to type file path manually is very daunting and I hate it so much when I mistyped. The file path I mentioned is relative from project root. Let’s say you have this structure</p>
+<pre class="swift"><code>▾ Yomu/
+  ▸ API/
+  ▸ DataStructures/
+  ▾ Screens/
+  ┊ ▾ ChapterList/
+  ┊ ┊ ┊ Chapter.swift
+  ┊ ┊ ┊ ChapterCell.swift
+  ┊ ┊ ┊ ChapterCell.xib
+  ┊ ┊ ┊ ChapterCollectionHeader.swift
+  ┊ ┊ ┊ ChapterCollectionHeader.xib
+  ┊ ┊ ┊ ChapterCollectionViewController.swift
+  ┊ ┊ ┊ ChapterCollectionViewController.xib
+  ┊ ┊ ┊ ChapterCollectionViewModel.swift
+  ┊ ┊ ┊ ChapterViewModel.swift
+  ┊ ┊ ┊ ReadChapterRealm.swift
+  ....
+▸ YomuTests/</code></pre>
+<p>and you want to point out to someone an implementation in <code>ChapterViewModel.swift</code>, you would type this</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="ex">Yomu/Screens/ChapterList/ChapterViewModel.swift</span></code></pre></div>
+<p>I did that a lot!</p>
+<p class="image-container">
+<img src="http://s2.quickmeme.com/img/71/71c3931c1edc4353a0c03ec549753b965872a2c343c09255617f4470cbd924ed.jpg" alt="We got a badass here" class="medium-size">
+</p>
+<p>I knew there’s a better way to do this. There’s a built-in function in vim that returns the relative path (from project root) of a file in active buffer.</p>
+<pre><code>expand('%')</code></pre>
+<p>Of course we can do better than that! It’ll handy if we can copy the file path to system clipboard.</p>
+<pre><code>&quot; Register relative file path of current buffer
+&quot; from project root to system clipboard
+nnoremap &lt;F10&gt; :let @+ = expand(&quot;%&quot;)&lt;CR&gt;</code></pre>
+<p>Now everytime you press <code>F10</code> in normal mode, it will automatically register file path to current active file in buffer to your system clipboard.</p>
+  </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wavvel'; // Required - Replace '<example>' with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+    </div>
+
+    <footer id="footer">
+      <p class="small">
+        © Copyright 2017 Sendy Halim
+      </p>
+      <p class="small">
+        <a href="https://github.com/sendyhalim/blog" target="_blank">Source Code</a>
+      </p>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="../../../assets/js/highlight.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>
