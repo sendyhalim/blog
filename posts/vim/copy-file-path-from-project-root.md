@@ -36,8 +36,7 @@ and you want to point out to someone an implementation in `ChapterViewModel.swif
 Yomu/Screens/ChapterList/ChapterViewModel.swift
 ```
 
-I did that a lot!
-
+I did that a lot...
 
 <p class="image-container">
   <img
@@ -52,7 +51,7 @@ I knew there's a better way to do this.  There's a built-in function in vim that
 expand('%')
 ```
 
-Of course we can do better than that! It'll handy if we can copy the file path to system clipboard.
+Of course we can do better than that! It'll be handy if we can copy the file path to system clipboard.
 
 
 ```
