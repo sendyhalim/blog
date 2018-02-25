@@ -34,8 +34,7 @@ body {
 .avatar {
   width: 100px;
   border-radius: 50%;
-  margin: auto;
-  display: block;
+  margin: auto; display: block;
   margin-bottom: 40px;
 }
 
