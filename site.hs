@@ -39,7 +39,7 @@ main = hakyll $ do
       let ctx =
             constField "title" title <>
             constField "tag" tag <>
-            listField "posts" postCtx (return posts) <>
+            listField "posts" postListCtx (return posts) <>
             defaultContext
 
       makeItem ""
@@ -59,7 +59,7 @@ main = hakyll $ do
 
   match "posts/**/*" $ do
     route cleanRoute
-    let ctx = tagsField "tags" tags <> postCtx
+    let ctx = tagsField "tags" tags <> singlePostCtx
 
     compile $ pandocCompiler
       >>= loadAndApplyTemplate "templates/post.html" ctx
@@ -73,7 +73,7 @@ main = hakyll $ do
     compile $ do
       posts <- recentFirst =<< loadAll "posts/**/*"
       let postsCtx =
-            listField "posts" postCtx (return posts) <>
+            listField "posts" postListCtx (return posts) <>
             constField "title" "Posts" <>
             defaultContext
 
@@ -89,7 +89,7 @@ main = hakyll $ do
     compile $ do
       posts <- recentFirst =<< loadAll "posts/**/*"
       let indexCtx =
-            listField "posts" postCtx (return posts) <>
+            listField "posts" postListCtx (return posts) <>
             constField "title" "Sendy Halim" <>
             defaultContext
 
@@ -103,9 +103,16 @@ main = hakyll $ do
 
 
 --------------------------------------------------------------------------------
-postCtx :: Context String
-postCtx =
-  dateField "date" "%b %d, %Y" <>
+
+postListCtx :: Context String
+postListCtx = postCtx "%Y-%m-%d"
+
+singlePostCtx :: Context String
+singlePostCtx = postCtx "%d %b %Y"
+
+postCtx :: String -> Context String
+postCtx dateFormat =
+  dateField "date" dateFormat <>
   defaultContext
 
 cleanRoute :: Routes
