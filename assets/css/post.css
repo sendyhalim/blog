@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lora');
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-
 code {
   font-weight: normal;
-  color: #054269;
+  color: #1e7e67;
 }
 
 pre {
@@ -11,10 +8,7 @@ pre {
 }
 
 .post {
-  font-family: Lora, Georgia, Cambria, "Times New Roman", Times, serif;
-  letter-spacing: .01rem;
   font-weight: 400;
-  font-size: 19px;
 }
 
 .post-body p {
@@ -29,7 +23,6 @@ pre {
 .post h6 {
   margin-top: 30px;
   margin-bottom: 10px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -91,7 +84,7 @@ pre {
 
 .post h2.headline a,
 .post-list .tag-list-container .tag {
-  font-size: 13px;
+  font-size: 12px;
   display: inline-block;
   margin-right: 8px;
   color: #5694f1;
@@ -117,6 +110,6 @@ pre {
 
 @media (max-width: 640px) {
   .post {
-    font-size: 16px;
+    font-size: 14px;
   }
 }

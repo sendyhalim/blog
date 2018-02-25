@@ -21,6 +21,10 @@ main = hakyll $ do
     route   idRoute
     compile copyFileCompiler
 
+  match "assets/fonts/*" $ do
+    route   idRoute
+    compile copyFileCompiler
+
   match "assets/js/*" $ do
     route   idRoute
     compile copyFileCompiler
