@@ -1,8 +1,11 @@
 $partial("templates/navigation.html")$
 
-<h3>
-  Posts tagged with <code>$tag$</code>
-  <hr>
-</h3>
+<div class="post">
+  <div class="post-body">
+    <h3>
+      Posts tagged with <code>$tag$</code>
+    </h3>
 
-$partial("templates/post-list.html")$
+    $partial("templates/post-list.html")$
+  </div>
+</div>
