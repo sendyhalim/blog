@@ -2,15 +2,15 @@
   font-family: 'Meslo LG S';
   font-style: normal;
   src: local('Meslo LG S'), local('Meslo LG S'),
-  url(/assets/fonts/MesloLGS-Regular.ttf)
+  url('/assets/fonts/MesloLGS-Regular.ttf')
   format('truetype');
 }
 
 @font-face {
   font-family: 'Meslo LG S';
-  font-style: bold;
+  font-weight: bold;
   src: local('Meslo LG S'), local('Meslo LG S'),
-  url(/assets/fonts/MesloLGS-Bold.ttf)
+  url('/assets/fonts/MesloLGS-Bold.ttf')
   format('truetype');
 }
 
