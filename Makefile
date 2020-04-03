@@ -2,6 +2,7 @@ build:
 	zola build
 
 deploy:
+	make build
 	git fetch origin
 	git checkout -b gh-pages origin/gh-pages
 	cp -r public/ .
