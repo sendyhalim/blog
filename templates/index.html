@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Sendy Halim">
 		<meta name="description" content="Sendy Halim&#39;s blog">
-    <title>$title$</title>
+    <title>{{ section.title }}</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/default.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/navigation.css" />
@@ -27,12 +27,39 @@
 
   <body>
     <div id="content">
-      $body$
+      <div class="post">
+        <div class="post-body">
+          <img class="avatar" src="./assets/images/avatar.png">
+
+          <p>
+          Hi, I'm Sendy.
+          I'm managing an awesome engineering team at <a href="https://cermati.com" target="_blank">Cermati</a>.
+          I make stuffs and contribute to open source on
+          <a href="https://github.com/sendyhalim" target="_blank">Github</a>.
+          I'm super interested in <code>Rust</code>, <code>Swift</code> and <code>Haskell</code>.
+          <a href="mailto:sendyhalim93@gmail.com" target="_blank">Poke me</a> if you have interesting projects!
+          </p>
+
+          <p>
+          This blog is built with <a href="https://github.com/getzola/zola" target="_blank">Rust Zola</a>.
+          </p>
+
+          <h2>Posts <span class="d-sm-none">(YYYY-MM-DD)</span></h2>
+          <div class="d-none d-sm-block">
+            <strong>
+              YYYY-MM-DD
+            </strong>
+          </div>
+
+          {% include "post-list.html" %}
+          <p>... more on the <a href="/posts">posts</a> section.</p>
+        </div>
+      </div>
     </div>
 
     <footer id="footer">
       <p class="small">
-        © Copyright 2017 Sendy Halim
+        © Copyright 2020 Sendy Halim
       </p>
       <p class="small">
         <a href="https://github.com/sendyhalim/blog" target="_blank">Source Code</a>

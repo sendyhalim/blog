@@ -1,9 +1,11 @@
----
-date: "2018-02-13T00:11:00+07:00"
-title: "Vim Copy File Path From Project Root"
-description: "How to copy file path from project root"
-tags: ["vim", "productivity"]
----
++++
+title = "Vim Copy File Path From Project Root"
+date = 2018-02-13T00:11:00+07:00
+description = "How to copy file path from project root"
+
+[taxonomies]
+tags = ["vim", "productivity"]
++++
 
 I often found myself typing file path manually when explaining code implementation and its use cases to my teammates.
 The task to type file path manually is very daunting and I hate it so much when I mistyped.

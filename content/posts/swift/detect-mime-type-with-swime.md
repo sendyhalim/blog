@@ -1,9 +1,11 @@
----
-title: "Swift MIME Type Detection with Swime"
-date: "2017-04-26T23:00:44+07:00"
-description: "Easy MIME Type detection with Swift"
-tags: ["swift", "mimetype", "libraries", "swime"]
----
++++
+title = "Swift MIME Type Detection with Swime"
+date = 2017-04-26T23:00:44+07:00
+description = "Easy MIME Type detection with Swift"
+
+[taxonomies]
+tags = ["swift", "mimetype", "libraries", "swime"]
++++
 
 A month ago I found myself scouring GitHub for a Swift plugin
 to detect mime type based on magic bytes. I did find [MimeType](https://github.com/onevcat/MimeType),

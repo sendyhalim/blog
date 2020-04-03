@@ -1,9 +1,11 @@
----
-title: "Customizing UISearchBar"
-date: "2018-02-10T03:19:00+07:00"
-description: "Tutorial to customize UISearchBar"
-tags: ["swift", "uisearchbar", "ios", "uiview"]
----
++++
+title = "Customizing UISearchBar"
+date = 2018-02-10T03:19:00+07:00
+description = "Tutorial to customize UISearchBar"
+
+[taxonomies]
+tags = ["swift", "uisearchbar", "ios", "uiview"]
++++
 
 
 The default view of `UISearchBar` is kind of boring, one way to customize it is by subclassing `UISearchBar` and put the customization code in `willMove(toSuperView:)` method.

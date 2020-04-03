@@ -1,9 +1,11 @@
----
-date: "2016-07-04T22:58:59+07:00"
-title: "RxSwift Race Condition on Cells"
-description: "RxSwift race condition while doing asynchronous operations on collection cells"
-tags: ["swift", "rxswift", "macOS"]
----
++++
+title = "RxSwift Race Condition on Cells"
+date = 2016-07-04T22:58:59+07:00
+description = "RxSwift race condition while doing asynchronous operations on collection cells"
+
+[taxonomies]
+tags = ["swift", "rxswift", "macOS"]
++++
 
 A few days ago I wrote a simple code to asynchronously load an image using [`RxMoya`](https://github.com/Moya/Moya#rxswift).
 `RxMoya` is an [`RxSwift`](https://github.com/ReactiveX/RxSwift) wrapper

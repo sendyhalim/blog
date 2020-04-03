@@ -1,9 +1,11 @@
----
-date: "2017-03-04T23:48:35+07:00"
-title: "Make NSCollectionViewItem Responsive Width and Height"
-description: "How to make NSCollectionViewItem size to be responsive on window resize event"
-tags: ["swift", "nscollectionview", "nscollectionviewitem", "appkit"]
----
++++
+title = "Make NSCollectionViewItem Responsive Width and Height"
+date = 2017-03-04T23:48:35+07:00
+description = "How to make NSCollectionViewItem size to be responsive on window resize event"
+
+[taxonomies]
+tags = ["swift", "nscollectionview", "nscollectionviewitem", "appkit"]
++++
 
 I had a hard time figuring out how to make `NSCollectionViewItem` width to be responsive.
 The problem was that I wanted my `NSCollectionViewItem` to follow its parent width.
@@ -30,7 +32,7 @@ extension MyCollectionViewController: NSCollectionViewDelegateFlowLayout {
 
 There's one catch here, remember we need to invalidate the cells layout manually
 
-```
+```swift
 class MyCollectionViewController: NSViewController {
   @IBOutlet weak var collectionView: NSCollectionView!
 

@@ -1,9 +1,11 @@
----
-date: "2017-02-10T20:47:23+07:00"
-title: "NSImageView Unproportional Zoom"
-description: "How to fix NSImageView unproportional zoom in AppKit"
-tags: ["swift", "nsimageview", "appkit"]
----
++++
+title = "NSImageView Unproportional Zoom"
+date = 2017-02-10T20:47:23+07:00
+description = "How to fix NSImageView unproportional zoom in AppKit"
+
+[taxonomies]
+tags = ["swift", "nsimageview", "appkit"]
++++
 
 I had this weird problem when I tried to implement a zoom functionality
 in my hobby project, a manga reader called [Yomu](https://github.com/sendyhalim/yomu).

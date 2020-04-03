@@ -1,19 +1,19 @@
-$partial("templates/navigation.html")$
+{% include "navigation.html" %}
 
 <div class="post">
-  <h1 class="title">$title$</h1>
+  <h1 class="title">{{ page.title }}</h1>
 
   <div class="headline">
     <div>
-      $date$
+      {% include "post-date.html" %}
     </div>
     <div>
-      $tags$
+      {% include "post-tag-list.html" %}
     </div>
   </div>
 
   <div class="post-body">
-    $body$
+    {{ page.content | safe }}
   </div>
 </div>
 

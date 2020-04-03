@@ -1,13 +1,15 @@
 <ul class="post-list">
-  $for(posts)$
-    <li class="row">
-      <div class="post-date col-12 d-block d-sm-none">
-        $date$
-      </div>
-      <div class="post-title col-12 col-md-10">
-        <span class="post-date d-none d-sm-inline-block">$date$</span>
-        <a href="$url$">$title$</a>
-      </div>
-    </li>
-  $endfor$
+  {% for page in section.pages | slice(start=0, end=5) %}
+  <li class="row">
+    <div class="post-date col-12 d-block d-sm-none">
+      {% include "post-date.html" %}
+    </div>
+    <div class="post-title col-12 col-md-10">
+      <span class="post-date d-none d-sm-inline-block">
+        {% include "post-date.html" %}
+      </span>
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+    </div>
+  </li>
+  {% endfor %}
 </ul>

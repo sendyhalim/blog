@@ -1,9 +1,11 @@
----
-date: "2016-07-10T00:49:40+07:00"
-title: "Coding Productivity Over 9000"
-description: "Why you should learn and use vim keybindings"
-tags: ["vim", "productivity"]
----
++++
+title = "Coding Productivity Over 9000"
+date = 2016-07-10T00:49:40+07:00
+description = "Why you should learn and use vim keybindings"
+
+[taxonomies]
+tags = ["vim", "productivity"]
++++
 
 <p class="image-container">
   <img

@@ -1,9 +1,11 @@
----
-date: "2017-03-11T14:56:17+07:00"
-title: "Living In The Terminal"
-description: "Spending Time in the Terminal"
-tags: ["terminal", "development", "zsh", "productivity"]
----
++++
+title = "Living In The Terminal"
+date = 2017-03-11T14:56:17+07:00
+description = "Spending Time in the Terminal"
+
+[taxonomies]
+tags = ["terminal", "development", "zsh", "productivity"]
++++
 
 Most of my time is spent in the terminal and I love working within it,
 so I invest a lot for the best terminal setup to make sure that I'm productive and happy when I'm using it.
