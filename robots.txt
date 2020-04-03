@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://sendyhalim.github.io/blog/sitemap.xml

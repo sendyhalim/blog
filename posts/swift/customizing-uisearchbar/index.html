@@ -5,14 +5,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Sendy Halim">
-		<meta name="description" content="Sendy Halim's blog">
+		<meta name="description" content="Sendy Halim&#39;s blog">
     <title>Customizing UISearchBar</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/navigation.css" />
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/highlight-js.css" />
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/image.css" />
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/post.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/highlight-js.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/image.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css" />
   </head>
 
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -28,7 +28,7 @@
   <body>
     <div id="content">
       <nav>
-  <a href="../../../">
+  <a href="/">
     <span class="arrow">←</span> Home
   </a>
 </nav>
@@ -40,22 +40,43 @@
 
   <div class="headline">
     <div>
-      09 Feb 2018
+      2018-02-10
+
     </div>
     <div>
-      <a href="../../../tags/swift/">swift</a>, <a href="../../../tags/uisearchbar/">uisearchbar</a>, <a href="../../../tags/ios/">ios</a>, <a href="../../../tags/uiview/">uiview</a>
+      <div class="tag-list-container">
+  
+  <span class="tag">
+    #swift
+  </span>
+  
+  <span class="tag">
+    #uisearchbar
+  </span>
+  
+  <span class="tag">
+    #ios
+  </span>
+  
+  <span class="tag">
+    #uiview
+  </span>
+  
+</div>
+
     </div>
   </div>
 
   <div class="post-body">
-    <p>The default view of <code>UISearchBar</code> is kind of boring, one way to customize it is by subclassing <code>UISearchBar</code> and put the customization code in <code>willMove(toSuperView:)</code> method. In this post, we’ll try to do 2 things</p>
+    <p>The default view of <code>UISearchBar</code> is kind of boring, one way to customize it is by subclassing <code>UISearchBar</code> and put the customization code in <code>willMove(toSuperView:)</code> method.
+In this post, we'll try to do 2 things</p>
 <ul>
 <li>Set border radius for <code>UISearchBar</code></li>
 <li>Set custom search icon for <code>UISearchBar</code></li>
 </ul>
 <h2 id="initial-state">Initial State</h2>
-<p>First, we need to subclass <code>UISearchBar</code>, let’s create one</p>
-<pre class="swift"><code>import UIKit
+<p>First, we need to subclass <code>UISearchBar</code>, let's create one</p>
+<pre><code>import UIKit
 
 class SearchBar: UISearchBar {
   override func willMove(toSuperview newSuperview: UIView?) {
@@ -63,28 +84,37 @@ class SearchBar: UISearchBar {
 
     // We'll fill this later~
   }
-}</code></pre>
+}
+</code></pre>
 <p>Then set your search bar class to <code>SearchBar</code></p>
 <p class="image-container">
-<img src="../../../assets/images/swift/customizing-uisearchbar/interface-builder-search-bar.png" alt="Customizing UISearchBar Icon Interface Builder Search Bar" class="medium-size">
+  <img
+    src="/assets/images/swift/customizing-uisearchbar/interface-builder-search-bar.png" alt="Customizing UISearchBar Icon Interface Builder Search Bar"
+    class="medium-size">
 </p>
-<p>Let’s take a look at our initial state, our <code>SearchBar</code> should look like this</p>
+<p>Let's take a look at our initial state, our <code>SearchBar</code> should look like this</p>
 <p class="image-container">
-<img src="../../../assets/images/swift/customizing-uisearchbar/initial-state.png" alt="Customizing UISearchBar Icon Initial State" class="medium-size">
+  <img
+    src="/assets/images/swift/customizing-uisearchbar/initial-state.png" alt="Customizing UISearchBar Icon Initial State"
+    class="medium-size">
 </p>
 <h2 id="uisearchbar-minimal-style">UISearchBar Minimal Style</h2>
-<p><code>UISearchBar</code> has <code>searchBarStyle</code> property, we’ll set that with <code>UISearchBarStyle.minimal</code>, this tells <code>UISearchBar</code> to remove its background</p>
-<pre class="swift"><code>override func willMove(toSuperview newSuperview: UIView?) {
+<p><code>UISearchBar</code> has <code>searchBarStyle</code> property, we'll set that with <code>UISearchBarStyle.minimal</code>, this tells <code>UISearchBar</code> to
+remove its background</p>
+<pre><code>override func willMove(toSuperview newSuperview: UIView?) {
   super.willMove(toSuperview: newSuperview)
 
   searchBarStyle = UISearchBarStyle.minimal
-}</code></pre>
+}
+</code></pre>
 <p class="image-container">
-<img src="../../../assets/images/swift/customizing-uisearchbar/minimal.png" alt="Customizing UISearchBar Icon Minimal" class="medium-size">
+  <img
+    src="/assets/images/swift/customizing-uisearchbar/minimal.png" alt="Customizing UISearchBar Icon Minimal"
+    class="medium-size">
 </p>
 <h2 id="borderless-uisearchbar">Borderless UISearchBar</h2>
-<p>Next, we’ll remove text field border and set some styling</p>
-<pre class="swift"><code>override func willMove(toSuperview newSuperview: UIView?) {
+<p>Next, we'll remove text field border and set some styling</p>
+<pre><code>override func willMove(toSuperview newSuperview: UIView?) {
   super.willMove(toSuperview: newSuperview)
 
   searchBarStyle = UISearchBarStyle.minimal
@@ -103,13 +133,16 @@ class SearchBar: UISearchBar {
   textField.layer.borderWidth = 1.0
   textField.layer.borderColor = textField.backgroundColor!.cgColor
   textField.textColor = UIColor(hex: &quot;#555555&quot;)
-}</code></pre>
+}
+</code></pre>
 <p class="image-container">
-<img src="../../../assets/images/swift/customizing-uisearchbar/borderless.png" alt="Customizing UISearchBar Icon Borderless" class="medium-size">
+  <img
+    src="/assets/images/swift/customizing-uisearchbar/borderless.png" alt="Customizing UISearchBar Icon Borderless"
+    class="medium-size">
 </p>
 <h2 id="customizing-search-icon">Customizing Search Icon</h2>
 <p>Now we need to customize the search icon</p>
-<pre class="swift"><code>override func willMove(toSuperview newSuperview: UIView?) {
+<pre><code>override func willMove(toSuperview newSuperview: UIView?) {
   super.willMove(toSuperview: newSuperview)
 
   searchBarStyle = .minimal
@@ -141,12 +174,17 @@ class SearchBar: UISearchBar {
   textField.layer.borderWidth = 1.0
   textField.layer.borderColor = textField.backgroundColor!.cgColor
   textField.textColor = UIColor(hex: &quot;#555555&quot;)
-}</code></pre>
+}
+</code></pre>
 <p>The end result should look like this</p>
 <p class="image-container">
-<img src="../../../assets/images/swift/customizing-uisearchbar/end-result.png" alt="Customizing UISearchBar Icon End Result" class="medium-size">
+  <img
+    src="/assets/images/swift/customizing-uisearchbar/end-result.png" alt="Customizing UISearchBar Icon End Result"
+    class="medium-size">
 </p>
-<p>You can find the full code <a href="https://github.com/sendyhalim/iYomu/blob/master/Yomu/Common/SearchBar.swift" target="_blank">here</a></p>
+<p>You can find the full code
+<a href="https://github.com/sendyhalim/iYomu/blob/master/Yomu/Common/SearchBar.swift" target="_blank">here</a></p>
+
   </div>
 </div>
 
@@ -169,7 +207,7 @@ class SearchBar: UISearchBar {
 
     <footer id="footer">
       <p class="small">
-        © Copyright 2017 Sendy Halim
+        © Copyright 2020 Sendy Halim
       </p>
       <p class="small">
         <a href="https://github.com/sendyhalim/blog" target="_blank">Source Code</a>
@@ -177,7 +215,7 @@ class SearchBar: UISearchBar {
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
-    <script src="../../../assets/js/highlight.js" type="text/javascript"></script>
+    <script src="/assets/js/highlight.js" type="text/javascript"></script>
     <script type="text/javascript">
       hljs.initHighlightingOnLoad();
     </script>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/swift/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/</loc>
+            
+                <lastmod>2018-02-10T03:19:00+07:00</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/swift/detect-mime-type-with-swime/</loc>
+            
+                <lastmod>2017-04-26T23:00:44+07:00</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/swift/macos/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/</loc>
+            
+                <lastmod>2017-03-04T23:48:35+07:00</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/swift/macos/unproportional-zoom/</loc>
+            
+                <lastmod>2017-02-10T20:47:23+07:00</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/swift/race-condition-on-cells/</loc>
+            
+                <lastmod>2016-07-04T22:58:59+07:00</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/terminal/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/</loc>
+            
+                <lastmod>2017-03-11T14:56:17+07:00</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/tools/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/tools/productivity-over-9000/</loc>
+            
+                <lastmod>2016-07-10T00:49:40+07:00</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/vim/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/vim/copy-file-path-from-project-root/</loc>
+            
+                <lastmod>2018-02-13T00:11:00+07:00</lastmod>
+            
+        </url>
+    
+</urlset>

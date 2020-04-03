@@ -5,14 +5,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Sendy Halim">
-		<meta name="description" content="Sendy Halim's blog">
+		<meta name="description" content="Sendy Halim&#39;s blog">
     <title>Vim Copy File Path From Project Root</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/navigation.css" />
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/highlight-js.css" />
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/image.css" />
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/post.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/highlight-js.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/image.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css" />
   </head>
 
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -28,7 +28,7 @@
   <body>
     <div id="content">
       <nav>
-  <a href="../../../">
+  <a href="/">
     <span class="arrow">←</span> Home
   </a>
 </nav>
@@ -40,16 +40,30 @@
 
   <div class="headline">
     <div>
-      12 Feb 2018
+      2018-02-13
+
     </div>
     <div>
-      <a href="../../../tags/vim/">vim</a>, <a href="../../../tags/productivity/">productivity</a>
+      <div class="tag-list-container">
+  
+  <span class="tag">
+    #vim
+  </span>
+  
+  <span class="tag">
+    #productivity
+  </span>
+  
+</div>
+
     </div>
   </div>
 
   <div class="post-body">
-    <p>I often found myself typing file path manually when explaining code implementation and its use cases to my teammates. The task to type file path manually is very daunting and I hate it so much when I mistyped. The file path I mentioned is relative from project root. Let’s say you have this structure</p>
-<pre class="swift"><code>▾ Yomu/
+    <p>I often found myself typing file path manually when explaining code implementation and its use cases to my teammates.
+The task to type file path manually is very daunting and I hate it so much when I mistyped.
+The file path I mentioned is relative from project root. Let's say you have this structure</p>
+<pre><code>▾ Yomu/
   ▸ API/
   ▸ DataStructures/
   ▾ Screens/
@@ -65,20 +79,28 @@
   ┊ ┊ ┊ ChapterViewModel.swift
   ┊ ┊ ┊ ReadChapterRealm.swift
   ....
-▸ YomuTests/</code></pre>
+▸ YomuTests/
+</code></pre>
 <p>and you want to point out to someone an implementation in <code>ChapterViewModel.swift</code>, you would type this</p>
-<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="ex">Yomu/Screens/ChapterList/ChapterViewModel.swift</span></code></pre></div>
-<p>I did that a lot…</p>
+<pre><code>Yomu/Screens/ChapterList/ChapterViewModel.swift
+</code></pre>
+<p>I did that a lot...</p>
 <p class="image-container">
-<img src="http://s2.quickmeme.com/img/71/71c3931c1edc4353a0c03ec549753b965872a2c343c09255617f4470cbd924ed.jpg" alt="We got a badass here" class="medium-size">
+  <img
+    src="http://s2.quickmeme.com/img/71/71c3931c1edc4353a0c03ec549753b965872a2c343c09255617f4470cbd924ed.jpg" alt="We got a badass here"
+    class="medium-size">
 </p>
-<p>I knew there’s a better way to do this. There’s a built-in function in vim that returns the relative path (from project root) of a file in active buffer.</p>
-<pre><code>expand('%')</code></pre>
-<p>Of course we can do better than that! It’ll be handy if we can copy the file path to system clipboard.</p>
+<p>I knew there's a better way to do this.  There's a built-in function in vim that returns the relative path (from project root) of a file in active buffer.</p>
+<pre><code>expand('%')
+</code></pre>
+<p>Of course we can do better than that! It'll be handy if we can copy the file path to system clipboard.</p>
 <pre><code>&quot; Register relative file path of current buffer
 &quot; from project root to system clipboard
-nnoremap &lt;F10&gt; :let @+ = expand(&quot;%&quot;)&lt;CR&gt;</code></pre>
-<p>Now everytime you press <code>F10</code> in normal mode, it will automatically register file path to current active file in buffer to your system clipboard.</p>
+nnoremap &lt;F10&gt; :let @+ = expand(&quot;%&quot;)&lt;CR&gt;
+</code></pre>
+<p>Now everytime you press <code>F10</code> in normal mode, it will automatically register file path to current active file
+in buffer to your system clipboard.</p>
+
   </div>
 </div>
 
@@ -101,7 +123,7 @@ nnoremap &lt;F10&gt; :let @+ = expand(&quot;%&quot;)&lt;CR&gt;</code></pre>
 
     <footer id="footer">
       <p class="small">
-        © Copyright 2017 Sendy Halim
+        © Copyright 2020 Sendy Halim
       </p>
       <p class="small">
         <a href="https://github.com/sendyhalim/blog" target="_blank">Source Code</a>
@@ -109,7 +131,7 @@ nnoremap &lt;F10&gt; :let @+ = expand(&quot;%&quot;)&lt;CR&gt;</code></pre>
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
-    <script src="../../../assets/js/highlight.js" type="text/javascript"></script>
+    <script src="/assets/js/highlight.js" type="text/javascript"></script>
     <script type="text/javascript">
       hljs.initHighlightingOnLoad();
     </script>
