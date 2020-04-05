@@ -74,7 +74,9 @@ In this post, we'll try to do 2 things</p>
 <li>Set border radius for <code>UISearchBar</code></li>
 <li>Set custom search icon for <code>UISearchBar</code></li>
 </ul>
-<h2 id="initial-state">Initial State</h2>
+<h2 id="initial-state"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#initial-state" aria-label="Anchor link for: initial-state">#</a>
+Initial State</h2>
 <p>First, we need to subclass <code>UISearchBar</code>, let's create one</p>
 <pre><code>import UIKit
 
@@ -89,16 +91,20 @@ class SearchBar: UISearchBar {
 <p>Then set your search bar class to <code>SearchBar</code></p>
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar/interface-builder-search-bar.png" alt="Customizing UISearchBar Icon Interface Builder Search Bar"
+    src={{ asset_path(path=""/assets/images/swift/customizing-uisearchbar/interface-builder-search-bar.png") }}"
+    alt="Customizing UISearchBar Icon Interface Builder Search Bar"
     class="medium-size">
 </p>
 <p>Let's take a look at our initial state, our <code>SearchBar</code> should look like this</p>
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar/initial-state.png" alt="Customizing UISearchBar Icon Initial State"
+    src="https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;initial-state.png"
+    alt="Customizing UISearchBar Icon Initial State"
     class="medium-size">
 </p>
-<h2 id="uisearchbar-minimal-style">UISearchBar Minimal Style</h2>
+<h2 id="uisearchbar-minimal-style"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#uisearchbar-minimal-style" aria-label="Anchor link for: uisearchbar-minimal-style">#</a>
+UISearchBar Minimal Style</h2>
 <p><code>UISearchBar</code> has <code>searchBarStyle</code> property, we'll set that with <code>UISearchBarStyle.minimal</code>, this tells <code>UISearchBar</code> to
 remove its background</p>
 <pre><code>override func willMove(toSuperview newSuperview: UIView?) {
@@ -109,10 +115,13 @@ remove its background</p>
 </code></pre>
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar/minimal.png" alt="Customizing UISearchBar Icon Minimal"
+    src={{ asset_path(path=""/assets/images/swift/customizing-uisearchbar/minimal.png") }}"
+    alt="Customizing UISearchBar Icon Minimal"
     class="medium-size">
 </p>
-<h2 id="borderless-uisearchbar">Borderless UISearchBar</h2>
+<h2 id="borderless-uisearchbar"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#borderless-uisearchbar" aria-label="Anchor link for: borderless-uisearchbar">#</a>
+Borderless UISearchBar</h2>
 <p>Next, we'll remove text field border and set some styling</p>
 <pre><code>override func willMove(toSuperview newSuperview: UIView?) {
   super.willMove(toSuperview: newSuperview)
@@ -137,10 +146,13 @@ remove its background</p>
 </code></pre>
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar/borderless.png" alt="Customizing UISearchBar Icon Borderless"
+    src="https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;borderless.png"
+    alt="Customizing UISearchBar Icon Borderless"
     class="medium-size">
 </p>
-<h2 id="customizing-search-icon">Customizing Search Icon</h2>
+<h2 id="customizing-search-icon"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#customizing-search-icon" aria-label="Anchor link for: customizing-search-icon">#</a>
+Customizing Search Icon</h2>
 <p>Now we need to customize the search icon</p>
 <pre><code>override func willMove(toSuperview newSuperview: UIView?) {
   super.willMove(toSuperview: newSuperview)
@@ -179,7 +191,8 @@ remove its background</p>
 <p>The end result should look like this</p>
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar/end-result.png" alt="Customizing UISearchBar Icon End Result"
+    src="https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;end-result.png"
+    alt="Customizing UISearchBar Icon End Result"
     class="medium-size">
 </p>
 <p>You can find the full code
