@@ -35,7 +35,8 @@ Then set your search bar class to `SearchBar`
 
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar/interface-builder-search-bar.png" alt="Customizing UISearchBar Icon Interface Builder Search Bar"
+    src={{ asset_path(path=""/assets/images/swift/customizing-uisearchbar/interface-builder-search-bar.png") }}"
+    alt="Customizing UISearchBar Icon Interface Builder Search Bar"
     class="medium-size">
 </p>
 
@@ -43,7 +44,8 @@ Let's take a look at our initial state, our `SearchBar` should look like this
 
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar/initial-state.png" alt="Customizing UISearchBar Icon Initial State"
+    src="{{ asset_path(path="/assets/images/swift/customizing-uisearchbar/initial-state.png") }}"
+    alt="Customizing UISearchBar Icon Initial State"
     class="medium-size">
 </p>
 
@@ -63,7 +65,8 @@ override func willMove(toSuperview newSuperview: UIView?) {
 
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar/minimal.png" alt="Customizing UISearchBar Icon Minimal"
+    src={{ asset_path(path=""/assets/images/swift/customizing-uisearchbar/minimal.png") }}"
+    alt="Customizing UISearchBar Icon Minimal"
     class="medium-size">
 </p>
 
@@ -97,7 +100,8 @@ override func willMove(toSuperview newSuperview: UIView?) {
 
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar/borderless.png" alt="Customizing UISearchBar Icon Borderless"
+    src="{{ asset_path(path="/assets/images/swift/customizing-uisearchbar/borderless.png") }}"
+    alt="Customizing UISearchBar Icon Borderless"
     class="medium-size">
 </p>
 
@@ -146,7 +150,8 @@ The end result should look like this
 
 <p class="image-container">
   <img
-    src="/assets/images/swift/customizing-uisearchbar/end-result.png" alt="Customizing UISearchBar Icon End Result"
+    src="{{ asset_path(path="/assets/images/swift/customizing-uisearchbar/end-result.png") }}"
+    alt="Customizing UISearchBar Icon End Result"
     class="medium-size">
 </p>
 

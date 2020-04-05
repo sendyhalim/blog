@@ -22,12 +22,6 @@ code {
   padding-bottom: 10px;
 }
 
-.post-body h1::before,
-.post-body h2::before,
-.post-body h3::before {
-  content: '# ';
-
-}
 .post h1,
 .post h2,
 .post h3,
