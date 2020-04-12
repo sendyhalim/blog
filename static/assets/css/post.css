@@ -110,10 +110,6 @@ code {
   content: '#';
 }
 
-.post .hljs {
-  min-width: 700px;
-}
-
 @media (max-width: 640px) {
   .post {
     font-size: 14px;
