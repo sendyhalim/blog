@@ -45,9 +45,10 @@ reacted quickly to the security issues and submitted a pull request to bump some
 This might seem trivial, but those of you that have swum on the dependencies ecosystem know that even a minor patch could
 pop bugs anywhere, a simple job to bump dependencies could drag down your entire weekend *evil laughs.
 
-Satpam has test cases baked into it, it doesn't have 100% coverage,
-but the tests are at "enough" level to cover normal positive and negative cases. Plus Albert is
-bumping the project version, so people should be aware of the changes. How do we make sure the project is fine?
+Satpam has <a href="https://travis-ci.org/github/cermati/satpam/builds/671509439" target="_blank">test cases</a>
+baked into it, it doesn't have 100% coverage, but the tests are at "enough" level to
+cover normal positive and negative cases. Plus Albert is bumping the project version,
+so people should be aware of the changes. How do we make sure the project is fine?
 
 <p class="image-container">
   <img
