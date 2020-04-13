@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Sendy Halim">
+		<meta name="description" content="Sendy Halim&#39;s blog">
+    <title>Phabricator: developing feature on top of other feature</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://sendyhalim.github.io/blog/assets/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="https://sendyhalim.github.io/blog/assets/css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="https://sendyhalim.github.io/blog/assets/css/highlight-js.css" />
+    <link rel="stylesheet" type="text/css" href="https://sendyhalim.github.io/blog/assets/css/image.css" />
+    <link rel="stylesheet" type="text/css" href="https://sendyhalim.github.io/blog/assets/css/post.css" />
+  </head>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80328765-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-80328765-1');
+  </script>
+
+  <body>
+    <div id="content">
+      <nav>
+  <a href="https://sendyhalim.github.io/blog">
+    <span class="arrow">←</span> Home
+  </a>
+</nav>
+
+
+
+<div class="post">
+  <h1 class="title">Phabricator: developing feature on top of other feature</h1>
+
+  <div class="headline">
+    <div>
+      2020-04-12
+
+    </div>
+    <div>
+      <div class="tag-list-container">
+  
+  <span class="tag">
+    #git
+  </span>
+  
+  <span class="tag">
+    #phabricator
+  </span>
+  
+</div>
+
+    </div>
+  </div>
+
+  <div class="post-body">
+    <p>NOTES: This post assumes that you've known <code>git rebase</code> and <code>phabricator</code> terms.</p>
+<p>We use phabricator as our code review tool at <code>Cermati</code>. A typical workflow for submitting &amp; merging your feature:</p>
+<ol>
+<li>Create new branch based on <code>master</code> branch, develop and <code>git commit</code> locally from there.</li>
+<li>Submit code review <code>arc diff</code> when we're done.</li>
+<li>Do <code>arc land</code> to merge our diff to remote <code>master</code> branch</li>
+</ol>
+<p>Command <code>arc land</code> will squash all of our commits into 1 commit on our feature branch, it will use diff title and description as the commit message. We can also simulate <code>arc land</code> manually, maybe not 100% exact though:</p>
+<ol>
+<li><code>git checkout master</code> to make sure local master branch is up to date.</li>
+<li><code>git checkout &lt;feature-branch&gt;</code></li>
+<li><code>git rebase master -i</code> and squash all of the <code>&lt;feature-branch&gt;</code> commits into 1 commit on top of <code>master</code> branch.</li>
+<li>Merge the rebased &amp; squashed feature branch to remote master.</li>
+<li>Checkout to master and pull origin master.</li>
+</ol>
+<p>This typical flow works if we work on separate features at the same time, but it could fail if we try to develop feature on top of other feature that's still in code review (submitted to phabricator). There are many cases this failure could happen, one of the frequent one is when we develop <code>feature-b</code> on top of <code>feature-a</code> where <code>feature-a</code> is still in code review.</p>
+<h3 id="simulation"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#simulation" aria-label="Anchor link for: simulation">#</a>
+Simulation</h3>
+<p>Assumptions:</p>
+<pre><code>M = master
+FA = feature a
+FB = feature b
+
+mx&lt;n&gt; = commit on master branch
+ax&lt;n&gt; = commit on feature-a branch
+bx&lt;n&gt; = commit on feature-b branch
+</code></pre>
+<p>The condition will look like below:</p>
+<ul>
+<li><code>master</code> branch: 3 commits <code>mx1</code>, <code>mx2</code>, and <code>mx3</code>.</li>
+<li><code>feature-a</code> branch: 2 commits <code>ax1</code> and <code>ax2</code>.</li>
+<li><code>feature-b</code> branch: 3 commits <code>bx1</code>, <code>bx2</code> and <code>bx3</code>, it's  built on top of <code>feature-a</code>.</li>
+</ul>
+<pre><code>mx1---mx2---mx3---&gt; [M]
+               \
+                ax1---ax2---&gt; [FA]
+                         \
+                          bx1---bx2---bx3---&gt; [FB]
+</code></pre>
+<h3 id="arc-land-feature-a-branch"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#arc-land-feature-a-branch" aria-label="Anchor link for: arc-land-feature-a-branch">#</a>
+Arc land feature-a branch</h3>
+<p>Let's say that your <code>feature-a</code> is accepted via code review process and you do <code>arc land</code>, it'll squash commits <code>ax1</code> and <code>ax2</code> into 1 commit.</p>
+<pre><code># Process view
+# S = squash
+# --------------------
+mx1---mx2---mx3---&gt; [M]
+               \         /---bx1---bx2---bx3---&gt; [FB]
+                ax1---ax2---&gt; [FA]
+                 |     |
+                 S     S
+# End result
+# There's a new commit &quot;ax&quot; that represents commit ax1 and ax2.
+# --------------------
+mx1---mx2---mx3---ax---&gt; [M]
+               \
+                ax1---ax2---bx1---bx2---bx3---&gt; [FB]
+</code></pre>
+<p><code>feature-b</code> shouldn't need <code>ax1</code> and <code>ax2</code> because it's already represented by <code>ax</code>. It will fail if you've submitted <code>feature-b</code> for code review and do <code>arc land</code>, the reason is because it could not merge &quot;cleanly&quot;. The fix is actually pretty easy, you need to point commit <code>bx1</code> to <code>ax</code>. We will do <code>git rebase</code> to rewrite the history, <strong>PLEASE BACKUP</strong> <code>feature-b</code> first before you do this, you can do it by checking-out out from <code>feature-b</code> to another branch.</p>
+<pre><code>git checkout feature-b
+
+# Backup for safety
+git checkout -b feature-b-backup
+</code></pre>
+<h3 id="rewriting-history"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#rewriting-history" aria-label="Anchor link for: rewriting-history">#</a>
+Rewriting history</h3>
+<p>First, make sure that we're on feature-b.</p>
+<pre><code># We will only rebase bx1, bx2, and bx3 onto master
+# because we do not need commit ax1 and ax2 here.
+# Notice we use &quot;ax2&quot; as our current base,
+# this is because &quot;git rebase --onto master&quot; uses range (ax2, bx3], so &quot;ax2&quot; is exclusive.
+# --------------------
+git rebase --onto master ax2 bx3
+</code></pre>
+<p>Now your <code>feature-b</code> should point to the latest commit on local <code>master</code> branch, you can verify this via <code>git log</code> or use a GUI tool.</p>
+<pre><code>git log --oneline --decorate --color --graph
+
+# End result
+# --------------------
+mx1---mx2---mx3---ax---&gt; [M]
+                    \
+                     bx1---bx2---bx3---&gt; [FB]
+</code></pre>
+<p>That's it, I hope it helps, wish there's an easier way.</p>
+
+  </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wavvel'; // Required - Replace '<example>' with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+    </div>
+
+    <footer id="footer">
+      <p class="small">
+        © Copyright 2020 Sendy Halim
+      </p>
+      <p class="small">
+        <a href="https://github.com/sendyhalim/blog" target="_blank">Source Code</a>
+      </p>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://sendyhalim.github.io/blog/assets/js/highlight.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>

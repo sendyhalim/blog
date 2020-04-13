@@ -9,6 +9,7 @@ code {
 
 .post {
   font-weight: 400;
+  margin-bottom: 60px;
 }
 
 .post-body p {
@@ -107,10 +108,6 @@ code {
 
 .post h2.headline a:before {
   content: '#';
-}
-
-.post .hljs {
-  min-width: 700px;
 }
 
 @media (max-width: 640px) {
