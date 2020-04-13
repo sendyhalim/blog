@@ -60,14 +60,14 @@
   </div>
 
   <div class="post-body">
-    <p>NOTES: This post assumes that you've known <code>git rebase</code> and <code>phabricator</code> terms.</p>
+    <p>NOTES: This post assumes that you're familiar with <code>git rebase</code> and <code>phabricator</code> terms.</p>
 <p>We use phabricator as our code review tool at <code>Cermati</code>. A typical workflow for submitting &amp; merging your feature:</p>
 <ol>
-<li>Create new branch based on <code>master</code> branch, develop and <code>git commit</code> locally from there.</li>
+<li>Create a new feature branch based on <code>master</code> branch, develop and <code>git commit</code> locally from there.</li>
 <li>Submit code review <code>arc diff</code> when we're done.</li>
-<li>Do <code>arc land</code> to merge our diff to remote <code>master</code> branch</li>
+<li>Run <code>arc land</code> to merge our diff to remote <code>master</code> branch.</li>
 </ol>
-<p>Command <code>arc land</code> will squash all of our commits into 1 commit on our feature branch, it will use diff title and description as the commit message. We can also simulate <code>arc land</code> manually, maybe not 100% exact though:</p>
+<p><code>arc land</code> will squash all of the commits into 1 commit on the feature branch, it uses diff title and description as the commit message. We can also simulate <code>arc land</code> manually, maybe not 100% exact though:</p>
 <ol>
 <li><code>git checkout master</code> to make sure local master branch is up to date.</li>
 <li><code>git checkout &lt;feature-branch&gt;</code></li>
@@ -119,7 +119,7 @@ mx1---mx2---mx3---ax---&gt; [M]
                \
                 ax1---ax2---bx1---bx2---bx3---&gt; [FB]
 </code></pre>
-<p><code>feature-b</code> shouldn't need <code>ax1</code> and <code>ax2</code> because it's already represented by <code>ax</code>. It will fail if you've submitted <code>feature-b</code> for code review and do <code>arc land</code>, the reason is because it could not merge &quot;cleanly&quot;. The fix is actually pretty easy, you need to point commit <code>bx1</code> to <code>ax</code>. We will do <code>git rebase</code> to rewrite the history, <strong>PLEASE BACKUP</strong> <code>feature-b</code> first before you do this, you can do it by checking-out out from <code>feature-b</code> to another branch.</p>
+<p><code>feature-b</code> doesn't need <code>ax1</code> and <code>ax2</code> because it's already represented by <code>ax</code>. It will fail if you've submitted <code>feature-b</code> for code review and do <code>arc land</code>, the reason is because it could not merge &quot;cleanly&quot;. The fix is actually pretty easy, you need to point commit <code>bx1</code> to <code>ax</code>. We will do <code>git rebase</code> to rewrite the history, <strong>PLEASE BACKUP</strong> <code>feature-b</code> first before you do this, you can do it by checking-out out from <code>feature-b</code> to another branch.</p>
 <pre><code>git checkout feature-b
 
 # Backup for safety
@@ -145,7 +145,7 @@ mx1---mx2---mx3---ax---&gt; [M]
                     \
                      bx1---bx2---bx3---&gt; [FB]
 </code></pre>
-<p>That's it, now you can do <code>arc land</code> safely. I hope it helps, wish there's an easier way.</p>
+<p>That's it, now you can do <code>arc land</code> cleanly. I hope it helps, wish there's an easier way.</p>
 
   </div>
 </div>
