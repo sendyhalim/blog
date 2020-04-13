@@ -9,7 +9,7 @@ tags = ["git", "phabricator"]
 
 NOTES: This post assumes that you're familiar with `git rebase` and `phabricator` terms.
 
-We use phabricator as our code review tool at `Cermati`. A typical workflow for submitting & merging your feature:
+We use phabricator as our code review tool. A typical workflow for submitting & merging your feature:
 1. Create a new feature branch based on `master` branch, develop and `git commit` locally from there.
 2. Submit code review `arc diff` when we're done.
 3. Run `arc land` to merge our diff to remote `master` branch.
