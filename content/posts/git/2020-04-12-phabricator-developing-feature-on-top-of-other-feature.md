@@ -7,14 +7,14 @@ description = "Phabricator: developing feature on top of other feature"
 tags = ["git", "phabricator"]
 +++
 
-NOTES: This post assumes that you've known `git rebase` and `phabricator` terms.
+NOTES: This post assumes that you're familiar with `git rebase` and `phabricator` terms.
 
 We use phabricator as our code review tool at `Cermati`. A typical workflow for submitting & merging your feature:
-1. Create new branch based on `master` branch, develop and `git commit` locally from there.
+1. Create a new feature branch based on `master` branch, develop and `git commit` locally from there.
 2. Submit code review `arc diff` when we're done.
-3. Do `arc land` to merge our diff to remote `master` branch
+3. Run `arc land` to merge our diff to remote `master` branch.
 
-Command `arc land` will squash all of our commits into 1 commit on our feature branch, it will use diff title and description as the commit message. We can also simulate `arc land` manually, maybe not 100% exact though:
+`arc land` will squash all of the commits into 1 commit on the feature branch, it uses diff title and description as the commit message. We can also simulate `arc land` manually, maybe not 100% exact though:
 1. `git checkout master` to make sure local master branch is up to date.
 2. `git checkout <feature-branch>`
 3. `git rebase master -i` and squash all of the `<feature-branch>` commits into 1 commit on top of `master` branch.
@@ -69,7 +69,7 @@ mx1---mx2---mx3---ax---> [M]
                 ax1---ax2---bx1---bx2---bx3---> [FB]
 ```
 
-`feature-b` shouldn't need `ax1` and `ax2` because it's already represented by `ax`. It will fail if you've submitted `feature-b` for code review and do `arc land`, the reason is because it could not merge "cleanly". The fix is actually pretty easy, you need to point commit `bx1` to `ax`. We will do `git rebase` to rewrite the history, **PLEASE BACKUP** `feature-b` first before you do this, you can do it by checking-out out from `feature-b` to another branch.
+`feature-b` doesn't need `ax1` and `ax2` because it's already represented by `ax`. It will fail if you've submitted `feature-b` for code review and do `arc land`, the reason is because it could not merge "cleanly". The fix is actually pretty easy, you need to point commit `bx1` to `ax`. We will do `git rebase` to rewrite the history, **PLEASE BACKUP** `feature-b` first before you do this, you can do it by checking-out out from `feature-b` to another branch.
 
 ```
 git checkout feature-b
@@ -100,4 +100,4 @@ mx1---mx2---mx3---ax---> [M]
                      bx1---bx2---bx3---> [FB]
 ```
 
-That's it, now you can do `arc land` safely. I hope it helps, wish there's an easier way.
+That's it, now you can do `arc land` cleanly. I hope it helps, wish there's an easier way.
