@@ -2,7 +2,6 @@
 title = "Phabricator: developing feature on top of other feature"
 date = 2020-04-12T22:37:00+07:00
 description = "Phabricator: developing feature on top of other feature"
-draft = true
 
 [taxonomies]
 tags = ["git", "phabricator"]
