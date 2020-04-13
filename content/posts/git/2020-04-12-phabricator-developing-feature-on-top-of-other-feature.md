@@ -100,4 +100,4 @@ mx1---mx2---mx3---ax---> [M]
                      bx1---bx2---bx3---> [FB]
 ```
 
-That's it, I hope it helps, wish there's an easier way.
+That's it, now you can do `arc land` safely. I hope it helps, wish there's an easier way.
