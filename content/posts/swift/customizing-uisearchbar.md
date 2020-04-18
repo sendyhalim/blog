@@ -35,7 +35,7 @@ Then set your search bar class to `SearchBar`
 
 <p class="image-container">
   <img
-    src={{ asset_path(path=""/assets/images/swift/customizing-uisearchbar/interface-builder-search-bar.png") }}"
+    src="{{ asset_path(path="/assets/images/swift/customizing-uisearchbar/interface-builder-search-bar.png") }}"
     alt="Customizing UISearchBar Icon Interface Builder Search Bar"
     class="medium-size">
 </p>
@@ -65,7 +65,7 @@ override func willMove(toSuperview newSuperview: UIView?) {
 
 <p class="image-container">
   <img
-    src={{ asset_path(path=""/assets/images/swift/customizing-uisearchbar/minimal.png") }}"
+    src="{{ asset_path(path="/assets/images/swift/customizing-uisearchbar/minimal.png") }}"
     alt="Customizing UISearchBar Icon Minimal"
     class="medium-size">
 </p>
