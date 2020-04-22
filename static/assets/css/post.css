@@ -35,12 +35,13 @@ code {
 }
 
 .post p {
-  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .post ol,
 .post ul {
-  margin-bottom: 20px;
+  margin-top: -5px;
+  margin-bottom: 15px;
 }
 
 .post li {
