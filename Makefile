@@ -13,4 +13,7 @@ deploy:
 	git checkout master
 	git branch -D gh-pages
 
+server:
+	zola serve --drafts
+
 .PHONY: build deploy
