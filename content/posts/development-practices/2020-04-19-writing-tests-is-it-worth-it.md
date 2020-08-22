@@ -2,6 +2,7 @@
 title = "Writing tests, is it worth it?"
 date = 2020-04-14T00:37:00+07:00
 description = "Writing tests, is it worth it?"
+draft = true
 
 [taxonomies]
 tags = ["development", "practice"]
