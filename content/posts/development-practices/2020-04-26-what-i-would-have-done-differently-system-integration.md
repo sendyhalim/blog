@@ -1,5 +1,5 @@
 +++
-title = "What I would have done differently when doing system integration"
+title = "What I would have done differently - system integration"
 date = 2020-08-22T00:00:00+07:00
 description = "What I would have done differently when doing system integration"
 
