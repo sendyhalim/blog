@@ -21,8 +21,10 @@ and put their brand as the label.
 The development was very intense because there are some parts that need to be customized
 for each partners and some of the APIs are not even 100% finished yet. We do the development both ways,
 partners also allocated engineering resource on their side to help with the integration.
-During this intense moment, we made some mistakes, both engineering related and non engineering. This post is about
-what I would do differently. This post will be updated regularly as the learning process continues, stay tuned!
+During this intense moment, we made some mistakes, both engineering related and non engineering.
+
+This post is about what we would have done differently and there are also some tips.
+The post will be updated regularly as the learning process continues, stay tuned!
 
 <hr>
 
