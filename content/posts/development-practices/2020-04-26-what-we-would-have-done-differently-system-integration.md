@@ -1,7 +1,7 @@
 +++
-title = "What I would have done differently - system integration"
+title = "What we would have done differently - system integration"
 date = 2020-08-22T00:00:00+07:00
-description = "What I would have done differently when doing system integration"
+description = "What we would have done differently when doing system integration"
 
 [taxonomies]
 tags = ["development", "practice", "integration", "tips"]
@@ -18,8 +18,9 @@ and put their brand as the label.
   >
 </p>
 
-The development was very intense because there are some parts that need to be customized for each partners.
-We do the development both ways, partners also allocated engineering resource on their side to help with the integration.
+The development was very intense because there are some parts that need to be customized
+for each partners and some of the APIs are not even 100% finished yet. We do the development both ways,
+partners also allocated engineering resource on their side to help with the integration.
 During this intense moment, we made some mistakes, both engineering related and non engineering. This post is about
 what I would do differently. This post will be updated regularly as the learning process continues, stay tuned!
 
@@ -45,3 +46,10 @@ always use `n` sprint. The new feature takes 4 hours to complete? Set the estima
 if it takes > 50% sprint time then say it 2 sprints. Development is not just
 about code-complete, it's about delivering the features that meet the expectation
 with minimum bugs and 0 critical bug, probably you need to update your API doc too.
+
+
+##### Remember, it's a partnership
+This is a partnership, it's a relationship where we will work together as a partner for
+mutual benefits, it's not a stage to throw mistakes, it's a stage to perform together
+and achieve great things together. Having this mindset will help your emotion and stress level in check.
+
