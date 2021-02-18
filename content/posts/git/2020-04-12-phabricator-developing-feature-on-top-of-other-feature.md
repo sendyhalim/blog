@@ -24,6 +24,8 @@ We use phabricator as our code review tool. A typical workflow for submitting & 
 This typical flow works if we work on separate features at the same time, but it could fail if we try to develop feature on top of other feature that's still in code review (submitted to phabricator). There are many cases this failure could happen, one of the frequent one is when we develop `feature-b` on top of `feature-a` where `feature-a` is still in code review.
 
 ### Simulation
+We'll be using [this repo](https://github.com/sendyhalim/phabricator-developing-feature-on-top-of-other-feature-code) as example.
+
 Assumptions:
 
 ```bash
@@ -79,16 +81,37 @@ git checkout -b feature-b-backup
 ```
 
 ### Rewriting history
-First, make sure that we're on feature-b.
+First, make sure that we're on feature-b and then we will run rebase interactive to drop commits `ax1` and `ax2`.
+It should be safe because both commits are already in master (represented by `ax` commit).
 ```bash
-# We will only rebase bx1, bx2, and bx3 onto master
-# because we do not need commit ax1 and ax2 here.
-# Notice we use "ax2" as our current base,
-# this is because "git rebase --onto master" uses range (ax2, bx3], so "ax2" is exclusive.
+# Do interactive rebase onto master
 # --------------------
-git rebase --onto master ax2 bx3
+git rebase -i master
 ```
 
+There will be an editor prompt that should look like
+```gitrebase
+pick 233a9b8 ax1
+pick 5f5e3ce ax2
+pick e145774 bx1
+pick 1834f7d bx2
+pick 95d155a bx3
+```
+
+You have 2 options remove `ax1` and `ax2`:
+A) Delete the lines
+B) Replace `pick` with `drop`
+
+You can do either one but I'll go with `drop` to make it more explicit in this post
+```gitrebase
+drop 233a9b8 ax1
+drop 5f5e3ce ax2
+pick e145774 bx1
+pick 1834f7d bx2
+pick 95d155a bx3
+```
+
+Save your changes and quit editor, the rebase process will continue by itself.
 Now your `feature-b` should point to the latest commit on local `master` branch, you can verify this via `git log` or use a GUI tool.
 ```bash
 git log --oneline --decorate --color --graph
