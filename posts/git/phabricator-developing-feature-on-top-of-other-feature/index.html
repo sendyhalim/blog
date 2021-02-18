@@ -79,6 +79,7 @@
 <h3 id="simulation"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#simulation" aria-label="Anchor link for: simulation">#</a>
 Simulation</h3>
+<p>We'll be using <a href="https://github.com/sendyhalim/phabricator-developing-feature-on-top-of-other-feature-code">this repo</a> as example.</p>
 <p>Assumptions:</p>
 <pre><code>M = master
 FA = feature a
@@ -128,15 +129,31 @@ git checkout -b feature-b-backup
 <h3 id="rewriting-history"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#rewriting-history" aria-label="Anchor link for: rewriting-history">#</a>
 Rewriting history</h3>
-<p>First, make sure that we're on feature-b.</p>
-<pre><code># We will only rebase bx1, bx2, and bx3 onto master
-# because we do not need commit ax1 and ax2 here.
-# Notice we use &quot;ax2&quot; as our current base,
-# this is because &quot;git rebase --onto master&quot; uses range (ax2, bx3], so &quot;ax2&quot; is exclusive.
+<p>First, make sure that we're on feature-b and then we will run rebase interactive to drop commits <code>ax1</code> and <code>ax2</code>.
+It should be safe because both commits are already in master (represented by <code>ax</code> commit).</p>
+<pre><code># Do interactive rebase onto master
 # --------------------
-git rebase --onto master ax2 bx3
+git rebase -i master
 </code></pre>
-<p>Now your <code>feature-b</code> should point to the latest commit on local <code>master</code> branch, you can verify this via <code>git log</code> or use a GUI tool.</p>
+<p>There will be an editor prompt that should look like</p>
+<pre><code>pick 233a9b8 ax1
+pick 5f5e3ce ax2
+pick e145774 bx1
+pick 1834f7d bx2
+pick 95d155a bx3
+</code></pre>
+<p>You have 2 options remove <code>ax1</code> and <code>ax2</code>:
+A) Delete the lines
+B) Replace <code>pick</code> with <code>drop</code></p>
+<p>You can do either one but I'll go with <code>drop</code> to make it more explicit in this post</p>
+<pre><code>drop 233a9b8 ax1
+drop 5f5e3ce ax2
+pick e145774 bx1
+pick 1834f7d bx2
+pick 95d155a bx3
+</code></pre>
+<p>Save your changes and quit editor, the rebase process will continue by itself.
+Now your <code>feature-b</code> should point to the latest commit on local <code>master</code> branch, you can verify this via <code>git log</code> or use a GUI tool.</p>
 <pre><code>git log --oneline --decorate --color --graph
 
 # End result
@@ -146,6 +163,13 @@ mx1---mx2---mx3---ax---&gt; [M]
                      bx1---bx2---bx3---&gt; [FB]
 </code></pre>
 <p>That's it, now you can do <code>arc land</code> cleanly. I hope it helps, wish there's an easier way.</p>
+<h3 id="post-updates"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#post-updates" aria-label="Anchor link for: post-updates">#</a>
+Post Updates</h3>
+<p>Most recent updates:</p>
+<ul>
+<li>Got feedback from <a href="https://www.linkedin.com/in/daniel-albert-art/">Daniel Albert</a> regarding the rebase process, we could use <code>git rebase -i master</code> to reduce confusion and fixes see <a href="https://github.com/sendyhalim/blog/commit/3f383f1595c0fcd7bed0d4daa746a04bbb35f927">here</a> for the changes.</li>
+</ul>
 
   </div>
 </div>
