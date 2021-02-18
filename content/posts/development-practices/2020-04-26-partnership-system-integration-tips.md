@@ -1,7 +1,7 @@
 +++
-title = "What we would have done differently - system integration"
+title = "Partnership System Integration Tips"
 date = 2020-08-22T00:00:00+07:00
-description = "What we would have done differently when doing system integration"
+description = "Partnership System Integration Tips"
 
 [taxonomies]
 tags = ["development", "practice", "integration", "tips"]
@@ -23,8 +23,8 @@ for each partners and some of the APIs are not even 100% finished yet. We do the
 partners also allocated engineering resource on their side to help with the integration.
 During this intense moment, we made some mistakes, both engineering related and non engineering.
 
-This post is about what we would have done differently and there are also some tips.
-The post will be updated regularly as the learning process continues, stay tuned!
+This post is about the lessons/key takeaways from the experience.
+I'll update the post regularly as the learning process continues, stay tuned!
 
 <hr>
 
@@ -43,11 +43,17 @@ of the problem thus would save your client's time and your time when doing integ
 
 
 ##### Use "sprint" as the development estimation time unit
-Never say that it's going to take `n` days or `n` hours to develop new features,
-always use `n` sprint. The new feature takes 4 hours to complete? Set the estimation to 1 sprint,
-if it takes > 50% sprint time then say it 2 sprints. Development is not just
+There will be times where both parties agrees on to develop new features, depending on the urgency,
+if it's a <b>*not a critical*</b> feature then I'd advise to always use `n` sprint as the time estimation.
+The new non-critical feature takes 4 hours to complete? Set the estimation to 1 sprint,
+if it takes > 50% of sprint points then say it takes 2 sprints. Development is not just
 about code-complete, it's about delivering the features that meet the expectation
-with minimum bugs and 0 critical bug, probably you need to update your API doc too.
+with minimum bugs and 0 critical bug, probably you need to update your API docs too.
+
+
+##### Handling major changes/decisions
+Make sure major changes/decisions will be discussed internally first, there will be different
+point of views, from product, UI/UX, engineering. Anything related to the major decisions should be answered with `Let us discuss internally first, we'll get back to you by X day(s)`
 
 
 ##### Remember, it's a partnership
