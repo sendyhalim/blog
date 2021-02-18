@@ -99,8 +99,8 @@ pick 95d155a bx3
 ```
 
 You have 2 options remove `ax1` and `ax2`:
-A) Delete the lines
-B) Replace `pick` with `drop`
+1. Delete the lines
+2. Replace `pick` with `drop`
 
 You can do either one but I'll go with `drop` to make it more explicit in this post
 ```gitrebase
