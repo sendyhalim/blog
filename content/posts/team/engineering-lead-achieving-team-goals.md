@@ -9,7 +9,7 @@ tags = ["achieving", "team", "goals", "tips", "career"]
 
 Some people (or most people) might find the stress level going up in respect with the uncertainty of success in this people management role.
 It is important to keep in mind that <b>your performance is not evaluated based on your _individual contributions_ but the *team contributions*</b>,
-it's not your performance anymore, <b>it's *the team performance*</b>! In general team performance will be tied to team achievements/goals completion.
+it's not your performance anymore, <b>it's *the team performance*</b>! In general, team performance will be tied to team achievements/goals completion.
 
 This post is based on my personal experiences & past mistakes, please take it with a grain of salt.
 The post will be focusing on tips to achieve your team goals, other perspectives (dealing with stress, challenging your team, growing your teammember, etc2) will be in another posts.
@@ -23,13 +23,13 @@ In short, you need to communicate clearly what needs to be done, in my case, we'
 
 
 ###### Plan ahead
-Your team have goals, what's next? <b>*Planning*</b>, to refer to British Army's 7Ps `Proper Planning and Preparation Prevents Piss Poor Performance`.
+Your team have goals, what's next? <b>*Planning*</b>, referring to British Army's *7Ps* `Proper Planning and Preparation Prevents Piss Poor Performance`.
 Several tips in planning:
 * Make sure the PIC understand the details of the plan by planning together, you make the team owns the plan by planning together instead of by yourself.
 * Write the plan in a sharable-docs (we use google docs).
 
 Remember to open the opportunity for team members (brave souls) to let them lead the planning and guide if needed, everyone
-should be able to plan ahead, it's a general skill that will be useful in general.
+should be able to plan ahead, it's a general skill that will be useful in life.
 
 
 ###### Communicate the plan & gather feedback
