@@ -23,12 +23,14 @@ In short, you need to communicate clearly what needs to be done, in my case, we'
 
 
 ###### Plan ahead
-Your team have goals, what's next? <b>*Planning*</b>, referring to British Army's *7Ps* `Proper Planning and Preparation Prevents Piss Poor Performance`.
-Several tips in planning:
+Your team have goals, what's next? <b>*Planning*</b>, why *planning* is important? I think I can use British Army's *7Ps* to explain why: `Proper Planning and Preparation Prevents Piss Poor Performance`.
+
+There are several key points that I always keep in my mental notes:
+* Describe the background why we're aiming for a specific goal, you can use a top-bottom model to lower barrier of entry in your plan.
 * Make sure the PIC understand the details of the plan by planning together, you make the team owns the plan by planning together instead of by yourself.
 * Write the plan in a sharable-docs (we use google docs).
 
-Remember to open the opportunity for team members (brave souls) to let them lead the planning and guide if needed, everyone
+Remember to open the opportunity for team members (brave souls 🤞) to let them lead the planning and guide if needed, everyone
 should be able to plan ahead, it's a general skill that will be useful in life.
 
 
@@ -52,8 +54,10 @@ There are 3 kind of reports that I usually find myself do:
 this channel should be useful for organizing chats & discussions scoping.
 
 
-###### The fun and the hard part
+###### The fun and the ugly part
 <b>Mission completed?</b> Make sure you give credit where credit is due, credit the PIC, team members and other parties that contribute to the project.
+Have celebration then focus on the next goal.
 
-<b>The hard part, mission failed.</b> In this case *you take full responsibility*, yes, the team lead is the first person responsible for the project, do not blame it on anyone else.
-In most cases your manager will require a report of what failed and what can be improved. Take it as a learning to get better! You can do it together with your team, remember to back-up each other!
+<b>The ugly part: mission failed.</b> In this case *you take the responsibility*. Yes, the team lead is the first person responsible for the project, do not blame it on anyone else in your team.
+Just like a CEO is responsible for the overall success of a company, team lead is responsible for the overall success of a team. Don't worry, your manager is also responsible for the teams under his/her supervision, that's why
+in most cases your manager will require a report of what failed and what can be improved, take it as a learning to get better! You can do it together with your team, the basic principle to keep in mind: <b>if you fail then you get up and improve</b>.

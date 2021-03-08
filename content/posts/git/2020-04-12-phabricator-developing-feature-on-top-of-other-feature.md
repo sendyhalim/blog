@@ -127,5 +127,5 @@ That's it, now you can do `arc land` cleanly. I hope it helps, wish there's an e
 
 ### Post Updates
 Most recent updates:
-* Got feedback from [Daniel Albert](https://www.linkedin.com/in/daniel-albert-art/) regarding the rebase process, we could use `git rebase -i master` to reduce confusion and fixes see [here](https://github.com/sendyhalim/blog/commit/3f383f1595c0fcd7bed0d4daa746a04bbb35f927) for the changes.
+* Got feedback from [Daniel Albert](https://www.linkedin.com/in/daniel-albert-art/) regarding the rebase process, we could use `git rebase -i master` to reduce confusion. See the [diff here](https://github.com/sendyhalim/blog/commit/3f383f1595c0fcd7bed0d4daa746a04bbb35f927).
 
