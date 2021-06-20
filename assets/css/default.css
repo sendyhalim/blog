@@ -159,3 +159,9 @@ th, td {
   border: 1px solid #CCC;
   padding: 3px 10px;
 }
+
+blockquote {
+  border-left: 3px solid #555555;
+  padding-left: 10px;
+  background-color: #EFEFEF;
+}
