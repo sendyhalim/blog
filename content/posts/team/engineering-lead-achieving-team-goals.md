@@ -58,6 +58,8 @@ this channel should be useful for organizing chats & discussions scoping.
 <b>Mission completed?</b> Make sure you give credit where credit is due, credit the PIC, team members and other parties that contribute to the project.
 Have celebration then focus on the next goal.
 
-<b>The ugly part: mission failed.</b> In this case *you take the responsibility*. Yes, the team lead is the first person responsible for the project, do not blame it on anyone else in your team.
-Just like a CEO is responsible for the overall success of a company, team lead is responsible for the overall success of a team. Don't worry, your manager is also responsible for the teams under his/her supervision, that's why
-in most cases your manager will require a report of what failed and what can be improved, take it as a learning to get better! You can do it together with your team, the basic principle to keep in mind: <b>if you fail then you get up and improve</b>.
+<b>The ugly part: mission failed.</b> In this case *you take the responsibility*. Yes, the team lead is responsible for the project, even though you should held people accountable.
+Just like a CEO is responsible for the overall success of a company, team lead is responsible for the overall success of a team.
+In most cases your manager will require a report of what failed and what can be improved. Take it as a learning to get better! You can do it together with your team, remember to back-up each other!
+
+> The basic principle to keep in mind: <b>if you fail then you get up together with the team and improve</b>.
