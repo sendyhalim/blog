@@ -8,7 +8,7 @@ tags = ["programming", "principles", "tips"]
 +++
 
 
-This post is meant to be something to held on when there's a split arguments on
+I hope this post can be something to be held on when there's a split arguments on
 how to approach things in programming, whatever language, framework, tool it is. I hope it can be useful,
 pick whatever you think suitable for your project/company, take it with a grain of salt.
 
@@ -22,8 +22,8 @@ Hopefully having these principles in mind would help us to:
 
 ### Readability
 Readability means it's easy to understand, not just easy to read. `Easy to understand` meaning might vary
-because each company/team has their own engineering skills standard. Having readability standard set earlier will help the team
-to jump between codebase faster in the long run, including new engineer onboarding process.
+because each company/team has their own engineering skills standard. Having a readability standard set earlier will boost
+team productivity in the longer run (cut communication cost, reduce time needed to understand the code, etc) and improve engineer onboarding process.
 
 ##### Readability - static type
 If possible it might be worth the investment to use statically typed language. Code is meant to be read more than it is written,
