@@ -8,17 +8,15 @@ tags = ["programming", "principles", "tips"]
 +++
 
 
-I hope this post can be something to be held on when there's a split arguments on
-how to approach things in programming, whatever language, framework, tool it is. I hope it can be useful,
-pick whatever you think suitable for your project/company, take it with a grain of salt.
+I hope this post can be something to be held on when starting a new project, when there's a split arguments on
+how to approach things in programming, framework and tool it is. Pick whatever you think suitable for your project & team, take it with a grain of salt.
 
-There are many programming paradigms and many approach to code, not including the best practices that are also dynamic,
-things are moving fast 🏎 💨!
+There are many programming paradigms, many approach to code, new tools and frameworks, well things are moving fast 🏎 💨!
 
-Hopefully having these principles in mind would help us to:
+Having these principles in mind has helped my team and me to:
 * Make programming decisions: how to structure code, error handling (error message) & patterns to use.
-* Decide when to invest more in documentations.
 * Decide When should we opt-in for hack and what's the proper way to apply "quickfix".
+* Decide when to invest more in documentations.
 
 ### Readability
 Readability means it's easy to understand, not just easy to read. `Easy to understand` meaning might vary
@@ -67,11 +65,17 @@ Modular means it's easy to plug & change something because there's a balanced ab
 that supports the change. Beware that in practice, you do not have to abstract everything,
 too much abstraction would be make it less readable and harder to understand. It
 would make the most sense to put abstraction on top of something that would likely to change or
-on top of something that already has multiple implementation in beginning. One easy example: suppose we want to send
+on top of something that already has multiple implementation in beginning.
+
+One easy example: suppose we want to send
 SMS(maybe for MFA use cases - OTP) to our users, putting an interface in front of the actual vendor
 implementation might be a good idea, why? Let's start with the business use case, MFA is a critical security feature, having a good OTP deliver rate is crucial for the user experience, we
 can't rely only to 1 vendor, it's important to have at least another SMS vendor backup in case the the primary vendor is down or there are other problems (latency drops or the delivery rate drops).
 If we put an interface for it, it's easy to switch. The switch strategy might vary, it could be via a circuit breaker mechanism or just a simple remote config to decide which SMS vendor to use.
+
+There's a signal that you could use to measure modularity, if it's relatively easy
+to write unit tests then most probably your code is modular enough because it's easy
+to inject dependencies (mock objects in unit test context) and refactor things.
 
 ### Debuggability
 No one wants their code to throw error, but life happens. The easier it is to debug the faster it is to resolve the problem.
