@@ -64,16 +64,14 @@
   </div>
 
   <div class="post-body">
-    <p>I hope this post can be something to be held on when there's a split arguments on
-how to approach things in programming, whatever language, framework, tool it is. I hope it can be useful,
-pick whatever you think suitable for your project/company, take it with a grain of salt.</p>
-<p>There are many programming paradigms and many approach to code, not including the best practices that are also dynamic,
-things are moving fast 🏎 💨!</p>
-<p>Hopefully having these principles in mind would help us to:</p>
+    <p>I hope this post can be something to be held on when starting a new project, when there's a split arguments on
+how to approach things in programming, framework and tool it is. Pick whatever you think suitable for your project &amp; team, take it with a grain of salt.</p>
+<p>There are many programming paradigms, many approach to code, new tools and frameworks, well things are moving fast 🏎 💨!</p>
+<p>Having these principles in mind has helped my team and me to:</p>
 <ul>
 <li>Make programming decisions: how to structure code, error handling (error message) &amp; patterns to use.</li>
-<li>Decide when to invest more in documentations.</li>
 <li>Decide When should we opt-in for hack and what's the proper way to apply &quot;quickfix&quot;.</li>
+<li>Decide when to invest more in documentations.</li>
 </ul>
 <h3 id="readability"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#readability" aria-label="Anchor link for: readability">#</a>
@@ -125,11 +123,15 @@ Modularity</h3>
 that supports the change. Beware that in practice, you do not have to abstract everything,
 too much abstraction would be make it less readable and harder to understand. It
 would make the most sense to put abstraction on top of something that would likely to change or
-on top of something that already has multiple implementation in beginning. One easy example: suppose we want to send
+on top of something that already has multiple implementation in beginning.</p>
+<p>One easy example: suppose we want to send
 SMS(maybe for MFA use cases - OTP) to our users, putting an interface in front of the actual vendor
 implementation might be a good idea, why? Let's start with the business use case, MFA is a critical security feature, having a good OTP deliver rate is crucial for the user experience, we
 can't rely only to 1 vendor, it's important to have at least another SMS vendor backup in case the the primary vendor is down or there are other problems (latency drops or the delivery rate drops).
 If we put an interface for it, it's easy to switch. The switch strategy might vary, it could be via a circuit breaker mechanism or just a simple remote config to decide which SMS vendor to use.</p>
+<p>There's a signal that you could use to measure modularity, if it's relatively easy
+to write unit tests then most probably your code is modular enough because it's easy
+to inject dependencies (mock objects in unit test context) and refactor things.</p>
 <h3 id="debuggability"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#debuggability" aria-label="Anchor link for: debuggability">#</a>
 Debuggability</h3>
