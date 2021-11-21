@@ -61,25 +61,25 @@ that you need to scroll both sides a lot, easier to just scroll vertically right
 
 
 ### Modularity
-Modular means it's easy to plug & change something because there's a balanced abstraction
-that supports the change. Beware that in practice, you do not have to abstract everything,
+Modular means it's easy to plug & change something because there's a _balanced abstraction_. Beware that in practice, you do not have to abstract everything,
 too much abstraction would be make it less readable and harder to understand. It
-would make the most sense to put abstraction on top of something that would likely to change or
-on top of something that already has multiple implementation in beginning.
+would make the most sense to put abstraction in front of something that would likely to change or
+something that already has/will have multiple implementations.
 
 One easy example: suppose we want to send
 SMS(maybe for MFA use cases - OTP) to our users, putting an interface in front of the actual vendor
-implementation might be a good idea, why? Let's start with the business use case, MFA is a critical security feature, having a good OTP deliver rate is crucial for the user experience, we
+implementation might be a good idea, why? Let's start with the business use case, MFA is a critical security feature, having a good OTP delivery rate is crucial for the user experience, we
 can't rely only to 1 vendor, it's important to have at least another SMS vendor backup in case the the primary vendor is down or there are other problems (latency drops or the delivery rate drops).
 If we put an interface for it, it's easy to switch. The switch strategy might vary, it could be via a circuit breaker mechanism or just a simple remote config to decide which SMS vendor to use.
+A bit intermezzo, use [TOTP might be more secure than OTP](https://jumpcloud.com/blog/totp-sms-2fa).
 
 There's a signal that you could use to measure modularity, if it's relatively easy
 to write unit tests then most probably your code is modular enough because it's easy
 to inject dependencies (mock objects in unit test context) and refactor things.
 
 ### Debuggability
-No one wants their code to throw error, but life happens. The easier it is to debug the faster it is to resolve the problem.
-Some of the important things that improves debuggability
+Please note that this part needs to be supported with observability which is part of
+system monitoring and outside the scope of this post, this section assumes you have reasonable observability of your system. No one wants their code to throw errors, but life happens. The easier it is to debug the error, the faster it is to resolve the problem.
+Some of the key points to measure your debuggability:
+* Error message, do we construct meaningful error message? or is it just printing `"System Error"`?
 * Error handling, do we let errors go into limbo? Do we have a clear separation on what's actually considered as an error?
-* Error message, do we construct meaningful error message? or is it just printing `"Error"`?
-* Error observability, how easy it is to notice error on production and how easy it is to see the error log? Do we have alerting of error rate?
