@@ -64,13 +64,14 @@
   </div>
 
   <div class="post-body">
-    <p>I hope this post can be something to be held on when starting a new project, when there's a split arguments on
-how to approach things in programming, framework and tool it is. Pick whatever you think suitable for your project &amp; team, take it with a grain of salt.</p>
-<p>There are many programming paradigms, many approach to code, new tools and frameworks, well things are moving fast 🏎 💨!</p>
-<p>Having these principles in mind has helped my team and me to:</p>
+    <p>There are many programming paradigms, many approaches to code, new tools and frameworks, well things are moving fast 🏎 💨!</p>
+<p>I hope this post can be something to be held on when considering programming and development standard.
+Usually the considerations will be useful when starting a new project, when there are arguments on
+how to approach things in development,, which tool/framework to use. Pick whatever you think is suitable for your project &amp; team, take it with a grain of salt.</p>
+<p>Having these principles in mind has helped my team to:</p>
 <ul>
-<li>Make programming decisions: how to structure code, error handling (error message) &amp; patterns to use.</li>
-<li>Decide When should we opt-in for hack and what's the proper way to apply &quot;quickfix&quot;.</li>
+<li>Make programming decisions: how to structure code, how to handle errors.</li>
+<li>Decide when should we opt-in for a hack and what's the minimum proper way to apply a &quot;quickfix&quot;.</li>
 <li>Decide when to invest more in documentations.</li>
 </ul>
 <h3 id="readability"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
@@ -78,25 +79,25 @@ how to approach things in programming, framework and tool it is. Pick whatever y
 Readability</h3>
 <p>Readability means it's easy to understand, not just easy to read. <code>Easy to understand</code> meaning might vary
 because each company/team has their own engineering skills standard. Having a readability standard set earlier will boost
-team productivity in the longer run (cut communication cost, reduce time needed to understand the code, etc) and improve engineer onboarding process.</p>
+team productivity in the longer run, it'll cut communication cost, reduce time needed to understand the code and hence improve engineer onboarding process.</p>
 <h5 id="readability-static-type"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#readability-static-type" aria-label="Anchor link for: readability-static-type">#</a>
-Readability - static type</h5>
+[Readability] Static type</h5>
 <p>If possible it might be worth the investment to use statically typed language. Code is meant to be read more than it is written,
-static typing will improve readability and combined with compiler will help you eliminate most of the compile-time type errors, this would also reduce
-the amount of unit testing. Practically, you don't need to test data type, unless your project requires you to do a lot runtime type check).</p>
+static typing will improve readability. Compiler will help you eliminate most of the compile-time type errors, this would simplify unit testing, you don't need to test data type unless your project requires you to do a lot runtime type check which is might be another sign of a problem.</p>
 <h5 id="readability-code-comment"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#readability-code-comment" aria-label="Anchor link for: readability-code-comment">#</a>
-Readability - code comment</h5>
-<p>Code comment meant to be used as explanation of some approach,  he goal is to help your peers and future you to understand your code
-either in code review or when we want to revisit the code in the future. Cases where code comment would benefit the most:
-A. Complex logic
-B. Hack/quickfix, this would reduce confusion a lot and make it explicit that the approach that's considered a &quot;hackfix&quot; is intended.</p>
+[Readability] Code comment</h5>
+<p>Code comment meant to be used as explanation of some approach, usually explaining &quot;why&quot; certain logic is set that way.
+The goal is to help your peers and &quot;future you&quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:
+A. Complex logic.
+B. Motivation regarding unorthodox approach.
+C. Hack/quickfix, this would reduce confusion a lot and make it explicit that the approach that's considered a &quot;hackfix&quot; is intended.</p>
 <h5 id="readability-be-explicit-enough"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#readability-be-explicit-enough" aria-label="Anchor link for: readability-be-explicit-enough">#</a>
-Readability - be explicit enough</h5>
+[Readability] Be explicit enough</h5>
 <p>Be explicit enough, set the acceptable standard of explicitness with your team.
-One example that we could use is to kind of tie naming with the datatype:
+Obvious examples would be related with variable naming:
 A. Use plural for list, vector or array type.</p>
 <pre><code>let emails: Vec&lt;String&gt;;
 let users: Vec&lt;User&gt;;
@@ -104,43 +105,46 @@ let people: Vec&lt;Person&gt;;
 </code></pre>
 <p>B. Use <code>{value}_by_{type}</code> naming pattern for key-value data structure (hashmap, btreemap, dictionary, etc)</p>
 <pre><code>// You'll get a user given an email
-let userByEmail: HashMap&lt;String, User&gt;
+let userByEmail: HashMap&lt;String, User&gt;;
 
-// You'll get users given name
-let usersByName: HashMap&lt;String, Vec&lt;User&gt;&gt;;
+// You'll get users given a name, maybe you're grouping users by their first name
+let usersByFirstName: HashMap&lt;String, Vec&lt;User&gt;&gt;;
 </code></pre>
-<h5 id="readability-set-a-limit-on-maximum-number-of-characters-per-line"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#readability-set-a-limit-on-maximum-number-of-characters-per-line" aria-label="Anchor link for: readability-set-a-limit-on-maximum-number-of-characters-per-line">#</a>
-Readability - set a limit on maximum number of characters per line.</h5>
+<h5 id="readability-limit-on-maximum-number-of-characters-per-line"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#readability-limit-on-maximum-number-of-characters-per-line" aria-label="Anchor link for: readability-limit-on-maximum-number-of-characters-per-line">#</a>
+[Readability] Limit on maximum number of characters per line.</h5>
 <p>Imagine you're reading a book, you need to scroll both vertically &amp; horizontally
-to read the paragraph because there's no maximum number of characters per line,
+to read a paragraph because there's no maximum number of characters per line,
 would it be a good user experience? The same goes for writing code, imagine a line of code
-that you need to scroll both sides a lot, easier to just scroll vertically right?</p>
+that you need to scroll both directions a lot, easier to just scroll vertically right?</p>
 <h3 id="modularity"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#modularity" aria-label="Anchor link for: modularity">#</a>
 Modularity</h3>
-<p>Modular means it's easy to plug &amp; change something because there's a balanced abstraction
-that supports the change. Beware that in practice, you do not have to abstract everything,
+<p>Modular means it's easy to plug &amp; change something because there's a <em>balanced abstraction</em>. Note that in practice, you do not have to abstract everything,
 too much abstraction would be make it less readable and harder to understand. It
 would make the most sense to put abstraction on top of something that would likely to change or
-on top of something that already has multiple implementation in beginning.</p>
+something that already has/will have multiple implementations.</p>
 <p>One easy example: suppose we want to send
-SMS(maybe for MFA use cases - OTP) to our users, putting an interface in front of the actual vendor
-implementation might be a good idea, why? Let's start with the business use case, MFA is a critical security feature, having a good OTP deliver rate is crucial for the user experience, we
+SMS(maybe for MFA use cases - OTP) to our users, putting an interface on top of the actual vendor
+implementation might be a good idea, why? Let's start with the business use case, MFA is a critical security feature, having a good OTP delivery rate is crucial for the user experience, we
 can't rely only to 1 vendor, it's important to have at least another SMS vendor backup in case the the primary vendor is down or there are other problems (latency drops or the delivery rate drops).
-If we put an interface for it, it's easy to switch. The switch strategy might vary, it could be via a circuit breaker mechanism or just a simple remote config to decide which SMS vendor to use.</p>
-<p>There's a signal that you could use to measure modularity, if it's relatively easy
+If we put an interface for it, it's easy to switch. The switch strategy might vary, it could be via a circuit breaker mechanism or just a simple remote config to decide which SMS vendor to use.
+A bit intermezzo, use <a href="https://jumpcloud.com/blog/totp-sms-2fa">TOTP might be more secure than OTP</a>.</p>
+<p>There's a signal that you could use to measure modularity, if it's <em>relatively easy</em>
 to write unit tests then most probably your code is modular enough because it's easy
-to inject dependencies (mock objects in unit test context) and refactor things.</p>
+to inject dependencies (mock objects in unit test context) and hence will make it easier to refactor things if needed.</p>
 <h3 id="debuggability"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#debuggability" aria-label="Anchor link for: debuggability">#</a>
 Debuggability</h3>
-<p>No one wants their code to throw error, but life happens. The easier it is to debug the faster it is to resolve the problem.
-Some of the important things that improves debuggability</p>
+<p>Please note that this part needs to be supported with observability which is part of
+system monitoring and outside the scope of this post, this section assumes you have reasonable observability of your system. No one wants their code to throw errors, but life happens.
+The easier it is to debug the error, the faster it is to resolve the problem.
+Some of the key points to measure your debuggability:</p>
 <ul>
+<li>How easy is it to be alerted when there are errors. Do you know your error rate in production?</li>
+<li>How easy is it to prioritize error? We should be able to separate errors by its severity, errors that block users to do payment should be more important than errors related with changing username.</li>
 <li>Error handling, do we let errors go into limbo? Do we have a clear separation on what's actually considered as an error?</li>
-<li>Error message, do we construct meaningful error message? or is it just printing <code>&quot;Error&quot;</code>?</li>
-<li>Error observability, how easy it is to notice error on production and how easy it is to see the error log? Do we have alerting of error rate?</li>
+<li>Error message, do we construct meaningful error message? or is it just printing <code>&quot;System Error&quot;</code>?</li>
 </ul>
 
   </div>
