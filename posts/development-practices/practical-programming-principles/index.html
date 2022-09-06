@@ -83,27 +83,34 @@ team productivity in the longer run, it'll cut communication cost, reduce time n
 <h5 id="readability-static-type"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#readability-static-type" aria-label="Anchor link for: readability-static-type">#</a>
 [Readability] Static type</h5>
-<p>If possible it might be worth the investment to use statically typed language. Code is meant to be read more than it is written,
-static typing will improve readability. Compiler will help you eliminate most of the compile-time type errors, this would simplify unit testing, you don't need to test data type unless your project requires you to do a lot runtime type check which is might be another sign of a problem.</p>
+<p>It might be worth the investment to use statically typed language. Code is meant to be read more than it is written,
+static typing will improve readability. Compiler will help you eliminate most of the compile-time type errors, this will simplify unit testing,
+you don't need to test data type unless your project requires you to do a lot of runtime type checking, too many runtime checking could be be sign of another problem though (depending on project goals).</p>
 <h5 id="readability-code-comment"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#readability-code-comment" aria-label="Anchor link for: readability-code-comment">#</a>
 [Readability] Code comment</h5>
-<p>Code comment meant to be used as explanation of some approach, usually explaining &quot;why&quot; certain logic is set that way.
-The goal is to help your peers and &quot;future you&quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:
-A. Complex logic.
-B. Motivation regarding unorthodox approach.
-C. Hack/quickfix, this would reduce confusion a lot and make it explicit that the approach that's considered a &quot;hackfix&quot; is intended.</p>
-<h5 id="readability-be-explicit-enough"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#readability-be-explicit-enough" aria-label="Anchor link for: readability-be-explicit-enough">#</a>
-[Readability] Be explicit enough</h5>
-<p>Be explicit enough, set the acceptable standard of explicitness with your team.
-Obvious examples would be related with variable naming:
-A. Use plural for list, vector or array type.</p>
+<p>Code comment usually is really useful to explain &quot;why&quot; certain logic is set that way, this will cut communication cost and make debugging a lot easier.
+The goal is to help your peers and &quot;future you&quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:</p>
+<ul>
+<li>Complex logic.</li>
+<li>Motivation regarding unorthodox approach.</li>
+<li>Hack/quickfix, this would reduce confusion a lot and make it explicit that the approach that's considered a &quot;hackfix&quot; is intended.</li>
+</ul>
+<h5 id="readability-explicit-standard"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#readability-explicit-standard" aria-label="Anchor link for: readability-explicit-standard">#</a>
+[Readability] Explicit standard</h5>
+<p>Set an acceptable standard of explicitness with your team.
+One of the most obvious example is to agree on how to name variables.</p>
+<ul>
+<li>Use plural for list, vector or array type.</li>
+</ul>
 <pre><code>let emails: Vec&lt;String&gt;;
 let users: Vec&lt;User&gt;;
 let people: Vec&lt;Person&gt;;
 </code></pre>
-<p>B. Use <code>{value}_by_{type}</code> naming pattern for key-value data structure (hashmap, btreemap, dictionary, etc)</p>
+<ul>
+<li>Use <code>{value}_by_{type}</code> naming pattern for key-value data structure (hashmap, btreemap, dictionary, etc)</li>
+</ul>
 <pre><code>// You'll get a user given an email
 let userByEmail: HashMap&lt;String, User&gt;;
 
