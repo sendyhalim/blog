@@ -25,27 +25,30 @@ because each company/team has their own engineering skills standard. Having a re
 team productivity in the longer run, it'll cut communication cost, reduce time needed to understand the code and hence improve engineer onboarding process.
 
 ##### [Readability] Static type
-If possible it might be worth the investment to use statically typed language. Code is meant to be read more than it is written,
-static typing will improve readability. Compiler will help you eliminate most of the compile-time type errors, this would simplify unit testing, you don't need to test data type unless your project requires you to do a lot runtime type check which is might be another sign of a problem.
+It might be worth the investment to use statically typed language. Code is meant to be read more than it is written,
+static typing will improve readability. Compiler will help you eliminate most of the compile-time type errors, this will simplify unit testing,
+you don't need to test data type unless your project requires you to do a lot of runtime type checking, too many runtime checking could be be sign of another problem though (depending on project goals).
 
 ##### [Readability] Code comment
-Code comment meant to be used as explanation of some approach, usually explaining "why" certain logic is set that way.
+Code comment usually is really useful to explain "why" certain logic is set that way, this will cut communication cost and make debugging a lot easier.
 The goal is to help your peers and "future you" to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:
-A. Complex logic.
-B. Motivation regarding unorthodox approach.
-C. Hack/quickfix, this would reduce confusion a lot and make it explicit that the approach that's considered a "hackfix" is intended.
 
-##### [Readability] Be explicit enough
-Be explicit enough, set the acceptable standard of explicitness with your team.
-Obvious examples would be related with variable naming:
-A. Use plural for list, vector or array type.
+* Complex logic.
+* Motivation regarding unorthodox approach.
+* Hack/quickfix, this would reduce confusion a lot and make it explicit that the approach that's considered a "hackfix" is intended.
+
+##### [Readability] Explicit standard
+Set an acceptable standard of explicitness with your team.
+One of the most obvious example is to agree on how to name variables.
+
+* Use plural for list, vector or array type.
 ```rust
 let emails: Vec<String>;
 let users: Vec<User>;
 let people: Vec<Person>;
 ```
 
-B. Use `{value}_by_{type}` naming pattern for key-value data structure (hashmap, btreemap, dictionary, etc)
+* Use `{value}_by_{type}` naming pattern for key-value data structure (hashmap, btreemap, dictionary, etc)
 ```rust
 // You'll get a user given an email
 let userByEmail: HashMap<String, User>;
