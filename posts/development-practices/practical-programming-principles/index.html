@@ -78,27 +78,27 @@ how to approach things in development,, which tool/framework to use. Pick whatev
 <a class="zola-anchor" href="#readability" aria-label="Anchor link for: readability">#</a>
 Readability</h3>
 <p>Readability means it's easy to understand, not just easy to read. <code>Easy to understand</code> meaning might vary
-because each company/team has their own engineering skills standard. Having a readability standard set earlier will boost
-team productivity in the longer run, it'll cut communication cost, reduce time needed to understand the code and hence improve engineer onboarding process.</p>
-<h5 id="readability-static-type"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#readability-static-type" aria-label="Anchor link for: readability-static-type">#</a>
-[Readability] Static type</h5>
+because each company/team has different engineering skills standard due to different skillset requirements as well. Having a readability standard set earlier will boost
+team productivity in the longer run, it'll cut communication cost, reduce the time needed to understand the code, hence improve the team onboarding process.</p>
+<h5 id="readability-statically-typed-language"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#readability-statically-typed-language" aria-label="Anchor link for: readability-statically-typed-language">#</a>
+[Readability] Statically typed language</h5>
 <p>It might be worth the investment to use statically typed language. Code is meant to be read more than it is written,
-static typing will improve readability. Compiler will help you eliminate most of the compile-time type errors, this will simplify unit testing,
+static typing will improve readability. The compiler will help you eliminate most of the compile-time type errors, which will simplify code reviews, unit testing.
 you don't need to test data type unless your project requires you to do a lot of runtime type checking, too many runtime checking could be be sign of another problem though (depending on project goals).</p>
-<h5 id="readability-code-comment"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#readability-code-comment" aria-label="Anchor link for: readability-code-comment">#</a>
-[Readability] Code comment</h5>
-<p>Code comment usually is really useful to explain &quot;why&quot; certain logic is set that way, this will cut communication cost and make debugging a lot easier.
+<h5 id="readability-invest-in-code-comments"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#readability-invest-in-code-comments" aria-label="Anchor link for: readability-invest-in-code-comments">#</a>
+[Readability] Invest in code comments</h5>
+<p>Code comments can be used to explain &quot;why&quot; certain logic is set that way, this will cut communication cost and make debugging a lot easier.
 The goal is to help your peers and &quot;future you&quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:</p>
 <ul>
 <li>Complex logic.</li>
 <li>Motivation regarding unorthodox approach.</li>
-<li>Hack/quickfix, this would reduce confusion a lot and make it explicit that the approach that's considered a &quot;hackfix&quot; is intended.</li>
+<li>Hack/quick fix, this would reduce confusion a lot and make it explicit that the approach that's considered a &quot;hack&quot; is intended.</li>
 </ul>
-<h5 id="readability-explicit-standard"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#readability-explicit-standard" aria-label="Anchor link for: readability-explicit-standard">#</a>
-[Readability] Explicit standard</h5>
+<h5 id="readability-standard-on-variable-names"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#readability-standard-on-variable-names" aria-label="Anchor link for: readability-standard-on-variable-names">#</a>
+[Readability] Standard on variable names</h5>
 <p>Set an acceptable standard of explicitness with your team.
 One of the most obvious example is to agree on how to name variables.</p>
 <ul>
@@ -123,7 +123,7 @@ let usersByFirstName: HashMap&lt;String, Vec&lt;User&gt;&gt;;
 <p>Imagine you're reading a book, you need to scroll both vertically &amp; horizontally
 to read a paragraph because there's no maximum number of characters per line,
 would it be a good user experience? The same goes for writing code, imagine a line of code
-that you need to scroll both directions a lot, easier to just scroll vertically right?</p>
+that you need to scroll both directions a lot, wouldn't it be easier to just scroll vertically?</p>
 <h3 id="modularity"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#modularity" aria-label="Anchor link for: modularity">#</a>
 Modularity</h3>
@@ -140,18 +140,30 @@ A bit intermezzo, use <a href="https://jumpcloud.com/blog/totp-sms-2fa">TOTP mig
 <p>There's a signal that you could use to measure modularity, if it's <em>relatively easy</em>
 to write unit tests then most probably your code is modular enough because it's easy
 to inject dependencies (mock objects in unit test context) and hence will make it easier to refactor things if needed.</p>
-<h3 id="debuggability"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#debuggability" aria-label="Anchor link for: debuggability">#</a>
-Debuggability</h3>
-<p>Please note that this part needs to be supported with observability which is part of
-system monitoring and outside the scope of this post, this section assumes you have reasonable observability of your system. No one wants their code to throw errors, but life happens.
-The easier it is to debug the error, the faster it is to resolve the problem.
-Some of the key points to measure your debuggability:</p>
+<h3 id="error-handling"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#error-handling" aria-label="Anchor link for: error-handling">#</a>
+Error Handling</h3>
+<p>Software breaks all the time, preferably you want to be able to spot errors before your users do.
+When you got error reports you also want to be able to debug it.</p>
+<h4 id="error-handling-observability"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#error-handling-observability" aria-label="Anchor link for: error-handling-observability">#</a>
+[Error Handling] Observability</h4>
+<p>Make sure errors do not go into limbo, you want to be able to plot and gauge error rates over time.
+It should be easy to spot as well.</p>
 <ul>
-<li>How easy is it to be alerted when there are errors. Do you know your error rate in production?</li>
-<li>How easy is it to prioritize error? We should be able to separate errors by its severity, errors that block users to do payment should be more important than errors related with changing username.</li>
-<li>Error handling, do we let errors go into limbo? Do we have a clear separation on what's actually considered as an error?</li>
-<li>Error message, do we construct meaningful error message? or is it just printing <code>&quot;System Error&quot;</code>?</li>
+<li>How easy is it to be alerted when there are errors?</li>
+<li>Can you see the error logs? How easy is it to see it?</li>
+<li>Do we have a clear separation on what's considered an error? Do not log informational messages as error</li>
+</ul>
+<h4 id="error-handling-debuggability"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#error-handling-debuggability" aria-label="Anchor link for: error-handling-debuggability">#</a>
+[Error Handling] Debuggability</h4>
+<p>The easier it is to debug the error, the faster it is to resolve the problem, your time should be spent
+mostly on building products/software instead of debugging.</p>
+<p>Some of the key points to measure your debuggability:</p>
+<ul>
+<li>How easy is it to prioritize errors? We should be able to separate errors by their severity, errors that block users to complete payment should be more important than errors related to the feature to change the username.</li>
+<li>Error message, do we construct meaningful error messages? or is it just printing <code>&quot;System Error&quot;</code>?</li>
 </ul>
 
   </div>
