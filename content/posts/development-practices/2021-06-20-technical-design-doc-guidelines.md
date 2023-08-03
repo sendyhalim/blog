@@ -17,10 +17,9 @@ The main principle is simple just like writing code, the easier it is to underst
 
 
 #### Start with background
-Background section should help people understand the context, generally you can show high level
-overview of how a specific feature works.
+Background section should help people understand the context of the document, generally you can show a high level
+overview of how certain problems are currently solved, how a certain feature works, etc.
 
-#### Current State
 Showing an overview of the current state will help people understand the background a bit deeper, if there's a current implementation/flow then show it, and make it explicit what could be improved from the current flow.
 Feel free to put links to other existing docs as well. A diagram flow will help people to visualize and catch up quickly.
 Free tools that you can use:
@@ -29,24 +28,33 @@ Free tools that you can use:
 
 
 #### Problem statement
-Explain why you're proposing the initiative. Why does it matter?
-What impact will it bring?
+This section states the problem with the current state, it should emphasize the importance of solving that problem and show why it matters.
 
-Some questions that maybe can help you to answer the impact:
+Some key points that maybe can guide you:
+* Are you solving a specific user problem where there are N users that are impacted?
+* The current process might have pain points and sometimes users are just numb to the "pain" up until someone points it out.
 * Will it increase the company's business metric either directly or indirectly? If it can save cost, any estimation by what %?
 * Are you investing for future needs? Why does that specific investment matter?
-* The current process that we have might have pain points and you want to improve it to increase employee/team productivity.
+
+
+#### Requirements
+The requirements section set boundaries on the solution, it helps you to filter solutions that can be applied.
+Typically there will be specific functionalities/features that the solutions must provide.
 
 
 #### Show the available options/solutions that we have
-There would be more than one solution that we can apply to solve the problem, it's preferable to lay out the available options that we have.
-Each solution should have pros and cons, start with the least preferable solution and iterate to the most preferable solution.
-It'll make it easier for us to get back here quickly just in case we pursued the wrong solution.
+There would be more than one solution that we can apply to meet the requirements, it's preferable to lay out the available options that we have.
+Start with the least preferable solution and list down its pros and cons, progressive move to the most preferable solution.
+
+Make it clear why we're implementing that specific solution, and why the others won't work as well as the one that you propose.
+
+Showing the available solutions will make it easier for us to get back here quickly just in case we pursued the wrong solution.
 
 
-#### Propose a solution
-Propose a solution to solve the problem, and make it clear why we're implementing that specific solution.
-Why the others won't work as well as the one that you propose?
+#### What are the success metrics
+Decide on the success metrics that can be monitored.
+For example, if you're implementing a UX improvement, the success metric should be something related to the feature funnel, one thing that you could do is add trackers to the feature funnel and then query the data through an analytical database,
+or just reuse existing funnel dashboard (if any).
 
 
 #### What are the action items & timelines
