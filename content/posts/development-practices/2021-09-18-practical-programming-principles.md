@@ -21,23 +21,23 @@ Having these principles in mind has helped my team to:
 
 ### Readability
 Readability means it's easy to understand, not just easy to read. `Easy to understand` meaning might vary
-because each company/team has their own engineering skills standard. Having a readability standard set earlier will boost
-team productivity in the longer run, it'll cut communication cost, reduce time needed to understand the code and hence improve engineer onboarding process.
+because each company/team has different engineering skills standard due to different skillset requirements as well. Having a readability standard set earlier will boost
+team productivity in the longer run, it'll cut communication cost, reduce the time needed to understand the code, hence improve the team onboarding process.
 
-##### [Readability] Static type
+##### [Readability] Statically typed language
 It might be worth the investment to use statically typed language. Code is meant to be read more than it is written,
-static typing will improve readability. Compiler will help you eliminate most of the compile-time type errors, this will simplify unit testing,
+static typing will improve readability. The compiler will help you eliminate most of the compile-time type errors, which will simplify code reviews, unit testing.
 you don't need to test data type unless your project requires you to do a lot of runtime type checking, too many runtime checking could be be sign of another problem though (depending on project goals).
 
-##### [Readability] Code comment
-Code comment usually is really useful to explain "why" certain logic is set that way, this will cut communication cost and make debugging a lot easier.
+##### [Readability] Invest in code comments
+Code comments can be used to explain "why" certain logic is set that way, this will cut communication cost and make debugging a lot easier.
 The goal is to help your peers and "future you" to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:
 
 * Complex logic.
 * Motivation regarding unorthodox approach.
-* Hack/quickfix, this would reduce confusion a lot and make it explicit that the approach that's considered a "hackfix" is intended.
+* Hack/quick fix, this would reduce confusion a lot and make it explicit that the approach that's considered a "hack" is intended.
 
-##### [Readability] Explicit standard
+##### [Readability] Standard on variable names
 Set an acceptable standard of explicitness with your team.
 One of the most obvious example is to agree on how to name variables.
 
@@ -61,7 +61,7 @@ let usersByFirstName: HashMap<String, Vec<User>>;
 Imagine you're reading a book, you need to scroll both vertically & horizontally
 to read a paragraph because there's no maximum number of characters per line,
 would it be a good user experience? The same goes for writing code, imagine a line of code
-that you need to scroll both directions a lot, easier to just scroll vertically right?
+that you need to scroll both directions a lot, wouldn't it be easier to just scroll vertically?
 
 
 ### Modularity
@@ -81,12 +81,23 @@ There's a signal that you could use to measure modularity, if it's _relatively e
 to write unit tests then most probably your code is modular enough because it's easy
 to inject dependencies (mock objects in unit test context) and hence will make it easier to refactor things if needed.
 
-### Debuggability
-Please note that this part needs to be supported with observability which is part of
-system monitoring and outside the scope of this post, this section assumes you have reasonable observability of your system. No one wants their code to throw errors, but life happens.
-The easier it is to debug the error, the faster it is to resolve the problem.
+### Error Handling
+Software breaks all the time, preferably you want to be able to spot errors before your users do.
+When you got error reports you also want to be able to debug it.
+
+#### [Error Handling] Observability
+Make sure errors do not go into limbo, you want to be able to plot and gauge error rates over time.
+It should be easy to spot as well.
+
+* How easy is it to be alerted when there are errors?
+* Can you see the error logs? How easy is it to see it?
+* Do we have a clear separation on what's considered an error? Do not log informational messages as error
+
+
+#### [Error Handling] Debuggability
+The easier it is to debug the error, the faster it is to resolve the problem, your time should be spent
+mostly on building products/software instead of debugging.
+
 Some of the key points to measure your debuggability:
-* How easy is it to be alerted when there are errors. Do you know your error rate in production?
-* How easy is it to prioritize error? We should be able to separate errors by its severity, errors that block users to do payment should be more important than errors related with changing username.
-* Error handling, do we let errors go into limbo? Do we have a clear separation on what's actually considered as an error?
-* Error message, do we construct meaningful error message? or is it just printing `"System Error"`?
+* How easy is it to prioritize errors? We should be able to separate errors by their severity, errors that block users to complete payment should be more important than errors related to the feature to change the username.
+* Error message, do we construct meaningful error messages? or is it just printing `"System Error"`?
