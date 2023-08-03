@@ -68,11 +68,8 @@ The main principle is simple just like writing code, the easier it is to underst
 <h4 id="start-with-background"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#start-with-background" aria-label="Anchor link for: start-with-background">#</a>
 Start with background</h4>
-<p>Background section should help people understand the context, generally you can show high level
-overview of how a specific feature works.</p>
-<h4 id="current-state"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#current-state" aria-label="Anchor link for: current-state">#</a>
-Current State</h4>
+<p>Background section should help people understand the context of the document, generally you can show a high level
+overview of how certain problems are currently solved, how a certain feature works, etc.</p>
 <p>Showing an overview of the current state will help people understand the background a bit deeper, if there's a current implementation/flow then show it, and make it explicit what could be improved from the current flow.
 Feel free to put links to other existing docs as well. A diagram flow will help people to visualize and catch up quickly.
 Free tools that you can use:</p>
@@ -83,25 +80,32 @@ Free tools that you can use:</p>
 <h4 id="problem-statement"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#problem-statement" aria-label="Anchor link for: problem-statement">#</a>
 Problem statement</h4>
-<p>Explain why you're proposing the initiative. Why does it matter?
-What impact will it bring?</p>
-<p>Some questions that maybe can help you to answer the impact:</p>
+<p>This section states the problem with the current state, it should emphasize the importance of solving that problem and show why it matters.</p>
+<p>Some key points that maybe can guide you:</p>
 <ul>
+<li>Are you solving a specific user problem where there are N users that are impacted?</li>
+<li>The current process might have pain points and sometimes users are just numb to the &quot;pain&quot; up until someone points it out.</li>
 <li>Will it increase the company's business metric either directly or indirectly? If it can save cost, any estimation by what %?</li>
 <li>Are you investing for future needs? Why does that specific investment matter?</li>
-<li>The current process that we have might have pain points and you want to improve it to increase employee/team productivity.</li>
 </ul>
+<h4 id="requirements"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#requirements" aria-label="Anchor link for: requirements">#</a>
+Requirements</h4>
+<p>The requirements section set boundaries on the solution, it helps you to filter solutions that can be applied.
+Typically there will be specific functionalities/features that the solutions must provide.</p>
 <h4 id="show-the-available-options-solutions-that-we-have"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#show-the-available-options-solutions-that-we-have" aria-label="Anchor link for: show-the-available-options-solutions-that-we-have">#</a>
 Show the available options/solutions that we have</h4>
-<p>There would be more than one solution that we can apply to solve the problem, it's preferable to lay out the available options that we have.
-Each solution should have pros and cons, start with the least preferable solution and iterate to the most preferable solution.
-It'll make it easier for us to get back here quickly just in case we pursued the wrong solution.</p>
-<h4 id="propose-a-solution"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#propose-a-solution" aria-label="Anchor link for: propose-a-solution">#</a>
-Propose a solution</h4>
-<p>Propose a solution to solve the problem, and make it clear why we're implementing that specific solution.
-Why the others won't work as well as the one that you propose?</p>
+<p>There would be more than one solution that we can apply to meet the requirements, it's preferable to lay out the available options that we have.
+Start with the least preferable solution and list down its pros and cons, progressive move to the most preferable solution.</p>
+<p>Make it clear why we're implementing that specific solution, and why the others won't work as well as the one that you propose.</p>
+<p>Showing the available solutions will make it easier for us to get back here quickly just in case we pursued the wrong solution.</p>
+<h4 id="what-are-the-success-metrics"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#what-are-the-success-metrics" aria-label="Anchor link for: what-are-the-success-metrics">#</a>
+What are the success metrics</h4>
+<p>Decide on the success metrics that can be monitored.
+For example, if you're implementing a UX improvement, the success metric should be something related to the feature funnel, one thing that you could do is add trackers to the feature funnel and then query the data through an analytical database,
+or just reuse existing funnel dashboard (if any).</p>
 <h4 id="what-are-the-action-items-timelines"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#what-are-the-action-items-timelines" aria-label="Anchor link for: what-are-the-action-items-timelines">#</a>
 What are the action items &amp; timelines</h4>
