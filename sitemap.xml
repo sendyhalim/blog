@@ -38,11 +38,6 @@
         </url>
     
         <url>
-            <loc>https://sendyhalim.github.io/blog/posts/getting-into-tech/</loc>
-            
-        </url>
-    
-        <url>
             <loc>https://sendyhalim.github.io/blog/posts/git/</loc>
             
         </url>
@@ -63,6 +58,18 @@
             <loc>https://sendyhalim.github.io/blog/posts/life/setting-up-a-structure-on-problem-solving-and-life/</loc>
             
                 <lastmod>2023-08-05T14:39:00+07:00</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/software-engineering/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://sendyhalim.github.io/blog/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/</loc>
+            
+                <lastmod>2023-08-12T23:30:30+07:00</lastmod>
             
         </url>
     
