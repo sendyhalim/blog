@@ -10,5 +10,9 @@ build_search_index = true
 # We want to use our own highlighter
 highlight_code = false
 
+taxonomies = [
+  {name = "tags", feed = true},
+]
+
 [extra]
 # Put all your custom variables here

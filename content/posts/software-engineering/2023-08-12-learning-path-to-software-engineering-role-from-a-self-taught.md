@@ -32,42 +32,42 @@ The learning path that I'm recommending might take ~12 months with dedication, a
 * Building a web server, a web server is responsible to process, store, and serve user website data. Imagine a user registration functionality where users can input email and password, the data will be processed and stored on the web server side.
 
 ### Programming Fundamentals
-##### Why
+#### Why
 Programming fundamentals can be applied to most of the software that you want to build, regardless of the programming language that you use.
 In fact, writing Excel/GoogleSheet formulas is similar to programming, the formulas are instructions to Excel with cell ranges as its input, and programming code is machine instructions to the computer. It's ok to invest a bit more time in fundamentals, based on my experience, you need to regularly revisit the fundamentals.
 
-##### Tech to learn
+#### Tech to learn
 Any general purpose programming language is fine,  I think `Python` is the most practical way to get started with programming, with `Python` alone you can build many things from games, software, web servers, and many more! I started with `C++`, I would start with Python if I knew the underlying programming fundamentals are mostly the same, the time learning and tinkering with `C++` syntaxes and features would have been better to be invested in other fundamentals such as operating systems, computer networking, database.
 
-##### Learning sources
+#### Learning sources
 Any beginner Python books focusing on the programming basics.
 
 ### Building a website
-###### Why
+#### Why
 I recommend to learn building a website first instead of building a mobile app because it’s easier to iterate and test. The experience from building a website and some the fundamentals are aplicable to mobile apps as well.
 
-###### Tech to learn
+#### Tech to learn
 * Basic HTML
 * Basic CSS, learn what's the role of CSS and how to do basic styling.
 * Basic Javascript, same as CSS but instead of styling learn how to manipulate HTML with javascript.
 
-###### Learning sources
+#### Learning sources
 * Any basic html books.
 * A huge plus point if you’re interested in CSS & Javascript. Using video as learning sources can help you to visualize and learn CSS & Javascript since mostly it's UI based.
 
 
 ### Building a webserver
-###### Why
+#### Why
 Most tech products are connected to the internet nowadays, a website is basically a product that the end users see on the UI side (we call it the client side), the web server is responsible for serving dynamic data to the client (your website).
 You will try to connect the website that you build from the previous learning point with the webserver and learn how these two interact with each other.
 
 
-###### Tech to learn
+#### Tech to learn
 * Python web framework. It's ok if you have time and want to build without a web framework, it's going to be a lot more challenging but will be more rewarding. I think the easiest way to start is with Python Flask.
 
 * Database. A database is like a warehouse where you can organize and store data, for example user registration data will be stored in a database. I recommend learning MySQL / PostgreSQL first, they are categorized as relational database (RDBMS) in terms of data model. It's longer to get started compared with MongoDB, but I think it's better to start with RDBMS since it's more common.
 
-###### Learning sources
+#### Learning sources
 Any Python book related to building a web app with a web framework should have a database introduction included.
 
 # What’s next?
