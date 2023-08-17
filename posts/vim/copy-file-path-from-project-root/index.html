@@ -63,11 +63,11 @@
     <p>I often found myself typing file path manually when explaining code implementation and its use cases to my teammates.
 The task to type file path manually is very daunting and I hate it so much when I mistyped.
 The file path I mentioned is relative from project root. Let's say you have this structure</p>
-<pre><code>▾ Yomu/
-  ▸ API/
-  ▸ DataStructures/
-  ▾ Screens/
-  ┊ ▾ ChapterList/
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">▾ Yomu&#x2F;
+  ▸ API&#x2F;
+  ▸ DataStructures&#x2F;
+  ▾ Screens&#x2F;
+  ┊ ▾ ChapterList&#x2F;
   ┊ ┊ ┊ Chapter.swift
   ┊ ┊ ┊ ChapterCell.swift
   ┊ ┊ ┊ ChapterCell.xib
@@ -79,10 +79,10 @@ The file path I mentioned is relative from project root. Let's say you have this
   ┊ ┊ ┊ ChapterViewModel.swift
   ┊ ┊ ┊ ReadChapterRealm.swift
   ....
-▸ YomuTests/
+▸ YomuTests&#x2F;
 </code></pre>
 <p>and you want to point out to someone an implementation in <code>ChapterViewModel.swift</code>, you would type this</p>
-<pre><code>Yomu/Screens/ChapterList/ChapterViewModel.swift
+<pre data-lang="sh" class="language-sh "><code class="language-sh" data-lang="sh">Yomu&#x2F;Screens&#x2F;ChapterList&#x2F;ChapterViewModel.swift
 </code></pre>
 <p>I did that a lot...</p>
 <p class="image-container">
@@ -91,7 +91,7 @@ The file path I mentioned is relative from project root. Let's say you have this
     class="medium-size">
 </p>
 <p>I knew there's a better way to do this.  There's a built-in function in vim that returns the relative path (from project root) of a file in active buffer.</p>
-<pre><code>expand('%')
+<pre><code>expand(&#x27;%&#x27;)
 </code></pre>
 <p>Of course we can do better than that! It'll be handy if we can copy the file path to system clipboard.</p>
 <pre><code>&quot; Register relative file path of current buffer

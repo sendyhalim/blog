@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - git</title>
+    <link href="https://sendyhalim.github.io/blog/tags/git/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-04-12T22:37:00+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/git/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Phabricator: developing feature on top of other feature</title>
+        <published>2020-04-12T22:37:00+07:00</published>
+        <updated>2020-04-12T22:37:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/git/phabricator-developing-feature-on-top-of-other-feature/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/git/phabricator-developing-feature-on-top-of-other-feature/</id>
+        
+        <content type="html">&lt;p&gt;NOTES: This post assumes that you&#x27;re familiar with &lt;code&gt;git rebase&lt;&#x2F;code&gt; and &lt;code&gt;phabricator&lt;&#x2F;code&gt; terms.&lt;&#x2F;p&gt;
+&lt;p&gt;We use phabricator as our code review tool. A typical workflow for submitting &amp;amp; merging your feature:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a new feature branch based on &lt;code&gt;master&lt;&#x2F;code&gt; branch, develop and &lt;code&gt;git commit&lt;&#x2F;code&gt; locally from there.&lt;&#x2F;li&gt;
+&lt;li&gt;Submit code review &lt;code&gt;arc diff&lt;&#x2F;code&gt; when we&#x27;re done.&lt;&#x2F;li&gt;
+&lt;li&gt;Run &lt;code&gt;arc land&lt;&#x2F;code&gt; to merge our diff to remote &lt;code&gt;master&lt;&#x2F;code&gt; branch.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;code&gt;arc land&lt;&#x2F;code&gt; will squash all of the commits into 1 commit on the feature branch, it uses diff title and description as the commit message. We can also simulate &lt;code&gt;arc land&lt;&#x2F;code&gt; manually, maybe not 100% exact though:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git checkout master&lt;&#x2F;code&gt; to make sure local master branch is up to date.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;git checkout &amp;lt;feature-branch&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;git rebase master -i&lt;&#x2F;code&gt; and squash all of the &lt;code&gt;&amp;lt;feature-branch&amp;gt;&lt;&#x2F;code&gt; commits into 1 commit on top of &lt;code&gt;master&lt;&#x2F;code&gt; branch.&lt;&#x2F;li&gt;
+&lt;li&gt;Merge the rebased &amp;amp; squashed feature branch to remote master.&lt;&#x2F;li&gt;
+&lt;li&gt;Checkout to master and pull origin master.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;This typical flow works if we work on separate features at the same time, but it could fail if we try to develop feature on top of other feature that&#x27;s still in code review (submitted to phabricator). There are many cases this failure could happen, one of the frequent one is when we develop &lt;code&gt;feature-b&lt;&#x2F;code&gt; on top of &lt;code&gt;feature-a&lt;&#x2F;code&gt; where &lt;code&gt;feature-a&lt;&#x2F;code&gt; is still in code review.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;simulation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#simulation&quot; aria-label=&quot;Anchor link for: simulation&quot;&gt;#&lt;&#x2F;a&gt;
+Simulation&lt;&#x2F;h3&gt;
+&lt;p&gt;We&#x27;ll be using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;phabricator-developing-feature-on-top-of-other-feature-code&quot;&gt;this repo&lt;&#x2F;a&gt; as example.&lt;&#x2F;p&gt;
+&lt;p&gt;Assumptions:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;M = master
+FA = feature a
+FB = feature b
+
+mx&amp;lt;n&amp;gt; = commit on master branch
+ax&amp;lt;n&amp;gt; = commit on feature-a branch
+bx&amp;lt;n&amp;gt; = commit on feature-b branch
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The condition will look like below:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;master&lt;&#x2F;code&gt; branch: 3 commits &lt;code&gt;mx1&lt;&#x2F;code&gt;, &lt;code&gt;mx2&lt;&#x2F;code&gt;, and &lt;code&gt;mx3&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;feature-a&lt;&#x2F;code&gt; branch: 2 commits &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;feature-b&lt;&#x2F;code&gt; branch: 3 commits &lt;code&gt;bx1&lt;&#x2F;code&gt;, &lt;code&gt;bx2&lt;&#x2F;code&gt; and &lt;code&gt;bx3&lt;&#x2F;code&gt;, it&#x27;s  built on top of &lt;code&gt;feature-a&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mx1---mx2---mx3---&amp;gt; [M]
+               \
+                ax1---ax2---&amp;gt; [FA]
+                         \
+                          bx1---bx2---bx3---&amp;gt; [FB]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;arc-land-feature-a-branch&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#arc-land-feature-a-branch&quot; aria-label=&quot;Anchor link for: arc-land-feature-a-branch&quot;&gt;#&lt;&#x2F;a&gt;
+Arc land feature-a branch&lt;&#x2F;h3&gt;
+&lt;p&gt;Let&#x27;s say that your &lt;code&gt;feature-a&lt;&#x2F;code&gt; is accepted via code review process and you do &lt;code&gt;arc land&lt;&#x2F;code&gt;, it&#x27;ll squash commits &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt; into 1 commit.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# Process view
+# S = squash
+# --------------------
+mx1---mx2---mx3---&amp;gt; [M]
+               \         &amp;#x2F;---bx1---bx2---bx3---&amp;gt; [FB]
+                ax1---ax2---&amp;gt; [FA]
+                 |     |
+                 S     S
+# End result
+# There&amp;#x27;s a new commit &amp;quot;ax&amp;quot; that represents commit ax1 and ax2.
+# --------------------
+mx1---mx2---mx3---ax---&amp;gt; [M]
+               \
+                ax1---ax2---bx1---bx2---bx3---&amp;gt; [FB]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;code&gt;feature-b&lt;&#x2F;code&gt; doesn&#x27;t need &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt; because it&#x27;s already represented by &lt;code&gt;ax&lt;&#x2F;code&gt;. It will fail if you&#x27;ve submitted &lt;code&gt;feature-b&lt;&#x2F;code&gt; for code review and do &lt;code&gt;arc land&lt;&#x2F;code&gt;, the reason is because it could not merge &amp;quot;cleanly&amp;quot;. The fix is actually pretty easy, you need to point commit &lt;code&gt;bx1&lt;&#x2F;code&gt; to &lt;code&gt;ax&lt;&#x2F;code&gt;. We will do &lt;code&gt;git rebase&lt;&#x2F;code&gt; to rewrite the history, &lt;strong&gt;PLEASE BACKUP&lt;&#x2F;strong&gt; &lt;code&gt;feature-b&lt;&#x2F;code&gt; first before you do this, you can do it by checking-out out from &lt;code&gt;feature-b&lt;&#x2F;code&gt; to another branch.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;git checkout feature-b
+
+# Backup for safety
+git checkout -b feature-b-backup
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;rewriting-history&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#rewriting-history&quot; aria-label=&quot;Anchor link for: rewriting-history&quot;&gt;#&lt;&#x2F;a&gt;
+Rewriting history&lt;&#x2F;h3&gt;
+&lt;p&gt;First, make sure that we&#x27;re on feature-b and then we will run rebase interactive to drop commits &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt;.
+It should be safe because both commits are already in master (represented by &lt;code&gt;ax&lt;&#x2F;code&gt; commit).&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# Do interactive rebase onto master
+# --------------------
+git rebase -i master
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;There will be an editor prompt that should look like&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;gitrebase&quot; class=&quot;language-gitrebase &quot;&gt;&lt;code class=&quot;language-gitrebase&quot; data-lang=&quot;gitrebase&quot;&gt;pick 233a9b8 ax1
+pick 5f5e3ce ax2
+pick e145774 bx1
+pick 1834f7d bx2
+pick 95d155a bx3
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You have 2 options remove &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Delete the lines&lt;&#x2F;li&gt;
+&lt;li&gt;Replace &lt;code&gt;pick&lt;&#x2F;code&gt; with &lt;code&gt;drop&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;You can do either one but I&#x27;ll go with &lt;code&gt;drop&lt;&#x2F;code&gt; to make it more explicit in this post&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;gitrebase&quot; class=&quot;language-gitrebase &quot;&gt;&lt;code class=&quot;language-gitrebase&quot; data-lang=&quot;gitrebase&quot;&gt;drop 233a9b8 ax1
+drop 5f5e3ce ax2
+pick e145774 bx1
+pick 1834f7d bx2
+pick 95d155a bx3
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Save your changes and quit editor, the rebase process will continue by itself.
+Now your &lt;code&gt;feature-b&lt;&#x2F;code&gt; should point to the latest commit on local &lt;code&gt;master&lt;&#x2F;code&gt; branch, you can verify this via &lt;code&gt;git log&lt;&#x2F;code&gt; or use a GUI tool.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git log --oneline --decorate --color --graph
+
+# End result
+# --------------------
+mx1---mx2---mx3---ax---&amp;gt; [M]
+                    \
+                     bx1---bx2---bx3---&amp;gt; [FB]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That&#x27;s it, now you can do &lt;code&gt;arc land&lt;&#x2F;code&gt; cleanly. I hope it helps, wish there&#x27;s an easier way.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;post-updates&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#post-updates&quot; aria-label=&quot;Anchor link for: post-updates&quot;&gt;#&lt;&#x2F;a&gt;
+Post Updates&lt;&#x2F;h3&gt;
+&lt;p&gt;Most recent updates:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Got feedback from &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;daniel-albert-art&#x2F;&quot;&gt;Daniel Albert&lt;&#x2F;a&gt; regarding the rebase process, we could use &lt;code&gt;git rebase -i master&lt;&#x2F;code&gt; to reduce confusion. See the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;blog&#x2F;commit&#x2F;3f383f1595c0fcd7bed0d4daa746a04bbb35f927&quot;&gt;diff here&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

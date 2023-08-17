@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - macOS</title>
+    <link href="https://sendyhalim.github.io/blog/tags/macos/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2016-07-04T22:58:59+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/macos/atom.xml</id>
+    <entry xml:lang="en">
+        <title>RxSwift Race Condition on Cells</title>
+        <published>2016-07-04T22:58:59+07:00</published>
+        <updated>2016-07-04T22:58:59+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/race-condition-on-cells/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/race-condition-on-cells/</id>
+        
+        <content type="html">&lt;p&gt;A few days ago I wrote a simple code to asynchronously load an image using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya#rxswift&quot;&gt;&lt;code&gt;RxMoya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.
+&lt;code&gt;RxMoya&lt;&#x2F;code&gt; is an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ReactiveX&#x2F;RxSwift&quot;&gt;&lt;code&gt;RxSwift&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; wrapper
+for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya&quot;&gt;&lt;code&gt;Moya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;. The flow is simple,
+everytime collection view asks for &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; (yes, I&#x27;m building a macOS app),
+I need to load the image asynchronously. Here&#x27;s a part of the implementation:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;func collectionView(
+  collectionView: NSCollectionView,
+  itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
+) -&amp;gt; NSCollectionViewItem {
+  let item = collectionView.makeItemWithIdentifier(
+    &amp;quot;ChapterItem&amp;quot;,
+    forIndexPath: indexPath
+  ) as! ChapterItem
+
+  let chapter = vm[indexPath.item]
+  let chapterPageVm = ChapterPagesViewModel(..)
+
+  &amp;#x2F;&amp;#x2F; Fetch manga chapter pages
+  chapterPageVm.fetch()
+
+  chapterPageVm
+    .chapterPages
+    .drive(onNext: { _ in
+      &amp;#x2F;&amp;#x2F; After chapter pages are loaded
+      &amp;#x2F;&amp;#x2F; we will set chapter preview here
+    })
+    .addDisposableTo(disposeBag)
+
+  ...
+
+  return item
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;i.imgflip.com&#x2F;1b9y1.jpg&quot;
+    alt=&quot;Problem analysis&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Obviously there&#x27;s a problem with the implementation, how do
+I make sure that after the chapter pages are loaded, the execution
+context of &lt;code&gt;driveNext&lt;&#x2F;code&gt; is valid? In other words, how to make sure
+that the cell item has not been re-used (because if it is
+and I’m setting the fetched data, then there will be race condition)?&lt;&#x2F;p&gt;
+&lt;p&gt;A solution that might work is by setting a &lt;code&gt;DisposeBag&lt;&#x2F;code&gt; to each
+cell and disposing it everytime &lt;code&gt;didEndDisplayingItem&lt;&#x2F;code&gt; gets called.&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;http:&#x2F;&#x2F;id.ragegenerator.com&#x2F;images&#x2F;ragebuilder-faces&#x2F;Happy&#x2F;09.png&quot;
+    alt=&quot;The solution&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Sounds like a perfect plan! Now I just need to find a way to set the dispose bags
+and keep track of them for each cell. Luckily &lt;code&gt;RxSwift&lt;&#x2F;code&gt; has a great community
+around it, &lt;code&gt;dpaschich&lt;&#x2F;code&gt; on &lt;a href=&quot;http:&#x2F;&#x2F;rxswift.slack.com&#x2F;&quot;&gt;rxswift.slack.com&lt;&#x2F;a&gt; suggested
+to set &lt;code&gt;DisposeBag&lt;&#x2F;code&gt; on each of the cell item and disposing it using a custom method
+&lt;code&gt;didEndDisplaying&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;class ChapterItem: NSCollectionViewItem {
+  @IBOutlet weak var chapterTitle: NSTextField!
+  @IBOutlet weak var chapterNumber: NSTextField!
+  @IBOutlet weak var chapterPreview: NSImageView!
+
+  var disposeBag = DisposeBag()
+
+  func didEndDisplaying() {
+    chapterPreview.image = .None
+
+    disposeBag = DisposeBag()
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;func collectionView(
+  collectionView: NSCollectionView,
+  didEndDisplayingItem item: NSCollectionViewItem,
+  forRepresentedObjectAtIndexPath indexPath: NSIndexPath
+) {
+  let _item = item as! ChapterItem
+
+  _item.didEndDisplaying()
+}
+
+func collectionView(
+  collectionView: NSCollectionView,
+  itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
+) -&amp;gt; NSCollectionViewItem {
+  let item = collectionView.makeItemWithIdentifier(
+    &amp;quot;ChapterItem&amp;quot;,
+    forIndexPath: indexPath
+  ) as! ChapterItem
+
+  let chapter = vm[indexPath.item]
+  let chapterPageVm = ChapterPagesViewModel(..)
+
+  &amp;#x2F;&amp;#x2F; Fetch manga chapter pages
+  chapterPageVm.fetch()
+
+  &amp;#x2F;&amp;#x2F; Notice how I add disposable to item.disposeBag
+  chapterPageVm
+    .chapterPages
+    .driveNext { _ in
+      &amp;#x2F;&amp;#x2F; After chapter pages are loaded
+      &amp;#x2F;&amp;#x2F; we will set chapter preview here
+    } &amp;gt;&amp;gt;&amp;gt; item.disposeBag
+
+  ...
+
+  return item
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+</feed>

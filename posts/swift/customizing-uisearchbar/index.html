@@ -78,27 +78,29 @@ In this post, we'll try to do 2 things</p>
 <a class="zola-anchor" href="#initial-state" aria-label="Anchor link for: initial-state">#</a>
 Initial State</h2>
 <p>First, we need to subclass <code>UISearchBar</code>, let's create one</p>
-<pre><code>import UIKit
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">import UIKit
 
 class SearchBar: UISearchBar {
   override func willMove(toSuperview newSuperview: UIView?) {
     super.willMove(toSuperview: newSuperview)
 
-    // We'll fill this later~
+    &#x2F;&#x2F; We&#x27;ll fill this later~
   }
 }
 </code></pre>
 <p>Then set your search bar class to <code>SearchBar</code></p>
 <p class="image-container">
   <img
-    src="https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;interface-builder-search-bar.png"
+    src="https://sendyhalim.github.io/blog/assets/images/swift/customizing-uisearchbar/interface-builder-search-bar.png
+"
     alt="Customizing UISearchBar Icon Interface Builder Search Bar"
     class="medium-size">
 </p>
 <p>Let's take a look at our initial state, our <code>SearchBar</code> should look like this</p>
 <p class="image-container">
   <img
-    src="https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;initial-state.png"
+    src="https://sendyhalim.github.io/blog/assets/images/swift/customizing-uisearchbar/initial-state.png
+"
     alt="Customizing UISearchBar Icon Initial State"
     class="medium-size">
 </p>
@@ -107,7 +109,7 @@ class SearchBar: UISearchBar {
 UISearchBar Minimal Style</h2>
 <p><code>UISearchBar</code> has <code>searchBarStyle</code> property, we'll set that with <code>UISearchBarStyle.minimal</code>, this tells <code>UISearchBar</code> to
 remove its background</p>
-<pre><code>override func willMove(toSuperview newSuperview: UIView?) {
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">override func willMove(toSuperview newSuperview: UIView?) {
   super.willMove(toSuperview: newSuperview)
 
   searchBarStyle = UISearchBarStyle.minimal
@@ -115,7 +117,8 @@ remove its background</p>
 </code></pre>
 <p class="image-container">
   <img
-    src="https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;minimal.png"
+    src="https://sendyhalim.github.io/blog/assets/images/swift/customizing-uisearchbar/minimal.png
+"
     alt="Customizing UISearchBar Icon Minimal"
     class="medium-size">
 </p>
@@ -123,18 +126,18 @@ remove its background</p>
 <a class="zola-anchor" href="#borderless-uisearchbar" aria-label="Anchor link for: borderless-uisearchbar">#</a>
 Borderless UISearchBar</h2>
 <p>Next, we'll remove text field border and set some styling</p>
-<pre><code>override func willMove(toSuperview newSuperview: UIView?) {
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">override func willMove(toSuperview newSuperview: UIView?) {
   super.willMove(toSuperview: newSuperview)
 
   searchBarStyle = UISearchBarStyle.minimal
 
-  // Configure text field
+  &#x2F;&#x2F; Configure text field
   let textField = value(forKey: &quot;_searchField&quot;) as! UITextField
 
-  // This will remove the border style, we need to do this
-  // in order to configure border style through `textField.layer`
-  // otherwise we'll have 2 borders.
-  // You can remove `textField.borderStyle = .none` to see it yourself.
+  &#x2F;&#x2F; This will remove the border style, we need to do this
+  &#x2F;&#x2F; in order to configure border style through `textField.layer`
+  &#x2F;&#x2F; otherwise we&#x27;ll have 2 borders.
+  &#x2F;&#x2F; You can remove `textField.borderStyle = .none` to see it yourself.
   textField.borderStyle = .none
   textField.backgroundColor = UIColor(hex: &quot;#F7F7F7&quot;)
   textField.clipsToBounds = true
@@ -146,7 +149,8 @@ Borderless UISearchBar</h2>
 </code></pre>
 <p class="image-container">
   <img
-    src="https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;borderless.png"
+    src="https://sendyhalim.github.io/blog/assets/images/swift/customizing-uisearchbar/borderless.png
+"
     alt="Customizing UISearchBar Icon Borderless"
     class="medium-size">
 </p>
@@ -154,16 +158,16 @@ Borderless UISearchBar</h2>
 <a class="zola-anchor" href="#customizing-search-icon" aria-label="Anchor link for: customizing-search-icon">#</a>
 Customizing Search Icon</h2>
 <p>Now we need to customize the search icon</p>
-<pre><code>override func willMove(toSuperview newSuperview: UIView?) {
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">override func willMove(toSuperview newSuperview: UIView?) {
   super.willMove(toSuperview: newSuperview)
 
   searchBarStyle = .minimal
 
-  // Create search icon.
+  &#x2F;&#x2F; Create search icon.
   let searchIcon = UIImageView(image: &lt;your search icon goes here&gt;)
   let searchImageSize = searchIcon.image!.size
 
-  // I'm adding some padding to the image
+  &#x2F;&#x2F; I&#x27;m adding some padding to the image
   searchIcon.frame = CGRect(
     x: 0,
     y: 0,
@@ -171,12 +175,12 @@ Customizing Search Icon</h2>
     height: searchImageSize.height
   )
 
-  // Default value is `UIViewContentMode.scaleToFill`,
-  // it'll stretch the search icon, we don't want that,
-  // we want to center the search icon instead.
+  &#x2F;&#x2F; Default value is `UIViewContentMode.scaleToFill`,
+  &#x2F;&#x2F; it&#x27;ll stretch the search icon, we don&#x27;t want that,
+  &#x2F;&#x2F; we want to center the search icon instead.
   searchIcon.contentMode = UIViewContentMode.center
 
-  // Configure text field
+  &#x2F;&#x2F; Configure text field
   let textField = value(forKey: &quot;_searchField&quot;) as! UITextField
   textField.leftView = searchIcon
   textField.borderStyle = .none
@@ -191,7 +195,8 @@ Customizing Search Icon</h2>
 <p>The end result should look like this</p>
 <p class="image-container">
   <img
-    src="https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;end-result.png"
+    src="https://sendyhalim.github.io/blog/assets/images/swift/customizing-uisearchbar/end-result.png
+"
     alt="Customizing UISearchBar Icon End Result"
     class="medium-size">
 </p>

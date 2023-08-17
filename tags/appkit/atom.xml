@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - appkit</title>
+    <link href="https://sendyhalim.github.io/blog/tags/appkit/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-03-04T23:48:35+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/appkit/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Make NSCollectionViewItem Responsive Width and Height</title>
+        <published>2017-03-04T23:48:35+07:00</published>
+        <updated>2017-03-04T23:48:35+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/</id>
+        
+        <content type="html">&lt;p&gt;I had a hard time figuring out how to make &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; width to be responsive.
+The problem was that I wanted my &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; to follow its parent width.
+Maybe I didn&#x27;t google the right keywords, I didn&#x27;t find any solution on the internet.
+I found the solution after reading &lt;code&gt;NSCollectionViewDelegateFlowLayout&lt;&#x2F;code&gt;, it wasn&#x27;t straight forward.
+When the window is resized, &lt;code&gt;NSCollectionView&lt;&#x2F;code&gt; will follow the its parent width by default, but not the cells inside it.
+Turns out that we need to invalidate the cells layout manually and tell &lt;code&gt;NSCollectionViewDelegateFlowLayout&lt;&#x2F;code&gt; our cells preferred size.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;extension MyCollectionViewController: NSCollectionViewDelegateFlowLayout {
+  func collectionView(
+    _ collectionView: NSCollectionView,
+    layout collectionViewLayout: NSCollectionViewLayout,
+    sizeForItemAt indexPath: IndexPath
+  ) -&amp;gt; NSSize {
+    &amp;#x2F;&amp;#x2F; Here we&amp;#x27;re telling that we want our cell width to
+    &amp;#x2F;&amp;#x2F; be equal to our collection view width
+    &amp;#x2F;&amp;#x2F; and height equals to 70
+    return CGSize(width: collectionView.bounds.width, height: 70)
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;There&#x27;s one catch here, remember we need to invalidate the cells layout manually&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;class MyCollectionViewController: NSViewController {
+  @IBOutlet weak var collectionView: NSCollectionView!
+
+  &amp;#x2F;&amp;#x2F; This method will be called everytime window is resized
+  override func viewWillLayout() {
+    super.viewWillLayout()
+
+    &amp;#x2F;&amp;#x2F; When we&amp;#x27;re invalidating the collection view layout
+    &amp;#x2F;&amp;#x2F; it will call `collectionView(_:layout:sizeForItemAt:)` method
+    collectionView.collectionViewLayout?.invalidateLayout()
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;There it is, hope it helps 🍪&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>NSImageView Unproportional Zoom</title>
+        <published>2017-02-10T20:47:23+07:00</published>
+        <updated>2017-02-10T20:47:23+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/macos/unproportional-zoom/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/macos/unproportional-zoom/</id>
+        
+        <content type="html">&lt;p&gt;I had this weird problem when I tried to implement a zoom functionality
+in my hobby project, a manga reader called &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;yomu&quot;&gt;Yomu&lt;&#x2F;a&gt;.
+When I tried to zoom an &lt;code&gt;NSImageView&lt;&#x2F;code&gt; programmatically
+it&#x27;s being zoomed unproportionally, my expectation was the image should be stretched horizontally
+and vertically without moving from its center point. It was like this&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;Zoom 100%&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;zoom-100.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;Zoom 140%&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;zoom-140.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Damn, there was an ugly gap :( between header border and the image.
+I had a hard time finding the solution, it took me almost 3 days to debug this problem (maybe because I&#x27;m a newbie).
+It turns out the solution is really simple, by default apple will set image view to scale proportionally down,
+changing it to proportionally up or down will fix the problem.&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;The culprit T_T&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;proportionally-down.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;Fixing it 🍻&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;proportionally-up-or-down.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

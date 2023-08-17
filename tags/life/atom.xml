@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - life</title>
+    <link href="https://sendyhalim.github.io/blog/tags/life/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-05T14:39:00+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/life/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Everything has a structure, thoughts on problem solving structure</title>
+        <published>2023-08-05T14:39:00+07:00</published>
+        <updated>2023-08-05T14:39:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/life/setting-up-a-structure-on-problem-solving-and-life/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/life/setting-up-a-structure-on-problem-solving-and-life/</id>
+        
+        <content type="html">&lt;h2 id=&quot;structure-in-general&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#structure-in-general&quot; aria-label=&quot;Anchor link for: structure-in-general&quot;&gt;#&lt;&#x2F;a&gt;
+Structure in general&lt;&#x2F;h2&gt;
+&lt;p&gt;Almost everything in our daily life has structure 😲!
+Starting on the human body that consists of a specific skeleton structure to protect and support us, cars generally have 4 wheels as the standard structure to move well, programming languages have their own syntax structure, and many more.
+Having a structure will guide us to execute methodically and effectively, especially in &lt;em&gt;high-pressure&lt;&#x2F;em&gt; situations where sometimes it&#x27;s not optimal to just rely on our instinct.&lt;&#x2F;p&gt;
+&lt;p&gt;There were small-medium initiatives&#x2F;problems in work and life that I solved just based on my instinct. After some iterations, there&#x27;s a noticeable common pattern in problem-solving and execution.
+Using just instinct is actually ok, but having a structure would make it easier to document, distribute&#x2F;share and extend the approach.
+Problem-solving structure is also useful in &lt;em&gt;high-pressure&lt;&#x2F;em&gt; situations to greatly reduce the chance of missing a step or two.&lt;&#x2F;p&gt;
+&lt;p&gt;Nowadays, my default would be to try to structure everything, this applies in life not just in a work environment.
+I&#x27;m sharing what I currently have in mind regarding this, I hope this post can help you to structure executions and be more effective.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;structure-in-problem-solving&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#structure-in-problem-solving&quot; aria-label=&quot;Anchor link for: structure-in-problem-solving&quot;&gt;#&lt;&#x2F;a&gt;
+Structure in Problem Solving&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;initial-thoughts&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#initial-thoughts&quot; aria-label=&quot;Anchor link for: initial-thoughts&quot;&gt;#&lt;&#x2F;a&gt;
+Initial thoughts&lt;&#x2F;h4&gt;
+&lt;p&gt;We can set a structure for problem-solving approach, though it might differ for everyone because everyone has different problems with different patterns.
+Just for example, a simple problem-solving structure could look something like this:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Problem background, we need to understand the context and the problem first, and make sure it actually exists, this can be done by reading user feedback, looking at the data, etc.&lt;&#x2F;li&gt;
+&lt;li&gt;Problem priority, the problem may exist but it&#x27;s better if we evaluate whether it&#x27;s worth it solving or not. After all, we already have many problems to solve right? If it&#x27;s worth it then evaluate and set the problem priority.
+Typically we want to solve the higher priority problems first, starting with the easiest ones if there are problems with the same priorities.&lt;&#x2F;li&gt;
+&lt;li&gt;Problem delegation, suppose we decide to solve it, do we have the capacity? Can it be delegated?&lt;&#x2F;li&gt;
+&lt;li&gt;Plan for solution, is the problem quite common? Do we have existing solutions that we could use or should we formulate our own solution?&lt;&#x2F;li&gt;
+&lt;li&gt;Execution, just get it done.&lt;&#x2F;li&gt;
+&lt;li&gt;Monitoring, how do I know the problem is solved? Can we monitor the data?&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;decompose-the-problem&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#decompose-the-problem&quot; aria-label=&quot;Anchor link for: decompose-the-problem&quot;&gt;#&lt;&#x2F;a&gt;
+Decompose the problem&lt;&#x2F;h4&gt;
+&lt;p&gt;Unless it&#x27;s straightforward, a problem typically can be decomposed into simpler subproblems. Those subproblems
+probably can be broken down again, the depth depends on how big the problem is and how would you balance it.
+Decomposing a problem makes it easier to delegate and find a specific solution to the subproblems.
+Try to find the balance, if it&#x27;s too small then probably we&#x27;ll end up spending unnecessary time breaking it down instead of
+actually solving the problem, if it&#x27;s too big then the execution might be suboptimal due to overwhelming assignment.&lt;&#x2F;p&gt;
+&lt;p&gt;What I find is, generally it&#x27;s easier to break down problems based on the skillset required to solve them because it&#x27;ll be easier to
+delegate to a team&#x2F;people of a specific role.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;attempts-to-apply-structure-on-other-cases&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#attempts-to-apply-structure-on-other-cases&quot; aria-label=&quot;Anchor link for: attempts-to-apply-structure-on-other-cases&quot;&gt;#&lt;&#x2F;a&gt;
+Attempts to apply structure on other cases&lt;&#x2F;h2&gt;
+&lt;p&gt;We&#x27;re going to go through some examples outside of general problem-solving structure,
+we will try to apply structure to each case. I encourage you to try to make your own examples at the end.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;example-launching-a-new-product&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#example-launching-a-new-product&quot; aria-label=&quot;Anchor link for: example-launching-a-new-product&quot;&gt;#&lt;&#x2F;a&gt;
+Example: Launching a new product&lt;&#x2F;h5&gt;
+&lt;p&gt;Suppose we have evaluated that it&#x27;s worth it to launch a new software product (a problem worth solving), the &lt;em&gt;assignment structure&lt;&#x2F;em&gt; could be divided into:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Product management -&amp;gt; assign to the Product team&lt;&#x2F;li&gt;
+&lt;li&gt;UI &amp;amp; flow component -&amp;gt; assign to UI&#x2F;UX team&lt;&#x2F;li&gt;
+&lt;li&gt;Development component -&amp;gt; assign to the Engineering team&lt;&#x2F;li&gt;
+&lt;li&gt;Marketing component -&amp;gt; assign to the Marketing team&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Each of the team could break down the assignment into multiple subproblems until we
+think it&#x27;s quite optimal, the development team could divide development effort into:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Backend Team&lt;&#x2F;li&gt;
+&lt;li&gt;Android Team&lt;&#x2F;li&gt;
+&lt;li&gt;iOS Team&lt;&#x2F;li&gt;
+&lt;li&gt;Engineering Infra Team, maybe we need to spin more servers.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Following up on the &lt;em&gt;assignment structure&lt;&#x2F;em&gt;, each team could have its own &lt;em&gt;execution structure&lt;&#x2F;em&gt;, it doesn&#x27;t have to follow the same structure
+because the way to solve the subproblem could differ. Engineering teams typically use agile methodology meanwhile marketing might use other approaches.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;example-covering-to-lead-a-meeting&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#example-covering-to-lead-a-meeting&quot; aria-label=&quot;Anchor link for: example-covering-to-lead-a-meeting&quot;&gt;#&lt;&#x2F;a&gt;
+Example: Covering to lead a meeting&lt;&#x2F;h5&gt;
+&lt;p&gt;There&#x27;s a product-themed meeting coming soon, but the lead product manager that&#x27;s supposed to lead the meeting was on sick leave on that day.
+I was asked to help lead the meeting since the other person that knows the high-level details was only me,
+I was kind of nervous because I&#x27;m more accustomed to leading engineering-themed meetings.&lt;&#x2F;p&gt;
+&lt;p&gt;Please note I&#x27;m not talking about meeting structure, we already have it and we can just follow the usual meeting structure,
+but my goal was to &lt;em&gt;up my understanding and confidence level leading a product-themed meeting&lt;&#x2F;em&gt;.
+Let&#x27;s try to structure it:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I think it&#x27;s best to write down the meeting objectives first with our own sentences.&lt;&#x2F;li&gt;
+&lt;li&gt;Then break down what would be the key points&#x2F;outline needed to be discussed to meet the objectives.&lt;&#x2F;li&gt;
+&lt;li&gt;Try to visualize how would the meeting run with the above key points.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h5 id=&quot;example-going-for-a-vacation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#example-going-for-a-vacation&quot; aria-label=&quot;Anchor link for: example-going-for-a-vacation&quot;&gt;#&lt;&#x2F;a&gt;
+Example: Going for a vacation&lt;&#x2F;h5&gt;
+&lt;p&gt;I would like to have a vacation in Japan with my family, the top level structure to get to the goal would be:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vacation dates&lt;&#x2F;li&gt;
+&lt;li&gt;Itinerary&lt;&#x2F;li&gt;
+&lt;li&gt;Budget planning&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Same with other problems, we can break each point into subproblems&#x2F;checklists, vacation dates could be broken down into:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Find out the date ranges with low workload so we can have vacations stress free&lt;&#x2F;li&gt;
+&lt;li&gt;Get buy-in from family&lt;&#x2F;li&gt;
+&lt;li&gt;Get annual leave approval&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The itinerary is probably the easiest to delegate, if I don&#x27;t have time I&#x27;ll just reuse itineraries made by other people.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;key-takeaways&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#key-takeaways&quot; aria-label=&quot;Anchor link for: key-takeaways&quot;&gt;#&lt;&#x2F;a&gt;
+Key takeaways&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Not every problem is worth solving, try to prioritize.&lt;&#x2F;li&gt;
+&lt;li&gt;When there’s a problem try to think about the problem structure first then break it down into subproblems until it&#x27;s quite optimal, follow the structure and move towards the solution.&lt;&#x2F;li&gt;
+&lt;li&gt;If it&#x27;s too much for you, always consider delegating the subproblems, especially the ones that can be run in parallel.&lt;&#x2F;li&gt;
+&lt;li&gt;Structure can be applied in many cases.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

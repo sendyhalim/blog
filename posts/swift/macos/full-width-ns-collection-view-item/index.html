@@ -74,29 +74,29 @@ Maybe I didn't google the right keywords, I didn't find any solution on the inte
 I found the solution after reading <code>NSCollectionViewDelegateFlowLayout</code>, it wasn't straight forward.
 When the window is resized, <code>NSCollectionView</code> will follow the its parent width by default, but not the cells inside it.
 Turns out that we need to invalidate the cells layout manually and tell <code>NSCollectionViewDelegateFlowLayout</code> our cells preferred size.</p>
-<pre><code>extension MyCollectionViewController: NSCollectionViewDelegateFlowLayout {
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">extension MyCollectionViewController: NSCollectionViewDelegateFlowLayout {
   func collectionView(
     _ collectionView: NSCollectionView,
     layout collectionViewLayout: NSCollectionViewLayout,
     sizeForItemAt indexPath: IndexPath
   ) -&gt; NSSize {
-    // Here we're telling that we want our cell width to
-    // be equal to our collection view width
-    // and height equals to 70
+    &#x2F;&#x2F; Here we&#x27;re telling that we want our cell width to
+    &#x2F;&#x2F; be equal to our collection view width
+    &#x2F;&#x2F; and height equals to 70
     return CGSize(width: collectionView.bounds.width, height: 70)
   }
 }
 </code></pre>
 <p>There's one catch here, remember we need to invalidate the cells layout manually</p>
-<pre><code>class MyCollectionViewController: NSViewController {
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">class MyCollectionViewController: NSViewController {
   @IBOutlet weak var collectionView: NSCollectionView!
 
-  // This method will be called everytime window is resized
+  &#x2F;&#x2F; This method will be called everytime window is resized
   override func viewWillLayout() {
     super.viewWillLayout()
 
-    // When we're invalidating the collection view layout
-    // it will call `collectionView(_:layout:sizeForItemAt:)` method
+    &#x2F;&#x2F; When we&#x27;re invalidating the collection view layout
+    &#x2F;&#x2F; it will call `collectionView(_:layout:sizeForItemAt:)` method
     collectionView.collectionViewLayout?.invalidateLayout()
   }
 }

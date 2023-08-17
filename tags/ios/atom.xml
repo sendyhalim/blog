@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - ios</title>
+    <link href="https://sendyhalim.github.io/blog/tags/ios/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2018-02-10T03:19:00+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/ios/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Customizing UISearchBar</title>
+        <published>2018-02-10T03:19:00+07:00</published>
+        <updated>2018-02-10T03:19:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/</id>
+        
+        <content type="html">&lt;p&gt;The default view of &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; is kind of boring, one way to customize it is by subclassing &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; and put the customization code in &lt;code&gt;willMove(toSuperView:)&lt;&#x2F;code&gt; method.
+In this post, we&#x27;ll try to do 2 things&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set border radius for &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Set custom search icon for &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;initial-state&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#initial-state&quot; aria-label=&quot;Anchor link for: initial-state&quot;&gt;#&lt;&#x2F;a&gt;
+Initial State&lt;&#x2F;h2&gt;
+&lt;p&gt;First, we need to subclass &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;, let&#x27;s create one&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;import UIKit
+
+class SearchBar: UISearchBar {
+  override func willMove(toSuperview newSuperview: UIView?) {
+    super.willMove(toSuperview: newSuperview)
+
+    &amp;#x2F;&amp;#x2F; We&amp;#x27;ll fill this later~
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then set your search bar class to &lt;code&gt;SearchBar&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;interface-builder-search-bar.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Interface Builder Search Bar&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s take a look at our initial state, our &lt;code&gt;SearchBar&lt;&#x2F;code&gt; should look like this&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;initial-state.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Initial State&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;uisearchbar-minimal-style&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#uisearchbar-minimal-style&quot; aria-label=&quot;Anchor link for: uisearchbar-minimal-style&quot;&gt;#&lt;&#x2F;a&gt;
+UISearchBar Minimal Style&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;UISearchBar&lt;&#x2F;code&gt; has &lt;code&gt;searchBarStyle&lt;&#x2F;code&gt; property, we&#x27;ll set that with &lt;code&gt;UISearchBarStyle.minimal&lt;&#x2F;code&gt;, this tells &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; to
+remove its background&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;override func willMove(toSuperview newSuperview: UIView?) {
+  super.willMove(toSuperview: newSuperview)
+
+  searchBarStyle = UISearchBarStyle.minimal
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;minimal.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Minimal&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;borderless-uisearchbar&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#borderless-uisearchbar&quot; aria-label=&quot;Anchor link for: borderless-uisearchbar&quot;&gt;#&lt;&#x2F;a&gt;
+Borderless UISearchBar&lt;&#x2F;h2&gt;
+&lt;p&gt;Next, we&#x27;ll remove text field border and set some styling&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;override func willMove(toSuperview newSuperview: UIView?) {
+  super.willMove(toSuperview: newSuperview)
+
+  searchBarStyle = UISearchBarStyle.minimal
+
+  &amp;#x2F;&amp;#x2F; Configure text field
+  let textField = value(forKey: &amp;quot;_searchField&amp;quot;) as! UITextField
+
+  &amp;#x2F;&amp;#x2F; This will remove the border style, we need to do this
+  &amp;#x2F;&amp;#x2F; in order to configure border style through `textField.layer`
+  &amp;#x2F;&amp;#x2F; otherwise we&amp;#x27;ll have 2 borders.
+  &amp;#x2F;&amp;#x2F; You can remove `textField.borderStyle = .none` to see it yourself.
+  textField.borderStyle = .none
+  textField.backgroundColor = UIColor(hex: &amp;quot;#F7F7F7&amp;quot;)
+  textField.clipsToBounds = true
+  textField.layer.cornerRadius = 6.0
+  textField.layer.borderWidth = 1.0
+  textField.layer.borderColor = textField.backgroundColor!.cgColor
+  textField.textColor = UIColor(hex: &amp;quot;#555555&amp;quot;)
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;borderless.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Borderless&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;customizing-search-icon&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#customizing-search-icon&quot; aria-label=&quot;Anchor link for: customizing-search-icon&quot;&gt;#&lt;&#x2F;a&gt;
+Customizing Search Icon&lt;&#x2F;h2&gt;
+&lt;p&gt;Now we need to customize the search icon&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;override func willMove(toSuperview newSuperview: UIView?) {
+  super.willMove(toSuperview: newSuperview)
+
+  searchBarStyle = .minimal
+
+  &amp;#x2F;&amp;#x2F; Create search icon.
+  let searchIcon = UIImageView(image: &amp;lt;your search icon goes here&amp;gt;)
+  let searchImageSize = searchIcon.image!.size
+
+  &amp;#x2F;&amp;#x2F; I&amp;#x27;m adding some padding to the image
+  searchIcon.frame = CGRect(
+    x: 0,
+    y: 0,
+    width: searchImageSize.width + 10,
+    height: searchImageSize.height
+  )
+
+  &amp;#x2F;&amp;#x2F; Default value is `UIViewContentMode.scaleToFill`,
+  &amp;#x2F;&amp;#x2F; it&amp;#x27;ll stretch the search icon, we don&amp;#x27;t want that,
+  &amp;#x2F;&amp;#x2F; we want to center the search icon instead.
+  searchIcon.contentMode = UIViewContentMode.center
+
+  &amp;#x2F;&amp;#x2F; Configure text field
+  let textField = value(forKey: &amp;quot;_searchField&amp;quot;) as! UITextField
+  textField.leftView = searchIcon
+  textField.borderStyle = .none
+  textField.backgroundColor = UIColor(hex: &amp;quot;#F7F7F7&amp;quot;)
+  textField.clipsToBounds = true
+  textField.layer.cornerRadius = 6.0
+  textField.layer.borderWidth = 1.0
+  textField.layer.borderColor = textField.backgroundColor!.cgColor
+  textField.textColor = UIColor(hex: &amp;quot;#555555&amp;quot;)
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The end result should look like this&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;end-result.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon End Result&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;You can find the full code
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;iYomu&#x2F;blob&#x2F;master&#x2F;Yomu&#x2F;Common&#x2F;SearchBar.swift&quot; target=&quot;_blank&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

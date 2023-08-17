@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - terminal</title>
+    <link href="https://sendyhalim.github.io/blog/tags/terminal/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-03-11T14:56:17+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/terminal/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Living In The Terminal</title>
+        <published>2017-03-11T14:56:17+07:00</published>
+        <updated>2017-03-11T14:56:17+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/</id>
+        
+        <content type="html">&lt;p&gt;Most of my time is spent in the terminal and I love working within it,
+so I invest a lot for the best terminal setup to make sure that I&#x27;m productive and happy when I&#x27;m using it.
+Here&#x27;s a couple of screenshots of my terminal&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-1.png
+&quot;
+    alt=&quot;Terminal with vim&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-2.png
+&quot;
+    alt=&quot;Terminal splitted&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s the must have list for the best terminal experience&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gnachman&#x2F;iTerm2&quot;&gt;iTerm2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&quot;&gt;Tmux&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;neovim&#x2F;neovim&quot;&gt;Neovim&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Let&#x27;s start with iTerm2, it&#x27;s the go to terminal when you&#x27;re using macOS and does not like
+the built-in terminal that macOS has. Some people prefer to use &lt;a href=&quot;https:&#x2F;&#x2F;hyper.is&#x2F;&quot;&gt;Hyper&lt;&#x2F;a&gt; nowadays
+but I stick to iTerm2 because it&#x27;s a native app (written using Objective-C).&lt;&#x2F;p&gt;
+&lt;p&gt;Tmux is a terminal multiplexer, it runs inside iTerm2. I use it to open multiple windows and
+split panes within the terminal (it can do more than that).&lt;&#x2F;p&gt;
+&lt;p&gt;Neovim is a drop-in replacement for vim, I just use it because the project&#x27;s motivation is to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;neovim&#x2F;neovim&#x2F;wiki&#x2F;Introduction&quot;&gt;refactor
+Vim source code&lt;&#x2F;a&gt; and I believe it&#x27;s the future.&lt;&#x2F;p&gt;
+&lt;p&gt;One nice thing of working in the terminal is that I don&#x27;t need to switch often between applications.
+Most of my work can be done within the terminal (depending on the work itself).
+It&#x27;s easy to run shell commands when you code in the terminal. The real deal is when you start managing your dotfiles configuration.
+I put my dotfiles configuration on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;dotfiles&quot;&gt;my github&lt;&#x2F;a&gt;, I just
+need to clone it and run my setup script to get my ideal work environment 🍻.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

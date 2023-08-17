@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - productivity</title>
+    <link href="https://sendyhalim.github.io/blog/tags/productivity/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2018-02-13T00:11:00+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/productivity/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Vim Copy File Path From Project Root</title>
+        <published>2018-02-13T00:11:00+07:00</published>
+        <updated>2018-02-13T00:11:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/vim/copy-file-path-from-project-root/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/vim/copy-file-path-from-project-root/</id>
+        
+        <content type="html">&lt;p&gt;I often found myself typing file path manually when explaining code implementation and its use cases to my teammates.
+The task to type file path manually is very daunting and I hate it so much when I mistyped.
+The file path I mentioned is relative from project root. Let&#x27;s say you have this structure&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;▾ Yomu&amp;#x2F;
+  ▸ API&amp;#x2F;
+  ▸ DataStructures&amp;#x2F;
+  ▾ Screens&amp;#x2F;
+  ┊ ▾ ChapterList&amp;#x2F;
+  ┊ ┊ ┊ Chapter.swift
+  ┊ ┊ ┊ ChapterCell.swift
+  ┊ ┊ ┊ ChapterCell.xib
+  ┊ ┊ ┊ ChapterCollectionHeader.swift
+  ┊ ┊ ┊ ChapterCollectionHeader.xib
+  ┊ ┊ ┊ ChapterCollectionViewController.swift
+  ┊ ┊ ┊ ChapterCollectionViewController.xib
+  ┊ ┊ ┊ ChapterCollectionViewModel.swift
+  ┊ ┊ ┊ ChapterViewModel.swift
+  ┊ ┊ ┊ ReadChapterRealm.swift
+  ....
+▸ YomuTests&amp;#x2F;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;and you want to point out to someone an implementation in &lt;code&gt;ChapterViewModel.swift&lt;&#x2F;code&gt;, you would type this&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;Yomu&amp;#x2F;Screens&amp;#x2F;ChapterList&amp;#x2F;ChapterViewModel.swift
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I did that a lot...&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;http:&#x2F;&#x2F;s2.quickmeme.com&#x2F;img&#x2F;71&#x2F;71c3931c1edc4353a0c03ec549753b965872a2c343c09255617f4470cbd924ed.jpg&quot; alt=&quot;We got a badass here&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;I knew there&#x27;s a better way to do this.  There&#x27;s a built-in function in vim that returns the relative path (from project root) of a file in active buffer.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;expand(&amp;#x27;%&amp;#x27;)
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Of course we can do better than that! It&#x27;ll be handy if we can copy the file path to system clipboard.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot; Register relative file path of current buffer
+&amp;quot; from project root to system clipboard
+nnoremap &amp;lt;F10&amp;gt; :let @+ = expand(&amp;quot;%&amp;quot;)&amp;lt;CR&amp;gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now everytime you press &lt;code&gt;F10&lt;&#x2F;code&gt; in normal mode, it will automatically register file path to current active file
+in buffer to your system clipboard.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Living In The Terminal</title>
+        <published>2017-03-11T14:56:17+07:00</published>
+        <updated>2017-03-11T14:56:17+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/</id>
+        
+        <content type="html">&lt;p&gt;Most of my time is spent in the terminal and I love working within it,
+so I invest a lot for the best terminal setup to make sure that I&#x27;m productive and happy when I&#x27;m using it.
+Here&#x27;s a couple of screenshots of my terminal&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-1.png
+&quot;
+    alt=&quot;Terminal with vim&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-2.png
+&quot;
+    alt=&quot;Terminal splitted&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s the must have list for the best terminal experience&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gnachman&#x2F;iTerm2&quot;&gt;iTerm2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&quot;&gt;Tmux&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;neovim&#x2F;neovim&quot;&gt;Neovim&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Let&#x27;s start with iTerm2, it&#x27;s the go to terminal when you&#x27;re using macOS and does not like
+the built-in terminal that macOS has. Some people prefer to use &lt;a href=&quot;https:&#x2F;&#x2F;hyper.is&#x2F;&quot;&gt;Hyper&lt;&#x2F;a&gt; nowadays
+but I stick to iTerm2 because it&#x27;s a native app (written using Objective-C).&lt;&#x2F;p&gt;
+&lt;p&gt;Tmux is a terminal multiplexer, it runs inside iTerm2. I use it to open multiple windows and
+split panes within the terminal (it can do more than that).&lt;&#x2F;p&gt;
+&lt;p&gt;Neovim is a drop-in replacement for vim, I just use it because the project&#x27;s motivation is to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;neovim&#x2F;neovim&#x2F;wiki&#x2F;Introduction&quot;&gt;refactor
+Vim source code&lt;&#x2F;a&gt; and I believe it&#x27;s the future.&lt;&#x2F;p&gt;
+&lt;p&gt;One nice thing of working in the terminal is that I don&#x27;t need to switch often between applications.
+Most of my work can be done within the terminal (depending on the work itself).
+It&#x27;s easy to run shell commands when you code in the terminal. The real deal is when you start managing your dotfiles configuration.
+I put my dotfiles configuration on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;dotfiles&quot;&gt;my github&lt;&#x2F;a&gt;, I just
+need to clone it and run my setup script to get my ideal work environment 🍻.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Coding Productivity Over 9000</title>
+        <published>2016-07-10T00:49:40+07:00</published>
+        <updated>2016-07-10T00:49:40+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/tools/productivity-over-9000/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/tools/productivity-over-9000/</id>
+        
+        <content type="html">&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;media.giphy.com&#x2F;media&#x2F;XIqCQx02E1U9W&#x2F;giphy.gif&quot; alt=&quot;Over 9000&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Why you should learn and use vim keybindings.&lt;&#x2F;p&gt;
+&lt;p&gt;It started 2 years ago when I decided to invest in vim.
+The first weeks with vim were hell, I wasn&#x27;t productive at all.
+So I consider it as an investment, and it pays well.
+Let me show you a simple example, let&#x27;s say I have this code (written in &lt;code&gt;Swift&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;func add(x: Int, y: Int) -&amp;gt; Int {
+  return x + y;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;and I want to add another function, that is a &lt;code&gt;multiply&lt;&#x2F;code&gt; function&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;func multiply(x: Int, y: Int) -&amp;gt; Int {
+  return x * y;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;the-old-days&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-old-days&quot; aria-label=&quot;Anchor link for: the-old-days&quot;&gt;#&lt;&#x2F;a&gt;
+The old days&lt;&#x2F;h2&gt;
+&lt;p&gt;In the old days, I would need around 10-12 seconds by doing these:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Move my right hand off the keyboard towards my mouse&lt;&#x2F;li&gt;
+&lt;li&gt;Select the &lt;code&gt;add&lt;&#x2F;code&gt; function&lt;&#x2F;li&gt;
+&lt;li&gt;Press &lt;code&gt;⌘ + c&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Move my right hand to the keyboard again, press arrow down then &lt;code&gt;⌘ + v&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Use my mouse to place the cursor at &lt;code&gt;+&lt;&#x2F;code&gt; operator and replace it with &lt;code&gt;*&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Double click &lt;code&gt;add&lt;&#x2F;code&gt; function name and replace it with &lt;code&gt;multiply&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;vim-s-way&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#vim-s-way&quot; aria-label=&quot;Anchor link for: vim-s-way&quot;&gt;#&lt;&#x2F;a&gt;
+Vim&#x27;s way&lt;&#x2F;h2&gt;
+&lt;p&gt;Let&#x27;s see with the approach that I would&#x27;ve take with vim, this time it takes around 7-8 seconds:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to visual mode with &lt;code&gt;v&lt;&#x2F;code&gt; then press &lt;code&gt;%&lt;&#x2F;code&gt; to block all the &lt;code&gt;add&lt;&#x2F;code&gt; function&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;ctrl + c&lt;&#x2F;code&gt; (yes I have a custom mapping for copy)&lt;&#x2F;li&gt;
+&lt;li&gt;Go to the bottom line of &lt;code&gt;buffer&lt;&#x2F;code&gt; with &lt;code&gt;G&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;ctrl + v&lt;&#x2F;code&gt; (custom mapping for paste)&lt;&#x2F;li&gt;
+&lt;li&gt;Press &lt;code&gt;kf+s*&amp;lt;ctrl&amp;gt;-{&lt;&#x2F;code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;k&lt;&#x2F;code&gt; move cursor 1 line up.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;f+&lt;&#x2F;code&gt; find &lt;code&gt;+&lt;&#x2F;code&gt; operator and move the cursor to it&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;s*&lt;&#x2F;code&gt; replace &lt;code&gt;+&lt;&#x2F;code&gt; with &lt;code&gt;*&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ctrl&amp;gt;-{&lt;&#x2F;code&gt; back to normal mode&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Press &lt;code&gt;kHwcw&lt;&#x2F;code&gt; then type &lt;code&gt;mutiply&lt;&#x2F;code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;k&lt;&#x2F;code&gt; move cursor 1 line up&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;H&lt;&#x2F;code&gt; (custom mapping) move to the first character at the current line&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;w&lt;&#x2F;code&gt; move 1 word (to &lt;code&gt;add&lt;&#x2F;code&gt; function name)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;cw&lt;&#x2F;code&gt; and type &lt;code&gt;multiply&lt;&#x2F;code&gt; will replace &lt;code&gt;add&lt;&#x2F;code&gt; with &lt;code&gt;mutiply&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Step 1-6 combined would take 7-8 seconds for me (let&#x27;s make it 8 seconds).
+There it is, I just saved 2-4 seconds of my life. I think it&#x27;s really worth it.
+The previous example is a simple one, consider these coding-related operations:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jump between lines&lt;&#x2F;li&gt;
+&lt;li&gt;Move code from line x-y to line z&lt;&#x2F;li&gt;
+&lt;li&gt;Change code inside curly braces (in vim you can use &lt;code&gt;ci{&lt;&#x2F;code&gt;, yes that&#x27;s only 3 strokes)&lt;&#x2F;li&gt;
+&lt;li&gt;Etc..&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;&#x2F;strong&gt;: You can cheat on step 5 and 6 if you use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;easymotion&#x2F;vim-easymotion&quot;&gt;Vim Easymotion&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I don&#x27;t know how much time I&#x27;ve saved for myself, but indeed the investment pays really well.
+Some people will tell you that you should use a real &lt;code&gt;IDE&lt;&#x2F;code&gt; and I couldn&#x27;t agree more with them, I would tell you the same.
+With vim in your toolbox, you can install a vim keybindings plugin for your IDE, so you&#x27;ll get
+the power of IDE and vim keybindings.&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;media.giphy.com&#x2F;media&#x2F;138o38B4EmLjGw&#x2F;giphy.gif&quot; alt=&quot;Make It Over 9000&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Personally I use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;XVimProject&#x2F;XVim&quot;&gt;XVim&lt;&#x2F;a&gt; for XCode,
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;JetBrains&#x2F;ideavim&quot;&gt;Ideavim&lt;&#x2F;a&gt; for &lt;a href=&quot;https:&#x2F;&#x2F;www.jetbrains.com&quot;&gt;Jetbrains&lt;&#x2F;a&gt;.
+Sometimes depending on my mood, I use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;syl20bnr&#x2F;spacemacs&quot;&gt;Spacemacs&lt;&#x2F;a&gt;
+(Pre-configured emacs with a lot of useful packages) with vim keybindings for other stuffs.
+Feel free to see&#x2F;copy my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;dotfiles&#x2F;tree&#x2F;master&#x2F;vimrc&quot;&gt;vimrc&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

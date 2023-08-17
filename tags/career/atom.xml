@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - career</title>
+    <link href="https://sendyhalim.github.io/blog/tags/career/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2021-02-23T20:00:00+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/career/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Engineering Lead - Achieving Team Goals</title>
+        <published>2021-02-23T20:00:00+07:00</published>
+        <updated>2021-02-23T20:00:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/team/engineering-lead-achieving-team-goals/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/team/engineering-lead-achieving-team-goals/</id>
+        
+        <content type="html">&lt;p&gt;Some people (or most people) might find the stress level going up in respect with the uncertainty of success in this people management role.
+It is important to keep in mind that &lt;b&gt;your performance is not evaluated based on your &lt;em&gt;individual contributions&lt;&#x2F;em&gt; but the &lt;em&gt;team contributions&lt;&#x2F;em&gt;&lt;&#x2F;b&gt;,
+it&#x27;s not your performance anymore, &lt;b&gt;it&#x27;s &lt;em&gt;the team performance&lt;&#x2F;em&gt;&lt;&#x2F;b&gt;! In general, team performance will be tied to team achievements&#x2F;goals completion.&lt;&#x2F;p&gt;
+&lt;p&gt;This post is based on my personal experiences &amp;amp; past mistakes, please take it with a grain of salt.
+The post will be focusing on tips to achieve your team goals, other perspectives (dealing with stress, challenging your team, growing your teammember, etc2) will be in another posts.
+Your mileage may vary depending on the expectation of your company&#x2F;employer.&lt;&#x2F;p&gt;
+&lt;h6 id=&quot;make-sure-the-team-is-aligned-with-company-goals&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#make-sure-the-team-is-aligned-with-company-goals&quot; aria-label=&quot;Anchor link for: make-sure-the-team-is-aligned-with-company-goals&quot;&gt;#&lt;&#x2F;a&gt;
+Make sure the team is aligned with company goals&lt;&#x2F;h6&gt;
+&lt;p&gt;In short, you need to communicate clearly what needs to be done, in my case, we&#x27;re using OKR and use the tool to align with the company goals (by deriving the department&#x27;s OKR), then we&#x27;ll iterate the team OKR together one by one with things to be checked:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each goal must have at least a PIC. If it&#x27;s not set yet: the earlier you visit this section will result in less uncertainty.&lt;&#x2F;li&gt;
+&lt;li&gt;Each PIC must understand the goal and why they&#x27;re doing it, this is to build the base motivation and get the buy-in from the PIC.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h6 id=&quot;plan-ahead&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#plan-ahead&quot; aria-label=&quot;Anchor link for: plan-ahead&quot;&gt;#&lt;&#x2F;a&gt;
+Plan ahead&lt;&#x2F;h6&gt;
+&lt;p&gt;Your team have goals, what&#x27;s next? &lt;b&gt;&lt;em&gt;Planning&lt;&#x2F;em&gt;&lt;&#x2F;b&gt;, why &lt;em&gt;planning&lt;&#x2F;em&gt; is important? I think I can use British Army&#x27;s &lt;em&gt;7Ps&lt;&#x2F;em&gt; to explain why: &lt;code&gt;Proper Planning and Preparation Prevents Piss Poor Performance&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;There are several key points that I always keep in my mental notes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Describe the background why we&#x27;re aiming for a specific goal, you can use a top-bottom model to lower barrier of entry in your plan.&lt;&#x2F;li&gt;
+&lt;li&gt;Make sure the PIC understand the details of the plan by planning together, you make the team owns the plan by planning together instead of by yourself.&lt;&#x2F;li&gt;
+&lt;li&gt;Write the plan in a sharable-docs (we use google docs).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Remember to open the opportunity for team members (brave souls 🤞) to let them lead the planning and guide if needed, everyone
+should be able to plan ahead, it&#x27;s a general skill that will be useful in life.&lt;&#x2F;p&gt;
+&lt;h6 id=&quot;communicate-the-plan-gather-feedback&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#communicate-the-plan-gather-feedback&quot; aria-label=&quot;Anchor link for: communicate-the-plan-gather-feedback&quot;&gt;#&lt;&#x2F;a&gt;
+Communicate the plan &amp;amp; gather feedback&lt;&#x2F;h6&gt;
+&lt;p&gt;Your team goals have stakeholders, be it upper management, product team, marketing team, etc2. Communicate the plan to stakeholders &amp;amp; gather feedback,
+you can do this by setting up a meeting or &lt;em&gt;possibly&lt;&#x2F;em&gt; just via email if the goal is small-medium size (in my case it&#x27;s usually &amp;lt; 1 week of work).&lt;&#x2F;p&gt;
+&lt;h6 id=&quot;split-the-work-after-the-plan-is-approved&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#split-the-work-after-the-plan-is-approved&quot; aria-label=&quot;Anchor link for: split-the-work-after-the-plan-is-approved&quot;&gt;#&lt;&#x2F;a&gt;
+Split the work after the plan is approved&lt;&#x2F;h6&gt;
+&lt;p&gt;At this step you need to split the tasks according to the plan and distribute the work across your team members or other team(s).
+You can use software for subtasking or just use excel should be ok as long as it&#x27;s clear.&lt;&#x2F;p&gt;
+&lt;h6 id=&quot;eggggggggggxecute-and-reporting&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#eggggggggggxecute-and-reporting&quot; aria-label=&quot;Anchor link for: eggggggggggxecute-and-reporting&quot;&gt;#&lt;&#x2F;a&gt;
+Eggggggggggxecute and reporting&lt;&#x2F;h6&gt;
+&lt;p&gt;This is the grinding part, the PIC will execute the plan and team lead is expected to &amp;quot;guard&amp;quot; the execution a.k.a make sure it&#x27;s done properly, be ready to get your hands dirty as well, remember to unblock your team member.
+Let the PIC know explicitly that there might be changes along the road, just remember to revise the plan &amp;amp; report back to stakeholders.&lt;&#x2F;p&gt;
+&lt;p&gt;There are 3 kind of reports that I usually find myself do:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Official reporting regarding the project, it depends on your stakeholders, updating the progress in your plan documentation and send the TLDR version via email should be enough in most cases.&lt;&#x2F;li&gt;
+&lt;li&gt;Weekly reporting to my manager, this report contains the overall projects progress (achievements&#x2F;other important highlights) running within the team.&lt;&#x2F;li&gt;
+&lt;li&gt;[Optional] Most of the time it&#x27;s a good idea to setup a specific slack channel (or just use whatever software your company use) for medium-high complexity project and let stakeholders to decide whether they want to join the channel or not,
+this channel should be useful for organizing chats &amp;amp; discussions scoping.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h6 id=&quot;the-fun-and-the-ugly-part&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-fun-and-the-ugly-part&quot; aria-label=&quot;Anchor link for: the-fun-and-the-ugly-part&quot;&gt;#&lt;&#x2F;a&gt;
+The fun and the ugly part&lt;&#x2F;h6&gt;
+&lt;p&gt;&lt;b&gt;Mission completed?&lt;&#x2F;b&gt; Make sure you give credit where credit is due, credit the PIC, team members and other parties that contribute to the project.
+Have celebration then focus on the next goal.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;b&gt;The ugly part: mission failed.&lt;&#x2F;b&gt; In this case &lt;em&gt;you take the responsibility&lt;&#x2F;em&gt;. Yes, the team lead is responsible for the project, even though you should held people accountable.
+Just like a CEO is responsible for the overall success of a company, team lead is responsible for the overall success of a team.
+In most cases your manager will require a report of what failed and what can be improved. Take it as a learning to get better! You can do it together with your team, remember to back-up each other!&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The basic principle to keep in mind: &lt;b&gt;if you fail then you get up together with the team and improve&lt;&#x2F;b&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+        
+    </entry>
+</feed>

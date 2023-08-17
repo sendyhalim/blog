@@ -104,17 +104,17 @@ One of the most obvious example is to agree on how to name variables.</p>
 <ul>
 <li>Use plural for list, vector or array type.</li>
 </ul>
-<pre><code>let emails: Vec&lt;String&gt;;
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">let emails: Vec&lt;String&gt;;
 let users: Vec&lt;User&gt;;
 let people: Vec&lt;Person&gt;;
 </code></pre>
 <ul>
 <li>Use <code>{value}_by_{type}</code> naming pattern for key-value data structure (hashmap, btreemap, dictionary, etc)</li>
 </ul>
-<pre><code>// You'll get a user given an email
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">&#x2F;&#x2F; You&#x27;ll get a user given an email
 let userByEmail: HashMap&lt;String, User&gt;;
 
-// You'll get users given a name, maybe you're grouping users by their first name
+&#x2F;&#x2F; You&#x27;ll get users given a name, maybe you&#x27;re grouping users by their first name
 let usersByFirstName: HashMap&lt;String, Vec&lt;User&gt;&gt;;
 </code></pre>
 <h5 id="readability-limit-on-maximum-number-of-characters-per-line"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->

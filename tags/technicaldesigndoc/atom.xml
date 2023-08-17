@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - technicaldesigndoc</title>
+    <link href="https://sendyhalim.github.io/blog/tags/technicaldesigndoc/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2021-06-20T00:00:25+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/technicaldesigndoc/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Technical Design Doc Guidelines</title>
+        <published>2021-06-20T00:00:25+07:00</published>
+        <updated>2021-06-20T00:00:25+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/development-practices/technical-design-doc-guidelines/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/development-practices/technical-design-doc-guidelines/</id>
+        
+        <content type="html">&lt;p&gt;Writing a technical design doc(TDD) is a prerequisite of a medium-high feature development&#x2F;refactoring initiative, it&#x27;s a crucial part of the development process.
+TDD can ease the process to get everyone on board with the plan, the doc should be reviewed by your CTO&#x2F;Managers and stakeholders.
+It&#x27;s an essential part of the planning process because &lt;b&gt;it brings people together, especially to get buy-in from the team and stakeholders&lt;&#x2F;b&gt; so they can provide support along the way 🍪!&lt;&#x2F;p&gt;
+&lt;p&gt;The post will cover some of the general guidelines that hopefully can assist you to prepare the TDD.
+The main principle is simple just like writing code, the easier it is to understand the easier it is to review.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;start-with-background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#start-with-background&quot; aria-label=&quot;Anchor link for: start-with-background&quot;&gt;#&lt;&#x2F;a&gt;
+Start with background&lt;&#x2F;h4&gt;
+&lt;p&gt;Background section should help people understand the context of the document, generally you can show a high level
+overview of how certain problems are currently solved, how a certain feature works, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;Showing an overview of the current state will help people understand the background a bit deeper, if there&#x27;s a current implementation&#x2F;flow then show it, and make it explicit what could be improved from the current flow.
+Feel free to put links to other existing docs as well. A diagram flow will help people to visualize and catch up quickly.
+Free tools that you can use:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;diagrams.net&quot;&gt;diagrams.net&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mermaid-js.github.io&#x2F;mermaid&#x2F;#&#x2F;&quot;&gt;MermaidJS&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;problem-statement&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#problem-statement&quot; aria-label=&quot;Anchor link for: problem-statement&quot;&gt;#&lt;&#x2F;a&gt;
+Problem statement&lt;&#x2F;h4&gt;
+&lt;p&gt;This section states the problem with the current state, it should emphasize the importance of solving that problem and show why it matters.&lt;&#x2F;p&gt;
+&lt;p&gt;Some key points that maybe can guide you:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Are you solving a specific user problem where there are N users that are impacted?&lt;&#x2F;li&gt;
+&lt;li&gt;The current process might have pain points and sometimes users are just numb to the &amp;quot;pain&amp;quot; up until someone points it out.&lt;&#x2F;li&gt;
+&lt;li&gt;Will it increase the company&#x27;s business metric either directly or indirectly? If it can save cost, any estimation by what %?&lt;&#x2F;li&gt;
+&lt;li&gt;Are you investing for future needs? Why does that specific investment matter?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;requirements&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#requirements&quot; aria-label=&quot;Anchor link for: requirements&quot;&gt;#&lt;&#x2F;a&gt;
+Requirements&lt;&#x2F;h4&gt;
+&lt;p&gt;The requirements section set boundaries on the solution, it helps you to filter solutions that can be applied.
+Typically there will be specific functionalities&#x2F;features that the solutions must provide.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;show-the-available-options-solutions-that-we-have&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#show-the-available-options-solutions-that-we-have&quot; aria-label=&quot;Anchor link for: show-the-available-options-solutions-that-we-have&quot;&gt;#&lt;&#x2F;a&gt;
+Show the available options&#x2F;solutions that we have&lt;&#x2F;h4&gt;
+&lt;p&gt;There would be more than one solution that we can apply to meet the requirements, it&#x27;s preferable to lay out the available options that we have.
+Start with the least preferable solution and list down its pros and cons, progressive move to the most preferable solution.&lt;&#x2F;p&gt;
+&lt;p&gt;Make it clear why we&#x27;re implementing that specific solution, and why the others won&#x27;t work as well as the one that you propose.&lt;&#x2F;p&gt;
+&lt;p&gt;Showing the available solutions will make it easier for us to get back here quickly just in case we pursued the wrong solution.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;what-are-the-success-metrics&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-are-the-success-metrics&quot; aria-label=&quot;Anchor link for: what-are-the-success-metrics&quot;&gt;#&lt;&#x2F;a&gt;
+What are the success metrics&lt;&#x2F;h4&gt;
+&lt;p&gt;Decide on the success metrics that can be monitored.
+For example, if you&#x27;re implementing a UX improvement, the success metric should be something related to the feature funnel, one thing that you could do is add trackers to the feature funnel and then query the data through an analytical database,
+or just reuse existing funnel dashboard (if any).&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;what-are-the-action-items-timelines&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-are-the-action-items-timelines&quot; aria-label=&quot;Anchor link for: what-are-the-action-items-timelines&quot;&gt;#&lt;&#x2F;a&gt;
+What are the action items &amp;amp; timelines&lt;&#x2F;h4&gt;
+&lt;p&gt;List all of the action items and set the PIC. PIC could be a team (the team lead will delegate the tasks) or an individual contributor.
+If the project has milestones then set the deadline for each milestone, if it&#x27;s not then it&#x27;s ok to just put the end goal deadline,
+make sure all the PICs agree with the timeline.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;what-s-your-backup-plan&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-s-your-backup-plan&quot; aria-label=&quot;Anchor link for: what-s-your-backup-plan&quot;&gt;#&lt;&#x2F;a&gt;
+What&#x27;s your backup plan&lt;&#x2F;h4&gt;
+&lt;p&gt;Things could fail even with an almost perfect plan, what&#x27;s your backup plan?&lt;&#x2F;p&gt;
+&lt;p&gt;If a migration plan fails, what should we do? Is there a way to turn back? If there&#x27;s a way, should we continue with the risk or is there anything that we should do?
+What are the steps of the backup plan? Who&#x27;s going to execute it?&lt;&#x2F;p&gt;
+&lt;p&gt;Specifically in product engineering, suppose it does not meet the deadline, then what are non-essential features that we can cut? Can we move them into the next iterations?&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;gather-feedback&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#gather-feedback&quot; aria-label=&quot;Anchor link for: gather-feedback&quot;&gt;#&lt;&#x2F;a&gt;
+Gather feedback&lt;&#x2F;h4&gt;
+&lt;p&gt;There&#x27;s no perfect plan, open a feedback session and verify reviewers concerns. Sometimes there are blind spots due to the lack of visibility&#x2F;outdated product knowledge,
+for example the flow that you read has changed after you prepared the plan.&lt;&#x2F;p&gt;
+&lt;p&gt;Don&#x27;t worry too much, that&#x27;s why we&#x27;re doing the technical design doc review session 🖖.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

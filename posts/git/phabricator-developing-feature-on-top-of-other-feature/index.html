@@ -81,7 +81,7 @@
 Simulation</h3>
 <p>We'll be using <a href="https://github.com/sendyhalim/phabricator-developing-feature-on-top-of-other-feature-code">this repo</a> as example.</p>
 <p>Assumptions:</p>
-<pre><code>M = master
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">M = master
 FA = feature a
 FB = feature b
 
@@ -95,7 +95,7 @@ bx&lt;n&gt; = commit on feature-b branch
 <li><code>feature-a</code> branch: 2 commits <code>ax1</code> and <code>ax2</code>.</li>
 <li><code>feature-b</code> branch: 3 commits <code>bx1</code>, <code>bx2</code> and <code>bx3</code>, it's  built on top of <code>feature-a</code>.</li>
 </ul>
-<pre><code>mx1---mx2---mx3---&gt; [M]
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">mx1---mx2---mx3---&gt; [M]
                \
                 ax1---ax2---&gt; [FA]
                          \
@@ -105,16 +105,16 @@ bx&lt;n&gt; = commit on feature-b branch
 <a class="zola-anchor" href="#arc-land-feature-a-branch" aria-label="Anchor link for: arc-land-feature-a-branch">#</a>
 Arc land feature-a branch</h3>
 <p>Let's say that your <code>feature-a</code> is accepted via code review process and you do <code>arc land</code>, it'll squash commits <code>ax1</code> and <code>ax2</code> into 1 commit.</p>
-<pre><code># Process view
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash"># Process view
 # S = squash
 # --------------------
 mx1---mx2---mx3---&gt; [M]
-               \         /---bx1---bx2---bx3---&gt; [FB]
+               \         &#x2F;---bx1---bx2---bx3---&gt; [FB]
                 ax1---ax2---&gt; [FA]
                  |     |
                  S     S
 # End result
-# There's a new commit &quot;ax&quot; that represents commit ax1 and ax2.
+# There&#x27;s a new commit &quot;ax&quot; that represents commit ax1 and ax2.
 # --------------------
 mx1---mx2---mx3---ax---&gt; [M]
                \
@@ -131,12 +131,12 @@ git checkout -b feature-b-backup
 Rewriting history</h3>
 <p>First, make sure that we're on feature-b and then we will run rebase interactive to drop commits <code>ax1</code> and <code>ax2</code>.
 It should be safe because both commits are already in master (represented by <code>ax</code> commit).</p>
-<pre><code># Do interactive rebase onto master
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash"># Do interactive rebase onto master
 # --------------------
 git rebase -i master
 </code></pre>
 <p>There will be an editor prompt that should look like</p>
-<pre><code>pick 233a9b8 ax1
+<pre data-lang="gitrebase" class="language-gitrebase "><code class="language-gitrebase" data-lang="gitrebase">pick 233a9b8 ax1
 pick 5f5e3ce ax2
 pick e145774 bx1
 pick 1834f7d bx2
@@ -148,7 +148,7 @@ pick 95d155a bx3
 <li>Replace <code>pick</code> with <code>drop</code></li>
 </ol>
 <p>You can do either one but I'll go with <code>drop</code> to make it more explicit in this post</p>
-<pre><code>drop 233a9b8 ax1
+<pre data-lang="gitrebase" class="language-gitrebase "><code class="language-gitrebase" data-lang="gitrebase">drop 233a9b8 ax1
 drop 5f5e3ce ax2
 pick e145774 bx1
 pick 1834f7d bx2
@@ -156,7 +156,7 @@ pick 95d155a bx3
 </code></pre>
 <p>Save your changes and quit editor, the rebase process will continue by itself.
 Now your <code>feature-b</code> should point to the latest commit on local <code>master</code> branch, you can verify this via <code>git log</code> or use a GUI tool.</p>
-<pre><code>git log --oneline --decorate --color --graph
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">git log --oneline --decorate --color --graph
 
 # End result
 # --------------------

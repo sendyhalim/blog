@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - swime</title>
+    <link href="https://sendyhalim.github.io/blog/tags/swime/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-04-26T23:00:44+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/swime/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Swift MIME Type Detection with Swime</title>
+        <published>2017-04-26T23:00:44+07:00</published>
+        <updated>2017-04-26T23:00:44+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/detect-mime-type-with-swime/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/detect-mime-type-with-swime/</id>
+        
+        <content type="html">&lt;p&gt;A month ago I found myself scouring GitHub for a Swift plugin
+to detect mime type based on magic bytes. I did find &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;onevcat&#x2F;MimeType&quot;&gt;MimeType&lt;&#x2F;a&gt;,
+unfortunately it extracts the mime type from a file path or url extension.
+Knowing that no one hadn&#x27;t created a mime type checking library for Swift, I set
+a to-do list to learn about mime type checking, hoping that I could contribute to the open source
+community. My first attempt was to understand how to read file bytes in Swift.
+Below is my best attempt after going through Apple docs and some examples from stackoverflow.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;let path = &amp;quot;&amp;#x2F;path&amp;#x2F;to&amp;#x2F;file&amp;quot;
+let url = URL(fileURLWithPath: path, isDirectory: false)
+let data = try! Data(contentsOf: url)
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Okay now I&#x27;ve got the file represented in &lt;code&gt;Data&lt;&#x2F;code&gt; struct, how do I read the bytes?
+It turns out we need to allocate an array of &lt;code&gt;UInt8&lt;&#x2F;code&gt; as the bytes container
+then pass it to &lt;code&gt;Data.copyBytes(to:count:)&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;let bytesCount = 10
+
+&amp;#x2F;&amp;#x2F; Bytes need to mutable.
+var bytes = [UInt8](repeating: 0, count: bytesCount)
+
+&amp;#x2F;&amp;#x2F; Copy file bytes to `bytes` variable
+data.copyBytes(to: &amp;amp;bytes, count: bytesCount)
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Next is the hard part, some of the &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;List_of_file_signatures&quot;&gt;magic bytes specification&lt;&#x2F;a&gt;
+need to be treated differently, for example we need to read bytes 0-3 then jump to bytes 30-57 to check
+for &lt;code&gt;application&#x2F;epub+zip&lt;&#x2F;code&gt;.
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;swime&quot;&gt;Swime&lt;&#x2F;a&gt; comes to aid this. I took the awesome implementation of
+Sindresorhus &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sindresorhus&#x2F;file-type&quot;&gt;file type&lt;&#x2F;a&gt; library and rewrote it in Swift with
+some added features.&lt;&#x2F;p&gt;
+&lt;p&gt;A typical mime type check operation with Swime would look like this&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;import Swime
+
+let path = &amp;quot;&amp;#x2F;path&amp;#x2F;to&amp;#x2F;some-file.jpg&amp;quot;
+let url = URL(fileURLWithPath: path, isDirectory: false)
+let data = try! Data(contentsOf: url)
+let mimeType = Swime.mimeType(data: data)
+
+mimeType?.type == .jpg &amp;#x2F;&amp;#x2F; true
+mimeType! &amp;#x2F;&amp;#x2F; MimeType(mime: &amp;quot;image&amp;#x2F;jpeg&amp;quot;, ext: &amp;quot;jpg&amp;quot;, type: .jpg)
+
+switch mimeType?.type {
+  case .jpg?:
+    ....
+  case .png?:
+    ....
+  case .wmv?:
+    ....
+
+  case ...
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Please feel free to open an issue or pull request if there&#x27;s a feature
+that would be a great addition to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;swime&quot;&gt;Swime&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;media.giphy.com&#x2F;media&#x2F;Zw3oBUuOlDJ3W&#x2F;giphy.gif&quot; alt=&quot;Beer Toast!&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

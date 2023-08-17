@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - swift</title>
+    <link href="https://sendyhalim.github.io/blog/tags/swift/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2018-02-10T03:19:00+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/swift/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Customizing UISearchBar</title>
+        <published>2018-02-10T03:19:00+07:00</published>
+        <updated>2018-02-10T03:19:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/</id>
+        
+        <content type="html">&lt;p&gt;The default view of &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; is kind of boring, one way to customize it is by subclassing &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; and put the customization code in &lt;code&gt;willMove(toSuperView:)&lt;&#x2F;code&gt; method.
+In this post, we&#x27;ll try to do 2 things&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set border radius for &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Set custom search icon for &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;initial-state&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#initial-state&quot; aria-label=&quot;Anchor link for: initial-state&quot;&gt;#&lt;&#x2F;a&gt;
+Initial State&lt;&#x2F;h2&gt;
+&lt;p&gt;First, we need to subclass &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;, let&#x27;s create one&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;import UIKit
+
+class SearchBar: UISearchBar {
+  override func willMove(toSuperview newSuperview: UIView?) {
+    super.willMove(toSuperview: newSuperview)
+
+    &amp;#x2F;&amp;#x2F; We&amp;#x27;ll fill this later~
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then set your search bar class to &lt;code&gt;SearchBar&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;interface-builder-search-bar.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Interface Builder Search Bar&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s take a look at our initial state, our &lt;code&gt;SearchBar&lt;&#x2F;code&gt; should look like this&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;initial-state.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Initial State&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;uisearchbar-minimal-style&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#uisearchbar-minimal-style&quot; aria-label=&quot;Anchor link for: uisearchbar-minimal-style&quot;&gt;#&lt;&#x2F;a&gt;
+UISearchBar Minimal Style&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;UISearchBar&lt;&#x2F;code&gt; has &lt;code&gt;searchBarStyle&lt;&#x2F;code&gt; property, we&#x27;ll set that with &lt;code&gt;UISearchBarStyle.minimal&lt;&#x2F;code&gt;, this tells &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; to
+remove its background&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;override func willMove(toSuperview newSuperview: UIView?) {
+  super.willMove(toSuperview: newSuperview)
+
+  searchBarStyle = UISearchBarStyle.minimal
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;minimal.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Minimal&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;borderless-uisearchbar&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#borderless-uisearchbar&quot; aria-label=&quot;Anchor link for: borderless-uisearchbar&quot;&gt;#&lt;&#x2F;a&gt;
+Borderless UISearchBar&lt;&#x2F;h2&gt;
+&lt;p&gt;Next, we&#x27;ll remove text field border and set some styling&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;override func willMove(toSuperview newSuperview: UIView?) {
+  super.willMove(toSuperview: newSuperview)
+
+  searchBarStyle = UISearchBarStyle.minimal
+
+  &amp;#x2F;&amp;#x2F; Configure text field
+  let textField = value(forKey: &amp;quot;_searchField&amp;quot;) as! UITextField
+
+  &amp;#x2F;&amp;#x2F; This will remove the border style, we need to do this
+  &amp;#x2F;&amp;#x2F; in order to configure border style through `textField.layer`
+  &amp;#x2F;&amp;#x2F; otherwise we&amp;#x27;ll have 2 borders.
+  &amp;#x2F;&amp;#x2F; You can remove `textField.borderStyle = .none` to see it yourself.
+  textField.borderStyle = .none
+  textField.backgroundColor = UIColor(hex: &amp;quot;#F7F7F7&amp;quot;)
+  textField.clipsToBounds = true
+  textField.layer.cornerRadius = 6.0
+  textField.layer.borderWidth = 1.0
+  textField.layer.borderColor = textField.backgroundColor!.cgColor
+  textField.textColor = UIColor(hex: &amp;quot;#555555&amp;quot;)
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;borderless.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Borderless&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;customizing-search-icon&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#customizing-search-icon&quot; aria-label=&quot;Anchor link for: customizing-search-icon&quot;&gt;#&lt;&#x2F;a&gt;
+Customizing Search Icon&lt;&#x2F;h2&gt;
+&lt;p&gt;Now we need to customize the search icon&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;override func willMove(toSuperview newSuperview: UIView?) {
+  super.willMove(toSuperview: newSuperview)
+
+  searchBarStyle = .minimal
+
+  &amp;#x2F;&amp;#x2F; Create search icon.
+  let searchIcon = UIImageView(image: &amp;lt;your search icon goes here&amp;gt;)
+  let searchImageSize = searchIcon.image!.size
+
+  &amp;#x2F;&amp;#x2F; I&amp;#x27;m adding some padding to the image
+  searchIcon.frame = CGRect(
+    x: 0,
+    y: 0,
+    width: searchImageSize.width + 10,
+    height: searchImageSize.height
+  )
+
+  &amp;#x2F;&amp;#x2F; Default value is `UIViewContentMode.scaleToFill`,
+  &amp;#x2F;&amp;#x2F; it&amp;#x27;ll stretch the search icon, we don&amp;#x27;t want that,
+  &amp;#x2F;&amp;#x2F; we want to center the search icon instead.
+  searchIcon.contentMode = UIViewContentMode.center
+
+  &amp;#x2F;&amp;#x2F; Configure text field
+  let textField = value(forKey: &amp;quot;_searchField&amp;quot;) as! UITextField
+  textField.leftView = searchIcon
+  textField.borderStyle = .none
+  textField.backgroundColor = UIColor(hex: &amp;quot;#F7F7F7&amp;quot;)
+  textField.clipsToBounds = true
+  textField.layer.cornerRadius = 6.0
+  textField.layer.borderWidth = 1.0
+  textField.layer.borderColor = textField.backgroundColor!.cgColor
+  textField.textColor = UIColor(hex: &amp;quot;#555555&amp;quot;)
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The end result should look like this&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;end-result.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon End Result&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;You can find the full code
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;iYomu&#x2F;blob&#x2F;master&#x2F;Yomu&#x2F;Common&#x2F;SearchBar.swift&quot; target=&quot;_blank&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Swift MIME Type Detection with Swime</title>
+        <published>2017-04-26T23:00:44+07:00</published>
+        <updated>2017-04-26T23:00:44+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/detect-mime-type-with-swime/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/detect-mime-type-with-swime/</id>
+        
+        <content type="html">&lt;p&gt;A month ago I found myself scouring GitHub for a Swift plugin
+to detect mime type based on magic bytes. I did find &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;onevcat&#x2F;MimeType&quot;&gt;MimeType&lt;&#x2F;a&gt;,
+unfortunately it extracts the mime type from a file path or url extension.
+Knowing that no one hadn&#x27;t created a mime type checking library for Swift, I set
+a to-do list to learn about mime type checking, hoping that I could contribute to the open source
+community. My first attempt was to understand how to read file bytes in Swift.
+Below is my best attempt after going through Apple docs and some examples from stackoverflow.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;let path = &amp;quot;&amp;#x2F;path&amp;#x2F;to&amp;#x2F;file&amp;quot;
+let url = URL(fileURLWithPath: path, isDirectory: false)
+let data = try! Data(contentsOf: url)
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Okay now I&#x27;ve got the file represented in &lt;code&gt;Data&lt;&#x2F;code&gt; struct, how do I read the bytes?
+It turns out we need to allocate an array of &lt;code&gt;UInt8&lt;&#x2F;code&gt; as the bytes container
+then pass it to &lt;code&gt;Data.copyBytes(to:count:)&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;let bytesCount = 10
+
+&amp;#x2F;&amp;#x2F; Bytes need to mutable.
+var bytes = [UInt8](repeating: 0, count: bytesCount)
+
+&amp;#x2F;&amp;#x2F; Copy file bytes to `bytes` variable
+data.copyBytes(to: &amp;amp;bytes, count: bytesCount)
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Next is the hard part, some of the &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;List_of_file_signatures&quot;&gt;magic bytes specification&lt;&#x2F;a&gt;
+need to be treated differently, for example we need to read bytes 0-3 then jump to bytes 30-57 to check
+for &lt;code&gt;application&#x2F;epub+zip&lt;&#x2F;code&gt;.
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;swime&quot;&gt;Swime&lt;&#x2F;a&gt; comes to aid this. I took the awesome implementation of
+Sindresorhus &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sindresorhus&#x2F;file-type&quot;&gt;file type&lt;&#x2F;a&gt; library and rewrote it in Swift with
+some added features.&lt;&#x2F;p&gt;
+&lt;p&gt;A typical mime type check operation with Swime would look like this&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;import Swime
+
+let path = &amp;quot;&amp;#x2F;path&amp;#x2F;to&amp;#x2F;some-file.jpg&amp;quot;
+let url = URL(fileURLWithPath: path, isDirectory: false)
+let data = try! Data(contentsOf: url)
+let mimeType = Swime.mimeType(data: data)
+
+mimeType?.type == .jpg &amp;#x2F;&amp;#x2F; true
+mimeType! &amp;#x2F;&amp;#x2F; MimeType(mime: &amp;quot;image&amp;#x2F;jpeg&amp;quot;, ext: &amp;quot;jpg&amp;quot;, type: .jpg)
+
+switch mimeType?.type {
+  case .jpg?:
+    ....
+  case .png?:
+    ....
+  case .wmv?:
+    ....
+
+  case ...
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Please feel free to open an issue or pull request if there&#x27;s a feature
+that would be a great addition to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;swime&quot;&gt;Swime&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;media.giphy.com&#x2F;media&#x2F;Zw3oBUuOlDJ3W&#x2F;giphy.gif&quot; alt=&quot;Beer Toast!&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Make NSCollectionViewItem Responsive Width and Height</title>
+        <published>2017-03-04T23:48:35+07:00</published>
+        <updated>2017-03-04T23:48:35+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/</id>
+        
+        <content type="html">&lt;p&gt;I had a hard time figuring out how to make &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; width to be responsive.
+The problem was that I wanted my &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; to follow its parent width.
+Maybe I didn&#x27;t google the right keywords, I didn&#x27;t find any solution on the internet.
+I found the solution after reading &lt;code&gt;NSCollectionViewDelegateFlowLayout&lt;&#x2F;code&gt;, it wasn&#x27;t straight forward.
+When the window is resized, &lt;code&gt;NSCollectionView&lt;&#x2F;code&gt; will follow the its parent width by default, but not the cells inside it.
+Turns out that we need to invalidate the cells layout manually and tell &lt;code&gt;NSCollectionViewDelegateFlowLayout&lt;&#x2F;code&gt; our cells preferred size.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;extension MyCollectionViewController: NSCollectionViewDelegateFlowLayout {
+  func collectionView(
+    _ collectionView: NSCollectionView,
+    layout collectionViewLayout: NSCollectionViewLayout,
+    sizeForItemAt indexPath: IndexPath
+  ) -&amp;gt; NSSize {
+    &amp;#x2F;&amp;#x2F; Here we&amp;#x27;re telling that we want our cell width to
+    &amp;#x2F;&amp;#x2F; be equal to our collection view width
+    &amp;#x2F;&amp;#x2F; and height equals to 70
+    return CGSize(width: collectionView.bounds.width, height: 70)
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;There&#x27;s one catch here, remember we need to invalidate the cells layout manually&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;class MyCollectionViewController: NSViewController {
+  @IBOutlet weak var collectionView: NSCollectionView!
+
+  &amp;#x2F;&amp;#x2F; This method will be called everytime window is resized
+  override func viewWillLayout() {
+    super.viewWillLayout()
+
+    &amp;#x2F;&amp;#x2F; When we&amp;#x27;re invalidating the collection view layout
+    &amp;#x2F;&amp;#x2F; it will call `collectionView(_:layout:sizeForItemAt:)` method
+    collectionView.collectionViewLayout?.invalidateLayout()
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;There it is, hope it helps 🍪&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>NSImageView Unproportional Zoom</title>
+        <published>2017-02-10T20:47:23+07:00</published>
+        <updated>2017-02-10T20:47:23+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/macos/unproportional-zoom/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/macos/unproportional-zoom/</id>
+        
+        <content type="html">&lt;p&gt;I had this weird problem when I tried to implement a zoom functionality
+in my hobby project, a manga reader called &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;yomu&quot;&gt;Yomu&lt;&#x2F;a&gt;.
+When I tried to zoom an &lt;code&gt;NSImageView&lt;&#x2F;code&gt; programmatically
+it&#x27;s being zoomed unproportionally, my expectation was the image should be stretched horizontally
+and vertically without moving from its center point. It was like this&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;Zoom 100%&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;zoom-100.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;Zoom 140%&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;zoom-140.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Damn, there was an ugly gap :( between header border and the image.
+I had a hard time finding the solution, it took me almost 3 days to debug this problem (maybe because I&#x27;m a newbie).
+It turns out the solution is really simple, by default apple will set image view to scale proportionally down,
+changing it to proportionally up or down will fix the problem.&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;The culprit T_T&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;proportionally-down.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;Fixing it 🍻&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;proportionally-up-or-down.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>RxSwift Race Condition on Cells</title>
+        <published>2016-07-04T22:58:59+07:00</published>
+        <updated>2016-07-04T22:58:59+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/race-condition-on-cells/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/race-condition-on-cells/</id>
+        
+        <content type="html">&lt;p&gt;A few days ago I wrote a simple code to asynchronously load an image using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya#rxswift&quot;&gt;&lt;code&gt;RxMoya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.
+&lt;code&gt;RxMoya&lt;&#x2F;code&gt; is an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ReactiveX&#x2F;RxSwift&quot;&gt;&lt;code&gt;RxSwift&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; wrapper
+for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya&quot;&gt;&lt;code&gt;Moya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;. The flow is simple,
+everytime collection view asks for &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; (yes, I&#x27;m building a macOS app),
+I need to load the image asynchronously. Here&#x27;s a part of the implementation:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;func collectionView(
+  collectionView: NSCollectionView,
+  itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
+) -&amp;gt; NSCollectionViewItem {
+  let item = collectionView.makeItemWithIdentifier(
+    &amp;quot;ChapterItem&amp;quot;,
+    forIndexPath: indexPath
+  ) as! ChapterItem
+
+  let chapter = vm[indexPath.item]
+  let chapterPageVm = ChapterPagesViewModel(..)
+
+  &amp;#x2F;&amp;#x2F; Fetch manga chapter pages
+  chapterPageVm.fetch()
+
+  chapterPageVm
+    .chapterPages
+    .drive(onNext: { _ in
+      &amp;#x2F;&amp;#x2F; After chapter pages are loaded
+      &amp;#x2F;&amp;#x2F; we will set chapter preview here
+    })
+    .addDisposableTo(disposeBag)
+
+  ...
+
+  return item
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;i.imgflip.com&#x2F;1b9y1.jpg&quot;
+    alt=&quot;Problem analysis&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Obviously there&#x27;s a problem with the implementation, how do
+I make sure that after the chapter pages are loaded, the execution
+context of &lt;code&gt;driveNext&lt;&#x2F;code&gt; is valid? In other words, how to make sure
+that the cell item has not been re-used (because if it is
+and I’m setting the fetched data, then there will be race condition)?&lt;&#x2F;p&gt;
+&lt;p&gt;A solution that might work is by setting a &lt;code&gt;DisposeBag&lt;&#x2F;code&gt; to each
+cell and disposing it everytime &lt;code&gt;didEndDisplayingItem&lt;&#x2F;code&gt; gets called.&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;http:&#x2F;&#x2F;id.ragegenerator.com&#x2F;images&#x2F;ragebuilder-faces&#x2F;Happy&#x2F;09.png&quot;
+    alt=&quot;The solution&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Sounds like a perfect plan! Now I just need to find a way to set the dispose bags
+and keep track of them for each cell. Luckily &lt;code&gt;RxSwift&lt;&#x2F;code&gt; has a great community
+around it, &lt;code&gt;dpaschich&lt;&#x2F;code&gt; on &lt;a href=&quot;http:&#x2F;&#x2F;rxswift.slack.com&#x2F;&quot;&gt;rxswift.slack.com&lt;&#x2F;a&gt; suggested
+to set &lt;code&gt;DisposeBag&lt;&#x2F;code&gt; on each of the cell item and disposing it using a custom method
+&lt;code&gt;didEndDisplaying&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;class ChapterItem: NSCollectionViewItem {
+  @IBOutlet weak var chapterTitle: NSTextField!
+  @IBOutlet weak var chapterNumber: NSTextField!
+  @IBOutlet weak var chapterPreview: NSImageView!
+
+  var disposeBag = DisposeBag()
+
+  func didEndDisplaying() {
+    chapterPreview.image = .None
+
+    disposeBag = DisposeBag()
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;func collectionView(
+  collectionView: NSCollectionView,
+  didEndDisplayingItem item: NSCollectionViewItem,
+  forRepresentedObjectAtIndexPath indexPath: NSIndexPath
+) {
+  let _item = item as! ChapterItem
+
+  _item.didEndDisplaying()
+}
+
+func collectionView(
+  collectionView: NSCollectionView,
+  itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
+) -&amp;gt; NSCollectionViewItem {
+  let item = collectionView.makeItemWithIdentifier(
+    &amp;quot;ChapterItem&amp;quot;,
+    forIndexPath: indexPath
+  ) as! ChapterItem
+
+  let chapter = vm[indexPath.item]
+  let chapterPageVm = ChapterPagesViewModel(..)
+
+  &amp;#x2F;&amp;#x2F; Fetch manga chapter pages
+  chapterPageVm.fetch()
+
+  &amp;#x2F;&amp;#x2F; Notice how I add disposable to item.disposeBag
+  chapterPageVm
+    .chapterPages
+    .driveNext { _ in
+      &amp;#x2F;&amp;#x2F; After chapter pages are loaded
+      &amp;#x2F;&amp;#x2F; we will set chapter preview here
+    } &amp;gt;&amp;gt;&amp;gt; item.disposeBag
+
+  ...
+
+  return item
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+</feed>

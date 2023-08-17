@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - principles</title>
+    <link href="https://sendyhalim.github.io/blog/tags/principles/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2021-09-18T00:00:25+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/principles/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Practical Programming Principles</title>
+        <published>2021-09-18T00:00:25+07:00</published>
+        <updated>2021-09-18T00:00:25+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/development-practices/practical-programming-principles/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/development-practices/practical-programming-principles/</id>
+        
+        <content type="html">&lt;p&gt;There are many programming paradigms, many approaches to code, new tools and frameworks, well things are moving fast 🏎 💨!&lt;&#x2F;p&gt;
+&lt;p&gt;I hope this post can be something to be held on when considering programming and development standard.
+Usually the considerations will be useful when starting a new project, when there are arguments on
+how to approach things in development,, which tool&#x2F;framework to use. Pick whatever you think is suitable for your project &amp;amp; team, take it with a grain of salt.&lt;&#x2F;p&gt;
+&lt;p&gt;Having these principles in mind has helped my team to:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make programming decisions: how to structure code, how to handle errors.&lt;&#x2F;li&gt;
+&lt;li&gt;Decide when should we opt-in for a hack and what&#x27;s the minimum proper way to apply a &amp;quot;quickfix&amp;quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;Decide when to invest more in documentations.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;readability&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability&quot; aria-label=&quot;Anchor link for: readability&quot;&gt;#&lt;&#x2F;a&gt;
+Readability&lt;&#x2F;h3&gt;
+&lt;p&gt;Readability means it&#x27;s easy to understand, not just easy to read. &lt;code&gt;Easy to understand&lt;&#x2F;code&gt; meaning might vary
+because each company&#x2F;team has different engineering skills standard due to different skillset requirements as well. Having a readability standard set earlier will boost
+team productivity in the longer run, it&#x27;ll cut communication cost, reduce the time needed to understand the code, hence improve the team onboarding process.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;readability-statically-typed-language&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-statically-typed-language&quot; aria-label=&quot;Anchor link for: readability-statically-typed-language&quot;&gt;#&lt;&#x2F;a&gt;
+[Readability] Statically typed language&lt;&#x2F;h5&gt;
+&lt;p&gt;It might be worth the investment to use statically typed language. Code is meant to be read more than it is written,
+static typing will improve readability. The compiler will help you eliminate most of the compile-time type errors, which will simplify code reviews, unit testing.
+you don&#x27;t need to test data type unless your project requires you to do a lot of runtime type checking, too many runtime checking could be be sign of another problem though (depending on project goals).&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;readability-invest-in-code-comments&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-invest-in-code-comments&quot; aria-label=&quot;Anchor link for: readability-invest-in-code-comments&quot;&gt;#&lt;&#x2F;a&gt;
+[Readability] Invest in code comments&lt;&#x2F;h5&gt;
+&lt;p&gt;Code comments can be used to explain &amp;quot;why&amp;quot; certain logic is set that way, this will cut communication cost and make debugging a lot easier.
+The goal is to help your peers and &amp;quot;future you&amp;quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Complex logic.&lt;&#x2F;li&gt;
+&lt;li&gt;Motivation regarding unorthodox approach.&lt;&#x2F;li&gt;
+&lt;li&gt;Hack&#x2F;quick fix, this would reduce confusion a lot and make it explicit that the approach that&#x27;s considered a &amp;quot;hack&amp;quot; is intended.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h5 id=&quot;readability-standard-on-variable-names&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-standard-on-variable-names&quot; aria-label=&quot;Anchor link for: readability-standard-on-variable-names&quot;&gt;#&lt;&#x2F;a&gt;
+[Readability] Standard on variable names&lt;&#x2F;h5&gt;
+&lt;p&gt;Set an acceptable standard of explicitness with your team.
+One of the most obvious example is to agree on how to name variables.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use plural for list, vector or array type.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;let emails: Vec&amp;lt;String&amp;gt;;
+let users: Vec&amp;lt;User&amp;gt;;
+let people: Vec&amp;lt;Person&amp;gt;;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;{value}_by_{type}&lt;&#x2F;code&gt; naming pattern for key-value data structure (hashmap, btreemap, dictionary, etc)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&amp;#x2F;&amp;#x2F; You&amp;#x27;ll get a user given an email
+let userByEmail: HashMap&amp;lt;String, User&amp;gt;;
+
+&amp;#x2F;&amp;#x2F; You&amp;#x27;ll get users given a name, maybe you&amp;#x27;re grouping users by their first name
+let usersByFirstName: HashMap&amp;lt;String, Vec&amp;lt;User&amp;gt;&amp;gt;;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h5 id=&quot;readability-limit-on-maximum-number-of-characters-per-line&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-limit-on-maximum-number-of-characters-per-line&quot; aria-label=&quot;Anchor link for: readability-limit-on-maximum-number-of-characters-per-line&quot;&gt;#&lt;&#x2F;a&gt;
+[Readability] Limit on maximum number of characters per line.&lt;&#x2F;h5&gt;
+&lt;p&gt;Imagine you&#x27;re reading a book, you need to scroll both vertically &amp;amp; horizontally
+to read a paragraph because there&#x27;s no maximum number of characters per line,
+would it be a good user experience? The same goes for writing code, imagine a line of code
+that you need to scroll both directions a lot, wouldn&#x27;t it be easier to just scroll vertically?&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;modularity&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#modularity&quot; aria-label=&quot;Anchor link for: modularity&quot;&gt;#&lt;&#x2F;a&gt;
+Modularity&lt;&#x2F;h3&gt;
+&lt;p&gt;Modular means it&#x27;s easy to plug &amp;amp; change something because there&#x27;s a &lt;em&gt;balanced abstraction&lt;&#x2F;em&gt;. Note that in practice, you do not have to abstract everything,
+too much abstraction would be make it less readable and harder to understand. It
+would make the most sense to put abstraction on top of something that would likely to change or
+something that already has&#x2F;will have multiple implementations.&lt;&#x2F;p&gt;
+&lt;p&gt;One easy example: suppose we want to send
+SMS(maybe for MFA use cases - OTP) to our users, putting an interface on top of the actual vendor
+implementation might be a good idea, why? Let&#x27;s start with the business use case, MFA is a critical security feature, having a good OTP delivery rate is crucial for the user experience, we
+can&#x27;t rely only to 1 vendor, it&#x27;s important to have at least another SMS vendor backup in case the the primary vendor is down or there are other problems (latency drops or the delivery rate drops).
+If we put an interface for it, it&#x27;s easy to switch. The switch strategy might vary, it could be via a circuit breaker mechanism or just a simple remote config to decide which SMS vendor to use.
+A bit intermezzo, use &lt;a href=&quot;https:&#x2F;&#x2F;jumpcloud.com&#x2F;blog&#x2F;totp-sms-2fa&quot;&gt;TOTP might be more secure than OTP&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;There&#x27;s a signal that you could use to measure modularity, if it&#x27;s &lt;em&gt;relatively easy&lt;&#x2F;em&gt;
+to write unit tests then most probably your code is modular enough because it&#x27;s easy
+to inject dependencies (mock objects in unit test context) and hence will make it easier to refactor things if needed.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;error-handling&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#error-handling&quot; aria-label=&quot;Anchor link for: error-handling&quot;&gt;#&lt;&#x2F;a&gt;
+Error Handling&lt;&#x2F;h3&gt;
+&lt;p&gt;Software breaks all the time, preferably you want to be able to spot errors before your users do.
+When you got error reports you also want to be able to debug it.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;error-handling-observability&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#error-handling-observability&quot; aria-label=&quot;Anchor link for: error-handling-observability&quot;&gt;#&lt;&#x2F;a&gt;
+[Error Handling] Observability&lt;&#x2F;h4&gt;
+&lt;p&gt;Make sure errors do not go into limbo, you want to be able to plot and gauge error rates over time.
+It should be easy to spot as well.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;How easy is it to be alerted when there are errors?&lt;&#x2F;li&gt;
+&lt;li&gt;Can you see the error logs? How easy is it to see it?&lt;&#x2F;li&gt;
+&lt;li&gt;Do we have a clear separation on what&#x27;s considered an error? Do not log informational messages as error&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;error-handling-debuggability&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#error-handling-debuggability&quot; aria-label=&quot;Anchor link for: error-handling-debuggability&quot;&gt;#&lt;&#x2F;a&gt;
+[Error Handling] Debuggability&lt;&#x2F;h4&gt;
+&lt;p&gt;The easier it is to debug the error, the faster it is to resolve the problem, your time should be spent
+mostly on building products&#x2F;software instead of debugging.&lt;&#x2F;p&gt;
+&lt;p&gt;Some of the key points to measure your debuggability:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;How easy is it to prioritize errors? We should be able to separate errors by their severity, errors that block users to complete payment should be more important than errors related to the feature to change the username.&lt;&#x2F;li&gt;
+&lt;li&gt;Error message, do we construct meaningful error messages? or is it just printing &lt;code&gt;&amp;quot;System Error&amp;quot;&lt;&#x2F;code&gt;?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

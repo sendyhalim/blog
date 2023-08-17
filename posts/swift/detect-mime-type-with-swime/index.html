@@ -75,19 +75,19 @@ Knowing that no one hadn't created a mime type checking library for Swift, I set
 a to-do list to learn about mime type checking, hoping that I could contribute to the open source
 community. My first attempt was to understand how to read file bytes in Swift.
 Below is my best attempt after going through Apple docs and some examples from stackoverflow.</p>
-<pre><code>let path = &quot;/path/to/file&quot;
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">let path = &quot;&#x2F;path&#x2F;to&#x2F;file&quot;
 let url = URL(fileURLWithPath: path, isDirectory: false)
 let data = try! Data(contentsOf: url)
 </code></pre>
 <p>Okay now I've got the file represented in <code>Data</code> struct, how do I read the bytes?
 It turns out we need to allocate an array of <code>UInt8</code> as the bytes container
 then pass it to <code>Data.copyBytes(to:count:)</code></p>
-<pre><code>let bytesCount = 10
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">let bytesCount = 10
 
-// Bytes need to mutable.
+&#x2F;&#x2F; Bytes need to mutable.
 var bytes = [UInt8](repeating: 0, count: bytesCount)
 
-// Copy file bytes to `bytes` variable
+&#x2F;&#x2F; Copy file bytes to `bytes` variable
 data.copyBytes(to: &amp;bytes, count: bytesCount)
 </code></pre>
 <p>Next is the hard part, some of the <a href="https://en.wikipedia.org/wiki/List_of_file_signatures">magic bytes specification</a>
@@ -97,15 +97,15 @@ for <code>application/epub+zip</code>.
 Sindresorhus <a href="https://github.com/sindresorhus/file-type">file type</a> library and rewrote it in Swift with
 some added features.</p>
 <p>A typical mime type check operation with Swime would look like this</p>
-<pre><code>import Swime
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">import Swime
 
-let path = &quot;/path/to/some-file.jpg&quot;
+let path = &quot;&#x2F;path&#x2F;to&#x2F;some-file.jpg&quot;
 let url = URL(fileURLWithPath: path, isDirectory: false)
 let data = try! Data(contentsOf: url)
 let mimeType = Swime.mimeType(data: data)
 
-mimeType?.type == .jpg // true
-mimeType! // MimeType(mime: &quot;image/jpeg&quot;, ext: &quot;jpg&quot;, type: .jpg)
+mimeType?.type == .jpg &#x2F;&#x2F; true
+mimeType! &#x2F;&#x2F; MimeType(mime: &quot;image&#x2F;jpeg&quot;, ext: &quot;jpg&quot;, type: .jpg)
 
 switch mimeType?.type {
   case .jpg?:

@@ -69,7 +69,7 @@
 for <a href="https://github.com/Moya/Moya"><code>Moya</code></a>. The flow is simple,
 everytime collection view asks for <code>NSCollectionViewItem</code> (yes, I'm building a macOS app),
 I need to load the image asynchronously. Here's a part of the implementation:</p>
-<pre><code>func collectionView(
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">func collectionView(
   collectionView: NSCollectionView,
   itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
 ) -&gt; NSCollectionViewItem {
@@ -81,14 +81,14 @@ I need to load the image asynchronously. Here's a part of the implementation:</p
   let chapter = vm[indexPath.item]
   let chapterPageVm = ChapterPagesViewModel(..)
 
-  // Fetch manga chapter pages
+  &#x2F;&#x2F; Fetch manga chapter pages
   chapterPageVm.fetch()
 
   chapterPageVm
     .chapterPages
     .drive(onNext: { _ in
-      // After chapter pages are loaded
-      // we will set chapter preview here
+      &#x2F;&#x2F; After chapter pages are loaded
+      &#x2F;&#x2F; we will set chapter preview here
     })
     .addDisposableTo(disposeBag)
 
@@ -121,7 +121,7 @@ and keep track of them for each cell. Luckily <code>RxSwift</code> has a great c
 around it, <code>dpaschich</code> on <a href="http://rxswift.slack.com/">rxswift.slack.com</a> suggested
 to set <code>DisposeBag</code> on each of the cell item and disposing it using a custom method
 <code>didEndDisplaying</code></p>
-<pre><code>class ChapterItem: NSCollectionViewItem {
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">class ChapterItem: NSCollectionViewItem {
   @IBOutlet weak var chapterTitle: NSTextField!
   @IBOutlet weak var chapterNumber: NSTextField!
   @IBOutlet weak var chapterPreview: NSImageView!
@@ -135,7 +135,7 @@ to set <code>DisposeBag</code> on each of the cell item and disposing it using a
   }
 }
 </code></pre>
-<pre><code>func collectionView(
+<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">func collectionView(
   collectionView: NSCollectionView,
   didEndDisplayingItem item: NSCollectionViewItem,
   forRepresentedObjectAtIndexPath indexPath: NSIndexPath
@@ -157,15 +157,15 @@ func collectionView(
   let chapter = vm[indexPath.item]
   let chapterPageVm = ChapterPagesViewModel(..)
 
-  // Fetch manga chapter pages
+  &#x2F;&#x2F; Fetch manga chapter pages
   chapterPageVm.fetch()
 
-  // Notice how I add disposable to item.disposeBag
+  &#x2F;&#x2F; Notice how I add disposable to item.disposeBag
   chapterPageVm
     .chapterPages
     .driveNext { _ in
-      // After chapter pages are loaded
-      // we will set chapter preview here
+      &#x2F;&#x2F; After chapter pages are loaded
+      &#x2F;&#x2F; we will set chapter preview here
     } &gt;&gt;&gt; item.disposeBag
 
   ...

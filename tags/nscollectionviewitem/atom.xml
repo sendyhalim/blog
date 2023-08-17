@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - nscollectionviewitem</title>
+    <link href="https://sendyhalim.github.io/blog/tags/nscollectionviewitem/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-03-04T23:48:35+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/nscollectionviewitem/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Make NSCollectionViewItem Responsive Width and Height</title>
+        <published>2017-03-04T23:48:35+07:00</published>
+        <updated>2017-03-04T23:48:35+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/</id>
+        
+        <content type="html">&lt;p&gt;I had a hard time figuring out how to make &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; width to be responsive.
+The problem was that I wanted my &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; to follow its parent width.
+Maybe I didn&#x27;t google the right keywords, I didn&#x27;t find any solution on the internet.
+I found the solution after reading &lt;code&gt;NSCollectionViewDelegateFlowLayout&lt;&#x2F;code&gt;, it wasn&#x27;t straight forward.
+When the window is resized, &lt;code&gt;NSCollectionView&lt;&#x2F;code&gt; will follow the its parent width by default, but not the cells inside it.
+Turns out that we need to invalidate the cells layout manually and tell &lt;code&gt;NSCollectionViewDelegateFlowLayout&lt;&#x2F;code&gt; our cells preferred size.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;extension MyCollectionViewController: NSCollectionViewDelegateFlowLayout {
+  func collectionView(
+    _ collectionView: NSCollectionView,
+    layout collectionViewLayout: NSCollectionViewLayout,
+    sizeForItemAt indexPath: IndexPath
+  ) -&amp;gt; NSSize {
+    &amp;#x2F;&amp;#x2F; Here we&amp;#x27;re telling that we want our cell width to
+    &amp;#x2F;&amp;#x2F; be equal to our collection view width
+    &amp;#x2F;&amp;#x2F; and height equals to 70
+    return CGSize(width: collectionView.bounds.width, height: 70)
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;There&#x27;s one catch here, remember we need to invalidate the cells layout manually&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;class MyCollectionViewController: NSViewController {
+  @IBOutlet weak var collectionView: NSCollectionView!
+
+  &amp;#x2F;&amp;#x2F; This method will be called everytime window is resized
+  override func viewWillLayout() {
+    super.viewWillLayout()
+
+    &amp;#x2F;&amp;#x2F; When we&amp;#x27;re invalidating the collection view layout
+    &amp;#x2F;&amp;#x2F; it will call `collectionView(_:layout:sizeForItemAt:)` method
+    collectionView.collectionViewLayout?.invalidateLayout()
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;There it is, hope it helps 🍪&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
