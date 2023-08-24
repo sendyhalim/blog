@@ -49,4 +49,5 @@ because I'm already comfortable with them (psql, mysql cli, etc) and I'm confide
 #### Others
 * Google Chrome
 * Google Calendar
+* [Trello](https://trello.com)
 
