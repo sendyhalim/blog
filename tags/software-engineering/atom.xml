@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - software-engineering</title>
+    <link href="https://sendyhalim.github.io/blog/tags/software-engineering/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-24T00:00:00+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/software-engineering/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Tools That I Use For Software Engineering</title>
+        <published>2023-08-24T00:00:00+07:00</published>
+        <updated>2023-08-24T00:00:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/software-engineering/tools-that-i-use-for-software-engineering/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/software-engineering/tools-that-i-use-for-software-engineering/</id>
+        
+        <content type="html">&lt;p&gt;Let&#x27;s structure it to 3 big components&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tools Requirements&lt;&#x2F;li&gt;
+&lt;li&gt;Hardware&lt;&#x2F;li&gt;
+&lt;li&gt;Software&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;tools-requirements&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#tools-requirements&quot; aria-label=&quot;Anchor link for: tools-requirements&quot;&gt;#&lt;&#x2F;a&gt;
+Tools Requirements&lt;&#x2F;h1&gt;
+&lt;p&gt;I&#x27;m kind of frugal in terms of paying for tools, I wouldn&#x27;t spend money unless it satisfies the following requirements:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The tools must save my time.&lt;&#x2F;li&gt;
+&lt;li&gt;It should be long lasting, either it&#x27;s already proven to be long lasting or at the very minimum there must be a company that supports it.&lt;&#x2F;li&gt;
+&lt;li&gt;There&#x27;s no other good free option that could save my time.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;hardware&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#hardware&quot; aria-label=&quot;Anchor link for: hardware&quot;&gt;#&lt;&#x2F;a&gt;
+Hardware&lt;&#x2F;h1&gt;
+&lt;h4 id=&quot;keyboard&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#keyboard&quot; aria-label=&quot;Anchor link for: keyboard&quot;&gt;#&lt;&#x2F;a&gt;
+Keyboard&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Logitech MK275 - &lt;a href=&quot;https:&#x2F;&#x2F;tokopedia.link&#x2F;qirzFnuLwCb&quot;&gt;Tokopedia&lt;&#x2F;a&gt;, I like it, it&#x27;s cheap and works well.&lt;&#x2F;li&gt;
+&lt;li&gt;Keychron K2 - &lt;a href=&quot;https:&#x2F;&#x2F;tokopedia.link&#x2F;1BSfq6lLwCb&quot;&gt;Tokopedia&lt;&#x2F;a&gt;,  got it as a gift on my 28th birthday.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;laptop&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#laptop&quot; aria-label=&quot;Anchor link for: laptop&quot;&gt;#&lt;&#x2F;a&gt;
+Laptop&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Macbook Pro Retina 15 inch, going to replace it soon.&lt;&#x2F;li&gt;
+&lt;li&gt;Vertical Laptop Stand (Alumunium) - &lt;a href=&quot;https:&#x2F;&#x2F;tokopedia.link&#x2F;7JJtv6iMwCb&quot;&gt;Tokopedia&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;monitor&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#monitor&quot; aria-label=&quot;Anchor link for: monitor&quot;&gt;#&lt;&#x2F;a&gt;
+Monitor&lt;&#x2F;h4&gt;
+&lt;p&gt;I&#x27;m using a 24 inch Dell, unfortunately I forgot the link, but I recall that I bought it in 2017 for around ~$170 and it&#x27;s still ok up until now.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;software&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#software&quot; aria-label=&quot;Anchor link for: software&quot;&gt;#&lt;&#x2F;a&gt;
+Software&lt;&#x2F;h1&gt;
+&lt;p&gt;Most of the software tools that I use are mostly free..&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;code-editor-ide&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#code-editor-ide&quot; aria-label=&quot;Anchor link for: code-editor-ide&quot;&gt;#&lt;&#x2F;a&gt;
+Code Editor &amp;amp; IDE&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;neovim&#x2F;neovim&quot;&gt;Vim&lt;&#x2F;a&gt;, I&#x27;m using the NeoVim variant, I use it by default for any development and practically all text editing (even writing this blog).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.jetbrains.com&#x2F;idea&#x2F;download&#x2F;&quot;&gt;Intellij IDEA&lt;&#x2F;a&gt; (Community Edition), nothing beats Intellij + vim keybindings plugin for JVM based development.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;terminal&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#terminal&quot; aria-label=&quot;Anchor link for: terminal&quot;&gt;#&lt;&#x2F;a&gt;
+Terminal&lt;&#x2F;h4&gt;
+&lt;p&gt;I&#x27;m in the shell terminal for most of my software engineering activities, say for example I use native database CLIs to browse database
+because I&#x27;m already comfortable with them (psql, mysql cli, etc) and I&#x27;m confident they will be long lasting.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt; for the terminal GUI, I like &lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;&quot;&gt;Rust&lt;&#x2F;a&gt; language, so why not use a terminal built with rust-lang.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&quot;&gt;Tmux&lt;&#x2F;a&gt; as terminal multiplexer. Not sure what was the initial motivation for choosing tmux, in 2015 I just saw my collague use it then been using it since then.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;others&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#others&quot; aria-label=&quot;Anchor link for: others&quot;&gt;#&lt;&#x2F;a&gt;
+Others&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Chrome&lt;&#x2F;li&gt;
+&lt;li&gt;Google Calendar&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;trello.com&quot;&gt;Trello&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>
