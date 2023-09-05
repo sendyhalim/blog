@@ -8,7 +8,9 @@ tags = ["career-switch", "learning-path"]
 +++
 
 # My view on the learning path
-I have friends that want to get into tech, especially in the software engineering field, I think there's too much noise on the learning path nowadays. I'm a self taught, I do software engineering for fun and I was lucky to land an engineering role at Cermati in 2015, I’m confident that I can say a thing or two regarding getting into the software engineering field. I will write another post on the details of the journey, this post will focus on my version of balanced practical approach to get into the software engineering field.
+I have friends that want to get into tech, some of them are looking into the software engineering field,
+they are confused with so many learning sources in the field. I personally think there's too much noise on the learning path nowadays.
+A little bit of my background, I'm a self taught, I do software engineering for fun and I was lucky to land an engineering role at Cermati in 2015, so I’m confident that I can say a thing or two regarding getting into the software engineering field. I will write another post on the details of the journey, this post will focus on my version of balanced practical approach to get into the software engineering field.
 
 I hope this post can be useful as a guideline and inspiration for other people to get into the software engineering role.
 
@@ -16,9 +18,9 @@ I hope this post can be useful as a guideline and inspiration for other people t
 # Learning Keypoints
 It's very common for everyone to have varying learning journeys, I think there are some important points to keep in mind regardless of your learning path:
 * It's a lot easier to pick a specific learning path if you know what you want. It ranges from wanting to build a tech startup, switching career to tech or just finding a new hobby.
-* If you just want to try things out whether software engineering fits you or not, then I would recommend finding a problem that you think can be solved with software. Typically, repetitive tedious tasks can be solved or automated by software, keep the problem in your mental notes so it's easier to relate to it during learning. Try to think whether point it’s possible to solve your problem with your current tech skills, if not then try to find the missing learning component.
+* If you just want to try things out whether software engineering fits you or not, then I would recommend finding a problem that you think can be solved with software. Typically, repetitive tedious tasks can be solved or automated by software, keep the problem in your mental notes so it's easier to relate to it during learning. Try to think whether it’s possible to solve your problem with your current tech skills, if not then try to find the missing learning components.
 * Focus on the fundamentals. There are many engineering tools and frameworks, it's a common pattern to come across a "new cool thing" in software engineering. The tools you learn today could be obsolete anytime in the future, the fundamentals however typically can be applied to most of the tools. Be curious, always ask why? Why things work that way, why things are built that way.
-* It’s expected to not understand subjects from the learning source you're currently on, don’t give up yet! My tip is to search other learning sources on the same topic and try to learn from different perspectives, you can do it by googling or youtube or just asking ChatGPT, beware though it might not be 100% on point, you need to reverify the answer by rereading the subject from other sources.
+* It’s expected to not understand subjects from the learning source you're currently on, don’t give up yet! My tip is to search other learning sources on the same topic and try to learn from different perspectives, you can do it by googling or youtube or just asking ChatGPT, beware though it might not be 100% on point, you need to reverify the answer by re-reading the subject from other sources.
 * I’m recommending to read books as your main learning source, it’s structured and easy to search by text. At the very minimum, books with 100+ reviews and 4.5+ stars on Amazon.com should be ok. Watching videos are ok but I think it’s hard to search for a specific explanation by keyword. You could also do bootcamps, but it seems most of them put more emphasis on the frameworks/tools instead of the fundamentals though.
 * Software engineering is a craft, the more you put in the hours to write software the more you’ll get better.
 
