@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - about-me</title>
+    <link href="https://sendyhalim.github.io/blog/tags/about-me/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-12T23:30:30+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/about-me/atom.xml</id>
+    <entry xml:lang="en">
+        <title>About Me</title>
+        <published>2023-08-12T23:30:30+07:00</published>
+        <updated>2023-08-12T23:30:30+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/about-me/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/about-me/</id>
+        
+        <content type="html">&lt;p&gt;Hi, I&#x27;m Sendy Halim 👋. I live in Tangerang, Indonesia with my wife, one child, and a dog.
+I&#x27;m passionate about software engineering, I randomly came across to it when I was looking for
+a new hobby during my 1st semester of my accounting degree, I completed my major though.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;about-software-engineering&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#about-software-engineering&quot; aria-label=&quot;Anchor link for: about-software-engineering&quot;&gt;#&lt;&#x2F;a&gt;
+About Software engineering&lt;&#x2F;h1&gt;
+&lt;p&gt;Writing code and software engineering is a hobby to me, it&#x27;s an activity that
+I enjoy the most. I&#x27;m not sure what&#x27;s the reason, it&#x27;s just I&#x27;m really into it.&lt;&#x2F;p&gt;
+&lt;p&gt;Unfortunately I rarely write code at work nowadays, I&#x27;m putting my focus to
+manage teams of great software engineers, the low feeling of not writing code is paid half
+everytime the teams ship features and bring more value to users, the other half is paid
+when I write code in my sparetime 🤞.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;about-blogging&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#about-blogging&quot; aria-label=&quot;Anchor link for: about-blogging&quot;&gt;#&lt;&#x2F;a&gt;
+About Blogging&lt;&#x2F;h1&gt;
+&lt;p&gt;There are a couple reasons why I started this blog:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I want to docment my thoughts based on my life, hobby projects, and profesional experience working in the software engineering field.&lt;&#x2F;li&gt;
+&lt;li&gt;I want to improve my writing skills.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>
