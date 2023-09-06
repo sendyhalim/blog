@@ -14,8 +14,8 @@ This post is structured into 3 big components
 * Software
 
 # Tools Requirements
-I'm of frugal in terms of paying for tools, I wouldn't spend money unless it satisfies the following requirements:
-* The tools must save my time.
+I'm frugal in terms of paying for tools, I wouldn't spend money unless it satisfies the following requirements:
+* The tool must save my time.
 * It should be long lasting, either it's already proven to be long lasting or at the very minimum there must be a company behind the tool that's supporting it.
 * There's no other good free option that could save my time.
 
@@ -35,7 +35,8 @@ I'm using a 24 inch Dell, unfortunately I forgot the link, but I recall that I b
 # Software
 Most of the software tools that I use are mostly free.
 
-#### Code Editor & IDE * [Vim](https://github.com/neovim/neovim), I'm using the NeoVim variant, I use it by default for any development and practically all text editing (even writing this blog).
+#### Code Editor & IDE
+* [Vim](https://www.vim.org/), I'm using the [NeoVim](https://github.com/neovim/neovim) variant. I vim by default for almost any development and practically all text editing (even writing this blog).
 * [Intellij IDEA](https://www.jetbrains.com/idea/download/) (Community Edition), nothing beats Intellij + vim keybindings plugin for JVM based development.
 
 #### Terminal
