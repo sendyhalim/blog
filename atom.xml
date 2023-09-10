@@ -1,0 +1,1434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title></title>
+    <link href="https://sendyhalim.github.io/blog/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-24T00:00:00+07:00</updated>
+    <id>https://sendyhalim.github.io/blog/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Tools That I Use For Software Engineering</title>
+        <published>2023-08-24T00:00:00+07:00</published>
+        <updated>2023-08-24T00:00:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/software-engineering/tools-that-i-use-for-software-engineering/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/software-engineering/tools-that-i-use-for-software-engineering/</id>
+        
+        <content type="html">&lt;p&gt;This post is structured into 3 big components&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tools Requirements&lt;&#x2F;li&gt;
+&lt;li&gt;Hardware&lt;&#x2F;li&gt;
+&lt;li&gt;Software&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;tools-requirements&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#tools-requirements&quot; aria-label=&quot;Anchor link for: tools-requirements&quot;&gt;#&lt;&#x2F;a&gt;
+Tools Requirements&lt;&#x2F;h1&gt;
+&lt;p&gt;I&#x27;m frugal in terms of paying for tools, I wouldn&#x27;t spend money unless it satisfies the following requirements:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The tool must save my time.&lt;&#x2F;li&gt;
+&lt;li&gt;It should be long lasting, either it&#x27;s already proven to be long lasting or at the very minimum there must be a company behind the tool that&#x27;s supporting it.&lt;&#x2F;li&gt;
+&lt;li&gt;There&#x27;s no other good free option that could save my time.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;hardware&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#hardware&quot; aria-label=&quot;Anchor link for: hardware&quot;&gt;#&lt;&#x2F;a&gt;
+Hardware&lt;&#x2F;h1&gt;
+&lt;h4 id=&quot;keyboard&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#keyboard&quot; aria-label=&quot;Anchor link for: keyboard&quot;&gt;#&lt;&#x2F;a&gt;
+Keyboard&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Logitech MK275 - &lt;a href=&quot;https:&#x2F;&#x2F;tokopedia.link&#x2F;qirzFnuLwCb&quot;&gt;Tokopedia&lt;&#x2F;a&gt;, I like it, it&#x27;s cheap and works well.&lt;&#x2F;li&gt;
+&lt;li&gt;Keychron K2 - &lt;a href=&quot;https:&#x2F;&#x2F;tokopedia.link&#x2F;1BSfq6lLwCb&quot;&gt;Tokopedia&lt;&#x2F;a&gt;,  got it as a gift on my 28th birthday.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;laptop&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#laptop&quot; aria-label=&quot;Anchor link for: laptop&quot;&gt;#&lt;&#x2F;a&gt;
+Laptop&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Macbook Pro Retina 15 inch, going to replace it soon with a macbook air.&lt;&#x2F;li&gt;
+&lt;li&gt;Vertical Laptop Stand (Alumunium) - &lt;a href=&quot;https:&#x2F;&#x2F;tokopedia.link&#x2F;7JJtv6iMwCb&quot;&gt;Tokopedia&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;monitor&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#monitor&quot; aria-label=&quot;Anchor link for: monitor&quot;&gt;#&lt;&#x2F;a&gt;
+Monitor&lt;&#x2F;h4&gt;
+&lt;p&gt;I&#x27;m using a 24 inch Dell, unfortunately I forgot the link, but I recall that I bought it in 2017 for around ~$170 and it&#x27;s still delivering pixels.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;software&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#software&quot; aria-label=&quot;Anchor link for: software&quot;&gt;#&lt;&#x2F;a&gt;
+Software&lt;&#x2F;h1&gt;
+&lt;p&gt;Most of the software tools that I use are mostly free.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;code-editor-ide&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#code-editor-ide&quot; aria-label=&quot;Anchor link for: code-editor-ide&quot;&gt;#&lt;&#x2F;a&gt;
+Code Editor &amp;amp; IDE&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.vim.org&#x2F;&quot;&gt;Vim&lt;&#x2F;a&gt;, I&#x27;m using the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;neovim&#x2F;neovim&quot;&gt;NeoVim&lt;&#x2F;a&gt; variant. I vim by default for almost any development and practically all text editing (even writing this blog).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.jetbrains.com&#x2F;idea&#x2F;download&#x2F;&quot;&gt;Intellij IDEA&lt;&#x2F;a&gt; (Community Edition), nothing beats Intellij + vim keybindings plugin for JVM based development.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;terminal&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#terminal&quot; aria-label=&quot;Anchor link for: terminal&quot;&gt;#&lt;&#x2F;a&gt;
+Terminal&lt;&#x2F;h4&gt;
+&lt;p&gt;I&#x27;m in the shell terminal for most of my software engineering activities, for example I use native database CLIs to browse database
+because I&#x27;m already comfortable with them (psql, mysql cli, etc) and I&#x27;m confident they will be long lasting, so learning
+other GUI tools might not be worth it, I&#x27;d rather spend my time to learn other software engineering fundamentals.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt; for the terminal GUI, I like &lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;&quot;&gt;Rust&lt;&#x2F;a&gt; language, so why not use a terminal built with it.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&quot;&gt;Tmux&lt;&#x2F;a&gt; as terminal multiplexer, not sure what was the initial motivation for choosing tmux, in 2015 I saw my collague used it and it works well.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;others&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#others&quot; aria-label=&quot;Anchor link for: others&quot;&gt;#&lt;&#x2F;a&gt;
+Others&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Chrome&lt;&#x2F;li&gt;
+&lt;li&gt;Google Calendar&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;trello.com&quot;&gt;Trello&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>About Me</title>
+        <published>2023-08-12T23:30:30+07:00</published>
+        <updated>2023-08-12T23:30:30+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/pages/about-me/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/pages/about-me/</id>
+        
+        <content type="html">&lt;p&gt;Hi, I&#x27;m Sendy Halim 👋. I live in Tangerang, Indonesia with my wife, one child, and a dog.
+I&#x27;m passionate about software engineering, I randomly came across to it when I was looking for
+a new hobby during my 1st semester of my accounting degree, I completed my major though.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;about-software-engineering&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#about-software-engineering&quot; aria-label=&quot;Anchor link for: about-software-engineering&quot;&gt;#&lt;&#x2F;a&gt;
+About Software engineering&lt;&#x2F;h1&gt;
+&lt;p&gt;Writing code and software engineering is a hobby to me, it&#x27;s an activity that
+I enjoy the most. I&#x27;m not sure what&#x27;s the reason, it&#x27;s just I&#x27;m really into it.&lt;&#x2F;p&gt;
+&lt;p&gt;Unfortunately I rarely write code at work nowadays, I&#x27;m putting my focus to
+manage teams of great software engineers, the low feeling of not writing code is paid half
+everytime the teams ship features and bring more value to users, the other half is paid
+when I write code in my sparetime 🤞.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;about-blogging&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#about-blogging&quot; aria-label=&quot;Anchor link for: about-blogging&quot;&gt;#&lt;&#x2F;a&gt;
+About Blogging&lt;&#x2F;h1&gt;
+&lt;p&gt;There are a couple of reasons why I started this blog:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I want to docment my thoughts based on my life, hobby projects, and profesional experience working in the software engineering field.&lt;&#x2F;li&gt;
+&lt;li&gt;I want to improve my writing skills.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Learning Path to Software Engineering Role From a Self Taught</title>
+        <published>2023-08-12T23:30:30+07:00</published>
+        <updated>2023-08-12T23:30:30+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/</id>
+        
+        <content type="html">&lt;h1 id=&quot;my-view-on-the-learning-path&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#my-view-on-the-learning-path&quot; aria-label=&quot;Anchor link for: my-view-on-the-learning-path&quot;&gt;#&lt;&#x2F;a&gt;
+My view on the learning path&lt;&#x2F;h1&gt;
+&lt;p&gt;I have friends that want to get into tech, some of them are looking into the software engineering field,
+they are confused with so many learning sources in the field. I personally think there&#x27;s too much noise on the learning path nowadays.
+A little bit of my background, I&#x27;m a self taught, I do software engineering for fun and I was lucky to land an engineering role at Cermati in 2015, so I’m confident that I can say a thing or two regarding getting into the software engineering field. I will write another post on the details of the journey, this post will focus on my version of balanced practical approach to get into the software engineering field.&lt;&#x2F;p&gt;
+&lt;p&gt;I hope this post can be useful as a guideline and inspiration for other people to get into the software engineering role.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;learning-keypoints&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#learning-keypoints&quot; aria-label=&quot;Anchor link for: learning-keypoints&quot;&gt;#&lt;&#x2F;a&gt;
+Learning Keypoints&lt;&#x2F;h1&gt;
+&lt;p&gt;It&#x27;s very common for everyone to have varying learning journeys, I think there are some important points to keep in mind regardless of your learning path:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;It&#x27;s a lot easier to pick a specific learning path if you know what you want. It ranges from wanting to build a tech startup, switching career to tech or just finding a new hobby.&lt;&#x2F;li&gt;
+&lt;li&gt;If you just want to try things out whether software engineering fits you or not, then I would recommend finding a problem that you think can be solved with software. Typically, repetitive tedious tasks can be solved or automated by software, keep the problem in your mental notes so it&#x27;s easier to relate to it during learning. Try to think whether it’s possible to solve your problem with your current tech skills, if not then try to find the missing learning components.&lt;&#x2F;li&gt;
+&lt;li&gt;Focus on the fundamentals. There are many engineering tools and frameworks, it&#x27;s a common pattern to come across a &amp;quot;new cool thing&amp;quot; in software engineering. The tools you learn today could be obsolete anytime in the future, the fundamentals however typically can be applied to most of the tools. Be curious, always ask why? Why things work that way, why things are built that way.&lt;&#x2F;li&gt;
+&lt;li&gt;It’s expected to not understand subjects from the learning source you&#x27;re currently on, don’t give up yet! My tip is to search other learning sources on the same topic and try to learn from different perspectives, you can do it by googling or youtube or just asking ChatGPT, beware though it might not be 100% on point, you need to reverify the answer by re-reading the subject from other sources.&lt;&#x2F;li&gt;
+&lt;li&gt;I’m recommending to read books as your main learning source, it’s structured and easy to search by text. At the very minimum, books with 100+ reviews and 4.5+ stars on Amazon.com should be ok. Watching videos are ok but I think it’s hard to search for a specific explanation by keyword. You could also do bootcamps, but it seems most of them put more emphasis on the frameworks&#x2F;tools instead of the fundamentals though.&lt;&#x2F;li&gt;
+&lt;li&gt;Software engineering is a craft, the more you put in the hours to write software the more you’ll get better.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;learning-path&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#learning-path&quot; aria-label=&quot;Anchor link for: learning-path&quot;&gt;#&lt;&#x2F;a&gt;
+Learning Path&lt;&#x2F;h1&gt;
+&lt;p&gt;Following a balanced practical path throughout your journey is crucial, you want to know the fundamentals and be able to practically apply them. The fundamentals will set you apart and help you make better engineering decisions, for example, which tools (language, framework, libraries) to use and how to use them properly.&lt;&#x2F;p&gt;
+&lt;p&gt;The learning path that I&#x27;m recommending might take ~12 months with dedication, around 1-2 hours per day on average, it consists of mainly 3 components:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Programming fundamentals, focusing on the basic programming concept as the foundation for you to build software.&lt;&#x2F;li&gt;
+&lt;li&gt;Building a website, I think it&#x27;s a good idea to start with building a basic website UI, we will build the server side later on since most of tech products are connected to the internet.&lt;&#x2F;li&gt;
+&lt;li&gt;Building a web server, a web server is responsible to process, store, and serve user website data. Imagine a user registration functionality where users can input email and password, the data will be processed and stored on the web server side.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;programming-fundamentals&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#programming-fundamentals&quot; aria-label=&quot;Anchor link for: programming-fundamentals&quot;&gt;#&lt;&#x2F;a&gt;
+Programming Fundamentals&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;why&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#why&quot; aria-label=&quot;Anchor link for: why&quot;&gt;#&lt;&#x2F;a&gt;
+Why&lt;&#x2F;h4&gt;
+&lt;p&gt;Programming fundamentals can be applied to most of the software that you want to build, regardless of the programming language that you use.
+In fact, writing Excel&#x2F;GoogleSheet formulas is similar to programming, the formulas are instructions to Excel with cell ranges as its input, and programming code is machine instructions to the computer. It&#x27;s ok to invest a bit more time in fundamentals, based on my experience, you need to regularly revisit the fundamentals.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;tech-to-learn&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#tech-to-learn&quot; aria-label=&quot;Anchor link for: tech-to-learn&quot;&gt;#&lt;&#x2F;a&gt;
+Tech to learn&lt;&#x2F;h4&gt;
+&lt;p&gt;Any general purpose programming language is fine,  I think &lt;code&gt;Python&lt;&#x2F;code&gt; is the most practical way to get started with programming, with &lt;code&gt;Python&lt;&#x2F;code&gt; alone you can build many things from games, software, web servers, and many more! I started with &lt;code&gt;C++&lt;&#x2F;code&gt;, I would start with Python if I knew the underlying programming fundamentals are mostly the same, the time learning and tinkering with &lt;code&gt;C++&lt;&#x2F;code&gt; syntaxes and features would have been better to be invested in other fundamentals such as operating systems, computer networking, database.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;learning-sources&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#learning-sources&quot; aria-label=&quot;Anchor link for: learning-sources&quot;&gt;#&lt;&#x2F;a&gt;
+Learning sources&lt;&#x2F;h4&gt;
+&lt;p&gt;Any beginner Python books focusing on the programming basics.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;building-a-website&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#building-a-website&quot; aria-label=&quot;Anchor link for: building-a-website&quot;&gt;#&lt;&#x2F;a&gt;
+Building a website&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;why-1&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#why-1&quot; aria-label=&quot;Anchor link for: why-1&quot;&gt;#&lt;&#x2F;a&gt;
+Why&lt;&#x2F;h4&gt;
+&lt;p&gt;I recommend to learn building a website first instead of building a mobile app because it’s easier to iterate and test. The experience from building a website and some the fundamentals are aplicable to mobile apps as well.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;tech-to-learn-1&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#tech-to-learn-1&quot; aria-label=&quot;Anchor link for: tech-to-learn-1&quot;&gt;#&lt;&#x2F;a&gt;
+Tech to learn&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic HTML&lt;&#x2F;li&gt;
+&lt;li&gt;Basic CSS, learn what&#x27;s the role of CSS and how to do basic styling.&lt;&#x2F;li&gt;
+&lt;li&gt;Basic Javascript, same as CSS but instead of styling learn how to manipulate HTML with javascript.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;learning-sources-1&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#learning-sources-1&quot; aria-label=&quot;Anchor link for: learning-sources-1&quot;&gt;#&lt;&#x2F;a&gt;
+Learning sources&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Any basic html books.&lt;&#x2F;li&gt;
+&lt;li&gt;A huge plus point if you’re interested in CSS &amp;amp; Javascript. Using video as learning sources can help you to visualize and learn CSS &amp;amp; Javascript since mostly it&#x27;s UI based.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;building-a-webserver&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#building-a-webserver&quot; aria-label=&quot;Anchor link for: building-a-webserver&quot;&gt;#&lt;&#x2F;a&gt;
+Building a webserver&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;why-2&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#why-2&quot; aria-label=&quot;Anchor link for: why-2&quot;&gt;#&lt;&#x2F;a&gt;
+Why&lt;&#x2F;h4&gt;
+&lt;p&gt;Most tech products are connected to the internet nowadays, a website is basically a product that the end users see on the UI side (we call it the client side), the web server is responsible for serving dynamic data to the client (your website).
+You will try to connect the website that you build from the previous learning point with the webserver and learn how these two interact with each other.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;tech-to-learn-2&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#tech-to-learn-2&quot; aria-label=&quot;Anchor link for: tech-to-learn-2&quot;&gt;#&lt;&#x2F;a&gt;
+Tech to learn&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Python web framework. It&#x27;s ok if you have time and want to build without a web framework, it&#x27;s going to be a lot more challenging but will be more rewarding. I think the easiest way to start is with Python Flask.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Database. A database is like a warehouse where you can organize and store data, for example user registration data will be stored in a database. I recommend learning MySQL &#x2F; PostgreSQL first, they are categorized as relational database (RDBMS) in terms of data model. It&#x27;s longer to get started compared with MongoDB, but I think it&#x27;s better to start with RDBMS since it&#x27;s more common.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;learning-sources-2&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#learning-sources-2&quot; aria-label=&quot;Anchor link for: learning-sources-2&quot;&gt;#&lt;&#x2F;a&gt;
+Learning sources&lt;&#x2F;h4&gt;
+&lt;p&gt;Any Python book related to building a web app with a web framework should have a database introduction included.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-s-next&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-s-next&quot; aria-label=&quot;Anchor link for: what-s-next&quot;&gt;#&lt;&#x2F;a&gt;
+What’s next?&lt;&#x2F;h1&gt;
+&lt;p&gt;Do not aim to be perfect, just start and get things done first, you can iterate later on while you’re learning. The more you put in the hours to write software the more you’ll get better.&lt;&#x2F;p&gt;
+&lt;p&gt;You will still need to visit other fundamentals, I&#x27;m still building my fundamentals up until now and there&#x27;s always more to learn and discover, it&#x27;s actually fun! Here are the topics that you can explore:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Operating System&lt;&#x2F;li&gt;
+&lt;li&gt;Database&lt;&#x2F;li&gt;
+&lt;li&gt;Computer Networking&lt;&#x2F;li&gt;
+&lt;li&gt;Data Structure&lt;&#x2F;li&gt;
+&lt;li&gt;Security&lt;&#x2F;li&gt;
+&lt;li&gt;Distributed system&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Please feel free to comment in the post if you have any questions.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Everything has a structure, thoughts on problem solving structure</title>
+        <published>2023-08-05T14:39:00+07:00</published>
+        <updated>2023-08-05T14:39:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/life/setting-up-a-structure-on-problem-solving-and-life/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/life/setting-up-a-structure-on-problem-solving-and-life/</id>
+        
+        <content type="html">&lt;h2 id=&quot;structure-in-general&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#structure-in-general&quot; aria-label=&quot;Anchor link for: structure-in-general&quot;&gt;#&lt;&#x2F;a&gt;
+Structure in general&lt;&#x2F;h2&gt;
+&lt;p&gt;Almost everything in our daily life has structure 😲!
+Starting on the human body that consists of a specific skeleton structure to protect and support us, cars generally have 4 wheels as the standard structure to move well, programming languages have their own syntax structure, and many more.
+Having a structure will guide us to execute methodically and effectively, especially in &lt;em&gt;high-pressure&lt;&#x2F;em&gt; situations where sometimes it&#x27;s not optimal to just rely on our instinct.&lt;&#x2F;p&gt;
+&lt;p&gt;There were small-medium initiatives&#x2F;problems in work and life that I solved just based on my instinct. After some iterations, there&#x27;s a noticeable common pattern in problem-solving and execution.
+Using just instinct is actually ok, but having a structure would make it easier to document, distribute&#x2F;share and extend the approach.
+Problem-solving structure is also useful in &lt;em&gt;high-pressure&lt;&#x2F;em&gt; situations to greatly reduce the chance of missing a step or two.&lt;&#x2F;p&gt;
+&lt;p&gt;Nowadays, my default would be to try to structure everything, this applies in life not just in a work environment.
+I&#x27;m sharing what I currently have in mind regarding this, I hope this post can help you to structure executions and be more effective.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;structure-in-problem-solving&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#structure-in-problem-solving&quot; aria-label=&quot;Anchor link for: structure-in-problem-solving&quot;&gt;#&lt;&#x2F;a&gt;
+Structure in Problem Solving&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;initial-thoughts&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#initial-thoughts&quot; aria-label=&quot;Anchor link for: initial-thoughts&quot;&gt;#&lt;&#x2F;a&gt;
+Initial thoughts&lt;&#x2F;h4&gt;
+&lt;p&gt;We can set a structure for problem-solving approach, though it might differ for everyone because everyone has different problems with different patterns.
+Just for example, a simple problem-solving structure could look something like this:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Problem background, we need to understand the context and the problem first, and make sure it actually exists, this can be done by reading user feedback, looking at the data, etc.&lt;&#x2F;li&gt;
+&lt;li&gt;Problem priority, the problem may exist but it&#x27;s better if we evaluate whether it&#x27;s worth it solving or not. After all, we already have many problems to solve right? If it&#x27;s worth it then evaluate and set the problem priority.
+Typically we want to solve the higher priority problems first, starting with the easiest ones if there are problems with the same priorities.&lt;&#x2F;li&gt;
+&lt;li&gt;Problem delegation, suppose we decide to solve it, do we have the capacity? Can it be delegated?&lt;&#x2F;li&gt;
+&lt;li&gt;Plan for solution, is the problem quite common? Do we have existing solutions that we could use or should we formulate our own solution?&lt;&#x2F;li&gt;
+&lt;li&gt;Execution, just get it done.&lt;&#x2F;li&gt;
+&lt;li&gt;Monitoring, how do I know the problem is solved? Can we monitor the data?&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;decompose-the-problem&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#decompose-the-problem&quot; aria-label=&quot;Anchor link for: decompose-the-problem&quot;&gt;#&lt;&#x2F;a&gt;
+Decompose the problem&lt;&#x2F;h4&gt;
+&lt;p&gt;Unless it&#x27;s straightforward, a problem typically can be decomposed into simpler subproblems. Those subproblems
+probably can be broken down again, the depth depends on how big the problem is and how would you balance it.
+Decomposing a problem makes it easier to delegate and find a specific solution to the subproblems.
+Try to find the balance, if it&#x27;s too small then probably we&#x27;ll end up spending unnecessary time breaking it down instead of
+actually solving the problem, if it&#x27;s too big then the execution might be suboptimal due to overwhelming assignment.&lt;&#x2F;p&gt;
+&lt;p&gt;What I find is, generally it&#x27;s easier to break down problems based on the skillset required to solve them because it&#x27;ll be easier to
+delegate to a team&#x2F;people of a specific role.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;attempts-to-apply-structure-on-other-cases&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#attempts-to-apply-structure-on-other-cases&quot; aria-label=&quot;Anchor link for: attempts-to-apply-structure-on-other-cases&quot;&gt;#&lt;&#x2F;a&gt;
+Attempts to apply structure on other cases&lt;&#x2F;h2&gt;
+&lt;p&gt;We&#x27;re going to go through some examples outside of general problem-solving structure,
+we will try to apply structure to each case. I encourage you to try to make your own examples at the end.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;example-launching-a-new-product&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#example-launching-a-new-product&quot; aria-label=&quot;Anchor link for: example-launching-a-new-product&quot;&gt;#&lt;&#x2F;a&gt;
+Example: Launching a new product&lt;&#x2F;h5&gt;
+&lt;p&gt;Suppose we have evaluated that it&#x27;s worth it to launch a new software product (a problem worth solving), the &lt;em&gt;assignment structure&lt;&#x2F;em&gt; could be divided into:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Product management -&amp;gt; assign to the Product team&lt;&#x2F;li&gt;
+&lt;li&gt;UI &amp;amp; flow component -&amp;gt; assign to UI&#x2F;UX team&lt;&#x2F;li&gt;
+&lt;li&gt;Development component -&amp;gt; assign to the Engineering team&lt;&#x2F;li&gt;
+&lt;li&gt;Marketing component -&amp;gt; assign to the Marketing team&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Each of the team could break down the assignment into multiple subproblems until we
+think it&#x27;s quite optimal, the development team could divide development effort into:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Backend Team&lt;&#x2F;li&gt;
+&lt;li&gt;Android Team&lt;&#x2F;li&gt;
+&lt;li&gt;iOS Team&lt;&#x2F;li&gt;
+&lt;li&gt;Engineering Infra Team, maybe we need to spin more servers.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Following up on the &lt;em&gt;assignment structure&lt;&#x2F;em&gt;, each team could have its own &lt;em&gt;execution structure&lt;&#x2F;em&gt;, it doesn&#x27;t have to follow the same structure
+because the way to solve the subproblem could differ. Engineering teams typically use agile methodology meanwhile marketing might use other approaches.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;example-covering-to-lead-a-meeting&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#example-covering-to-lead-a-meeting&quot; aria-label=&quot;Anchor link for: example-covering-to-lead-a-meeting&quot;&gt;#&lt;&#x2F;a&gt;
+Example: Covering to lead a meeting&lt;&#x2F;h5&gt;
+&lt;p&gt;There&#x27;s a product-themed meeting coming soon, but the lead product manager that&#x27;s supposed to lead the meeting was on sick leave on that day.
+I was asked to help lead the meeting since the other person that knows the high-level details was only me,
+I was kind of nervous because I&#x27;m more accustomed to leading engineering-themed meetings.&lt;&#x2F;p&gt;
+&lt;p&gt;Please note I&#x27;m not talking about meeting structure, we already have it and we can just follow the usual meeting structure,
+but my goal was to &lt;em&gt;up my understanding and confidence level leading a product-themed meeting&lt;&#x2F;em&gt;.
+Let&#x27;s try to structure it:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I think it&#x27;s best to write down the meeting objectives first with our own sentences.&lt;&#x2F;li&gt;
+&lt;li&gt;Then break down what would be the key points&#x2F;outline needed to be discussed to meet the objectives.&lt;&#x2F;li&gt;
+&lt;li&gt;Try to visualize how would the meeting run with the above key points.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h5 id=&quot;example-going-for-a-vacation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#example-going-for-a-vacation&quot; aria-label=&quot;Anchor link for: example-going-for-a-vacation&quot;&gt;#&lt;&#x2F;a&gt;
+Example: Going for a vacation&lt;&#x2F;h5&gt;
+&lt;p&gt;I would like to have a vacation in Japan with my family, the top level structure to get to the goal would be:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vacation dates&lt;&#x2F;li&gt;
+&lt;li&gt;Itinerary&lt;&#x2F;li&gt;
+&lt;li&gt;Budget planning&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Same with other problems, we can break each point into subproblems&#x2F;checklists, vacation dates could be broken down into:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Find out the date ranges with low workload so we can have vacations stress free&lt;&#x2F;li&gt;
+&lt;li&gt;Get buy-in from family&lt;&#x2F;li&gt;
+&lt;li&gt;Get annual leave approval&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The itinerary is probably the easiest to delegate, if I don&#x27;t have time I&#x27;ll just reuse itineraries made by other people.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;key-takeaways&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#key-takeaways&quot; aria-label=&quot;Anchor link for: key-takeaways&quot;&gt;#&lt;&#x2F;a&gt;
+Key takeaways&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Not every problem is worth solving, try to prioritize.&lt;&#x2F;li&gt;
+&lt;li&gt;When there’s a problem try to think about the problem structure first then break it down into subproblems until it&#x27;s quite optimal, follow the structure and move towards the solution.&lt;&#x2F;li&gt;
+&lt;li&gt;If it&#x27;s too much for you, always consider delegating the subproblems, especially the ones that can be run in parallel.&lt;&#x2F;li&gt;
+&lt;li&gt;Structure can be applied in many cases.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Practical Programming Principles</title>
+        <published>2021-09-18T00:00:25+07:00</published>
+        <updated>2021-09-18T00:00:25+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/development-practices/practical-programming-principles/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/development-practices/practical-programming-principles/</id>
+        
+        <content type="html">&lt;p&gt;There are many programming paradigms, many approaches to code, new tools and frameworks, well things are moving fast 🏎 💨!&lt;&#x2F;p&gt;
+&lt;p&gt;I hope this post can be something to be held on when considering programming and development standard.
+Usually the considerations will be useful when starting a new project, when there are arguments on
+how to approach things in development,, which tool&#x2F;framework to use. Pick whatever you think is suitable for your project &amp;amp; team, take it with a grain of salt.&lt;&#x2F;p&gt;
+&lt;p&gt;Having these principles in mind has helped my team to:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make programming decisions: how to structure code, how to handle errors.&lt;&#x2F;li&gt;
+&lt;li&gt;Decide when should we opt-in for a hack and what&#x27;s the minimum proper way to apply a &amp;quot;quickfix&amp;quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;Decide when to invest more in documentations.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;readability&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability&quot; aria-label=&quot;Anchor link for: readability&quot;&gt;#&lt;&#x2F;a&gt;
+Readability&lt;&#x2F;h3&gt;
+&lt;p&gt;Readability means it&#x27;s easy to understand, not just easy to read. &lt;code&gt;Easy to understand&lt;&#x2F;code&gt; meaning might vary
+because each company&#x2F;team has different engineering skills standard due to different skillset requirements as well. Having a readability standard set earlier will boost
+team productivity in the longer run, it&#x27;ll cut communication cost, reduce the time needed to understand the code, hence improve the team onboarding process.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;readability-statically-typed-language&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-statically-typed-language&quot; aria-label=&quot;Anchor link for: readability-statically-typed-language&quot;&gt;#&lt;&#x2F;a&gt;
+[Readability] Statically typed language&lt;&#x2F;h5&gt;
+&lt;p&gt;It might be worth the investment to use statically typed language. Code is meant to be read more than it is written,
+static typing will improve readability. The compiler will help you eliminate most of the compile-time type errors, which will simplify code reviews, unit testing.
+you don&#x27;t need to test data type unless your project requires you to do a lot of runtime type checking, too many runtime checking could be be sign of another problem though (depending on project goals).&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;readability-invest-in-code-comments&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-invest-in-code-comments&quot; aria-label=&quot;Anchor link for: readability-invest-in-code-comments&quot;&gt;#&lt;&#x2F;a&gt;
+[Readability] Invest in code comments&lt;&#x2F;h5&gt;
+&lt;p&gt;Code comments can be used to explain &amp;quot;why&amp;quot; certain logic is set that way, this will cut communication cost and make debugging a lot easier.
+The goal is to help your peers and &amp;quot;future you&amp;quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Complex logic.&lt;&#x2F;li&gt;
+&lt;li&gt;Motivation regarding unorthodox approach.&lt;&#x2F;li&gt;
+&lt;li&gt;Hack&#x2F;quick fix, this would reduce confusion a lot and make it explicit that the approach that&#x27;s considered a &amp;quot;hack&amp;quot; is intended.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h5 id=&quot;readability-standard-on-variable-names&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-standard-on-variable-names&quot; aria-label=&quot;Anchor link for: readability-standard-on-variable-names&quot;&gt;#&lt;&#x2F;a&gt;
+[Readability] Standard on variable names&lt;&#x2F;h5&gt;
+&lt;p&gt;Set an acceptable standard of explicitness with your team.
+One of the most obvious example is to agree on how to name variables.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use plural for list, vector or array type.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;let emails: Vec&amp;lt;String&amp;gt;;
+let users: Vec&amp;lt;User&amp;gt;;
+let people: Vec&amp;lt;Person&amp;gt;;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;{value}_by_{type}&lt;&#x2F;code&gt; naming pattern for key-value data structure (hashmap, btreemap, dictionary, etc)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&amp;#x2F;&amp;#x2F; You&amp;#x27;ll get a user given an email
+let userByEmail: HashMap&amp;lt;String, User&amp;gt;;
+
+&amp;#x2F;&amp;#x2F; You&amp;#x27;ll get users given a name, maybe you&amp;#x27;re grouping users by their first name
+let usersByFirstName: HashMap&amp;lt;String, Vec&amp;lt;User&amp;gt;&amp;gt;;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h5 id=&quot;readability-limit-on-maximum-number-of-characters-per-line&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-limit-on-maximum-number-of-characters-per-line&quot; aria-label=&quot;Anchor link for: readability-limit-on-maximum-number-of-characters-per-line&quot;&gt;#&lt;&#x2F;a&gt;
+[Readability] Limit on maximum number of characters per line.&lt;&#x2F;h5&gt;
+&lt;p&gt;Imagine you&#x27;re reading a book, you need to scroll both vertically &amp;amp; horizontally
+to read a paragraph because there&#x27;s no maximum number of characters per line,
+would it be a good user experience? The same goes for writing code, imagine a line of code
+that you need to scroll both directions a lot, wouldn&#x27;t it be easier to just scroll vertically?&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;modularity&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#modularity&quot; aria-label=&quot;Anchor link for: modularity&quot;&gt;#&lt;&#x2F;a&gt;
+Modularity&lt;&#x2F;h3&gt;
+&lt;p&gt;Modular means it&#x27;s easy to plug &amp;amp; change something because there&#x27;s a &lt;em&gt;balanced abstraction&lt;&#x2F;em&gt;. Note that in practice, you do not have to abstract everything,
+too much abstraction would be make it less readable and harder to understand. It
+would make the most sense to put abstraction on top of something that would likely to change or
+something that already has&#x2F;will have multiple implementations.&lt;&#x2F;p&gt;
+&lt;p&gt;One easy example: suppose we want to send
+SMS(maybe for MFA use cases - OTP) to our users, putting an interface on top of the actual vendor
+implementation might be a good idea, why? Let&#x27;s start with the business use case, MFA is a critical security feature, having a good OTP delivery rate is crucial for the user experience, we
+can&#x27;t rely only to 1 vendor, it&#x27;s important to have at least another SMS vendor backup in case the the primary vendor is down or there are other problems (latency drops or the delivery rate drops).
+If we put an interface for it, it&#x27;s easy to switch. The switch strategy might vary, it could be via a circuit breaker mechanism or just a simple remote config to decide which SMS vendor to use.
+A bit intermezzo, use &lt;a href=&quot;https:&#x2F;&#x2F;jumpcloud.com&#x2F;blog&#x2F;totp-sms-2fa&quot;&gt;TOTP might be more secure than OTP&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;There&#x27;s a signal that you could use to measure modularity, if it&#x27;s &lt;em&gt;relatively easy&lt;&#x2F;em&gt;
+to write unit tests then most probably your code is modular enough because it&#x27;s easy
+to inject dependencies (mock objects in unit test context) and hence will make it easier to refactor things if needed.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;error-handling&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#error-handling&quot; aria-label=&quot;Anchor link for: error-handling&quot;&gt;#&lt;&#x2F;a&gt;
+Error Handling&lt;&#x2F;h3&gt;
+&lt;p&gt;Software breaks all the time, preferably you want to be able to spot errors before your users do.
+When you got error reports you also want to be able to debug it.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;error-handling-observability&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#error-handling-observability&quot; aria-label=&quot;Anchor link for: error-handling-observability&quot;&gt;#&lt;&#x2F;a&gt;
+[Error Handling] Observability&lt;&#x2F;h4&gt;
+&lt;p&gt;Make sure errors do not go into limbo, you want to be able to plot and gauge error rates over time.
+It should be easy to spot as well.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;How easy is it to be alerted when there are errors?&lt;&#x2F;li&gt;
+&lt;li&gt;Can you see the error logs? How easy is it to see it?&lt;&#x2F;li&gt;
+&lt;li&gt;Do we have a clear separation on what&#x27;s considered an error? Do not log informational messages as error&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;error-handling-debuggability&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#error-handling-debuggability&quot; aria-label=&quot;Anchor link for: error-handling-debuggability&quot;&gt;#&lt;&#x2F;a&gt;
+[Error Handling] Debuggability&lt;&#x2F;h4&gt;
+&lt;p&gt;The easier it is to debug the error, the faster it is to resolve the problem, your time should be spent
+mostly on building products&#x2F;software instead of debugging.&lt;&#x2F;p&gt;
+&lt;p&gt;Some of the key points to measure your debuggability:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;How easy is it to prioritize errors? We should be able to separate errors by their severity, errors that block users to complete payment should be more important than errors related to the feature to change the username.&lt;&#x2F;li&gt;
+&lt;li&gt;Error message, do we construct meaningful error messages? or is it just printing &lt;code&gt;&amp;quot;System Error&amp;quot;&lt;&#x2F;code&gt;?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Technical Design Doc Guidelines</title>
+        <published>2021-06-20T00:00:25+07:00</published>
+        <updated>2021-06-20T00:00:25+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/development-practices/technical-design-doc-guidelines/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/development-practices/technical-design-doc-guidelines/</id>
+        
+        <content type="html">&lt;p&gt;Writing a technical design doc(TDD) is a prerequisite of a medium-high feature development&#x2F;refactoring initiative, it&#x27;s a crucial part of the development process.
+TDD can ease the process to get everyone on board with the plan, the doc should be reviewed by your CTO&#x2F;Managers and stakeholders.
+It&#x27;s an essential part of the planning process because &lt;b&gt;it brings people together, especially to get buy-in from the team and stakeholders&lt;&#x2F;b&gt; so they can provide support along the way 🍪!&lt;&#x2F;p&gt;
+&lt;p&gt;The post will cover some of the general guidelines that hopefully can assist you to prepare the TDD.
+The main principle is simple just like writing code, the easier it is to understand the easier it is to review.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;start-with-background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#start-with-background&quot; aria-label=&quot;Anchor link for: start-with-background&quot;&gt;#&lt;&#x2F;a&gt;
+Start with background&lt;&#x2F;h4&gt;
+&lt;p&gt;Background section should help people understand the context of the document, generally you can show a high level
+overview of how certain problems are currently solved, how a certain feature works, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;Showing an overview of the current state will help people understand the background a bit deeper, if there&#x27;s a current implementation&#x2F;flow then show it, and make it explicit what could be improved from the current flow.
+Feel free to put links to other existing docs as well. A diagram flow will help people to visualize and catch up quickly.
+Free tools that you can use:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;diagrams.net&quot;&gt;diagrams.net&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mermaid-js.github.io&#x2F;mermaid&#x2F;#&#x2F;&quot;&gt;MermaidJS&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;problem-statement&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#problem-statement&quot; aria-label=&quot;Anchor link for: problem-statement&quot;&gt;#&lt;&#x2F;a&gt;
+Problem statement&lt;&#x2F;h4&gt;
+&lt;p&gt;This section states the problem with the current state, it should emphasize the importance of solving that problem and show why it matters.&lt;&#x2F;p&gt;
+&lt;p&gt;Some key points that maybe can guide you:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Are you solving a specific user problem where there are N users that are impacted?&lt;&#x2F;li&gt;
+&lt;li&gt;The current process might have pain points and sometimes users are just numb to the &amp;quot;pain&amp;quot; up until someone points it out.&lt;&#x2F;li&gt;
+&lt;li&gt;Will it increase the company&#x27;s business metric either directly or indirectly? If it can save cost, any estimation by what %?&lt;&#x2F;li&gt;
+&lt;li&gt;Are you investing for future needs? Why does that specific investment matter?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;requirements&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#requirements&quot; aria-label=&quot;Anchor link for: requirements&quot;&gt;#&lt;&#x2F;a&gt;
+Requirements&lt;&#x2F;h4&gt;
+&lt;p&gt;The requirements section set boundaries on the solution, it helps you to filter solutions that can be applied.
+Typically there will be specific functionalities&#x2F;features that the solutions must provide.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;show-the-available-options-solutions-that-we-have&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#show-the-available-options-solutions-that-we-have&quot; aria-label=&quot;Anchor link for: show-the-available-options-solutions-that-we-have&quot;&gt;#&lt;&#x2F;a&gt;
+Show the available options&#x2F;solutions that we have&lt;&#x2F;h4&gt;
+&lt;p&gt;There would be more than one solution that we can apply to meet the requirements, it&#x27;s preferable to lay out the available options that we have.
+Start with the least preferable solution and list down its pros and cons, progressive move to the most preferable solution.&lt;&#x2F;p&gt;
+&lt;p&gt;Make it clear why we&#x27;re implementing that specific solution, and why the others won&#x27;t work as well as the one that you propose.&lt;&#x2F;p&gt;
+&lt;p&gt;Showing the available solutions will make it easier for us to get back here quickly just in case we pursued the wrong solution.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;what-are-the-success-metrics&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-are-the-success-metrics&quot; aria-label=&quot;Anchor link for: what-are-the-success-metrics&quot;&gt;#&lt;&#x2F;a&gt;
+What are the success metrics&lt;&#x2F;h4&gt;
+&lt;p&gt;Decide on the success metrics that can be monitored.
+For example, if you&#x27;re implementing a UX improvement, the success metric should be something related to the feature funnel, one thing that you could do is add trackers to the feature funnel and then query the data through an analytical database,
+or just reuse existing funnel dashboard (if any).&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;what-are-the-action-items-timelines&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-are-the-action-items-timelines&quot; aria-label=&quot;Anchor link for: what-are-the-action-items-timelines&quot;&gt;#&lt;&#x2F;a&gt;
+What are the action items &amp;amp; timelines&lt;&#x2F;h4&gt;
+&lt;p&gt;List all of the action items and set the PIC. PIC could be a team (the team lead will delegate the tasks) or an individual contributor.
+If the project has milestones then set the deadline for each milestone, if it&#x27;s not then it&#x27;s ok to just put the end goal deadline,
+make sure all the PICs agree with the timeline.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;what-s-your-backup-plan&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-s-your-backup-plan&quot; aria-label=&quot;Anchor link for: what-s-your-backup-plan&quot;&gt;#&lt;&#x2F;a&gt;
+What&#x27;s your backup plan&lt;&#x2F;h4&gt;
+&lt;p&gt;Things could fail even with an almost perfect plan, what&#x27;s your backup plan?&lt;&#x2F;p&gt;
+&lt;p&gt;If a migration plan fails, what should we do? Is there a way to turn back? If there&#x27;s a way, should we continue with the risk or is there anything that we should do?
+What are the steps of the backup plan? Who&#x27;s going to execute it?&lt;&#x2F;p&gt;
+&lt;p&gt;Specifically in product engineering, suppose it does not meet the deadline, then what are non-essential features that we can cut? Can we move them into the next iterations?&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;gather-feedback&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#gather-feedback&quot; aria-label=&quot;Anchor link for: gather-feedback&quot;&gt;#&lt;&#x2F;a&gt;
+Gather feedback&lt;&#x2F;h4&gt;
+&lt;p&gt;There&#x27;s no perfect plan, open a feedback session and verify reviewers concerns. Sometimes there are blind spots due to the lack of visibility&#x2F;outdated product knowledge,
+for example the flow that you read has changed after you prepared the plan.&lt;&#x2F;p&gt;
+&lt;p&gt;Don&#x27;t worry too much, that&#x27;s why we&#x27;re doing the technical design doc review session 🖖.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Engineering Lead - Achieving Team Goals</title>
+        <published>2021-02-23T20:00:00+07:00</published>
+        <updated>2021-02-23T20:00:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/team/engineering-lead-achieving-team-goals/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/team/engineering-lead-achieving-team-goals/</id>
+        
+        <content type="html">&lt;p&gt;Some people (or most people) might find the stress level going up in respect with the uncertainty of success in this people management role.
+It is important to keep in mind that &lt;b&gt;your performance is not evaluated based on your &lt;em&gt;individual contributions&lt;&#x2F;em&gt; but the &lt;em&gt;team contributions&lt;&#x2F;em&gt;&lt;&#x2F;b&gt;,
+it&#x27;s not your performance anymore, &lt;b&gt;it&#x27;s &lt;em&gt;the team performance&lt;&#x2F;em&gt;&lt;&#x2F;b&gt;! In general, team performance will be tied to team achievements&#x2F;goals completion.&lt;&#x2F;p&gt;
+&lt;p&gt;This post is based on my personal experiences &amp;amp; past mistakes, please take it with a grain of salt.
+The post will be focusing on tips to achieve your team goals, other perspectives (dealing with stress, challenging your team, growing your teammember, etc2) will be in another posts.
+Your mileage may vary depending on the expectation of your company&#x2F;employer.&lt;&#x2F;p&gt;
+&lt;h6 id=&quot;make-sure-the-team-is-aligned-with-company-goals&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#make-sure-the-team-is-aligned-with-company-goals&quot; aria-label=&quot;Anchor link for: make-sure-the-team-is-aligned-with-company-goals&quot;&gt;#&lt;&#x2F;a&gt;
+Make sure the team is aligned with company goals&lt;&#x2F;h6&gt;
+&lt;p&gt;In short, you need to communicate clearly what needs to be done, in my case, we&#x27;re using OKR and use the tool to align with the company goals (by deriving the department&#x27;s OKR), then we&#x27;ll iterate the team OKR together one by one with things to be checked:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each goal must have at least a PIC. If it&#x27;s not set yet: the earlier you visit this section will result in less uncertainty.&lt;&#x2F;li&gt;
+&lt;li&gt;Each PIC must understand the goal and why they&#x27;re doing it, this is to build the base motivation and get the buy-in from the PIC.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h6 id=&quot;plan-ahead&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#plan-ahead&quot; aria-label=&quot;Anchor link for: plan-ahead&quot;&gt;#&lt;&#x2F;a&gt;
+Plan ahead&lt;&#x2F;h6&gt;
+&lt;p&gt;Your team have goals, what&#x27;s next? &lt;b&gt;&lt;em&gt;Planning&lt;&#x2F;em&gt;&lt;&#x2F;b&gt;, why &lt;em&gt;planning&lt;&#x2F;em&gt; is important? I think I can use British Army&#x27;s &lt;em&gt;7Ps&lt;&#x2F;em&gt; to explain why: &lt;code&gt;Proper Planning and Preparation Prevents Piss Poor Performance&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;There are several key points that I always keep in my mental notes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Describe the background why we&#x27;re aiming for a specific goal, you can use a top-bottom model to lower barrier of entry in your plan.&lt;&#x2F;li&gt;
+&lt;li&gt;Make sure the PIC understand the details of the plan by planning together, you make the team owns the plan by planning together instead of by yourself.&lt;&#x2F;li&gt;
+&lt;li&gt;Write the plan in a sharable-docs (we use google docs).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Remember to open the opportunity for team members (brave souls 🤞) to let them lead the planning and guide if needed, everyone
+should be able to plan ahead, it&#x27;s a general skill that will be useful in life.&lt;&#x2F;p&gt;
+&lt;h6 id=&quot;communicate-the-plan-gather-feedback&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#communicate-the-plan-gather-feedback&quot; aria-label=&quot;Anchor link for: communicate-the-plan-gather-feedback&quot;&gt;#&lt;&#x2F;a&gt;
+Communicate the plan &amp;amp; gather feedback&lt;&#x2F;h6&gt;
+&lt;p&gt;Your team goals have stakeholders, be it upper management, product team, marketing team, etc2. Communicate the plan to stakeholders &amp;amp; gather feedback,
+you can do this by setting up a meeting or &lt;em&gt;possibly&lt;&#x2F;em&gt; just via email if the goal is small-medium size (in my case it&#x27;s usually &amp;lt; 1 week of work).&lt;&#x2F;p&gt;
+&lt;h6 id=&quot;split-the-work-after-the-plan-is-approved&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#split-the-work-after-the-plan-is-approved&quot; aria-label=&quot;Anchor link for: split-the-work-after-the-plan-is-approved&quot;&gt;#&lt;&#x2F;a&gt;
+Split the work after the plan is approved&lt;&#x2F;h6&gt;
+&lt;p&gt;At this step you need to split the tasks according to the plan and distribute the work across your team members or other team(s).
+You can use software for subtasking or just use excel should be ok as long as it&#x27;s clear.&lt;&#x2F;p&gt;
+&lt;h6 id=&quot;eggggggggggxecute-and-reporting&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#eggggggggggxecute-and-reporting&quot; aria-label=&quot;Anchor link for: eggggggggggxecute-and-reporting&quot;&gt;#&lt;&#x2F;a&gt;
+Eggggggggggxecute and reporting&lt;&#x2F;h6&gt;
+&lt;p&gt;This is the grinding part, the PIC will execute the plan and team lead is expected to &amp;quot;guard&amp;quot; the execution a.k.a make sure it&#x27;s done properly, be ready to get your hands dirty as well, remember to unblock your team member.
+Let the PIC know explicitly that there might be changes along the road, just remember to revise the plan &amp;amp; report back to stakeholders.&lt;&#x2F;p&gt;
+&lt;p&gt;There are 3 kind of reports that I usually find myself do:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Official reporting regarding the project, it depends on your stakeholders, updating the progress in your plan documentation and send the TLDR version via email should be enough in most cases.&lt;&#x2F;li&gt;
+&lt;li&gt;Weekly reporting to my manager, this report contains the overall projects progress (achievements&#x2F;other important highlights) running within the team.&lt;&#x2F;li&gt;
+&lt;li&gt;[Optional] Most of the time it&#x27;s a good idea to setup a specific slack channel (or just use whatever software your company use) for medium-high complexity project and let stakeholders to decide whether they want to join the channel or not,
+this channel should be useful for organizing chats &amp;amp; discussions scoping.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h6 id=&quot;the-fun-and-the-ugly-part&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-fun-and-the-ugly-part&quot; aria-label=&quot;Anchor link for: the-fun-and-the-ugly-part&quot;&gt;#&lt;&#x2F;a&gt;
+The fun and the ugly part&lt;&#x2F;h6&gt;
+&lt;p&gt;&lt;b&gt;Mission completed?&lt;&#x2F;b&gt; Make sure you give credit where credit is due, credit the PIC, team members and other parties that contribute to the project.
+Have celebration then focus on the next goal.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;b&gt;The ugly part: mission failed.&lt;&#x2F;b&gt; In this case &lt;em&gt;you take the responsibility&lt;&#x2F;em&gt;. Yes, the team lead is responsible for the project, even though you should held people accountable.
+Just like a CEO is responsible for the overall success of a company, team lead is responsible for the overall success of a team.
+In most cases your manager will require a report of what failed and what can be improved. Take it as a learning to get better! You can do it together with your team, remember to back-up each other!&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The basic principle to keep in mind: &lt;b&gt;if you fail then you get up together with the team and improve&lt;&#x2F;b&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Partnership System Integration Tips</title>
+        <published>2020-08-22T00:00:00+07:00</published>
+        <updated>2020-08-22T00:00:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/development-practices/partnership-system-integration-tips/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/development-practices/partnership-system-integration-tips/</id>
+        
+        <content type="html">&lt;p&gt;Recently we just had intense integrations with our business partners.
+We have a whitelabel product where registered whitelabel partners can use our core engine
+and put their brand as the label.&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1556484687-30636164638b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1567&amp;q=80&quot;
+  &gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;The development was very intense because there are some parts that need to be customized
+for each partners and some of the APIs are not even 100% finished yet. We do the development both ways,
+partners also allocated engineering resource on their side to help with the integration.
+During this intense moment, we made some mistakes, both engineering related and non engineering.&lt;&#x2F;p&gt;
+&lt;p&gt;This post is about the lessons&#x2F;key takeaways from the experience.
+I&#x27;ll update the post regularly as the learning process continues, stay tuned!&lt;&#x2F;p&gt;
+&lt;hr&gt;
+&lt;h5 id=&quot;unix-timestamp-for-all-datetime-api-parameters&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#unix-timestamp-for-all-datetime-api-parameters&quot; aria-label=&quot;Anchor link for: unix-timestamp-for-all-datetime-api-parameters&quot;&gt;#&lt;&#x2F;a&gt;
+Unix timestamp for all datetime API parameters&lt;&#x2F;h5&gt;
+&lt;p&gt;As of now we&#x27;re using &lt;a href=&quot;https:&#x2F;&#x2F;www.iso.org&#x2F;iso-8601-date-and-time-format.html&quot;&gt;iso datetime format&lt;&#x2F;a&gt;
+for datetime fields, it&#x27;s very likely that your API clients are using a different
+programming language &#x2F; library and the tool that they choose is going to behave differently.
+At the end unixtimestamp is the most general way to pass datetime data.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;snake-case-instead-of-camelcase-for-api-fields&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#snake-case-instead-of-camelcase-for-api-fields&quot; aria-label=&quot;Anchor link for: snake-case-instead-of-camelcase-for-api-fields&quot;&gt;#&lt;&#x2F;a&gt;
+snake_case instead of camelCase for API fields&lt;&#x2F;h5&gt;
+&lt;p&gt;We had multiple integration problems when partners had typo. Let&#x27;s face it,
+everyone has this experience where you mistype the &lt;code&gt;camelCase&lt;&#x2F;code&gt; format,
+e.g. &lt;code&gt;someField&lt;&#x2F;code&gt; -&amp;gt; &lt;code&gt;somefield&lt;&#x2F;code&gt;. Using &lt;code&gt;snake_case&lt;&#x2F;code&gt; should reduce the possibility
+of the problem thus would save your client&#x27;s time and your time when doing integration.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;use-sprint-as-the-development-estimation-time-unit&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#use-sprint-as-the-development-estimation-time-unit&quot; aria-label=&quot;Anchor link for: use-sprint-as-the-development-estimation-time-unit&quot;&gt;#&lt;&#x2F;a&gt;
+Use &amp;quot;sprint&amp;quot; as the development estimation time unit&lt;&#x2F;h5&gt;
+&lt;p&gt;There will be times where both parties agrees on to develop new features, depending on the urgency,
+if it&#x27;s a &lt;b&gt;&lt;em&gt;not a critical&lt;&#x2F;em&gt;&lt;&#x2F;b&gt; feature then I&#x27;d advise to always use &lt;code&gt;n&lt;&#x2F;code&gt; sprint as the time estimation.
+The new non-critical feature takes 4 hours to complete? Set the estimation to 1 sprint,
+if it takes &amp;gt; 50% of sprint points then say it takes 2 sprints. Development is not just
+about code-complete, it&#x27;s about delivering the features that meet the expectation
+with minimum bugs and 0 critical bug, probably you need to update your API docs too.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;handling-major-changes-decisions&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#handling-major-changes-decisions&quot; aria-label=&quot;Anchor link for: handling-major-changes-decisions&quot;&gt;#&lt;&#x2F;a&gt;
+Handling major changes&#x2F;decisions&lt;&#x2F;h5&gt;
+&lt;p&gt;Make sure major changes&#x2F;decisions will be discussed internally first, there will be different
+point of views, from product, UI&#x2F;UX, engineering. Anything related to the major decisions should be answered with &lt;code&gt;Let us discuss internally first, we&#x27;ll get back to you by X day(s)&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;remember-it-s-a-partnership&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#remember-it-s-a-partnership&quot; aria-label=&quot;Anchor link for: remember-it-s-a-partnership&quot;&gt;#&lt;&#x2F;a&gt;
+Remember, it&#x27;s a partnership&lt;&#x2F;h5&gt;
+&lt;p&gt;This is a partnership, it&#x27;s a relationship where we will work together as a partner for
+mutual benefits, it&#x27;s not a stage to throw mistakes, it&#x27;s a stage to perform together
+and achieve great things together. Having this mindset will help your emotion and stress level in check.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Phabricator: developing feature on top of other feature</title>
+        <published>2020-04-12T22:37:00+07:00</published>
+        <updated>2020-04-12T22:37:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/git/phabricator-developing-feature-on-top-of-other-feature/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/git/phabricator-developing-feature-on-top-of-other-feature/</id>
+        
+        <content type="html">&lt;p&gt;NOTES: This post assumes that you&#x27;re familiar with &lt;code&gt;git rebase&lt;&#x2F;code&gt; and &lt;code&gt;phabricator&lt;&#x2F;code&gt; terms.&lt;&#x2F;p&gt;
+&lt;p&gt;We use phabricator as our code review tool. A typical workflow for submitting &amp;amp; merging your feature:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a new feature branch based on &lt;code&gt;master&lt;&#x2F;code&gt; branch, develop and &lt;code&gt;git commit&lt;&#x2F;code&gt; locally from there.&lt;&#x2F;li&gt;
+&lt;li&gt;Submit code review &lt;code&gt;arc diff&lt;&#x2F;code&gt; when we&#x27;re done.&lt;&#x2F;li&gt;
+&lt;li&gt;Run &lt;code&gt;arc land&lt;&#x2F;code&gt; to merge our diff to remote &lt;code&gt;master&lt;&#x2F;code&gt; branch.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;code&gt;arc land&lt;&#x2F;code&gt; will squash all of the commits into 1 commit on the feature branch, it uses diff title and description as the commit message. We can also simulate &lt;code&gt;arc land&lt;&#x2F;code&gt; manually, maybe not 100% exact though:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git checkout master&lt;&#x2F;code&gt; to make sure local master branch is up to date.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;git checkout &amp;lt;feature-branch&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;git rebase master -i&lt;&#x2F;code&gt; and squash all of the &lt;code&gt;&amp;lt;feature-branch&amp;gt;&lt;&#x2F;code&gt; commits into 1 commit on top of &lt;code&gt;master&lt;&#x2F;code&gt; branch.&lt;&#x2F;li&gt;
+&lt;li&gt;Merge the rebased &amp;amp; squashed feature branch to remote master.&lt;&#x2F;li&gt;
+&lt;li&gt;Checkout to master and pull origin master.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;This typical flow works if we work on separate features at the same time, but it could fail if we try to develop feature on top of other feature that&#x27;s still in code review (submitted to phabricator). There are many cases this failure could happen, one of the frequent one is when we develop &lt;code&gt;feature-b&lt;&#x2F;code&gt; on top of &lt;code&gt;feature-a&lt;&#x2F;code&gt; where &lt;code&gt;feature-a&lt;&#x2F;code&gt; is still in code review.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;simulation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#simulation&quot; aria-label=&quot;Anchor link for: simulation&quot;&gt;#&lt;&#x2F;a&gt;
+Simulation&lt;&#x2F;h3&gt;
+&lt;p&gt;We&#x27;ll be using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;phabricator-developing-feature-on-top-of-other-feature-code&quot;&gt;this repo&lt;&#x2F;a&gt; as example.&lt;&#x2F;p&gt;
+&lt;p&gt;Assumptions:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;M = master
+FA = feature a
+FB = feature b
+
+mx&amp;lt;n&amp;gt; = commit on master branch
+ax&amp;lt;n&amp;gt; = commit on feature-a branch
+bx&amp;lt;n&amp;gt; = commit on feature-b branch
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The condition will look like below:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;master&lt;&#x2F;code&gt; branch: 3 commits &lt;code&gt;mx1&lt;&#x2F;code&gt;, &lt;code&gt;mx2&lt;&#x2F;code&gt;, and &lt;code&gt;mx3&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;feature-a&lt;&#x2F;code&gt; branch: 2 commits &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;feature-b&lt;&#x2F;code&gt; branch: 3 commits &lt;code&gt;bx1&lt;&#x2F;code&gt;, &lt;code&gt;bx2&lt;&#x2F;code&gt; and &lt;code&gt;bx3&lt;&#x2F;code&gt;, it&#x27;s  built on top of &lt;code&gt;feature-a&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mx1---mx2---mx3---&amp;gt; [M]
+               \
+                ax1---ax2---&amp;gt; [FA]
+                         \
+                          bx1---bx2---bx3---&amp;gt; [FB]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;arc-land-feature-a-branch&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#arc-land-feature-a-branch&quot; aria-label=&quot;Anchor link for: arc-land-feature-a-branch&quot;&gt;#&lt;&#x2F;a&gt;
+Arc land feature-a branch&lt;&#x2F;h3&gt;
+&lt;p&gt;Let&#x27;s say that your &lt;code&gt;feature-a&lt;&#x2F;code&gt; is accepted via code review process and you do &lt;code&gt;arc land&lt;&#x2F;code&gt;, it&#x27;ll squash commits &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt; into 1 commit.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# Process view
+# S = squash
+# --------------------
+mx1---mx2---mx3---&amp;gt; [M]
+               \         &amp;#x2F;---bx1---bx2---bx3---&amp;gt; [FB]
+                ax1---ax2---&amp;gt; [FA]
+                 |     |
+                 S     S
+# End result
+# There&amp;#x27;s a new commit &amp;quot;ax&amp;quot; that represents commit ax1 and ax2.
+# --------------------
+mx1---mx2---mx3---ax---&amp;gt; [M]
+               \
+                ax1---ax2---bx1---bx2---bx3---&amp;gt; [FB]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;code&gt;feature-b&lt;&#x2F;code&gt; doesn&#x27;t need &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt; because it&#x27;s already represented by &lt;code&gt;ax&lt;&#x2F;code&gt;. It will fail if you&#x27;ve submitted &lt;code&gt;feature-b&lt;&#x2F;code&gt; for code review and do &lt;code&gt;arc land&lt;&#x2F;code&gt;, the reason is because it could not merge &amp;quot;cleanly&amp;quot;. The fix is actually pretty easy, you need to point commit &lt;code&gt;bx1&lt;&#x2F;code&gt; to &lt;code&gt;ax&lt;&#x2F;code&gt;. We will do &lt;code&gt;git rebase&lt;&#x2F;code&gt; to rewrite the history, &lt;strong&gt;PLEASE BACKUP&lt;&#x2F;strong&gt; &lt;code&gt;feature-b&lt;&#x2F;code&gt; first before you do this, you can do it by checking-out out from &lt;code&gt;feature-b&lt;&#x2F;code&gt; to another branch.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;git checkout feature-b
+
+# Backup for safety
+git checkout -b feature-b-backup
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;rewriting-history&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#rewriting-history&quot; aria-label=&quot;Anchor link for: rewriting-history&quot;&gt;#&lt;&#x2F;a&gt;
+Rewriting history&lt;&#x2F;h3&gt;
+&lt;p&gt;First, make sure that we&#x27;re on feature-b and then we will run rebase interactive to drop commits &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt;.
+It should be safe because both commits are already in master (represented by &lt;code&gt;ax&lt;&#x2F;code&gt; commit).&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# Do interactive rebase onto master
+# --------------------
+git rebase -i master
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;There will be an editor prompt that should look like&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;gitrebase&quot; class=&quot;language-gitrebase &quot;&gt;&lt;code class=&quot;language-gitrebase&quot; data-lang=&quot;gitrebase&quot;&gt;pick 233a9b8 ax1
+pick 5f5e3ce ax2
+pick e145774 bx1
+pick 1834f7d bx2
+pick 95d155a bx3
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You have 2 options remove &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Delete the lines&lt;&#x2F;li&gt;
+&lt;li&gt;Replace &lt;code&gt;pick&lt;&#x2F;code&gt; with &lt;code&gt;drop&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;You can do either one but I&#x27;ll go with &lt;code&gt;drop&lt;&#x2F;code&gt; to make it more explicit in this post&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;gitrebase&quot; class=&quot;language-gitrebase &quot;&gt;&lt;code class=&quot;language-gitrebase&quot; data-lang=&quot;gitrebase&quot;&gt;drop 233a9b8 ax1
+drop 5f5e3ce ax2
+pick e145774 bx1
+pick 1834f7d bx2
+pick 95d155a bx3
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Save your changes and quit editor, the rebase process will continue by itself.
+Now your &lt;code&gt;feature-b&lt;&#x2F;code&gt; should point to the latest commit on local &lt;code&gt;master&lt;&#x2F;code&gt; branch, you can verify this via &lt;code&gt;git log&lt;&#x2F;code&gt; or use a GUI tool.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git log --oneline --decorate --color --graph
+
+# End result
+# --------------------
+mx1---mx2---mx3---ax---&amp;gt; [M]
+                    \
+                     bx1---bx2---bx3---&amp;gt; [FB]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That&#x27;s it, now you can do &lt;code&gt;arc land&lt;&#x2F;code&gt; cleanly. I hope it helps, wish there&#x27;s an easier way.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;post-updates&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#post-updates&quot; aria-label=&quot;Anchor link for: post-updates&quot;&gt;#&lt;&#x2F;a&gt;
+Post Updates&lt;&#x2F;h3&gt;
+&lt;p&gt;Most recent updates:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Got feedback from &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;daniel-albert-art&#x2F;&quot;&gt;Daniel Albert&lt;&#x2F;a&gt; regarding the rebase process, we could use &lt;code&gt;git rebase -i master&lt;&#x2F;code&gt; to reduce confusion. See the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;blog&#x2F;commit&#x2F;3f383f1595c0fcd7bed0d4daa746a04bbb35f927&quot;&gt;diff here&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Vim Copy File Path From Project Root</title>
+        <published>2018-02-13T00:11:00+07:00</published>
+        <updated>2018-02-13T00:11:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/vim/copy-file-path-from-project-root/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/vim/copy-file-path-from-project-root/</id>
+        
+        <content type="html">&lt;p&gt;I often found myself typing file path manually when explaining code implementation and its use cases to my teammates.
+The task to type file path manually is very daunting and I hate it so much when I mistyped.
+The file path I mentioned is relative from project root. Let&#x27;s say you have this structure&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;▾ Yomu&amp;#x2F;
+  ▸ API&amp;#x2F;
+  ▸ DataStructures&amp;#x2F;
+  ▾ Screens&amp;#x2F;
+  ┊ ▾ ChapterList&amp;#x2F;
+  ┊ ┊ ┊ Chapter.swift
+  ┊ ┊ ┊ ChapterCell.swift
+  ┊ ┊ ┊ ChapterCell.xib
+  ┊ ┊ ┊ ChapterCollectionHeader.swift
+  ┊ ┊ ┊ ChapterCollectionHeader.xib
+  ┊ ┊ ┊ ChapterCollectionViewController.swift
+  ┊ ┊ ┊ ChapterCollectionViewController.xib
+  ┊ ┊ ┊ ChapterCollectionViewModel.swift
+  ┊ ┊ ┊ ChapterViewModel.swift
+  ┊ ┊ ┊ ReadChapterRealm.swift
+  ....
+▸ YomuTests&amp;#x2F;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;and you want to point out to someone an implementation in &lt;code&gt;ChapterViewModel.swift&lt;&#x2F;code&gt;, you would type this&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;Yomu&amp;#x2F;Screens&amp;#x2F;ChapterList&amp;#x2F;ChapterViewModel.swift
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I did that a lot...&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;http:&#x2F;&#x2F;s2.quickmeme.com&#x2F;img&#x2F;71&#x2F;71c3931c1edc4353a0c03ec549753b965872a2c343c09255617f4470cbd924ed.jpg&quot; alt=&quot;We got a badass here&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;I knew there&#x27;s a better way to do this.  There&#x27;s a built-in function in vim that returns the relative path (from project root) of a file in active buffer.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;expand(&amp;#x27;%&amp;#x27;)
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Of course we can do better than that! It&#x27;ll be handy if we can copy the file path to system clipboard.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot; Register relative file path of current buffer
+&amp;quot; from project root to system clipboard
+nnoremap &amp;lt;F10&amp;gt; :let @+ = expand(&amp;quot;%&amp;quot;)&amp;lt;CR&amp;gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now everytime you press &lt;code&gt;F10&lt;&#x2F;code&gt; in normal mode, it will automatically register file path to current active file
+in buffer to your system clipboard.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Customizing UISearchBar</title>
+        <published>2018-02-10T03:19:00+07:00</published>
+        <updated>2018-02-10T03:19:00+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/</id>
+        
+        <content type="html">&lt;p&gt;The default view of &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; is kind of boring, one way to customize it is by subclassing &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; and put the customization code in &lt;code&gt;willMove(toSuperView:)&lt;&#x2F;code&gt; method.
+In this post, we&#x27;ll try to do 2 things&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set border radius for &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Set custom search icon for &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;initial-state&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#initial-state&quot; aria-label=&quot;Anchor link for: initial-state&quot;&gt;#&lt;&#x2F;a&gt;
+Initial State&lt;&#x2F;h2&gt;
+&lt;p&gt;First, we need to subclass &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;, let&#x27;s create one&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;import UIKit
+
+class SearchBar: UISearchBar {
+  override func willMove(toSuperview newSuperview: UIView?) {
+    super.willMove(toSuperview: newSuperview)
+
+    &amp;#x2F;&amp;#x2F; We&amp;#x27;ll fill this later~
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then set your search bar class to &lt;code&gt;SearchBar&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;interface-builder-search-bar.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Interface Builder Search Bar&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s take a look at our initial state, our &lt;code&gt;SearchBar&lt;&#x2F;code&gt; should look like this&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;initial-state.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Initial State&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;uisearchbar-minimal-style&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#uisearchbar-minimal-style&quot; aria-label=&quot;Anchor link for: uisearchbar-minimal-style&quot;&gt;#&lt;&#x2F;a&gt;
+UISearchBar Minimal Style&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;UISearchBar&lt;&#x2F;code&gt; has &lt;code&gt;searchBarStyle&lt;&#x2F;code&gt; property, we&#x27;ll set that with &lt;code&gt;UISearchBarStyle.minimal&lt;&#x2F;code&gt;, this tells &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; to
+remove its background&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;override func willMove(toSuperview newSuperview: UIView?) {
+  super.willMove(toSuperview: newSuperview)
+
+  searchBarStyle = UISearchBarStyle.minimal
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;minimal.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Minimal&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;borderless-uisearchbar&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#borderless-uisearchbar&quot; aria-label=&quot;Anchor link for: borderless-uisearchbar&quot;&gt;#&lt;&#x2F;a&gt;
+Borderless UISearchBar&lt;&#x2F;h2&gt;
+&lt;p&gt;Next, we&#x27;ll remove text field border and set some styling&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;override func willMove(toSuperview newSuperview: UIView?) {
+  super.willMove(toSuperview: newSuperview)
+
+  searchBarStyle = UISearchBarStyle.minimal
+
+  &amp;#x2F;&amp;#x2F; Configure text field
+  let textField = value(forKey: &amp;quot;_searchField&amp;quot;) as! UITextField
+
+  &amp;#x2F;&amp;#x2F; This will remove the border style, we need to do this
+  &amp;#x2F;&amp;#x2F; in order to configure border style through `textField.layer`
+  &amp;#x2F;&amp;#x2F; otherwise we&amp;#x27;ll have 2 borders.
+  &amp;#x2F;&amp;#x2F; You can remove `textField.borderStyle = .none` to see it yourself.
+  textField.borderStyle = .none
+  textField.backgroundColor = UIColor(hex: &amp;quot;#F7F7F7&amp;quot;)
+  textField.clipsToBounds = true
+  textField.layer.cornerRadius = 6.0
+  textField.layer.borderWidth = 1.0
+  textField.layer.borderColor = textField.backgroundColor!.cgColor
+  textField.textColor = UIColor(hex: &amp;quot;#555555&amp;quot;)
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;borderless.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon Borderless&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;customizing-search-icon&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#customizing-search-icon&quot; aria-label=&quot;Anchor link for: customizing-search-icon&quot;&gt;#&lt;&#x2F;a&gt;
+Customizing Search Icon&lt;&#x2F;h2&gt;
+&lt;p&gt;Now we need to customize the search icon&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;override func willMove(toSuperview newSuperview: UIView?) {
+  super.willMove(toSuperview: newSuperview)
+
+  searchBarStyle = .minimal
+
+  &amp;#x2F;&amp;#x2F; Create search icon.
+  let searchIcon = UIImageView(image: &amp;lt;your search icon goes here&amp;gt;)
+  let searchImageSize = searchIcon.image!.size
+
+  &amp;#x2F;&amp;#x2F; I&amp;#x27;m adding some padding to the image
+  searchIcon.frame = CGRect(
+    x: 0,
+    y: 0,
+    width: searchImageSize.width + 10,
+    height: searchImageSize.height
+  )
+
+  &amp;#x2F;&amp;#x2F; Default value is `UIViewContentMode.scaleToFill`,
+  &amp;#x2F;&amp;#x2F; it&amp;#x27;ll stretch the search icon, we don&amp;#x27;t want that,
+  &amp;#x2F;&amp;#x2F; we want to center the search icon instead.
+  searchIcon.contentMode = UIViewContentMode.center
+
+  &amp;#x2F;&amp;#x2F; Configure text field
+  let textField = value(forKey: &amp;quot;_searchField&amp;quot;) as! UITextField
+  textField.leftView = searchIcon
+  textField.borderStyle = .none
+  textField.backgroundColor = UIColor(hex: &amp;quot;#F7F7F7&amp;quot;)
+  textField.clipsToBounds = true
+  textField.layer.cornerRadius = 6.0
+  textField.layer.borderWidth = 1.0
+  textField.layer.borderColor = textField.backgroundColor!.cgColor
+  textField.textColor = UIColor(hex: &amp;quot;#555555&amp;quot;)
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The end result should look like this&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;end-result.png
+&quot;
+    alt=&quot;Customizing UISearchBar Icon End Result&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;You can find the full code
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;iYomu&#x2F;blob&#x2F;master&#x2F;Yomu&#x2F;Common&#x2F;SearchBar.swift&quot; target=&quot;_blank&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Swift MIME Type Detection with Swime</title>
+        <published>2017-04-26T23:00:44+07:00</published>
+        <updated>2017-04-26T23:00:44+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/detect-mime-type-with-swime/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/detect-mime-type-with-swime/</id>
+        
+        <content type="html">&lt;p&gt;A month ago I found myself scouring GitHub for a Swift plugin
+to detect mime type based on magic bytes. I did find &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;onevcat&#x2F;MimeType&quot;&gt;MimeType&lt;&#x2F;a&gt;,
+unfortunately it extracts the mime type from a file path or url extension.
+Knowing that no one hadn&#x27;t created a mime type checking library for Swift, I set
+a to-do list to learn about mime type checking, hoping that I could contribute to the open source
+community. My first attempt was to understand how to read file bytes in Swift.
+Below is my best attempt after going through Apple docs and some examples from stackoverflow.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;let path = &amp;quot;&amp;#x2F;path&amp;#x2F;to&amp;#x2F;file&amp;quot;
+let url = URL(fileURLWithPath: path, isDirectory: false)
+let data = try! Data(contentsOf: url)
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Okay now I&#x27;ve got the file represented in &lt;code&gt;Data&lt;&#x2F;code&gt; struct, how do I read the bytes?
+It turns out we need to allocate an array of &lt;code&gt;UInt8&lt;&#x2F;code&gt; as the bytes container
+then pass it to &lt;code&gt;Data.copyBytes(to:count:)&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;let bytesCount = 10
+
+&amp;#x2F;&amp;#x2F; Bytes need to mutable.
+var bytes = [UInt8](repeating: 0, count: bytesCount)
+
+&amp;#x2F;&amp;#x2F; Copy file bytes to `bytes` variable
+data.copyBytes(to: &amp;amp;bytes, count: bytesCount)
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Next is the hard part, some of the &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;List_of_file_signatures&quot;&gt;magic bytes specification&lt;&#x2F;a&gt;
+need to be treated differently, for example we need to read bytes 0-3 then jump to bytes 30-57 to check
+for &lt;code&gt;application&#x2F;epub+zip&lt;&#x2F;code&gt;.
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;swime&quot;&gt;Swime&lt;&#x2F;a&gt; comes to aid this. I took the awesome implementation of
+Sindresorhus &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sindresorhus&#x2F;file-type&quot;&gt;file type&lt;&#x2F;a&gt; library and rewrote it in Swift with
+some added features.&lt;&#x2F;p&gt;
+&lt;p&gt;A typical mime type check operation with Swime would look like this&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;import Swime
+
+let path = &amp;quot;&amp;#x2F;path&amp;#x2F;to&amp;#x2F;some-file.jpg&amp;quot;
+let url = URL(fileURLWithPath: path, isDirectory: false)
+let data = try! Data(contentsOf: url)
+let mimeType = Swime.mimeType(data: data)
+
+mimeType?.type == .jpg &amp;#x2F;&amp;#x2F; true
+mimeType! &amp;#x2F;&amp;#x2F; MimeType(mime: &amp;quot;image&amp;#x2F;jpeg&amp;quot;, ext: &amp;quot;jpg&amp;quot;, type: .jpg)
+
+switch mimeType?.type {
+  case .jpg?:
+    ....
+  case .png?:
+    ....
+  case .wmv?:
+    ....
+
+  case ...
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Please feel free to open an issue or pull request if there&#x27;s a feature
+that would be a great addition to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;swime&quot;&gt;Swime&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;media.giphy.com&#x2F;media&#x2F;Zw3oBUuOlDJ3W&#x2F;giphy.gif&quot; alt=&quot;Beer Toast!&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Living In The Terminal</title>
+        <published>2017-03-11T14:56:17+07:00</published>
+        <updated>2017-03-11T14:56:17+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/</id>
+        
+        <content type="html">&lt;p&gt;Most of my time is spent in the terminal and I love working within it,
+so I invest a lot for the best terminal setup to make sure that I&#x27;m productive and happy when I&#x27;m using it.
+Here&#x27;s a couple of screenshots of my terminal&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-1.png
+&quot;
+    alt=&quot;Terminal with vim&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-2.png
+&quot;
+    alt=&quot;Terminal splitted&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s the must have list for the best terminal experience&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gnachman&#x2F;iTerm2&quot;&gt;iTerm2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&quot;&gt;Tmux&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;neovim&#x2F;neovim&quot;&gt;Neovim&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Let&#x27;s start with iTerm2, it&#x27;s the go to terminal when you&#x27;re using macOS and does not like
+the built-in terminal that macOS has. Some people prefer to use &lt;a href=&quot;https:&#x2F;&#x2F;hyper.is&#x2F;&quot;&gt;Hyper&lt;&#x2F;a&gt; nowadays
+but I stick to iTerm2 because it&#x27;s a native app (written using Objective-C).&lt;&#x2F;p&gt;
+&lt;p&gt;Tmux is a terminal multiplexer, it runs inside iTerm2. I use it to open multiple windows and
+split panes within the terminal (it can do more than that).&lt;&#x2F;p&gt;
+&lt;p&gt;Neovim is a drop-in replacement for vim, I just use it because the project&#x27;s motivation is to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;neovim&#x2F;neovim&#x2F;wiki&#x2F;Introduction&quot;&gt;refactor
+Vim source code&lt;&#x2F;a&gt; and I believe it&#x27;s the future.&lt;&#x2F;p&gt;
+&lt;p&gt;One nice thing of working in the terminal is that I don&#x27;t need to switch often between applications.
+Most of my work can be done within the terminal (depending on the work itself).
+It&#x27;s easy to run shell commands when you code in the terminal. The real deal is when you start managing your dotfiles configuration.
+I put my dotfiles configuration on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;dotfiles&quot;&gt;my github&lt;&#x2F;a&gt;, I just
+need to clone it and run my setup script to get my ideal work environment 🍻.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Make NSCollectionViewItem Responsive Width and Height</title>
+        <published>2017-03-04T23:48:35+07:00</published>
+        <updated>2017-03-04T23:48:35+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/</id>
+        
+        <content type="html">&lt;p&gt;I had a hard time figuring out how to make &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; width to be responsive.
+The problem was that I wanted my &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; to follow its parent width.
+Maybe I didn&#x27;t google the right keywords, I didn&#x27;t find any solution on the internet.
+I found the solution after reading &lt;code&gt;NSCollectionViewDelegateFlowLayout&lt;&#x2F;code&gt;, it wasn&#x27;t straight forward.
+When the window is resized, &lt;code&gt;NSCollectionView&lt;&#x2F;code&gt; will follow the its parent width by default, but not the cells inside it.
+Turns out that we need to invalidate the cells layout manually and tell &lt;code&gt;NSCollectionViewDelegateFlowLayout&lt;&#x2F;code&gt; our cells preferred size.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;extension MyCollectionViewController: NSCollectionViewDelegateFlowLayout {
+  func collectionView(
+    _ collectionView: NSCollectionView,
+    layout collectionViewLayout: NSCollectionViewLayout,
+    sizeForItemAt indexPath: IndexPath
+  ) -&amp;gt; NSSize {
+    &amp;#x2F;&amp;#x2F; Here we&amp;#x27;re telling that we want our cell width to
+    &amp;#x2F;&amp;#x2F; be equal to our collection view width
+    &amp;#x2F;&amp;#x2F; and height equals to 70
+    return CGSize(width: collectionView.bounds.width, height: 70)
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;There&#x27;s one catch here, remember we need to invalidate the cells layout manually&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;class MyCollectionViewController: NSViewController {
+  @IBOutlet weak var collectionView: NSCollectionView!
+
+  &amp;#x2F;&amp;#x2F; This method will be called everytime window is resized
+  override func viewWillLayout() {
+    super.viewWillLayout()
+
+    &amp;#x2F;&amp;#x2F; When we&amp;#x27;re invalidating the collection view layout
+    &amp;#x2F;&amp;#x2F; it will call `collectionView(_:layout:sizeForItemAt:)` method
+    collectionView.collectionViewLayout?.invalidateLayout()
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;There it is, hope it helps 🍪&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>NSImageView Unproportional Zoom</title>
+        <published>2017-02-10T20:47:23+07:00</published>
+        <updated>2017-02-10T20:47:23+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/macos/unproportional-zoom/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/macos/unproportional-zoom/</id>
+        
+        <content type="html">&lt;p&gt;I had this weird problem when I tried to implement a zoom functionality
+in my hobby project, a manga reader called &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;yomu&quot;&gt;Yomu&lt;&#x2F;a&gt;.
+When I tried to zoom an &lt;code&gt;NSImageView&lt;&#x2F;code&gt; programmatically
+it&#x27;s being zoomed unproportionally, my expectation was the image should be stretched horizontally
+and vertically without moving from its center point. It was like this&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;Zoom 100%&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;zoom-100.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;Zoom 140%&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;zoom-140.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Damn, there was an ugly gap :( between header border and the image.
+I had a hard time finding the solution, it took me almost 3 days to debug this problem (maybe because I&#x27;m a newbie).
+It turns out the solution is really simple, by default apple will set image view to scale proportionally down,
+changing it to proportionally up or down will fix the problem.&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;The culprit T_T&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;proportionally-down.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;h5 class=&quot;text-center&quot;&gt;Fixing it 🍻&lt;&#x2F;h5&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;proportionally-up-or-down.png
+&quot;
+    alt=&quot;NSImageView unproportional zoom&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Coding Productivity Over 9000</title>
+        <published>2016-07-10T00:49:40+07:00</published>
+        <updated>2016-07-10T00:49:40+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/tools/productivity-over-9000/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/tools/productivity-over-9000/</id>
+        
+        <content type="html">&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;media.giphy.com&#x2F;media&#x2F;XIqCQx02E1U9W&#x2F;giphy.gif&quot; alt=&quot;Over 9000&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Why you should learn and use vim keybindings.&lt;&#x2F;p&gt;
+&lt;p&gt;It started 2 years ago when I decided to invest in vim.
+The first weeks with vim were hell, I wasn&#x27;t productive at all.
+So I consider it as an investment, and it pays well.
+Let me show you a simple example, let&#x27;s say I have this code (written in &lt;code&gt;Swift&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;func add(x: Int, y: Int) -&amp;gt; Int {
+  return x + y;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;and I want to add another function, that is a &lt;code&gt;multiply&lt;&#x2F;code&gt; function&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;func multiply(x: Int, y: Int) -&amp;gt; Int {
+  return x * y;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;the-old-days&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-old-days&quot; aria-label=&quot;Anchor link for: the-old-days&quot;&gt;#&lt;&#x2F;a&gt;
+The old days&lt;&#x2F;h2&gt;
+&lt;p&gt;In the old days, I would need around 10-12 seconds by doing these:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Move my right hand off the keyboard towards my mouse&lt;&#x2F;li&gt;
+&lt;li&gt;Select the &lt;code&gt;add&lt;&#x2F;code&gt; function&lt;&#x2F;li&gt;
+&lt;li&gt;Press &lt;code&gt;⌘ + c&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Move my right hand to the keyboard again, press arrow down then &lt;code&gt;⌘ + v&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Use my mouse to place the cursor at &lt;code&gt;+&lt;&#x2F;code&gt; operator and replace it with &lt;code&gt;*&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Double click &lt;code&gt;add&lt;&#x2F;code&gt; function name and replace it with &lt;code&gt;multiply&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;vim-s-way&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#vim-s-way&quot; aria-label=&quot;Anchor link for: vim-s-way&quot;&gt;#&lt;&#x2F;a&gt;
+Vim&#x27;s way&lt;&#x2F;h2&gt;
+&lt;p&gt;Let&#x27;s see with the approach that I would&#x27;ve take with vim, this time it takes around 7-8 seconds:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to visual mode with &lt;code&gt;v&lt;&#x2F;code&gt; then press &lt;code&gt;%&lt;&#x2F;code&gt; to block all the &lt;code&gt;add&lt;&#x2F;code&gt; function&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;ctrl + c&lt;&#x2F;code&gt; (yes I have a custom mapping for copy)&lt;&#x2F;li&gt;
+&lt;li&gt;Go to the bottom line of &lt;code&gt;buffer&lt;&#x2F;code&gt; with &lt;code&gt;G&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;ctrl + v&lt;&#x2F;code&gt; (custom mapping for paste)&lt;&#x2F;li&gt;
+&lt;li&gt;Press &lt;code&gt;kf+s*&amp;lt;ctrl&amp;gt;-{&lt;&#x2F;code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;k&lt;&#x2F;code&gt; move cursor 1 line up.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;f+&lt;&#x2F;code&gt; find &lt;code&gt;+&lt;&#x2F;code&gt; operator and move the cursor to it&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;s*&lt;&#x2F;code&gt; replace &lt;code&gt;+&lt;&#x2F;code&gt; with &lt;code&gt;*&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ctrl&amp;gt;-{&lt;&#x2F;code&gt; back to normal mode&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Press &lt;code&gt;kHwcw&lt;&#x2F;code&gt; then type &lt;code&gt;mutiply&lt;&#x2F;code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;k&lt;&#x2F;code&gt; move cursor 1 line up&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;H&lt;&#x2F;code&gt; (custom mapping) move to the first character at the current line&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;w&lt;&#x2F;code&gt; move 1 word (to &lt;code&gt;add&lt;&#x2F;code&gt; function name)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;cw&lt;&#x2F;code&gt; and type &lt;code&gt;multiply&lt;&#x2F;code&gt; will replace &lt;code&gt;add&lt;&#x2F;code&gt; with &lt;code&gt;mutiply&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Step 1-6 combined would take 7-8 seconds for me (let&#x27;s make it 8 seconds).
+There it is, I just saved 2-4 seconds of my life. I think it&#x27;s really worth it.
+The previous example is a simple one, consider these coding-related operations:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jump between lines&lt;&#x2F;li&gt;
+&lt;li&gt;Move code from line x-y to line z&lt;&#x2F;li&gt;
+&lt;li&gt;Change code inside curly braces (in vim you can use &lt;code&gt;ci{&lt;&#x2F;code&gt;, yes that&#x27;s only 3 strokes)&lt;&#x2F;li&gt;
+&lt;li&gt;Etc..&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;&#x2F;strong&gt;: You can cheat on step 5 and 6 if you use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;easymotion&#x2F;vim-easymotion&quot;&gt;Vim Easymotion&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I don&#x27;t know how much time I&#x27;ve saved for myself, but indeed the investment pays really well.
+Some people will tell you that you should use a real &lt;code&gt;IDE&lt;&#x2F;code&gt; and I couldn&#x27;t agree more with them, I would tell you the same.
+With vim in your toolbox, you can install a vim keybindings plugin for your IDE, so you&#x27;ll get
+the power of IDE and vim keybindings.&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;media.giphy.com&#x2F;media&#x2F;138o38B4EmLjGw&#x2F;giphy.gif&quot; alt=&quot;Make It Over 9000&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Personally I use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;XVimProject&#x2F;XVim&quot;&gt;XVim&lt;&#x2F;a&gt; for XCode,
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;JetBrains&#x2F;ideavim&quot;&gt;Ideavim&lt;&#x2F;a&gt; for &lt;a href=&quot;https:&#x2F;&#x2F;www.jetbrains.com&quot;&gt;Jetbrains&lt;&#x2F;a&gt;.
+Sometimes depending on my mood, I use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;syl20bnr&#x2F;spacemacs&quot;&gt;Spacemacs&lt;&#x2F;a&gt;
+(Pre-configured emacs with a lot of useful packages) with vim keybindings for other stuffs.
+Feel free to see&#x2F;copy my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;dotfiles&#x2F;tree&#x2F;master&#x2F;vimrc&quot;&gt;vimrc&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>RxSwift Race Condition on Cells</title>
+        <published>2016-07-04T22:58:59+07:00</published>
+        <updated>2016-07-04T22:58:59+07:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/race-condition-on-cells/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/swift/race-condition-on-cells/</id>
+        
+        <content type="html">&lt;p&gt;A few days ago I wrote a simple code to asynchronously load an image using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya#rxswift&quot;&gt;&lt;code&gt;RxMoya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.
+&lt;code&gt;RxMoya&lt;&#x2F;code&gt; is an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ReactiveX&#x2F;RxSwift&quot;&gt;&lt;code&gt;RxSwift&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; wrapper
+for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya&quot;&gt;&lt;code&gt;Moya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;. The flow is simple,
+everytime collection view asks for &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; (yes, I&#x27;m building a macOS app),
+I need to load the image asynchronously. Here&#x27;s a part of the implementation:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;func collectionView(
+  collectionView: NSCollectionView,
+  itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
+) -&amp;gt; NSCollectionViewItem {
+  let item = collectionView.makeItemWithIdentifier(
+    &amp;quot;ChapterItem&amp;quot;,
+    forIndexPath: indexPath
+  ) as! ChapterItem
+
+  let chapter = vm[indexPath.item]
+  let chapterPageVm = ChapterPagesViewModel(..)
+
+  &amp;#x2F;&amp;#x2F; Fetch manga chapter pages
+  chapterPageVm.fetch()
+
+  chapterPageVm
+    .chapterPages
+    .drive(onNext: { _ in
+      &amp;#x2F;&amp;#x2F; After chapter pages are loaded
+      &amp;#x2F;&amp;#x2F; we will set chapter preview here
+    })
+    .addDisposableTo(disposeBag)
+
+  ...
+
+  return item
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;https:&#x2F;&#x2F;i.imgflip.com&#x2F;1b9y1.jpg&quot;
+    alt=&quot;Problem analysis&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Obviously there&#x27;s a problem with the implementation, how do
+I make sure that after the chapter pages are loaded, the execution
+context of &lt;code&gt;driveNext&lt;&#x2F;code&gt; is valid? In other words, how to make sure
+that the cell item has not been re-used (because if it is
+and I’m setting the fetched data, then there will be race condition)?&lt;&#x2F;p&gt;
+&lt;p&gt;A solution that might work is by setting a &lt;code&gt;DisposeBag&lt;&#x2F;code&gt; to each
+cell and disposing it everytime &lt;code&gt;didEndDisplayingItem&lt;&#x2F;code&gt; gets called.&lt;&#x2F;p&gt;
+&lt;p class=&quot;image-container&quot;&gt;
+  &lt;img
+    src=&quot;http:&#x2F;&#x2F;id.ragegenerator.com&#x2F;images&#x2F;ragebuilder-faces&#x2F;Happy&#x2F;09.png&quot;
+    alt=&quot;The solution&quot;
+    class=&quot;medium-size&quot;&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;Sounds like a perfect plan! Now I just need to find a way to set the dispose bags
+and keep track of them for each cell. Luckily &lt;code&gt;RxSwift&lt;&#x2F;code&gt; has a great community
+around it, &lt;code&gt;dpaschich&lt;&#x2F;code&gt; on &lt;a href=&quot;http:&#x2F;&#x2F;rxswift.slack.com&#x2F;&quot;&gt;rxswift.slack.com&lt;&#x2F;a&gt; suggested
+to set &lt;code&gt;DisposeBag&lt;&#x2F;code&gt; on each of the cell item and disposing it using a custom method
+&lt;code&gt;didEndDisplaying&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;class ChapterItem: NSCollectionViewItem {
+  @IBOutlet weak var chapterTitle: NSTextField!
+  @IBOutlet weak var chapterNumber: NSTextField!
+  @IBOutlet weak var chapterPreview: NSImageView!
+
+  var disposeBag = DisposeBag()
+
+  func didEndDisplaying() {
+    chapterPreview.image = .None
+
+    disposeBag = DisposeBag()
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;func collectionView(
+  collectionView: NSCollectionView,
+  didEndDisplayingItem item: NSCollectionViewItem,
+  forRepresentedObjectAtIndexPath indexPath: NSIndexPath
+) {
+  let _item = item as! ChapterItem
+
+  _item.didEndDisplaying()
+}
+
+func collectionView(
+  collectionView: NSCollectionView,
+  itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
+) -&amp;gt; NSCollectionViewItem {
+  let item = collectionView.makeItemWithIdentifier(
+    &amp;quot;ChapterItem&amp;quot;,
+    forIndexPath: indexPath
+  ) as! ChapterItem
+
+  let chapter = vm[indexPath.item]
+  let chapterPageVm = ChapterPagesViewModel(..)
+
+  &amp;#x2F;&amp;#x2F; Fetch manga chapter pages
+  chapterPageVm.fetch()
+
+  &amp;#x2F;&amp;#x2F; Notice how I add disposable to item.disposeBag
+  chapterPageVm
+    .chapterPages
+    .driveNext { _ in
+      &amp;#x2F;&amp;#x2F; After chapter pages are loaded
+      &amp;#x2F;&amp;#x2F; we will set chapter preview here
+    } &amp;gt;&amp;gt;&amp;gt; item.disposeBag
+
+  ...
+
+  return item
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+</feed>
