@@ -4,8 +4,68 @@
     <link href="https://sendyhalim.github.io/blog/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://sendyhalim.github.io/blog"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-08-24T00:00:00+07:00</updated>
+    <updated>2023-09-10T00:00:00+00:00</updated>
     <id>https://sendyhalim.github.io/blog/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Postgres Reading Checklist</title>
+        <published>2023-09-10T00:00:00+00:00</published>
+        <updated>2023-09-10T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/reading-checklist/postgres/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/reading-checklist/postgres/</id>
+        
+        <content type="html">&lt;p&gt;I&#x27;m not a database expert, in my career I&#x27;ve faced so many issues and bottlenecks,
+most of the come from database. My crystal ball 🔮 told me that it&#x27;s just a matter of time
+until the next database issues occur, so I decided to gather as much practical
+database learning sources as I can in the past years, especially the ones that I think (based on experience)
+will most likely be used.&lt;&#x2F;p&gt;
+&lt;p&gt;We&#x27;re using postgres at work so it&#x27;s going to be tailored specifically to it,
+the checklist should be read in order but nothing stops you to jump around.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;basic-postgres&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#basic-postgres&quot; aria-label=&quot;Anchor link for: basic-postgres&quot;&gt;#&lt;&#x2F;a&gt;
+Basic Postgres&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;patshaughnessy.net&#x2F;2014&#x2F;11&#x2F;11&#x2F;discovering-the-computer-science-behind-postgres-indexes&quot;&gt;Discovering the Computer Science Behind Postgres Indexes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;patshaughnessy.net&#x2F;2014&#x2F;10&#x2F;13&#x2F;following-a-select-statement-through-postgres-internals&quot;&gt;Following a Select Statement Through Postgres Internals&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;patshaughnessy.net&#x2F;2015&#x2F;11&#x2F;24&#x2F;a-look-at-how-postgres-executes-a-tiny-join&quot;&gt;A Look at How Postgres Executes a Tiny Join&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;patshaughnessy.net&#x2F;2016&#x2F;1&#x2F;22&#x2F;is-your-postgres-query-starved-for-memory&quot;&gt;Is Your Postgres Query Starved for Memory?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dba.stackexchange.com&#x2F;a&#x2F;119391&quot;&gt;Understanding &lt;code&gt;bitmap heap scan&lt;&#x2F;code&gt; and &lt;code&gt;bitmap index scan&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;33100637&#x2F;understanding-bitmap-indexes-in-postgresql&quot;&gt;Understanding bitmap indexes in postgresql&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;slow-queries&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#slow-queries&quot; aria-label=&quot;Anchor link for: slow-queries&quot;&gt;#&lt;&#x2F;a&gt;
+Slow Queries&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;thoughtbot.com&#x2F;blog&#x2F;reading-an-explain-analyze-query-plan&quot;&gt;Reading a Postgres &lt;code&gt;EXPLAIN ANALYZE&lt;&#x2F;code&gt; Query Plan&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.cybertec-postgresql.com&#x2F;en&#x2F;how-to-interpret-postgresql-explain-analyze-output&#x2F;&quot;&gt;How to Interpret PostgreSQL &lt;code&gt;EXPLAIN ANALYZE&lt;&#x2F;code&gt; Output&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.cybertec-postgresql.com&#x2F;en&#x2F;3-ways-to-detect-slow-queries-in-postgresql&#x2F;&quot;&gt;3 Ways to Detect Slow Queries in PostgreSQL&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;postgres-locks&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#postgres-locks&quot; aria-label=&quot;Anchor link for: postgres-locks&quot;&gt;#&lt;&#x2F;a&gt;
+Postgres Locks&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.citusdata.com&#x2F;blog&#x2F;2018&#x2F;02&#x2F;15&#x2F;when-postgresql-blocks&#x2F;&quot;&gt;PostgreSQL rocks, except when it blocks: Understanding locks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;replication&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#replication&quot; aria-label=&quot;Anchor link for: replication&quot;&gt;#&lt;&#x2F;a&gt;
+Replication&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.postgresql.org&#x2F;docs&#x2F;current&#x2F;different-replication-solutions.html&quot;&gt;Replication Solutions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.postgresql.org&#x2F;docs&#x2F;current&#x2F;logical-replication.html&quot;&gt;Logical Replication&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;other-references&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#other-references&quot; aria-label=&quot;Anchor link for: other-references&quot;&gt;#&lt;&#x2F;a&gt;
+Other References&lt;&#x2F;h2&gt;
+&lt;p&gt;Not related directly to postgres, more of a general knowledge:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;Operating-System-Concepts-Abraham-Silberschatz&#x2F;dp&#x2F;1119800366&#x2F;ref=zg_bs_g_3863_sccl_4&#x2F;134-5812815-2007334?psc=1&quot;&gt;Operating system concepts&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;scoutapm.com&#x2F;blog&#x2F;understanding-disk-i-o-when-should-you-be-worried&quot;&gt;Understanding disk IO&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Tools That I Use For Software Engineering</title>
         <published>2023-08-24T00:00:00+07:00</published>
