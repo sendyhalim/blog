@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Sendy Halim">
 		<meta name="description" content="Sendy Halim&#39;s blog">
-    <title>Make NSCollectionViewItem Responsive Width and Height</title>
+    <title>About Me</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://sendyhalim.github.io/blog/assets/css/default.css" />
     <link rel="stylesheet" type="text/css" href="https://sendyhalim.github.io/blog/assets/css/navigation.css" />
@@ -36,30 +36,18 @@
 
 
 <div class="post">
-  <h1 class="title">Make NSCollectionViewItem Responsive Width and Height</h1>
+  <h1 class="title">About Me</h1>
 
   <div class="headline">
     <div>
-      2017-03-04
+      2023-08-12
 
     </div>
     <div>
       <div class="tag-list-container">
   
   <span class="tag">
-    #swift
-  </span>
-  
-  <span class="tag">
-    #nscollectionview
-  </span>
-  
-  <span class="tag">
-    #nscollectionviewitem
-  </span>
-  
-  <span class="tag">
-    #appkit
+    #about-me
   </span>
   
 </div>
@@ -68,40 +56,26 @@
   </div>
 
   <div class="post-body">
-    <p>I had a hard time figuring out how to make <code>NSCollectionViewItem</code> width to be responsive.
-The problem was that I wanted my <code>NSCollectionViewItem</code> to follow its parent width.
-Maybe I didn't google the right keywords, I didn't find any solution on the internet.
-I found the solution after reading <code>NSCollectionViewDelegateFlowLayout</code>, it wasn't straight forward.
-When the window is resized, <code>NSCollectionView</code> will follow the its parent width by default, but not the cells inside it.
-Turns out that we need to invalidate the cells layout manually and tell <code>NSCollectionViewDelegateFlowLayout</code> our cells preferred size.</p>
-<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">extension MyCollectionViewController: NSCollectionViewDelegateFlowLayout {
-  func collectionView(
-    _ collectionView: NSCollectionView,
-    layout collectionViewLayout: NSCollectionViewLayout,
-    sizeForItemAt indexPath: IndexPath
-  ) -&gt; NSSize {
-    &#x2F;&#x2F; Here we&#x27;re telling that we want our cell width to
-    &#x2F;&#x2F; be equal to our collection view width
-    &#x2F;&#x2F; and height equals to 70
-    return CGSize(width: collectionView.bounds.width, height: 70)
-  }
-}
-</code></pre>
-<p>There's one catch here, remember we need to invalidate the cells layout manually</p>
-<pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">class MyCollectionViewController: NSViewController {
-  @IBOutlet weak var collectionView: NSCollectionView!
-
-  &#x2F;&#x2F; This method will be called everytime window is resized
-  override func viewWillLayout() {
-    super.viewWillLayout()
-
-    &#x2F;&#x2F; When we&#x27;re invalidating the collection view layout
-    &#x2F;&#x2F; it will call `collectionView(_:layout:sizeForItemAt:)` method
-    collectionView.collectionViewLayout?.invalidateLayout()
-  }
-}
-</code></pre>
-<p>There it is, hope it helps 🍪</p>
+    <p>Hi, I'm Sendy Halim 👋. I live in Tangerang, Indonesia with my wife, one child, and a dog.
+I'm passionate about software engineering, I randomly came across to it when I was looking for
+a new hobby during my 1st semester of my accounting degree, I completed my major though.</p>
+<h1 id="about-software-engineering"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#about-software-engineering" aria-label="Anchor link for: about-software-engineering">#</a>
+About Software engineering</h1>
+<p>Writing code and software engineering is a hobby to me, it's an activity that
+I enjoy the most. I'm not sure what's the reason, it's just I'm really into it.</p>
+<p>Unfortunately I rarely write code at work nowadays, I'm putting my focus to
+manage teams of great software engineers, the low feeling of not writing code is paid half
+everytime the teams ship features and bring more value to users, the other half is paid
+when I write code in my sparetime 🤞.</p>
+<h1 id="about-blogging"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#about-blogging" aria-label="Anchor link for: about-blogging">#</a>
+About Blogging</h1>
+<p>There are a couple of reasons why I started this blog:</p>
+<ul>
+<li>I want to docment my thoughts based on my life, hobby projects, and profesional experience working in the software engineering field.</li>
+<li>I want to improve my writing skills.</li>
+</ul>
 
   </div>
 </div>

@@ -4,11 +4,14 @@
         <loc>https://sendyhalim.github.io/blog/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/</loc>
+        <loc>https://sendyhalim.github.io/blog/pages/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/about-me/</loc>
+        <loc>https://sendyhalim.github.io/blog/pages/about-me/</loc>
         <lastmod>2023-08-12T23:30:30+07:00</lastmod>
+    </url>
+    <url>
+        <loc>https://sendyhalim.github.io/blog/posts/</loc>
     </url>
     <url>
         <loc>https://sendyhalim.github.io/blog/posts/development-practices/</loc>

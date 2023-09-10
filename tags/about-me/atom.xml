@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/about-me/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/about-me/</id>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/pages/about-me/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/pages/about-me/</id>
         
         <content type="html">&lt;p&gt;Hi, I&#x27;m Sendy Halim 👋. I live in Tangerang, Indonesia with my wife, one child, and a dog.
 I&#x27;m passionate about software engineering, I randomly came across to it when I was looking for
@@ -31,7 +31,7 @@ when I write code in my sparetime 🤞.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;about-blogging&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#about-blogging&quot; aria-label=&quot;Anchor link for: about-blogging&quot;&gt;#&lt;&#x2F;a&gt;
 About Blogging&lt;&#x2F;h1&gt;
-&lt;p&gt;There are a couple reasons why I started this blog:&lt;&#x2F;p&gt;
+&lt;p&gt;There are a couple of reasons why I started this blog:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;I want to docment my thoughts based on my life, hobby projects, and profesional experience working in the software engineering field.&lt;&#x2F;li&gt;
 &lt;li&gt;I want to improve my writing skills.&lt;&#x2F;li&gt;
