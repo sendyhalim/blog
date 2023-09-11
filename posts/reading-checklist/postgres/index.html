@@ -92,9 +92,34 @@ Postgres Locks</h2>
 <ul>
 <li><a href="https://www.citusdata.com/blog/2018/02/15/when-postgresql-blocks/">PostgreSQL rocks, except when it blocks: Understanding locks</a></li>
 </ul>
+<h2 id="tuning-postgres"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#tuning-postgres" aria-label="Anchor link for: tuning-postgres">#</a>
+Tuning postgres</h2>
+<ul>
+<li><a href="https://web.archive.org/web/20230615074135/https://www.2ndquadrant.com/en/blog/on-the-impact-of-full-page-writes/">On the impact of full-page writes</a></li>
+<li><a href="https://web.archive.org/web/20221008035823/https://www.enterprisedb.com/blog/basics-tuning-checkpoints">Basics of Tuning Checkpoints</a></li>
+<li><a href="https://www.youtube.com/watch?v=xrMbzHdPLKM">Tuning PostgreSQL for High Write Workloads</a></li>
+<li><a href="https://www.youtube.com/watch?v=c8IrUHV70KQ">Full text search (psql 12)</a></li>
+</ul>
+<h2 id="data-partitioning"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#data-partitioning" aria-label="Anchor link for: data-partitioning">#</a>
+Data Partitioning</h2>
+<p>As of this writing, there are some changes in data partitioning on different version of postgres, so please
+always refer back to the official postgres documentation.</p>
+<ul>
+<li><a href="https://web.archive.org/web/20230324101619/https://www.enterprisedb.com/postgres-tutorials/how-use-table-partitioning-scale-postgresql">How to use table partitioning to scale PostgreSQL</a></li>
+<li><a href="https://web.archive.org/web/20230528084934/https://www.cybertec-postgresql.com/en/automatic-partition-creation-in-postgresql/">Automatic Partition Creation in PostgreSQL</a></li>
+<li><a href="https://web.archive.org/web/20221201065013/https://www.dbi-services.com/blog/postgresql-14-automatic-hash-and-list-partitioning/">PostgreSQL 14: Automatic hash and list partitioning?</a></li>
+</ul>
 <h2 id="replication"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#replication" aria-label="Anchor link for: replication">#</a>
 Replication</h2>
+<p>Replication is a method to do data redundancy, there are several reasons why you want to have redundancy:</p>
+<ol>
+<li>Having a live replica in different location as a backup just incase the primary DB is down. There might be regulatory needs for data redundancy.</li>
+<li>Offload data ingestion workload to another database.</li>
+</ol>
+<p>Checklist:</p>
 <ul>
 <li><a href="https://www.postgresql.org/docs/current/different-replication-solutions.html">Replication Solutions</a></li>
 <li><a href="https://www.postgresql.org/docs/current/logical-replication.html">Logical Replication</a></li>
