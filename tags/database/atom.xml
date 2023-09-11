@@ -7,25 +7,25 @@
     <updated>2023-09-10T00:00:00+00:00</updated>
     <id>https://sendyhalim.github.io/blog/tags/database/atom.xml</id>
     <entry xml:lang="en">
-        <title>Postgres Reading Checklist</title>
+        <title>PostgreSQL Reading Checklist</title>
         <published>2023-09-10T00:00:00+00:00</published>
         <updated>2023-09-10T00:00:00+00:00</updated>
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/reading-checklist/postgres/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/reading-checklist/postgres/</id>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/reading-checklist/postgresql/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/reading-checklist/postgresql/</id>
         
         <content type="html">&lt;p&gt;I&#x27;m not a database expert, in my career I&#x27;ve faced so many issues and bottlenecks,
 most of the come from database. My crystal ball 🔮 told me that it&#x27;s just a matter of time
 until the next database issues occur, so I decided to gather as much practical
 database learning sources as I can in the past years, especially the ones that I think (based on experience)
 will most likely be used.&lt;&#x2F;p&gt;
-&lt;p&gt;We&#x27;re using postgres at work so it&#x27;s going to be tailored specifically to it,
+&lt;p&gt;We&#x27;re using PostgreSQL at work so it&#x27;s going to be tailored specifically to it,
 the checklist should be read in order but nothing stops you to jump around.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;basic-postgres&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#basic-postgres&quot; aria-label=&quot;Anchor link for: basic-postgres&quot;&gt;#&lt;&#x2F;a&gt;
-Basic Postgres&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;basic-postgresql&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#basic-postgresql&quot; aria-label=&quot;Anchor link for: basic-postgresql&quot;&gt;#&lt;&#x2F;a&gt;
+Basic PostgreSQL&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;patshaughnessy.net&#x2F;2014&#x2F;11&#x2F;11&#x2F;discovering-the-computer-science-behind-postgres-indexes&quot;&gt;Discovering the Computer Science Behind Postgres Indexes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;patshaughnessy.net&#x2F;2014&#x2F;10&#x2F;13&#x2F;following-a-select-statement-through-postgres-internals&quot;&gt;Following a Select Statement Through Postgres Internals&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
