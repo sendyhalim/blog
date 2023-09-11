@@ -1,7 +1,7 @@
 +++
-title = "Postgres Reading Checklist"
+title = "PostgreSQL Reading Checklist"
 date = 2023-09-10
-description = "This is my compilation of postgres reading checklist"
+description = "This is my compilation of PostgreSQL reading checklist"
 
 [taxonomies]
 tags = ["database", "reading-checklist"]
@@ -13,10 +13,10 @@ until the next database issues occur, so I decided to gather as much practical
 database learning sources as I can in the past years, especially the ones that I think (based on experience)
 will most likely be used.
 
-We're using postgres at work so it's going to be tailored specifically to it,
+We're using PostgreSQL at work so it's going to be tailored specifically to it,
 the checklist should be read in order but nothing stops you to jump around.
 
-## Basic Postgres
+## Basic PostgreSQL
 * [Discovering the Computer Science Behind Postgres Indexes](http://patshaughnessy.net/2014/11/11/discovering-the-computer-science-behind-postgres-indexes)
 * [Following a Select Statement Through Postgres Internals](http://patshaughnessy.net/2014/10/13/following-a-select-statement-through-postgres-internals)
 * [A Look at How Postgres Executes a Tiny Join](http://patshaughnessy.net/2015/11/24/a-look-at-how-postgres-executes-a-tiny-join)
