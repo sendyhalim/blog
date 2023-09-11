@@ -32,7 +32,26 @@ the checklist should be read in order but nothing stops you to jump around.
 ## Postgres Locks
 * [PostgreSQL rocks, except when it blocks: Understanding locks](https://www.citusdata.com/blog/2018/02/15/when-postgresql-blocks/)
 
+## Tuning postgres
+* [On the impact of full-page writes](https://web.archive.org/web/20230615074135/https://www.2ndquadrant.com/en/blog/on-the-impact-of-full-page-writes/)
+* [Basics of Tuning Checkpoints](https://web.archive.org/web/20221008035823/https://www.enterprisedb.com/blog/basics-tuning-checkpoints)
+* [Tuning PostgreSQL for High Write Workloads](https://www.youtube.com/watch?v=xrMbzHdPLKM)
+* [Full text search (psql 12)](https://www.youtube.com/watch?v=c8IrUHV70KQ)
+
+## Data Partitioning
+As of this writing, there are some changes in data partitioning on different version of postgres, so please
+always refer back to the official postgres documentation.
+* [How to use table partitioning to scale PostgreSQL](https://web.archive.org/web/20230324101619/https://www.enterprisedb.com/postgres-tutorials/how-use-table-partitioning-scale-postgresql)
+* [Automatic Partition Creation in PostgreSQL](https://web.archive.org/web/20230528084934/https://www.cybertec-postgresql.com/en/automatic-partition-creation-in-postgresql/)
+* [PostgreSQL 14: Automatic hash and list partitioning?](https://web.archive.org/web/20221201065013/https://www.dbi-services.com/blog/postgresql-14-automatic-hash-and-list-partitioning/)
+
+
 ## Replication
+Replication is a method to do data redundancy, there are several reasons why you want to have redundancy:
+1. Having a live replica in different location as a backup just incase the primary DB is down. There might be regulatory needs for data redundancy.
+2. Offload data ingestion workload to another database.
+
+Checklist:
 * [Replication Solutions](https://www.postgresql.org/docs/current/different-replication-solutions.html)
 * [Logical Replication](https://www.postgresql.org/docs/current/logical-replication.html)
 
