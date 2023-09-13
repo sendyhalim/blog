@@ -61,6 +61,10 @@
         <lastmod>2023-08-24T00:00:00+07:00</lastmod>
     </url>
     <url>
+        <loc>https://sendyhalim.github.io/blog/posts/software-engineering/why-documentation-matters/</loc>
+        <lastmod>2023-09-13</lastmod>
+    </url>
+    <url>
         <loc>https://sendyhalim.github.io/blog/posts/swift/</loc>
     </url>
     <url>
@@ -140,6 +144,9 @@
     </url>
     <url>
         <loc>https://sendyhalim.github.io/blog/tags/development/</loc>
+    </url>
+    <url>
+        <loc>https://sendyhalim.github.io/blog/tags/documentation/</loc>
     </url>
     <url>
         <loc>https://sendyhalim.github.io/blog/tags/git/</loc>

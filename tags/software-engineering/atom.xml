@@ -4,8 +4,69 @@
     <link href="https://sendyhalim.github.io/blog/tags/software-engineering/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://sendyhalim.github.io/blog"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-08-24T00:00:00+07:00</updated>
+    <updated>2023-09-13T00:00:00+00:00</updated>
     <id>https://sendyhalim.github.io/blog/tags/software-engineering/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Why Documentation Matters</title>
+        <published>2023-09-13T00:00:00+00:00</published>
+        <updated>2023-09-13T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/software-engineering/why-documentation-matters/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/software-engineering/why-documentation-matters/</id>
+        
+        <content type="html">&lt;p&gt;Imagine buying a washing machine but it has no manual book, would you be happy?
+You&#x27;d do fine if you have prior experience with a similar machine, but what if you don&#x27;t?&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;software-engineering-documentation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#software-engineering-documentation&quot; aria-label=&quot;Anchor link for: software-engineering-documentation&quot;&gt;#&lt;&#x2F;a&gt;
+Software Engineering Documentation&lt;&#x2F;h1&gt;
+&lt;p&gt;Same as software engineering&#x2F;software product it matters a lot. Many years ago, I used to think that
+documentation was not really valuable, I was naive. Up until we added more people to the team,
+everyone started to wonder why the code was written that way and how would we test the code.&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s start with the most obvious example, suppose there are new joiners in your team
+and they want to set up a work laptop, they will ask you since there&#x27;s no documentation on what to set up.
+How long would it take for you to help them? 5 minutes on average per new joiner?
+If you have 10 new joiners it&#x27;ll add up to maybe ~30-50 minutes, if you&#x27;re loyal
+maybe you&#x27;ll go through an employee turnover cycle and there will be more new joiners.
+It would be a lot easier if you had a document on how to set up a work laptop, bonus point
+if you can automate it because it will save more time for your team members as well, you still
+need to document how to run the automation though and add a common troubleshooting guide.&lt;&#x2F;p&gt;
+&lt;p&gt;So documentation is kind of a leverage for you and other people, when done right it saves a lot of time!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;is-it-worth-documenting&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#is-it-worth-documenting&quot; aria-label=&quot;Anchor link for: is-it-worth-documenting&quot;&gt;#&lt;&#x2F;a&gt;
+Is It Worth Documenting?&lt;&#x2F;h1&gt;
+&lt;p&gt;Documentation is an investment, you need to choose which one to invest, not everything is worth documenting.
+I have my own personal heuristics on things that are worth to document:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Repetitive manual work that cannot be automated&#x2F;need manual intervention. It&#x27;s a lot easier to delegate if you have documentation.&lt;&#x2F;li&gt;
+&lt;li&gt;Things that are less likely to change but often being asked. For example, high level guides of
+service common components (secret engine, query layer, business logic layer, etc.) that explain how
+the components interact with each other.&lt;&#x2F;li&gt;
+&lt;li&gt;Post mortem docs, past mistakes and incidents because mostly we can learn something from it
+and something in the past is constant.&lt;&#x2F;li&gt;
+&lt;li&gt;Things that are commonly asked by my collagues. For example
+&lt;ul&gt;
+&lt;li&gt;Who owns service X? I have an excel contains a service ownership map.&lt;&#x2F;li&gt;
+&lt;li&gt;Do you have a link to Y? I have an excel that contains common bookmarks a.k.a the yellow page.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Troubleshooting guide. If you have an on-call process then it&#x27;s a must to have a troubleshooting guide so people who are on-call can troubleshoot by themselves.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;documentation-mental-model&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#documentation-mental-model&quot; aria-label=&quot;Anchor link for: documentation-mental-model&quot;&gt;#&lt;&#x2F;a&gt;
+Documentation Mental Model&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Not everything is worth documenting, look at the pattern in your workplace and decide on things that are worth documenting.&lt;&#x2F;li&gt;
+&lt;li&gt;The more you defer documentation, the more you&#x27;ll get dragged by other people, the same goes both ways.&lt;&#x2F;li&gt;
+&lt;li&gt;Outdated documentation is the same, if not worse than having no documentation. It misleads people.&lt;&#x2F;li&gt;
+&lt;li&gt;The more detailed your documentation is, the more likely it&#x27;ll go outdated, pick a balance.&lt;&#x2F;li&gt;
+&lt;li&gt;If it&#x27;s a critical part of the software then be as detailed as possible, you need to balance with risk of outdated documentation.
+Software critical parts usually have more than 1 person who knows about it, so you can cover each other to make sure the documentation is up to date.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Tools That I Use For Software Engineering</title>
         <published>2023-08-24T00:00:00+07:00</published>
