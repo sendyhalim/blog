@@ -57,6 +57,10 @@
         <lastmod>2023-08-12T23:30:30+07:00</lastmod>
     </url>
     <url>
+        <loc>https://sendyhalim.github.io/blog/posts/software-engineering/software-engineer-day-to-day-best-practices/</loc>
+        <lastmod>2023-09-19</lastmod>
+    </url>
+    <url>
         <loc>https://sendyhalim.github.io/blog/posts/software-engineering/tools-that-i-use-for-software-engineering/</loc>
         <lastmod>2023-08-24T00:00:00+07:00</lastmod>
     </url>
@@ -131,6 +135,9 @@
         <loc>https://sendyhalim.github.io/blog/tags/appkit/</loc>
     </url>
     <url>
+        <loc>https://sendyhalim.github.io/blog/tags/best-practices/</loc>
+    </url>
+    <url>
         <loc>https://sendyhalim.github.io/blog/tags/career-switch/</loc>
     </url>
     <url>
@@ -141,6 +148,9 @@
     </url>
     <url>
         <loc>https://sendyhalim.github.io/blog/tags/database/</loc>
+    </url>
+    <url>
+        <loc>https://sendyhalim.github.io/blog/tags/day-to-day/</loc>
     </url>
     <url>
         <loc>https://sendyhalim.github.io/blog/tags/development/</loc>

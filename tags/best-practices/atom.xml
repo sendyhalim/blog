@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - best-practices</title>
+    <link href="https://sendyhalim.github.io/blog/tags/best-practices/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sendyhalim.github.io/blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-19T00:00:00+00:00</updated>
+    <id>https://sendyhalim.github.io/blog/tags/best-practices/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Software Engineer Day to Day Best Practices</title>
+        <published>2023-09-19T00:00:00+00:00</published>
+        <updated>2023-09-19T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/software-engineering/software-engineer-day-to-day-best-practices/" type="text/html"/>
+        <id>https://sendyhalim.github.io/blog/posts/software-engineering/software-engineer-day-to-day-best-practices/</id>
+        
+        <content type="html">&lt;h2 id=&quot;background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#background&quot; aria-label=&quot;Anchor link for: background&quot;&gt;#&lt;&#x2F;a&gt;
+Background&lt;&#x2F;h2&gt;
+&lt;p&gt;The software engineerinng day to day practice is not related directly to programming, there are
+many programming best practices out there, but not many sharing the day to day best practices.
+This is my attempt to share my opinion on how engineer should do things.
+The list is mostly based on my personal and professional
+experience either good or bad (usually related with engineering incidents), I will maintain the list.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;database-operation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#database-operation&quot; aria-label=&quot;Anchor link for: database-operation&quot;&gt;#&lt;&#x2F;a&gt;
+Database Operation&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;always-ask-your-collague-to-review&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#always-ask-your-collague-to-review&quot; aria-label=&quot;Anchor link for: always-ask-your-collague-to-review&quot;&gt;#&lt;&#x2F;a&gt;
+Always ask your collague to review&lt;&#x2F;h4&gt;
+&lt;p&gt;Anytime you need to update&#x2F;delete data, make sure that someone has reviewed your sql query,
+based on my experience it prevents many bad things to happen on prod.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;write-where-statement-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#write-where-statement-first&quot; aria-label=&quot;Anchor link for: write-where-statement-first&quot;&gt;#&lt;&#x2F;a&gt;
+Write &lt;code&gt;where&lt;&#x2F;code&gt; statement first&lt;&#x2F;h4&gt;
+&lt;p&gt;Always write the &lt;code&gt;where&lt;&#x2F;code&gt; clause (filtering) first whenever you&#x27;re in a situation where there&#x27;s no one reviewing your query,
+this will prevent you accidentally executing query without filter.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sql&quot; class=&quot;language-sql &quot;&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;-- Write this first
+... where id = x
+
+-- Instead of
+update users set email = &amp;#x27;yyyyy&amp;#x27; ....
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;development&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#development&quot; aria-label=&quot;Anchor link for: development&quot;&gt;#&lt;&#x2F;a&gt;
+Development&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;unit-test-is-a-good-investment-if-done-properly&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#unit-test-is-a-good-investment-if-done-properly&quot; aria-label=&quot;Anchor link for: unit-test-is-a-good-investment-if-done-properly&quot;&gt;#&lt;&#x2F;a&gt;
+Unit test is a good investment if done properly&lt;&#x2F;h4&gt;
+&lt;p&gt;Investing in unit tests will eventually save your time if done properly, but not all
+unit tests are worth to invest. Considering the limited time, I would prioritize to invest
+in unit tests that fulfilled these first:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unit tests that proved my code has fulfilled the product requirements.&lt;&#x2F;li&gt;
+&lt;li&gt;Unit tests related with security check.&lt;&#x2F;li&gt;
+&lt;li&gt;Unit tests that cover negative cases that are most likely to happen.&lt;&#x2F;li&gt;
+&lt;li&gt;The rest are low-normal priority unit tests so it depends on how much I&#x27;m willing to invest.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;do-not-be-perfectionist-in-achieving-unit-test-coverage&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#do-not-be-perfectionist-in-achieving-unit-test-coverage&quot; aria-label=&quot;Anchor link for: do-not-be-perfectionist-in-achieving-unit-test-coverage&quot;&gt;#&lt;&#x2F;a&gt;
+Do not be perfectionist in achieving unit test coverage&lt;&#x2F;h4&gt;
+&lt;p&gt;100% test coverage doesn&#x27;t mean your code is bug-free, it depends whether you have the correct
+logic and branchinng (&lt;code&gt;if else&lt;&#x2F;code&gt;, &lt;code&gt;switch&lt;&#x2F;code&gt;, etc). Trying to be perfect in unit test coverage generally
+will yield a diminishing returns, your time might be better used to invest in other
+development.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;measure-your-feature&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#measure-your-feature&quot; aria-label=&quot;Anchor link for: measure-your-feature&quot;&gt;#&lt;&#x2F;a&gt;
+Measure your feature&lt;&#x2F;h4&gt;
+&lt;p&gt;Make sure you know how to measure your feature &#x2F; test your code in remote environment (staging, production),
+especially in production. I have seen many software engineers that deliver things fast but
+they never check their feature on prod, they don&#x27;t even know whether the feature
+works or not ☹️.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;code-review&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#code-review&quot; aria-label=&quot;Anchor link for: code-review&quot;&gt;#&lt;&#x2F;a&gt;
+Code Review&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;test-your-code&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#test-your-code&quot; aria-label=&quot;Anchor link for: test-your-code&quot;&gt;#&lt;&#x2F;a&gt;
+Test your code&lt;&#x2F;h4&gt;
+&lt;p&gt;Always test your code before submitting for code review, even in a hurry. Not many
+people have time to do detailed code review, so it&#x27;s your main responsibility to
+make sure that it works and doesn&#x27;t make any problem.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;re-review-your-code&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#re-review-your-code&quot; aria-label=&quot;Anchor link for: re-review-your-code&quot;&gt;#&lt;&#x2F;a&gt;
+Re-review your code&lt;&#x2F;h4&gt;
+&lt;p&gt;Please always review your code before asking someone to review it. Suppose you have
+a PR that&#x27;s ready to be reviewed and it takes around 20 minutes to review,
+imagine if there are 2 people reviewing your code, it&#x27;ll take 40 minutes of man hour,
+best case is your code is approved, but what if it&#x27;s not, it&#x27;ll take more man hour right?&lt;&#x2F;p&gt;
+&lt;p&gt;What you can do is to review your code first, make sure it fulfills the requirements and
+have followed the team standard practice.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
