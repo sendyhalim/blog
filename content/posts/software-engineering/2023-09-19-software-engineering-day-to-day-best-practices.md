@@ -1,5 +1,5 @@
 +++
-title = "Software Engineer Day to Day Best Practices"
+title = "Software Engineering Day to Day Best Practices"
 date = 2023-09-19
 description = "A compilation of software engineering/developer day to day best practices"
 
@@ -8,11 +8,12 @@ tags = ["software-engineering", "day-to-day", "best-practices"]
 +++
 
 ## Background
-The software engineerinng day to day practice is not related directly to programming, there are
+The software engineering day to day practice is not related directly to programming, there are
 many programming best practices out there, but not many sharing the day to day best practices.
-This is my attempt to share my opinion on how engineer should do things.
-The list is mostly based on my personal and professional
-experience either good or bad (usually related with engineering incidents), I will maintain the list.
+
+I'm opinionated on how engineer should do things, the list is mostly based on my personal and professional
+experience either good or bad (usually related with engineering incidents), the list
+will be maintained.
 
 
 ## Database Operation
@@ -41,7 +42,7 @@ in unit tests that fulfilled these first:
 * Unit tests that cover negative cases that are most likely to happen.
 * The rest are low-normal priority unit tests so it depends on how much I'm willing to invest.
 
-#### Do not be perfectionist in achieving unit test coverage
+#### Do not aim perfect unit test coverage
 100% test coverage doesn't mean your code is bug-free, it depends whether you have the correct
 logic and branchinng (`if else`, `switch`, etc). Trying to be perfect in unit test coverage generally
 will yield a diminishing returns, your time might be better used to invest in other
