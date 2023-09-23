@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - productivity</title>
-    <link href="https://sendyhalim.github.io/blog/tags/productivity/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://sendyhalim.github.io/blog"/>
+    <link href="https://blog.wavvel.com/tags/productivity/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2018-02-13T00:11:00+07:00</updated>
-    <id>https://sendyhalim.github.io/blog/tags/productivity/atom.xml</id>
+    <id>https://blog.wavvel.com/tags/productivity/atom.xml</id>
     <entry xml:lang="en">
         <title>Vim Copy File Path From Project Root</title>
         <published>2018-02-13T00:11:00+07:00</published>
@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/vim/copy-file-path-from-project-root/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/vim/copy-file-path-from-project-root/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/</id>
         
         <content type="html">&lt;p&gt;I often found myself typing file path manually when explaining code implementation and its use cases to my teammates.
 The task to type file path manually is very daunting and I hate it so much when I mistyped.
@@ -66,21 +66,21 @@ in buffer to your system clipboard.&lt;&#x2F;p&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/terminal/living-in-the-terminal/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/terminal/living-in-the-terminal/</id>
         
         <content type="html">&lt;p&gt;Most of my time is spent in the terminal and I love working within it,
 so I invest a lot for the best terminal setup to make sure that I&#x27;m productive and happy when I&#x27;m using it.
 Here&#x27;s a couple of screenshots of my terminal&lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-1.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-1.png
 &quot;
     alt=&quot;Terminal with vim&quot;&gt;
 &lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-2.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-2.png
 &quot;
     alt=&quot;Terminal splitted&quot;&gt;
 &lt;&#x2F;p&gt;
@@ -112,8 +112,8 @@ need to clone it and run my setup script to get my ideal work environment 🍻.&
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/tools/productivity-over-9000/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/tools/productivity-over-9000/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/tools/productivity-over-9000/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/tools/productivity-over-9000/</id>
         
         <content type="html">&lt;p class=&quot;image-container&quot;&gt;
   &lt;img

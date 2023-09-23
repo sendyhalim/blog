@@ -1,260 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://sendyhalim.github.io/blog/</loc>
+        <loc>https://blog.wavvel.com/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/pages/</loc>
+        <loc>https://blog.wavvel.com/pages/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/pages/about-me/</loc>
+        <loc>https://blog.wavvel.com/pages/about-me/</loc>
         <lastmod>2023-08-12T23:30:30+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/</loc>
+        <loc>https://blog.wavvel.com/posts/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/development-practices/</loc>
+        <loc>https://blog.wavvel.com/posts/development-practices/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/development-practices/partnership-system-integration-tips/</loc>
+        <loc>https://blog.wavvel.com/posts/development-practices/partnership-system-integration-tips/</loc>
         <lastmod>2020-08-22T00:00:00+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/development-practices/practical-programming-principles/</loc>
+        <loc>https://blog.wavvel.com/posts/development-practices/practical-programming-principles/</loc>
         <lastmod>2021-09-18T00:00:25+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/development-practices/technical-design-doc-guidelines/</loc>
+        <loc>https://blog.wavvel.com/posts/development-practices/technical-design-doc-guidelines/</loc>
         <lastmod>2021-06-20T00:00:25+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/git/</loc>
+        <loc>https://blog.wavvel.com/posts/git/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/git/phabricator-developing-feature-on-top-of-other-feature/</loc>
+        <loc>https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/</loc>
         <lastmod>2020-04-12T22:37:00+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/life/</loc>
+        <loc>https://blog.wavvel.com/posts/life/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/life/setting-up-a-structure-on-problem-solving-and-life/</loc>
+        <loc>https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/</loc>
         <lastmod>2023-08-05T14:39:00+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/reading-checklist/</loc>
+        <loc>https://blog.wavvel.com/posts/reading-checklist/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/reading-checklist/postgresql/</loc>
+        <loc>https://blog.wavvel.com/posts/reading-checklist/postgresql/</loc>
         <lastmod>2023-09-10</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/software-engineering/</loc>
+        <loc>https://blog.wavvel.com/posts/software-engineering/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/</loc>
+        <loc>https://blog.wavvel.com/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/</loc>
         <lastmod>2023-08-12T23:30:30+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/software-engineering/software-engineer-day-to-day-best-practices/</loc>
+        <loc>https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/</loc>
         <lastmod>2023-09-19</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/software-engineering/tools-that-i-use-for-software-engineering/</loc>
+        <loc>https://blog.wavvel.com/posts/software-engineering/tools-that-i-use-for-software-engineering/</loc>
         <lastmod>2023-08-24T00:00:00+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/software-engineering/why-documentation-matters/</loc>
+        <loc>https://blog.wavvel.com/posts/software-engineering/why-documentation-matters/</loc>
         <lastmod>2023-09-13</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/swift/</loc>
+        <loc>https://blog.wavvel.com/posts/swift/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/</loc>
+        <loc>https://blog.wavvel.com/posts/swift/customizing-uisearchbar/</loc>
         <lastmod>2018-02-10T03:19:00+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/swift/detect-mime-type-with-swime/</loc>
+        <loc>https://blog.wavvel.com/posts/swift/detect-mime-type-with-swime/</loc>
         <lastmod>2017-04-26T23:00:44+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/swift/macos/</loc>
+        <loc>https://blog.wavvel.com/posts/swift/macos/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/</loc>
+        <loc>https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/</loc>
         <lastmod>2017-03-04T23:48:35+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/swift/macos/unproportional-zoom/</loc>
+        <loc>https://blog.wavvel.com/posts/swift/macos/unproportional-zoom/</loc>
         <lastmod>2017-02-10T20:47:23+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/swift/race-condition-on-cells/</loc>
+        <loc>https://blog.wavvel.com/posts/swift/race-condition-on-cells/</loc>
         <lastmod>2016-07-04T22:58:59+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/team/</loc>
+        <loc>https://blog.wavvel.com/posts/team/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/team/engineering-lead-achieving-team-goals/</loc>
+        <loc>https://blog.wavvel.com/posts/team/engineering-lead-achieving-team-goals/</loc>
         <lastmod>2021-02-23T20:00:00+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/terminal/</loc>
+        <loc>https://blog.wavvel.com/posts/terminal/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/</loc>
+        <loc>https://blog.wavvel.com/posts/terminal/living-in-the-terminal/</loc>
         <lastmod>2017-03-11T14:56:17+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/tools/</loc>
+        <loc>https://blog.wavvel.com/posts/tools/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/tools/productivity-over-9000/</loc>
+        <loc>https://blog.wavvel.com/posts/tools/productivity-over-9000/</loc>
         <lastmod>2016-07-10T00:49:40+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/vim/</loc>
+        <loc>https://blog.wavvel.com/posts/vim/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/posts/vim/copy-file-path-from-project-root/</loc>
+        <loc>https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/</loc>
         <lastmod>2018-02-13T00:11:00+07:00</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/</loc>
+        <loc>https://blog.wavvel.com/posts/war-stories/accidentally-ran-database-update-without-where-clause/</loc>
+        <lastmod>2023-09-19</lastmod>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/about-me/</loc>
+        <loc>https://blog.wavvel.com/tags/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/achieving/</loc>
+        <loc>https://blog.wavvel.com/tags/about-me/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/appkit/</loc>
+        <loc>https://blog.wavvel.com/tags/achieving/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/best-practices/</loc>
+        <loc>https://blog.wavvel.com/tags/appkit/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/career-switch/</loc>
+        <loc>https://blog.wavvel.com/tags/best-practices/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/career/</loc>
+        <loc>https://blog.wavvel.com/tags/career-switch/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/coding/</loc>
+        <loc>https://blog.wavvel.com/tags/career/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/database/</loc>
+        <loc>https://blog.wavvel.com/tags/coding/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/day-to-day/</loc>
+        <loc>https://blog.wavvel.com/tags/database/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/development/</loc>
+        <loc>https://blog.wavvel.com/tags/day-to-day/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/documentation/</loc>
+        <loc>https://blog.wavvel.com/tags/development/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/git/</loc>
+        <loc>https://blog.wavvel.com/tags/documentation/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/goals/</loc>
+        <loc>https://blog.wavvel.com/tags/git/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/guidelines/</loc>
+        <loc>https://blog.wavvel.com/tags/goals/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/integration/</loc>
+        <loc>https://blog.wavvel.com/tags/guidelines/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/ios/</loc>
+        <loc>https://blog.wavvel.com/tags/integration/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/learning-path/</loc>
+        <loc>https://blog.wavvel.com/tags/ios/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/libraries/</loc>
+        <loc>https://blog.wavvel.com/tags/learning-path/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/life/</loc>
+        <loc>https://blog.wavvel.com/tags/libraries/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/macos/</loc>
+        <loc>https://blog.wavvel.com/tags/life/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/mimetype/</loc>
+        <loc>https://blog.wavvel.com/tags/macos/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/nscollectionview/</loc>
+        <loc>https://blog.wavvel.com/tags/mimetype/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/nscollectionviewitem/</loc>
+        <loc>https://blog.wavvel.com/tags/nscollectionview/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/nsimageview/</loc>
+        <loc>https://blog.wavvel.com/tags/nscollectionviewitem/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/phabricator/</loc>
+        <loc>https://blog.wavvel.com/tags/nsimageview/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/practice/</loc>
+        <loc>https://blog.wavvel.com/tags/phabricator/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/principles/</loc>
+        <loc>https://blog.wavvel.com/tags/practice/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/problem-solving/</loc>
+        <loc>https://blog.wavvel.com/tags/principles/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/productivity/</loc>
+        <loc>https://blog.wavvel.com/tags/problem-solving/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/programming/</loc>
+        <loc>https://blog.wavvel.com/tags/productivity/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/reading-checklist/</loc>
+        <loc>https://blog.wavvel.com/tags/programming/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/rxswift/</loc>
+        <loc>https://blog.wavvel.com/tags/reading-checklist/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/software-engineering/</loc>
+        <loc>https://blog.wavvel.com/tags/rxswift/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/swift/</loc>
+        <loc>https://blog.wavvel.com/tags/software-engineering/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/swime/</loc>
+        <loc>https://blog.wavvel.com/tags/swift/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/team/</loc>
+        <loc>https://blog.wavvel.com/tags/swime/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/technicaldesigndoc/</loc>
+        <loc>https://blog.wavvel.com/tags/team/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/terminal/</loc>
+        <loc>https://blog.wavvel.com/tags/technicaldesigndoc/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/tips/</loc>
+        <loc>https://blog.wavvel.com/tags/terminal/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/tools/</loc>
+        <loc>https://blog.wavvel.com/tags/tips/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/uisearchbar/</loc>
+        <loc>https://blog.wavvel.com/tags/tools/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/uiview/</loc>
+        <loc>https://blog.wavvel.com/tags/uisearchbar/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/vim/</loc>
+        <loc>https://blog.wavvel.com/tags/uiview/</loc>
     </url>
     <url>
-        <loc>https://sendyhalim.github.io/blog/tags/zsh/</loc>
+        <loc>https://blog.wavvel.com/tags/vim/</loc>
+    </url>
+    <url>
+        <loc>https://blog.wavvel.com/tags/zsh/</loc>
     </url>
 </urlset>

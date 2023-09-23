@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - about-me</title>
-    <link href="https://sendyhalim.github.io/blog/tags/about-me/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://sendyhalim.github.io/blog"/>
+    <link href="https://blog.wavvel.com/tags/about-me/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-08-12T23:30:30+07:00</updated>
-    <id>https://sendyhalim.github.io/blog/tags/about-me/atom.xml</id>
+    <id>https://blog.wavvel.com/tags/about-me/atom.xml</id>
     <entry xml:lang="en">
         <title>About Me</title>
         <published>2023-08-12T23:30:30+07:00</published>
@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/pages/about-me/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/pages/about-me/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/pages/about-me/" type="text/html"/>
+        <id>https://blog.wavvel.com/pages/about-me/</id>
         
         <content type="html">&lt;p&gt;Hi, I&#x27;m Sendy Halim 👋. I live in Tangerang, Indonesia with my wife, one child, and a dog.
 I&#x27;m passionate about software engineering, I randomly came across to it when I was looking for

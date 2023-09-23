@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - career</title>
-    <link href="https://sendyhalim.github.io/blog/tags/career/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://sendyhalim.github.io/blog"/>
+    <link href="https://blog.wavvel.com/tags/career/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2021-02-23T20:00:00+07:00</updated>
-    <id>https://sendyhalim.github.io/blog/tags/career/atom.xml</id>
+    <id>https://blog.wavvel.com/tags/career/atom.xml</id>
     <entry xml:lang="en">
         <title>Engineering Lead - Achieving Team Goals</title>
         <published>2021-02-23T20:00:00+07:00</published>
@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/team/engineering-lead-achieving-team-goals/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/team/engineering-lead-achieving-team-goals/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/team/engineering-lead-achieving-team-goals/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/team/engineering-lead-achieving-team-goals/</id>
         
         <content type="html">&lt;p&gt;Some people (or most people) might find the stress level going up in respect with the uncertainty of success in this people management role.
 It is important to keep in mind that &lt;b&gt;your performance is not evaluated based on your &lt;em&gt;individual contributions&lt;&#x2F;em&gt; but the &lt;em&gt;team contributions&lt;&#x2F;em&gt;&lt;&#x2F;b&gt;,

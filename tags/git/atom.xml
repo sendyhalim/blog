@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - git</title>
-    <link href="https://sendyhalim.github.io/blog/tags/git/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://sendyhalim.github.io/blog"/>
+    <link href="https://blog.wavvel.com/tags/git/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2020-04-12T22:37:00+07:00</updated>
-    <id>https://sendyhalim.github.io/blog/tags/git/atom.xml</id>
+    <id>https://blog.wavvel.com/tags/git/atom.xml</id>
     <entry xml:lang="en">
         <title>Phabricator: developing feature on top of other feature</title>
         <published>2020-04-12T22:37:00+07:00</published>
@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/git/phabricator-developing-feature-on-top-of-other-feature/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/git/phabricator-developing-feature-on-top-of-other-feature/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/</id>
         
         <content type="html">&lt;p&gt;NOTES: This post assumes that you&#x27;re familiar with &lt;code&gt;git rebase&lt;&#x2F;code&gt; and &lt;code&gt;phabricator&lt;&#x2F;code&gt; terms.&lt;&#x2F;p&gt;
 &lt;p&gt;We use phabricator as our code review tool. A typical workflow for submitting &amp;amp; merging your feature:&lt;&#x2F;p&gt;

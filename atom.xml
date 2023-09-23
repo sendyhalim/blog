@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title></title>
-    <link href="https://sendyhalim.github.io/blog/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://sendyhalim.github.io/blog"/>
+    <link href="https://blog.wavvel.com/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-09-19T00:00:00+00:00</updated>
-    <id>https://sendyhalim.github.io/blog/atom.xml</id>
+    <id>https://blog.wavvel.com/atom.xml</id>
     <entry xml:lang="en">
-        <title>Software Engineer Day to Day Best Practices</title>
+        <title>Software Engineering Day to Day Best Practices</title>
         <published>2023-09-19T00:00:00+00:00</published>
         <updated>2023-09-19T00:00:00+00:00</updated>
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/software-engineering/software-engineer-day-to-day-best-practices/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/software-engineering/software-engineer-day-to-day-best-practices/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/</id>
         
         <content type="html">&lt;h2 id=&quot;background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#background&quot; aria-label=&quot;Anchor link for: background&quot;&gt;#&lt;&#x2F;a&gt;
 Background&lt;&#x2F;h2&gt;
-&lt;p&gt;The software engineerinng day to day practice is not related directly to programming, there are
-many programming best practices out there, but not many sharing the day to day best practices.
-This is my attempt to share my opinion on how engineer should do things.
-The list is mostly based on my personal and professional
-experience either good or bad (usually related with engineering incidents), I will maintain the list.&lt;&#x2F;p&gt;
+&lt;p&gt;The software engineering day to day practice is not related directly to programming, there are
+many programming best practices out there, but not many sharing the day to day best practices.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m opinionated on how engineer should do things, the list is mostly based on my personal and professional
+experience either good or bad (usually related with engineering incidents), the list
+will be maintained.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;database-operation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#database-operation&quot; aria-label=&quot;Anchor link for: database-operation&quot;&gt;#&lt;&#x2F;a&gt;
 Database Operation&lt;&#x2F;h2&gt;
@@ -58,9 +58,9 @@ in unit tests that fulfilled these first:&lt;&#x2F;p&gt;
 &lt;li&gt;Unit tests that cover negative cases that are most likely to happen.&lt;&#x2F;li&gt;
 &lt;li&gt;The rest are low-normal priority unit tests so it depends on how much I&#x27;m willing to invest.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h4 id=&quot;do-not-be-perfectionist-in-achieving-unit-test-coverage&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#do-not-be-perfectionist-in-achieving-unit-test-coverage&quot; aria-label=&quot;Anchor link for: do-not-be-perfectionist-in-achieving-unit-test-coverage&quot;&gt;#&lt;&#x2F;a&gt;
-Do not be perfectionist in achieving unit test coverage&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;do-not-aim-perfect-unit-test-coverage&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#do-not-aim-perfect-unit-test-coverage&quot; aria-label=&quot;Anchor link for: do-not-aim-perfect-unit-test-coverage&quot;&gt;#&lt;&#x2F;a&gt;
+Do not aim perfect unit test coverage&lt;&#x2F;h4&gt;
 &lt;p&gt;100% test coverage doesn&#x27;t mean your code is bug-free, it depends whether you have the correct
 logic and branchinng (&lt;code&gt;if else&lt;&#x2F;code&gt;, &lt;code&gt;switch&lt;&#x2F;code&gt;, etc). Trying to be perfect in unit test coverage generally
 will yield a diminishing returns, your time might be better used to invest in other
@@ -94,14 +94,71 @@ have followed the team standard practice.&lt;&#x2F;p&gt;
         
     </entry>
     <entry xml:lang="en">
+        <title>War Story: Accidentally Running Database Update Without Where Clause</title>
+        <published>2023-09-19T00:00:00+00:00</published>
+        <updated>2023-09-19T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/war-stories/accidentally-ran-database-update-without-where-clause/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/war-stories/accidentally-ran-database-update-without-where-clause/</id>
+        
+        <content type="html">&lt;h2 id=&quot;what-happened&quot;&gt;What Happened&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;keytakeaways&quot;&gt;Keytakeaways&lt;&#x2F;h2&gt;
+&lt;p&gt;Warmindo&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Tempat&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sewa di depan alfamart&#x2F;indomart&lt;&#x2F;li&gt;
+&lt;li&gt;Sewa gerobak&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Menu&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Main
+&lt;ul&gt;
+&lt;li&gt;Kering&lt;&#x2F;li&gt;
+&lt;li&gt;Kuah&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Topping&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;SOP&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Preparation&lt;&#x2F;li&gt;
+&lt;li&gt;Masak&lt;&#x2F;li&gt;
+&lt;li&gt;Cleaning&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Staff&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yang penting bisa masak Indomi&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Pricing&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Finance&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>Why Documentation Matters</title>
         <published>2023-09-13T00:00:00+00:00</published>
         <updated>2023-09-13T00:00:00+00:00</updated>
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/software-engineering/why-documentation-matters/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/software-engineering/why-documentation-matters/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/why-documentation-matters/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/why-documentation-matters/</id>
         
         <content type="html">&lt;p&gt;Imagine buying a washing machine but it has no manual book, would you be happy?
 You&#x27;d do fine if you have prior experience with a similar machine, but what if you don&#x27;t?&lt;&#x2F;p&gt;
@@ -161,8 +218,8 @@ and something in the past is constant.&lt;&#x2F;li&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/reading-checklist/postgresql/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/reading-checklist/postgresql/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/reading-checklist/postgresql/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/reading-checklist/postgresql/</id>
         
         <content type="html">&lt;p&gt;I&#x27;m not a database expert, in my career I&#x27;ve faced so many issues and bottlenecks,
 most of the come from database. My crystal ball 🔮 told me that it&#x27;s just a matter of time
@@ -246,8 +303,8 @@ Other References&lt;&#x2F;h2&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/software-engineering/tools-that-i-use-for-software-engineering/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/software-engineering/tools-that-i-use-for-software-engineering/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/tools-that-i-use-for-software-engineering/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/tools-that-i-use-for-software-engineering/</id>
         
         <content type="html">&lt;p&gt;This post is structured into 3 big components&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -324,8 +381,8 @@ Others&lt;&#x2F;h4&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/pages/about-me/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/pages/about-me/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/pages/about-me/" type="text/html"/>
+        <id>https://blog.wavvel.com/pages/about-me/</id>
         
         <content type="html">&lt;p&gt;Hi, I&#x27;m Sendy Halim 👋. I live in Tangerang, Indonesia with my wife, one child, and a dog.
 I&#x27;m passionate about software engineering, I randomly came across to it when I was looking for
@@ -357,8 +414,8 @@ About Blogging&lt;&#x2F;h1&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/</id>
         
         <content type="html">&lt;h1 id=&quot;my-view-on-the-learning-path&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#my-view-on-the-learning-path&quot; aria-label=&quot;Anchor link for: my-view-on-the-learning-path&quot;&gt;#&lt;&#x2F;a&gt;
@@ -474,8 +531,8 @@ What’s next?&lt;&#x2F;h1&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/life/setting-up-a-structure-on-problem-solving-and-life/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/life/setting-up-a-structure-on-problem-solving-and-life/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/</id>
         
         <content type="html">&lt;h2 id=&quot;structure-in-general&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#structure-in-general&quot; aria-label=&quot;Anchor link for: structure-in-general&quot;&gt;#&lt;&#x2F;a&gt;
@@ -589,8 +646,8 @@ Key takeaways&lt;&#x2F;h2&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/development-practices/practical-programming-principles/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/development-practices/practical-programming-principles/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/development-practices/practical-programming-principles/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/development-practices/practical-programming-principles/</id>
         
         <content type="html">&lt;p&gt;There are many programming paradigms, many approaches to code, new tools and frameworks, well things are moving fast 🏎 💨!&lt;&#x2F;p&gt;
 &lt;p&gt;I hope this post can be something to be held on when considering programming and development standard.
@@ -703,8 +760,8 @@ mostly on building products&#x2F;software instead of debugging.&lt;&#x2F;p&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/development-practices/technical-design-doc-guidelines/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/development-practices/technical-design-doc-guidelines/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/development-practices/technical-design-doc-guidelines/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/development-practices/technical-design-doc-guidelines/</id>
         
         <content type="html">&lt;p&gt;Writing a technical design doc(TDD) is a prerequisite of a medium-high feature development&#x2F;refactoring initiative, it&#x27;s a crucial part of the development process.
 TDD can ease the process to get everyone on board with the plan, the doc should be reviewed by your CTO&#x2F;Managers and stakeholders.
@@ -781,8 +838,8 @@ for example the flow that you read has changed after you prepared the plan.&lt;&
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/team/engineering-lead-achieving-team-goals/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/team/engineering-lead-achieving-team-goals/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/team/engineering-lead-achieving-team-goals/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/team/engineering-lead-achieving-team-goals/</id>
         
         <content type="html">&lt;p&gt;Some people (or most people) might find the stress level going up in respect with the uncertainty of success in this people management role.
 It is important to keep in mind that &lt;b&gt;your performance is not evaluated based on your &lt;em&gt;individual contributions&lt;&#x2F;em&gt; but the &lt;em&gt;team contributions&lt;&#x2F;em&gt;&lt;&#x2F;b&gt;,
@@ -853,8 +910,8 @@ In most cases your manager will require a report of what failed and what can be 
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/development-practices/partnership-system-integration-tips/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/development-practices/partnership-system-integration-tips/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/development-practices/partnership-system-integration-tips/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/development-practices/partnership-system-integration-tips/</id>
         
         <content type="html">&lt;p&gt;Recently we just had intense integrations with our business partners.
 We have a whitelabel product where registered whitelabel partners can use our core engine
@@ -915,8 +972,8 @@ and achieve great things together. Having this mindset will help your emotion an
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/git/phabricator-developing-feature-on-top-of-other-feature/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/git/phabricator-developing-feature-on-top-of-other-feature/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/</id>
         
         <content type="html">&lt;p&gt;NOTES: This post assumes that you&#x27;re familiar with &lt;code&gt;git rebase&lt;&#x2F;code&gt; and &lt;code&gt;phabricator&lt;&#x2F;code&gt; terms.&lt;&#x2F;p&gt;
 &lt;p&gt;We use phabricator as our code review tool. A typical workflow for submitting &amp;amp; merging your feature:&lt;&#x2F;p&gt;
@@ -1040,8 +1097,8 @@ Post Updates&lt;&#x2F;h3&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/vim/copy-file-path-from-project-root/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/vim/copy-file-path-from-project-root/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/</id>
         
         <content type="html">&lt;p&gt;I often found myself typing file path manually when explaining code implementation and its use cases to my teammates.
 The task to type file path manually is very daunting and I hate it so much when I mistyped.
@@ -1093,8 +1150,8 @@ in buffer to your system clipboard.&lt;&#x2F;p&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/customizing-uisearchbar/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/swift/customizing-uisearchbar/</id>
         
         <content type="html">&lt;p&gt;The default view of &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; is kind of boring, one way to customize it is by subclassing &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; and put the customization code in &lt;code&gt;willMove(toSuperView:)&lt;&#x2F;code&gt; method.
 In this post, we&#x27;ll try to do 2 things&lt;&#x2F;p&gt;
@@ -1119,7 +1176,7 @@ class SearchBar: UISearchBar {
 &lt;p&gt;Then set your search bar class to &lt;code&gt;SearchBar&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;interface-builder-search-bar.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;interface-builder-search-bar.png
 &quot;
     alt=&quot;Customizing UISearchBar Icon Interface Builder Search Bar&quot;
     class=&quot;medium-size&quot;&gt;
@@ -1127,7 +1184,7 @@ class SearchBar: UISearchBar {
 &lt;p&gt;Let&#x27;s take a look at our initial state, our &lt;code&gt;SearchBar&lt;&#x2F;code&gt; should look like this&lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;initial-state.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;initial-state.png
 &quot;
     alt=&quot;Customizing UISearchBar Icon Initial State&quot;
     class=&quot;medium-size&quot;&gt;
@@ -1145,7 +1202,7 @@ remove its background&lt;&#x2F;p&gt;
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;minimal.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;minimal.png
 &quot;
     alt=&quot;Customizing UISearchBar Icon Minimal&quot;
     class=&quot;medium-size&quot;&gt;
@@ -1177,7 +1234,7 @@ Borderless UISearchBar&lt;&#x2F;h2&gt;
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;borderless.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;borderless.png
 &quot;
     alt=&quot;Customizing UISearchBar Icon Borderless&quot;
     class=&quot;medium-size&quot;&gt;
@@ -1223,7 +1280,7 @@ Customizing Search Icon&lt;&#x2F;h2&gt;
 &lt;p&gt;The end result should look like this&lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;end-result.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;end-result.png
 &quot;
     alt=&quot;Customizing UISearchBar Icon End Result&quot;
     class=&quot;medium-size&quot;&gt;
@@ -1240,8 +1297,8 @@ Customizing Search Icon&lt;&#x2F;h2&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/detect-mime-type-with-swime/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/swift/detect-mime-type-with-swime/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/detect-mime-type-with-swime/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/swift/detect-mime-type-with-swime/</id>
         
         <content type="html">&lt;p&gt;A month ago I found myself scouring GitHub for a Swift plugin
 to detect mime type based on magic bytes. I did find &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;onevcat&#x2F;MimeType&quot;&gt;MimeType&lt;&#x2F;a&gt;,
@@ -1310,21 +1367,21 @@ that would be a great addition to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/terminal/living-in-the-terminal/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/terminal/living-in-the-terminal/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/terminal/living-in-the-terminal/</id>
         
         <content type="html">&lt;p&gt;Most of my time is spent in the terminal and I love working within it,
 so I invest a lot for the best terminal setup to make sure that I&#x27;m productive and happy when I&#x27;m using it.
 Here&#x27;s a couple of screenshots of my terminal&lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-1.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-1.png
 &quot;
     alt=&quot;Terminal with vim&quot;&gt;
 &lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-2.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;terminal&#x2F;living-in-the-terminal&#x2F;terminal-2.png
 &quot;
     alt=&quot;Terminal splitted&quot;&gt;
 &lt;&#x2F;p&gt;
@@ -1356,8 +1413,8 @@ need to clone it and run my setup script to get my ideal work environment 🍻.&
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/</id>
         
         <content type="html">&lt;p&gt;I had a hard time figuring out how to make &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; width to be responsive.
 The problem was that I wanted my &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; to follow its parent width.
@@ -1403,8 +1460,8 @@ Turns out that we need to invalidate the cells layout manually and tell &lt;code
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/macos/unproportional-zoom/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/swift/macos/unproportional-zoom/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/macos/unproportional-zoom/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/swift/macos/unproportional-zoom/</id>
         
         <content type="html">&lt;p&gt;I had this weird problem when I tried to implement a zoom functionality
 in my hobby project, a manga reader called &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;yomu&quot;&gt;Yomu&lt;&#x2F;a&gt;.
@@ -1414,14 +1471,14 @@ and vertically without moving from its center point. It was like this&lt;&#x2F;p
 &lt;h5 class=&quot;text-center&quot;&gt;Zoom 100%&lt;&#x2F;h5&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;zoom-100.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;zoom-100.png
 &quot;
     alt=&quot;NSImageView unproportional zoom&quot;&gt;
 &lt;&#x2F;p&gt;
 &lt;h5 class=&quot;text-center&quot;&gt;Zoom 140%&lt;&#x2F;h5&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;zoom-140.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;zoom-140.png
 &quot;
     alt=&quot;NSImageView unproportional zoom&quot;&gt;
 &lt;&#x2F;p&gt;
@@ -1432,7 +1489,7 @@ changing it to proportionally up or down will fix the problem.&lt;&#x2F;p&gt;
 &lt;h5 class=&quot;text-center&quot;&gt;The culprit T_T&lt;&#x2F;h5&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;proportionally-down.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;proportionally-down.png
 &quot;
     alt=&quot;NSImageView unproportional zoom&quot;
     class=&quot;medium-size&quot;&gt;
@@ -1440,7 +1497,7 @@ changing it to proportionally up or down will fix the problem.&lt;&#x2F;p&gt;
 &lt;h5 class=&quot;text-center&quot;&gt;Fixing it 🍻&lt;&#x2F;h5&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;proportionally-up-or-down.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;image-view&#x2F;unproportional-zoom&#x2F;proportionally-up-or-down.png
 &quot;
     alt=&quot;NSImageView unproportional zoom&quot;
     class=&quot;medium-size&quot;&gt;
@@ -1455,8 +1512,8 @@ changing it to proportionally up or down will fix the problem.&lt;&#x2F;p&gt;
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/tools/productivity-over-9000/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/tools/productivity-over-9000/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/tools/productivity-over-9000/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/tools/productivity-over-9000/</id>
         
         <content type="html">&lt;p class=&quot;image-container&quot;&gt;
   &lt;img
@@ -1549,8 +1606,8 @@ Feel free to see&#x2F;copy my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/race-condition-on-cells/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/swift/race-condition-on-cells/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/race-condition-on-cells/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/swift/race-condition-on-cells/</id>
         
         <content type="html">&lt;p&gt;A few days ago I wrote a simple code to asynchronously load an image using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya#rxswift&quot;&gt;&lt;code&gt;RxMoya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.
 &lt;code&gt;RxMoya&lt;&#x2F;code&gt; is an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ReactiveX&#x2F;RxSwift&quot;&gt;&lt;code&gt;RxSwift&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; wrapper

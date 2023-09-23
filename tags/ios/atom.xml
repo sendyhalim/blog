@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - ios</title>
-    <link href="https://sendyhalim.github.io/blog/tags/ios/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://sendyhalim.github.io/blog"/>
+    <link href="https://blog.wavvel.com/tags/ios/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2018-02-10T03:19:00+07:00</updated>
-    <id>https://sendyhalim.github.io/blog/tags/ios/atom.xml</id>
+    <id>https://blog.wavvel.com/tags/ios/atom.xml</id>
     <entry xml:lang="en">
         <title>Customizing UISearchBar</title>
         <published>2018-02-10T03:19:00+07:00</published>
@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/swift/customizing-uisearchbar/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/customizing-uisearchbar/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/swift/customizing-uisearchbar/</id>
         
         <content type="html">&lt;p&gt;The default view of &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; is kind of boring, one way to customize it is by subclassing &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; and put the customization code in &lt;code&gt;willMove(toSuperView:)&lt;&#x2F;code&gt; method.
 In this post, we&#x27;ll try to do 2 things&lt;&#x2F;p&gt;
@@ -39,7 +39,7 @@ class SearchBar: UISearchBar {
 &lt;p&gt;Then set your search bar class to &lt;code&gt;SearchBar&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;interface-builder-search-bar.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;interface-builder-search-bar.png
 &quot;
     alt=&quot;Customizing UISearchBar Icon Interface Builder Search Bar&quot;
     class=&quot;medium-size&quot;&gt;
@@ -47,7 +47,7 @@ class SearchBar: UISearchBar {
 &lt;p&gt;Let&#x27;s take a look at our initial state, our &lt;code&gt;SearchBar&lt;&#x2F;code&gt; should look like this&lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;initial-state.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;initial-state.png
 &quot;
     alt=&quot;Customizing UISearchBar Icon Initial State&quot;
     class=&quot;medium-size&quot;&gt;
@@ -65,7 +65,7 @@ remove its background&lt;&#x2F;p&gt;
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;minimal.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;minimal.png
 &quot;
     alt=&quot;Customizing UISearchBar Icon Minimal&quot;
     class=&quot;medium-size&quot;&gt;
@@ -97,7 +97,7 @@ Borderless UISearchBar&lt;&#x2F;h2&gt;
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;borderless.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;borderless.png
 &quot;
     alt=&quot;Customizing UISearchBar Icon Borderless&quot;
     class=&quot;medium-size&quot;&gt;
@@ -143,7 +143,7 @@ Customizing Search Icon&lt;&#x2F;h2&gt;
 &lt;p&gt;The end result should look like this&lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
   &lt;img
-    src=&quot;https:&#x2F;&#x2F;sendyhalim.github.io&#x2F;blog&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;end-result.png
+    src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;swift&#x2F;customizing-uisearchbar&#x2F;end-result.png
 &quot;
     alt=&quot;Customizing UISearchBar Icon End Result&quot;
     class=&quot;medium-size&quot;&gt;

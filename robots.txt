@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://sendyhalim.github.io/blog/sitemap.xml
+Sitemap: https://blog.wavvel.com/sitemap.xml

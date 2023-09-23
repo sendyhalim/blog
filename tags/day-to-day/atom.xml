@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - day-to-day</title>
-    <link href="https://sendyhalim.github.io/blog/tags/day-to-day/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://sendyhalim.github.io/blog"/>
+    <link href="https://blog.wavvel.com/tags/day-to-day/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-09-19T00:00:00+00:00</updated>
-    <id>https://sendyhalim.github.io/blog/tags/day-to-day/atom.xml</id>
+    <id>https://blog.wavvel.com/tags/day-to-day/atom.xml</id>
     <entry xml:lang="en">
-        <title>Software Engineer Day to Day Best Practices</title>
+        <title>Software Engineering Day to Day Best Practices</title>
         <published>2023-09-19T00:00:00+00:00</published>
         <updated>2023-09-19T00:00:00+00:00</updated>
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/software-engineering/software-engineer-day-to-day-best-practices/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/software-engineering/software-engineer-day-to-day-best-practices/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/</id>
         
         <content type="html">&lt;h2 id=&quot;background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#background&quot; aria-label=&quot;Anchor link for: background&quot;&gt;#&lt;&#x2F;a&gt;
 Background&lt;&#x2F;h2&gt;
-&lt;p&gt;The software engineerinng day to day practice is not related directly to programming, there are
-many programming best practices out there, but not many sharing the day to day best practices.
-This is my attempt to share my opinion on how engineer should do things.
-The list is mostly based on my personal and professional
-experience either good or bad (usually related with engineering incidents), I will maintain the list.&lt;&#x2F;p&gt;
+&lt;p&gt;The software engineering day to day practice is not related directly to programming, there are
+many programming best practices out there, but not many sharing the day to day best practices.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m opinionated on how engineer should do things, the list is mostly based on my personal and professional
+experience either good or bad (usually related with engineering incidents), the list
+will be maintained.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;database-operation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#database-operation&quot; aria-label=&quot;Anchor link for: database-operation&quot;&gt;#&lt;&#x2F;a&gt;
 Database Operation&lt;&#x2F;h2&gt;
@@ -58,9 +58,9 @@ in unit tests that fulfilled these first:&lt;&#x2F;p&gt;
 &lt;li&gt;Unit tests that cover negative cases that are most likely to happen.&lt;&#x2F;li&gt;
 &lt;li&gt;The rest are low-normal priority unit tests so it depends on how much I&#x27;m willing to invest.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h4 id=&quot;do-not-be-perfectionist-in-achieving-unit-test-coverage&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#do-not-be-perfectionist-in-achieving-unit-test-coverage&quot; aria-label=&quot;Anchor link for: do-not-be-perfectionist-in-achieving-unit-test-coverage&quot;&gt;#&lt;&#x2F;a&gt;
-Do not be perfectionist in achieving unit test coverage&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;do-not-aim-perfect-unit-test-coverage&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#do-not-aim-perfect-unit-test-coverage&quot; aria-label=&quot;Anchor link for: do-not-aim-perfect-unit-test-coverage&quot;&gt;#&lt;&#x2F;a&gt;
+Do not aim perfect unit test coverage&lt;&#x2F;h4&gt;
 &lt;p&gt;100% test coverage doesn&#x27;t mean your code is bug-free, it depends whether you have the correct
 logic and branchinng (&lt;code&gt;if else&lt;&#x2F;code&gt;, &lt;code&gt;switch&lt;&#x2F;code&gt;, etc). Trying to be perfect in unit test coverage generally
 will yield a diminishing returns, your time might be better used to invest in other
@@ -90,6 +90,63 @@ imagine if there are 2 people reviewing your code, it&#x27;ll take 40 minutes of
 best case is your code is approved, but what if it&#x27;s not, it&#x27;ll take more man hour right?&lt;&#x2F;p&gt;
 &lt;p&gt;What you can do is to review your code first, make sure it fulfills the requirements and
 have followed the team standard practice.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>War Story: Accidentally Running Database Update Without Where Clause</title>
+        <published>2023-09-19T00:00:00+00:00</published>
+        <updated>2023-09-19T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/war-stories/accidentally-ran-database-update-without-where-clause/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/war-stories/accidentally-ran-database-update-without-where-clause/</id>
+        
+        <content type="html">&lt;h2 id=&quot;what-happened&quot;&gt;What Happened&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;keytakeaways&quot;&gt;Keytakeaways&lt;&#x2F;h2&gt;
+&lt;p&gt;Warmindo&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Tempat&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sewa di depan alfamart&#x2F;indomart&lt;&#x2F;li&gt;
+&lt;li&gt;Sewa gerobak&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Menu&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Main
+&lt;ul&gt;
+&lt;li&gt;Kering&lt;&#x2F;li&gt;
+&lt;li&gt;Kuah&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Topping&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;SOP&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Preparation&lt;&#x2F;li&gt;
+&lt;li&gt;Masak&lt;&#x2F;li&gt;
+&lt;li&gt;Cleaning&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Staff&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yang penting bisa masak Indomi&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Pricing&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Finance&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 </content>
         
     </entry>

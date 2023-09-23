@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - nscollectionview</title>
-    <link href="https://sendyhalim.github.io/blog/tags/nscollectionview/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://sendyhalim.github.io/blog"/>
+    <link href="https://blog.wavvel.com/tags/nscollectionview/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2017-03-04T23:48:35+07:00</updated>
-    <id>https://sendyhalim.github.io/blog/tags/nscollectionview/atom.xml</id>
+    <id>https://blog.wavvel.com/tags/nscollectionview/atom.xml</id>
     <entry xml:lang="en">
         <title>Make NSCollectionViewItem Responsive Width and Height</title>
         <published>2017-03-04T23:48:35+07:00</published>
@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/" type="text/html"/>
-        <id>https://sendyhalim.github.io/blog/posts/swift/macos/full-width-ns-collection-view-item/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/</id>
         
         <content type="html">&lt;p&gt;I had a hard time figuring out how to make &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; width to be responsive.
 The problem was that I wanted my &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; to follow its parent width.

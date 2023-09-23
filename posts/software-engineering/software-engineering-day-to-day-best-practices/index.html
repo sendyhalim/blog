@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Sendy Halim">
+		<meta name="description" content="Sendy Halim&#39;s blog">
+    <title>Software Engineering Day to Day Best Practices</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/highlight-js.css" />
+    <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/image.css" />
+    <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/post.css" />
+  </head>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80328765-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-80328765-1');
+  </script>
+
+  <body>
+    <div id="content">
+      <nav>
+  <a href="https://blog.wavvel.com">
+    <span class="arrow">←</span> Home
+  </a>
+</nav>
+
+
+
+<div class="post">
+  <h1 class="title">Software Engineering Day to Day Best Practices</h1>
+
+  <div class="headline">
+    <div>
+      2023-09-19
+
+    </div>
+    <div>
+      <div class="tag-list-container">
+  
+  <span class="tag">
+    #software-engineering
+  </span>
+  
+  <span class="tag">
+    #day-to-day
+  </span>
+  
+  <span class="tag">
+    #best-practices
+  </span>
+  
+</div>
+
+    </div>
+  </div>
+
+  <div class="post-body">
+    <h2 id="background"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#background" aria-label="Anchor link for: background">#</a>
+Background</h2>
+<p>The software engineering day to day practice is not related directly to programming, there are
+many programming best practices out there, but not many sharing the day to day best practices.</p>
+<p>I'm opinionated on how engineer should do things, the list is mostly based on my personal and professional
+experience either good or bad (usually related with engineering incidents), the list
+will be maintained.</p>
+<h2 id="database-operation"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#database-operation" aria-label="Anchor link for: database-operation">#</a>
+Database Operation</h2>
+<h4 id="always-ask-your-collague-to-review"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#always-ask-your-collague-to-review" aria-label="Anchor link for: always-ask-your-collague-to-review">#</a>
+Always ask your collague to review</h4>
+<p>Anytime you need to update/delete data, make sure that someone has reviewed your sql query,
+based on my experience it prevents many bad things to happen on prod.</p>
+<h4 id="write-where-statement-first"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#write-where-statement-first" aria-label="Anchor link for: write-where-statement-first">#</a>
+Write <code>where</code> statement first</h4>
+<p>Always write the <code>where</code> clause (filtering) first whenever you're in a situation where there's no one reviewing your query,
+this will prevent you accidentally executing query without filter.</p>
+<pre data-lang="sql" class="language-sql "><code class="language-sql" data-lang="sql">-- Write this first
+... where id = x
+
+-- Instead of
+update users set email = &#x27;yyyyy&#x27; ....
+</code></pre>
+<h2 id="development"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#development" aria-label="Anchor link for: development">#</a>
+Development</h2>
+<h4 id="unit-test-is-a-good-investment-if-done-properly"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#unit-test-is-a-good-investment-if-done-properly" aria-label="Anchor link for: unit-test-is-a-good-investment-if-done-properly">#</a>
+Unit test is a good investment if done properly</h4>
+<p>Investing in unit tests will eventually save your time if done properly, but not all
+unit tests are worth to invest. Considering the limited time, I would prioritize to invest
+in unit tests that fulfilled these first:</p>
+<ul>
+<li>Unit tests that proved my code has fulfilled the product requirements.</li>
+<li>Unit tests related with security check.</li>
+<li>Unit tests that cover negative cases that are most likely to happen.</li>
+<li>The rest are low-normal priority unit tests so it depends on how much I'm willing to invest.</li>
+</ul>
+<h4 id="do-not-aim-perfect-unit-test-coverage"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#do-not-aim-perfect-unit-test-coverage" aria-label="Anchor link for: do-not-aim-perfect-unit-test-coverage">#</a>
+Do not aim perfect unit test coverage</h4>
+<p>100% test coverage doesn't mean your code is bug-free, it depends whether you have the correct
+logic and branchinng (<code>if else</code>, <code>switch</code>, etc). Trying to be perfect in unit test coverage generally
+will yield a diminishing returns, your time might be better used to invest in other
+development.</p>
+<h4 id="measure-your-feature"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#measure-your-feature" aria-label="Anchor link for: measure-your-feature">#</a>
+Measure your feature</h4>
+<p>Make sure you know how to measure your feature / test your code in remote environment (staging, production),
+especially in production. I have seen many software engineers that deliver things fast but
+they never check their feature on prod, they don't even know whether the feature
+works or not ☹️.</p>
+<h2 id="code-review"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#code-review" aria-label="Anchor link for: code-review">#</a>
+Code Review</h2>
+<h4 id="test-your-code"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#test-your-code" aria-label="Anchor link for: test-your-code">#</a>
+Test your code</h4>
+<p>Always test your code before submitting for code review, even in a hurry. Not many
+people have time to do detailed code review, so it's your main responsibility to
+make sure that it works and doesn't make any problem.</p>
+<h4 id="re-review-your-code"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#re-review-your-code" aria-label="Anchor link for: re-review-your-code">#</a>
+Re-review your code</h4>
+<p>Please always review your code before asking someone to review it. Suppose you have
+a PR that's ready to be reviewed and it takes around 20 minutes to review,
+imagine if there are 2 people reviewing your code, it'll take 40 minutes of man hour,
+best case is your code is approved, but what if it's not, it'll take more man hour right?</p>
+<p>What you can do is to review your code first, make sure it fulfills the requirements and
+have followed the team standard practice.</p>
+
+  </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wavvel'; // Required - Replace '<example>' with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+    </div>
+
+    <footer id="footer">
+      <p class="small">
+        © Copyright 2023 Sendy Halim
+      </p>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://blog.wavvel.com/assets/js/highlight.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>
