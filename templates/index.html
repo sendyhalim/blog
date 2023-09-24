@@ -3,7 +3,7 @@
   {% include 'header.html' %}
 
   <body>
-    <div id="content">
+    <div id="centent">
       <div class="post">
         <div class="post-body">
           <img class="avatar" src="{{ config.base_url | safe }}/assets/images/avatar.png">
@@ -19,20 +19,47 @@
 
           <p>... more <a href="/pages/about-me">about me</a>.</p>
 
-          <h3>
-            My Recent Posts <span class="d-sm-none">(YYYY-MM-DD)
-            </span>
-          </h3>
+          <div>
+            <h3>
+              My Recent Posts <span class="d-sm-none">(YYYY-MM-DD)
+              </span>
+            </h3>
 
-          <div class="d-none d-sm-block">
-            <strong>
-              YYYY-MM-DD
-            </strong>
+            <div class="d-none d-sm-block">
+              <strong>
+                YYYY-MM-DD
+              </strong>
+            </div>
+
+            {% include "post-list.html" %}
+
+            <p>... more on the <a href="{{ config.base_url | safe }}/posts">posts</a> section.</p>
           </div>
 
-          {% include "post-list.html" %}
+          <div>
+            <h3>
+              Grouped Posts
+              </span>
+            </h3>
 
-          <p>... more on the <a href="{{ config.base_url | safe }}/posts">posts</a> section.</p>
+            <div>
+              <a href="/tags/reading-checklist">
+                📚 Reading Checklist
+              </a>
+            </div>
+
+            <div>
+              <a href="/tags/best-practices">
+                👌 Best Practices
+              </a>
+            </div>
+
+            <div>
+              <a href="/tags/war-stories">
+                🔥 War Stories
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

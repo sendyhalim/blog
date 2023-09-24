@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  {% include 'header.html' %}
+
+  <body>
+    {% include "navigation.html" %}
+
+    <div id="content">
+      <div class="post">
+        <div class="post-body">
+          <h3>
+            <div>
+              Posts tagged with #{{ term.name }}
+            </div>
+
+            <span class="d-sm-none">(YYYY-MM-DD)</span>
+          </h3>
+
+          <div class="d-none d-sm-block">
+            <strong>
+              YYYY-MM-DD
+            </strong>
+          </div>
+
+          <ul class="post-list">
+            {% for page in term.pages %}
+              {% include 'post-item.html' %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% include 'footer.html' %}
+  </body>
+</html>
+
