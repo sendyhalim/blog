@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - war-story</title>
+    <link href="https://blog.wavvel.com/tags/war-story/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-19T00:00:00+00:00</updated>
+    <id>https://blog.wavvel.com/tags/war-story/atom.xml</id>
+    <entry xml:lang="en">
+        <title>War Story: Accidentally Running Database Update Without Where Clause</title>
+        <published>2023-09-19T00:00:00+00:00</published>
+        <updated>2023-09-19T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/war-stories/accidentally-ran-database-update-without-where-clause/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/war-stories/accidentally-ran-database-update-without-where-clause/</id>
+        
+        <content type="html">&lt;h2 id=&quot;what-happened&quot;&gt;What Happened&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;keytakeaways&quot;&gt;Keytakeaways&lt;&#x2F;h2&gt;
+</content>
+        
+    </entry>
+</feed>
