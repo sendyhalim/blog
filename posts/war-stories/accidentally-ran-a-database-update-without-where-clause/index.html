@@ -8,7 +8,7 @@
   <meta name="description" content="Sendy Halim&#39;s blog">
   <title>
     
-      Living In The Terminal
+      War Story: Accidentally Ran A Database Update Without Where Clause
     
   </title>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
@@ -42,30 +42,30 @@
 
 
 <div class="post">
-  <h1 class="title">Living In The Terminal</h1>
+  <h1 class="title">War Story: Accidentally Ran A Database Update Without Where Clause</h1>
 
   <div class="headline">
     <div>
-      2017-03-11
+      2023-09-30
 
     </div>
     <div>
       <div class="tag-list-container">
   
   <span class="tag">
-    #terminal
+    #software-engineering
   </span>
   
   <span class="tag">
-    #development
+    #day-to-day
   </span>
   
   <span class="tag">
-    #zsh
+    #best-practices
   </span>
   
   <span class="tag">
-    #productivity
+    #war-stories
   </span>
   
 </div>
@@ -74,39 +74,40 @@
   </div>
 
   <div class="post-body">
-    <p>Most of my time is spent in the terminal and I love working within it,
-so I invest a lot for the best terminal setup to make sure that I'm productive and happy when I'm using it.
-Here's a couple of screenshots of my terminal</p>
-<p class="image-container">
-  <img
-    src="https://blog.wavvel.com/assets/images/terminal/living-in-the-terminal/terminal-1.png
-"
-    alt="Terminal with vim">
-</p>
-<p class="image-container">
-  <img
-    src="https://blog.wavvel.com/assets/images/terminal/living-in-the-terminal/terminal-2.png
-"
-    alt="Terminal splitted">
-</p>
-<p>Here's the must have list for the best terminal experience</p>
+    <h2 id="what-happened">What Happened</h2>
+<p>Back in 2019 I was in a very good mood that the product launch was quite smooth in the past months.
+I got report that there were calculation bugs affecting some of the data. The bug was reproducible locally, I skimmed at the code and just kind of knew where the miscalculation happened in the code,
+my confident was high and my coffee tasted good on that day!</p>
+<p>Long story short, I submitted the bug fix to be reviewed and then deployed
+the fix to our testing environment. I tested it manually in concurrent to the QA testing process, the fix worked
+well on test environment and I deployed it directly to the prod, the fix was confirmed to work on production as well,
+I could see incoming data was calculated correctly.</p>
+<p>As the finisher, I move forward to update the old data that was incorrect prior the fix.
+I was already in the company network, so I connected to the database through psql
+and start writing the update statement. I couldn't remember what was going on in my mind but
+I typed the closing semicolon as soon as I reached the update statement, I had not typed the filter, it was the
+worst thing that could happen.</p>
+<pre><code>update a_table set x = x * 1.1; -- &lt;enter&gt;
+</code></pre>
+<p>I didn't even notice, looking at my sql statement that I ran, it was kind of hanging there on psql 🤨. It's just like your typical query when it's processing a lot of data then
+it returned the updated rows, showing tens of thousands of data had been updated, this was a small DB, but still tens of thousands is a lot to
+fix.</p>
+<p>Thankfully I was able to pull a quick sql to update all the data again, I was lucky that I applied DML that's easy to reverse.</p>
+<pre><code>update a_table set x = x &#x2F; 1.1; -- &lt;enter&gt;
+</code></pre>
+<p>Putting cherry on the top, there was no new data coming in. The query worked and
+I can still keep my job, also big thanks to my coffee that I made for myself.
+Completing the day, I wrote the query with the filter (where clause) first then the DML to complete the day
+with a very good lesson that I keep up until now.</p>
+<h2 id="what-went-wrong-and-lesson-learned">What Went Wrong and Lesson Learned</h2>
+<p>For the reflection, what I can think of that went wrong:</p>
 <ul>
-<li><a href="https://github.com/gnachman/iTerm2">iTerm2</a></li>
-<li><a href="https://github.com/tmux/tmux">Tmux</a></li>
-<li><a href="https://github.com/neovim/neovim">Neovim</a></li>
+<li>I should've asked for sql review from my peers.</li>
+<li>I should've written the filter first before doing any mutations.</li>
 </ul>
-<p>Let's start with iTerm2, it's the go to terminal when you're using macOS and does not like
-the built-in terminal that macOS has. Some people prefer to use <a href="https://hyper.is/">Hyper</a> nowadays
-but I stick to iTerm2 because it's a native app (written using Objective-C).</p>
-<p>Tmux is a terminal multiplexer, it runs inside iTerm2. I use it to open multiple windows and
-split panes within the terminal (it can do more than that).</p>
-<p>Neovim is a drop-in replacement for vim, I just use it because the project's motivation is to <a href="https://github.com/neovim/neovim/wiki/Introduction">refactor
-Vim source code</a> and I believe it's the future.</p>
-<p>One nice thing of working in the terminal is that I don't need to switch often between applications.
-Most of my work can be done within the terminal (depending on the work itself).
-It's easy to run shell commands when you code in the terminal. The real deal is when you start managing your dotfiles configuration.
-I put my dotfiles configuration on <a href="https://github.com/sendyhalim/dotfiles">my github</a>, I just
-need to clone it and run my setup script to get my ideal work environment 🍻.</p>
+<p>From that day on, I always ask for a sql review and always write filter,
+this is a very good lesson and I'm very grateful for it.
+I hope you learn something from the war story.</p>
 
   </div>
 </div>

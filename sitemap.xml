@@ -123,8 +123,11 @@
         <lastmod>2018-02-13T00:11:00+07:00</lastmod>
     </url>
     <url>
-        <loc>https://blog.wavvel.com/posts/war-stories/accidentally-ran-database-update-without-where-clause/</loc>
-        <lastmod>2023-09-19</lastmod>
+        <loc>https://blog.wavvel.com/posts/war-stories/</loc>
+    </url>
+    <url>
+        <loc>https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/</loc>
+        <lastmod>2023-09-30</lastmod>
     </url>
     <url>
         <loc>https://blog.wavvel.com/tags/</loc>
@@ -259,7 +262,7 @@
         <loc>https://blog.wavvel.com/tags/vim/</loc>
     </url>
     <url>
-        <loc>https://blog.wavvel.com/tags/war-story/</loc>
+        <loc>https://blog.wavvel.com/tags/war-stories/</loc>
     </url>
     <url>
         <loc>https://blog.wavvel.com/tags/zsh/</loc>

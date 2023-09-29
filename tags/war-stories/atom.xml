@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - war-stories</title>
+    <link href="https://blog.wavvel.com/tags/war-stories/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-30T00:00:00+00:00</updated>
+    <id>https://blog.wavvel.com/tags/war-stories/atom.xml</id>
+    <entry xml:lang="en">
+        <title>War Story: Accidentally Ran A Database Update Without Where Clause</title>
+        <published>2023-09-30T00:00:00+00:00</published>
+        <updated>2023-09-30T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/</id>
+        
+        <content type="html">&lt;h2 id=&quot;what-happened&quot;&gt;What Happened&lt;&#x2F;h2&gt;
+&lt;p&gt;Back in 2019 I was in a very good mood that the product launch was quite smooth in the past months.
+I got report that there were calculation bugs affecting some of the data. The bug was reproducible locally, I skimmed at the code and just kind of knew where the miscalculation happened in the code,
+my confident was high and my coffee tasted good on that day!&lt;&#x2F;p&gt;
+&lt;p&gt;Long story short, I submitted the bug fix to be reviewed and then deployed
+the fix to our testing environment. I tested it manually in concurrent to the QA testing process, the fix worked
+well on test environment and I deployed it directly to the prod, the fix was confirmed to work on production as well,
+I could see incoming data was calculated correctly.&lt;&#x2F;p&gt;
+&lt;p&gt;As the finisher, I move forward to update the old data that was incorrect prior the fix.
+I was already in the company network, so I connected to the database through psql
+and start writing the update statement. I couldn&#x27;t remember what was going on in my mind but
+I typed the closing semicolon as soon as I reached the update statement, I had not typed the filter, it was the
+worst thing that could happen.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;update a_table set x = x * 1.1; -- &amp;lt;enter&amp;gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I didn&#x27;t even notice, looking at my sql statement that I ran, it was kind of hanging there on psql 🤨. It&#x27;s just like your typical query when it&#x27;s processing a lot of data then
+it returned the updated rows, showing tens of thousands of data had been updated, this was a small DB, but still tens of thousands is a lot to
+fix.&lt;&#x2F;p&gt;
+&lt;p&gt;Thankfully I was able to pull a quick sql to update all the data again, I was lucky that I applied DML that&#x27;s easy to reverse.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;update a_table set x = x &amp;#x2F; 1.1; -- &amp;lt;enter&amp;gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Putting cherry on the top, there was no new data coming in. The query worked and
+I can still keep my job, also big thanks to my coffee that I made for myself.
+Completing the day, I wrote the query with the filter (where clause) first then the DML to complete the day
+with a very good lesson that I keep up until now.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-went-wrong-and-lesson-learned&quot;&gt;What Went Wrong and Lesson Learned&lt;&#x2F;h2&gt;
+&lt;p&gt;For the reflection, what I can think of that went wrong:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I should&#x27;ve asked for sql review from my peers.&lt;&#x2F;li&gt;
+&lt;li&gt;I should&#x27;ve written the filter first before doing any mutations.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;From that day on, I always ask for a sql review and always write filter,
+this is a very good lesson and I&#x27;m very grateful for it.
+I hope you learn something from the war story.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
