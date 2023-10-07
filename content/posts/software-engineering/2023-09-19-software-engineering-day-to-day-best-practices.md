@@ -24,6 +24,7 @@ based on my experience it prevents many bad things to happen on prod.
 #### Write `where` statement first
 Always write the `where` clause (filtering) first whenever you're in a situation where there's no one reviewing your query,
 this will prevent you accidentally executing query without filter.
+You might also interested in reading my personal [war story](/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/) on this matter.
 ```sql
 -- Write this first
 ... where id = x
