@@ -90,7 +90,8 @@ based on my experience it prevents many bad things to happen on prod.</p>
 <a class="zola-anchor" href="#write-where-statement-first" aria-label="Anchor link for: write-where-statement-first">#</a>
 Write <code>where</code> statement first</h4>
 <p>Always write the <code>where</code> clause (filtering) first whenever you're in a situation where there's no one reviewing your query,
-this will prevent you accidentally executing query without filter.</p>
+this will prevent you accidentally executing query without filter.
+You might also interested in reading my personal <a href="/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/">war story</a> on this matter.</p>
 <pre data-lang="sql" class="language-sql "><code class="language-sql" data-lang="sql">-- Write this first
 ... where id = x
 

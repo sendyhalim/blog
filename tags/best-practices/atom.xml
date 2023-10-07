@@ -4,8 +4,76 @@
     <link href="https://blog.wavvel.com/tags/best-practices/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-09-30T00:00:00+00:00</updated>
+    <updated>2023-10-07T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/best-practices/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Unit Tests: The Point of Unit Tests</title>
+        <published>2023-10-07T00:00:00+00:00</published>
+        <updated>2023-10-07T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/the-point-of-unit-tests/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/the-point-of-unit-tests/</id>
+        
+        <content type="html">&lt;p&gt;Most likely you&#x27;ve heard the term &lt;code&gt;unit tests&lt;&#x2F;code&gt; if you&#x27;re in software engineering or fields related to it.
+This post is intended as a short introduction to the practice, starting with what is it and what&#x27;s the point
+of doing it from my view, it&#x27;s not meant to be super technical.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-is-unit-testing&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-unit-testing&quot; aria-label=&quot;Anchor link for: what-is-unit-testing&quot;&gt;#&lt;&#x2F;a&gt;
+What is Unit Testing&lt;&#x2F;h1&gt;
+&lt;p&gt;Just like the term, unit testing is basically &lt;em&gt;writing code&lt;&#x2F;em&gt; to test &lt;em&gt;your code&lt;&#x2F;em&gt; as a &amp;quot;unit&amp;quot;,
+it focuses only just the unit logic and &lt;em&gt;mocks&lt;&#x2F;em&gt; the I&#x2F;O operations and the side effects.&lt;&#x2F;p&gt;
+&lt;p&gt;For simplicity, suppose you have a function &lt;code&gt;calculateInvoiceAmount(order)&lt;&#x2F;code&gt;, it will calculate the invoice amount based on
+the given order and delivery fee data from a database. The code would look something along the lines of this&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;double calculateInvoiceAmount(Order order) {
+  deliveryFee = this.fetchDeliveryFeeFromDb();
+
+  return order amount + delivery fee;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In unit testing, we&#x27;ll mock (fake) &lt;code&gt;fetchDeliveryFeeFromDb&lt;&#x2F;code&gt; so it returns  predefined data because we just want to test the calculation logic and trust
+the DB that it will always be reliable, this way your unit tests only focus on the invoice amount calculation logic &lt;code&gt;order amount + delivery fee&lt;&#x2F;code&gt;.
+Focusing on the logic helps us to simplify unit testing because your unit tests do not depend on the database.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-s-the-point-of-unit-tests-and-why-it-matters&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-s-the-point-of-unit-tests-and-why-it-matters&quot; aria-label=&quot;Anchor link for: what-s-the-point-of-unit-tests-and-why-it-matters&quot;&gt;#&lt;&#x2F;a&gt;
+What&#x27;s the point of unit tests, and why it matters?&lt;&#x2F;h1&gt;
+&lt;p&gt;I acknowledged that I initially just following best practices to write unit tests, no actual motivation back then.
+The value was crystal clear after doing it a few times, there are 2 main values of writing unit tests:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;It saves your time, the leverage is much larger when you have a bigger team size.&lt;&#x2F;li&gt;
+&lt;li&gt;It helps you to write modular code.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;it-saves-your-time-and-your-team-when-done-well&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#it-saves-your-time-and-your-team-when-done-well&quot; aria-label=&quot;Anchor link for: it-saves-your-time-and-your-team-when-done-well&quot;&gt;#&lt;&#x2F;a&gt;
+It saves your time (and your team!) when done well&lt;&#x2F;h4&gt;
+&lt;p&gt;Writing unit tests help you to detect regression in your code. Imagine
+a typical common scenario where there are functions that depend on other functions,
+how do you know changing&#x2F;adding logic wouldn&#x27;t break the other functionalities?&lt;&#x2F;p&gt;
+&lt;p&gt;Investing in unit tests will help you detect breaking changes in other parts of your code (that
+have unit tests written), be it in other functions or in the existing function logic.
+This will save your time to do regression tests manually and ultimately it helps you to deliver faster.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;unit-tests-help-you-to-write-modular-code&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#unit-tests-help-you-to-write-modular-code&quot; aria-label=&quot;Anchor link for: unit-tests-help-you-to-write-modular-code&quot;&gt;#&lt;&#x2F;a&gt;
+Unit tests help you to write modular code&lt;&#x2F;h4&gt;
+&lt;p&gt;Writing unit tests is hard if your code is not modular, you would want to mock
+dependencies or I&#x2F;O in the class&#x2F;function that you&#x27;re testing, generally
+it&#x27;s going to be a lot easier writing unit tests for a class&#x2F;function where
+the dependencies are easy to swap (with mock&#x2F;fake implementation).&lt;&#x2F;p&gt;
+&lt;p&gt;Writing code with a mental note that you want to write units for it will
+indirectly forces you to make your code modular.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;real-life-example-at-work&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#real-life-example-at-work&quot; aria-label=&quot;Anchor link for: real-life-example-at-work&quot;&gt;#&lt;&#x2F;a&gt;
+Real-life example at work&lt;&#x2F;h1&gt;
+&lt;p&gt;In 2015, we invested in a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;cermati&#x2F;satpam&quot;&gt;library&lt;&#x2F;a&gt; to do generic input validation, there are 50+ validation rules
+and it&#x27;s used in almost all microservices in the company.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s not uncommon to have security notification to upgrade the library dependencies, luckily
+we&#x27;ve already &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;cermati&#x2F;satpam&#x2F;tree&#x2F;master&#x2F;test&#x2F;validators&quot;&gt;invested in unit tests&lt;&#x2F;a&gt; for each of the validation rules both for negative and positive cases.
+Upgrading a dependency is a matter of bumping the dependency version number and running the unit tests,
+once it&#x27;s all green we can proceed to push the dependency upgrade to the main codebase.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>War Story: Accidentally Ran A Database Update Without Where Clause</title>
         <published>2023-09-30T00:00:00+00:00</published>
@@ -83,7 +151,8 @@ based on my experience it prevents many bad things to happen on prod.&lt;&#x2F;p
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#write-where-statement-first&quot; aria-label=&quot;Anchor link for: write-where-statement-first&quot;&gt;#&lt;&#x2F;a&gt;
 Write &lt;code&gt;where&lt;&#x2F;code&gt; statement first&lt;&#x2F;h4&gt;
 &lt;p&gt;Always write the &lt;code&gt;where&lt;&#x2F;code&gt; clause (filtering) first whenever you&#x27;re in a situation where there&#x27;s no one reviewing your query,
-this will prevent you accidentally executing query without filter.&lt;&#x2F;p&gt;
+this will prevent you accidentally executing query without filter.
+You might also interested in reading my personal &lt;a href=&quot;&#x2F;posts&#x2F;war-stories&#x2F;accidentally-ran-a-database-update-without-where-clause&#x2F;&quot;&gt;war story&lt;&#x2F;a&gt; on this matter.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sql&quot; class=&quot;language-sql &quot;&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;-- Write this first
 ... where id = x
 

@@ -83,7 +83,8 @@ based on my experience it prevents many bad things to happen on prod.&lt;&#x2F;p
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#write-where-statement-first&quot; aria-label=&quot;Anchor link for: write-where-statement-first&quot;&gt;#&lt;&#x2F;a&gt;
 Write &lt;code&gt;where&lt;&#x2F;code&gt; statement first&lt;&#x2F;h4&gt;
 &lt;p&gt;Always write the &lt;code&gt;where&lt;&#x2F;code&gt; clause (filtering) first whenever you&#x27;re in a situation where there&#x27;s no one reviewing your query,
-this will prevent you accidentally executing query without filter.&lt;&#x2F;p&gt;
+this will prevent you accidentally executing query without filter.
+You might also interested in reading my personal &lt;a href=&quot;&#x2F;posts&#x2F;war-stories&#x2F;accidentally-ran-a-database-update-without-where-clause&#x2F;&quot;&gt;war story&lt;&#x2F;a&gt; on this matter.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sql&quot; class=&quot;language-sql &quot;&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;-- Write this first
 ... where id = x
 

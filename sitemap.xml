@@ -39,10 +39,6 @@
         <loc>https://blog.wavvel.com/posts/life/</loc>
     </url>
     <url>
-        <loc>https://blog.wavvel.com/posts/life/decision-making-structure/</loc>
-        <lastmod>2023-08-05T14:39:00+07:00</lastmod>
-    </url>
-    <url>
         <loc>https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/</loc>
         <lastmod>2023-08-05T14:39:00+07:00</lastmod>
     </url>
@@ -63,6 +59,10 @@
     <url>
         <loc>https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/</loc>
         <lastmod>2023-09-19</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.wavvel.com/posts/software-engineering/the-point-of-unit-tests/</loc>
+        <lastmod>2023-10-07</lastmod>
     </url>
     <url>
         <loc>https://blog.wavvel.com/posts/software-engineering/tools-that-i-use-for-software-engineering/</loc>
@@ -261,6 +261,9 @@
     </url>
     <url>
         <loc>https://blog.wavvel.com/tags/uiview/</loc>
+    </url>
+    <url>
+        <loc>https://blog.wavvel.com/tags/unit-test/</loc>
     </url>
     <url>
         <loc>https://blog.wavvel.com/tags/vim/</loc>
