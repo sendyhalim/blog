@@ -4,8 +4,21 @@
     <link href="https://blog.wavvel.com/tags/software-engineering/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-10-07T00:00:00+00:00</updated>
+    <updated>2023-10-08T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/software-engineering/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Unit Tests: Your first step in unit testing, what to expect</title>
+        <published>2023-10-08T00:00:00+00:00</published>
+        <updated>2023-10-08T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/your-first-step-in-unit-testing-practice-what-to-expect/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/your-first-step-in-unit-testing-practice-what-to-expect/</id>
+        
+        <content type="html"></content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Unit Tests: The Point of Unit Tests</title>
         <published>2023-10-07T00:00:00+00:00</published>
@@ -53,6 +66,16 @@ how do you know changing&#x2F;adding logic wouldn&#x27;t break the other functio
 &lt;p&gt;Investing in unit tests will help you detect breaking changes in other parts of your code (that
 have unit tests written), be it in other functions or in the existing function logic.
 This will save your time to do regression tests manually and ultimately it helps you to deliver faster.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;unit-tests-ease-effort-for-code-improvements&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#unit-tests-ease-effort-for-code-improvements&quot; aria-label=&quot;Anchor link for: unit-tests-ease-effort-for-code-improvements&quot;&gt;#&lt;&#x2F;a&gt;
+Unit tests ease effort for code improvements&lt;&#x2F;h4&gt;
+&lt;p&gt;Having unit tests properly invested will encourage engineers to improve or refactor a specific functionality.
+Improvements vary from dependency upgrades, optimizing approaches taken in a specific function, and many more.&lt;&#x2F;p&gt;
+&lt;p&gt;With properly invested unit tests, it&#x27;s a lot easier to catch breaking changes in the local machine
+before it gets deployed on remote environments (staging, production, etc). This would implicitly improve your code quality
+because engineers would have more confidence refactoring code that has unit tests compared to one that does not have it,
+they know that as long as the existing unit tests (assuming it&#x27;s invested properly) are green
+then most likely the behavior and output are fulfilling the expectations.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;unit-tests-help-you-to-write-modular-code&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#unit-tests-help-you-to-write-modular-code&quot; aria-label=&quot;Anchor link for: unit-tests-help-you-to-write-modular-code&quot;&gt;#&lt;&#x2F;a&gt;
 Unit tests help you to write modular code&lt;&#x2F;h4&gt;
