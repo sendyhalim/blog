@@ -45,6 +45,16 @@ Investing in unit tests will help you detect breaking changes in other parts of 
 have unit tests written), be it in other functions or in the existing function logic.
 This will save your time to do regression tests manually and ultimately it helps you to deliver faster.
 
+#### Unit tests ease effort for code improvements
+Having unit tests properly invested will encourage engineers to improve or refactor a specific functionality.
+Improvements vary from dependency upgrades, optimizing approaches taken in a specific function, and many more.
+
+With properly invested unit tests, it's a lot easier to catch breaking changes in the local machine
+before it gets deployed on remote environments (staging, production, etc). This would implicitly improve your code quality
+because engineers would have more confidence refactoring code that has unit tests compared to one that does not have it,
+they know that as long as the existing unit tests (assuming it's invested properly) are green
+then most likely the behavior and output are fulfilling the expectations.
+
 #### Unit tests help you to write modular code
 Writing unit tests is hard if your code is not modular, you would want to mock
 dependencies or I/O in the class/function that you're testing, generally
