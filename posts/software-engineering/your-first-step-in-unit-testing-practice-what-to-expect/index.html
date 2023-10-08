@@ -70,7 +70,66 @@
   </div>
 
   <div class="post-body">
-    
+    <h1 id="set-your-mindset-first"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#set-your-mindset-first" aria-label="Anchor link for: set-your-mindset-first">#</a>
+Set your mindset first</h1>
+<p>I would like to remind you that you need to understand the motivation behind unit tests,
+why are you doing it? It's important that you're convinced because unit tests is an investment,
+you will spend time doing it and you want to make sure that you invest properly in order
+to get the yield that you want. If you're convinced that it's going to be worth it then read on.</p>
+<h1 id="concept"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#concept" aria-label="Anchor link for: concept">#</a>
+Concept</h1>
+<p>Unit testing is a practice of the bigger testing component. In terms of isolation there are generally 2 types of testing:</p>
+<ul>
+<li>Unit testing, focuses on the function unit. Suppose there's function <code>f</code> and it depends on <code>g</code> and <code>h</code> ,
+when unit testing <code>f</code> we will assume other dependencies <code>g</code> and <code>h</code> will behave correctly, this is done through &quot;faking&quot; <code>g</code> and <code>h</code> behavior in
+an isolated unit testing environment.</li>
+<li>Functional testing, focuses on testing the end user features and flows to behave as expected, it does not fake <code>g</code> and <code>h</code> behavior
+but rather will expect <code>f</code> , <code>g</code> and <code>h</code> to work well together as a feature/flow.</li>
+</ul>
+<p>Unit testing is generally easier to implement because you're testing your code with an isolated environment
+where you can fake external service dependencies (database, redis, http API dependencies, etc).</p>
+<h1 id="first-expectation-and-setup"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#first-expectation-and-setup" aria-label="Anchor link for: first-expectation-and-setup">#</a>
+First Expectation and Setup</h1>
+<p>Just like programming, you'll be slow at first time writing unit tests but eventually
+you'll get better and faster hence your unit test investment will start paying dividends in terms of
+saving your / team time. Unit test is programming language agnostic, you can apply the practice in all languages, so
+mastering unit test is a long term investment.</p>
+<p>Your first step is to find a test library that supports unit tests, some examples</p>
+<ul>
+<li>Rust 👉 the testing component is <a href="https://doc.rust-lang.org/rust-by-example/testing/unit_testing.html">baked into the language</a>, so you can just write unit tests right away without an external library.</li>
+<li>Javascript 👉 you could install <a href="https://mochajs.org">mocha</a> as the test runner and <a href="https://www.chaijs.com">chai</a> to set assertions/expectations</li>
+<li>Swift 👉 there's <a href="https://www.swift.org/server/guides/testing.html">XCtest</a> bundled with the official Swift Package Manager.</li>
+<li>PHP 👉 the most popular one is <a href="https://phpunit.de">PHP Unit</a></li>
+</ul>
+<p>repeat the process over and over againand you’ll get better.</p>
+<h1 id="common-components-in-unit-testing"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#common-components-in-unit-testing" aria-label="Anchor link for: common-components-in-unit-testing">#</a>
+Common Components in unit testing</h1>
+<h3 id="testing-component"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#testing-component" aria-label="Anchor link for: testing-component">#</a>
+Testing component</h3>
+<h4 id="stub"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#stub" aria-label="Anchor link for: stub">#</a>
+Stub</h4>
+<h4 id="mock"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#mock" aria-label="Anchor link for: mock">#</a>
+Mock</h4>
+<h4 id="spy"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#spy" aria-label="Anchor link for: spy">#</a>
+Spy</h4>
+<h3 id="integration-component"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#integration-component" aria-label="Anchor link for: integration-component">#</a>
+Integration Component</h3>
+<h4 id="automated-tests"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#automated-tests" aria-label="Anchor link for: automated-tests">#</a>
+Automated tests</h4>
+<h4 id="test-reports"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#test-reports" aria-label="Anchor link for: test-reports">#</a>
+Test reports</h4>
+
   </div>
 </div>
 
