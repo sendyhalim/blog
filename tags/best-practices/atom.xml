@@ -4,80 +4,8 @@
     <link href="https://blog.wavvel.com/tags/best-practices/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-10-08T00:00:00+00:00</updated>
+    <updated>2023-10-07T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/best-practices/atom.xml</id>
-    <entry xml:lang="en">
-        <title>Unit Tests: Your first step in unit testing, what to expect</title>
-        <published>2023-10-08T00:00:00+00:00</published>
-        <updated>2023-10-08T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/your-first-step-in-unit-testing-practice-what-to-expect/" type="text/html"/>
-        <id>https://blog.wavvel.com/posts/software-engineering/your-first-step-in-unit-testing-practice-what-to-expect/</id>
-        
-        <content type="html">&lt;h1 id=&quot;set-your-mindset-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#set-your-mindset-first&quot; aria-label=&quot;Anchor link for: set-your-mindset-first&quot;&gt;#&lt;&#x2F;a&gt;
-Set your mindset first&lt;&#x2F;h1&gt;
-&lt;p&gt;I would like to remind you that you need to understand the motivation behind unit tests,
-why are you doing it? It&#x27;s important that you&#x27;re convinced because unit tests is an investment,
-you will spend time doing it and you want to make sure that you invest properly in order
-to get the yield that you want. If you&#x27;re convinced that it&#x27;s going to be worth it then read on.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;concept&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#concept&quot; aria-label=&quot;Anchor link for: concept&quot;&gt;#&lt;&#x2F;a&gt;
-Concept&lt;&#x2F;h1&gt;
-&lt;p&gt;Unit testing is a practice of the bigger testing component. In terms of isolation there are generally 2 types of testing:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Unit testing, focuses on the function unit. Suppose there&#x27;s function &lt;code&gt;f&lt;&#x2F;code&gt; and it depends on &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; ,
-when unit testing &lt;code&gt;f&lt;&#x2F;code&gt; we will assume other dependencies &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; will behave correctly, this is done through &amp;quot;faking&amp;quot; &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior in
-an isolated unit testing environment.&lt;&#x2F;li&gt;
-&lt;li&gt;Functional testing, focuses on testing the end user features and flows to behave as expected, it does not fake &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior
-but rather will expect &lt;code&gt;f&lt;&#x2F;code&gt; , &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; to work well together as a feature&#x2F;flow.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Unit testing is generally easier to implement because you&#x27;re testing your code with an isolated environment
-where you can fake external service dependencies (database, redis, http API dependencies, etc).&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;first-expectation-and-setup&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#first-expectation-and-setup&quot; aria-label=&quot;Anchor link for: first-expectation-and-setup&quot;&gt;#&lt;&#x2F;a&gt;
-First Expectation and Setup&lt;&#x2F;h1&gt;
-&lt;p&gt;Just like programming, you&#x27;ll be slow at first time writing unit tests but eventually
-you&#x27;ll get better and faster hence your unit test investment will start paying dividends in terms of
-saving your &#x2F; team time. Unit test is programming language agnostic, you can apply the practice in all languages, so
-mastering unit test is a long term investment.&lt;&#x2F;p&gt;
-&lt;p&gt;Your first step is to find a test library that supports unit tests, some examples&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Rust 👉 the testing component is &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;rust-by-example&#x2F;testing&#x2F;unit_testing.html&quot;&gt;baked into the language&lt;&#x2F;a&gt;, so you can just write unit tests right away without an external library.&lt;&#x2F;li&gt;
-&lt;li&gt;Javascript 👉 you could install &lt;a href=&quot;https:&#x2F;&#x2F;mochajs.org&quot;&gt;mocha&lt;&#x2F;a&gt; as the test runner and &lt;a href=&quot;https:&#x2F;&#x2F;www.chaijs.com&quot;&gt;chai&lt;&#x2F;a&gt; to set assertions&#x2F;expectations&lt;&#x2F;li&gt;
-&lt;li&gt;Swift 👉 there&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;www.swift.org&#x2F;server&#x2F;guides&#x2F;testing.html&quot;&gt;XCtest&lt;&#x2F;a&gt; bundled with the official Swift Package Manager.&lt;&#x2F;li&gt;
-&lt;li&gt;PHP 👉 the most popular one is &lt;a href=&quot;https:&#x2F;&#x2F;phpunit.de&quot;&gt;PHP Unit&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;repeat the process over and over againand you’ll get better.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;common-components-in-unit-testing&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#common-components-in-unit-testing&quot; aria-label=&quot;Anchor link for: common-components-in-unit-testing&quot;&gt;#&lt;&#x2F;a&gt;
-Common Components in unit testing&lt;&#x2F;h1&gt;
-&lt;h3 id=&quot;testing-component&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#testing-component&quot; aria-label=&quot;Anchor link for: testing-component&quot;&gt;#&lt;&#x2F;a&gt;
-Testing component&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;stub&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#stub&quot; aria-label=&quot;Anchor link for: stub&quot;&gt;#&lt;&#x2F;a&gt;
-Stub&lt;&#x2F;h4&gt;
-&lt;h4 id=&quot;mock&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#mock&quot; aria-label=&quot;Anchor link for: mock&quot;&gt;#&lt;&#x2F;a&gt;
-Mock&lt;&#x2F;h4&gt;
-&lt;h4 id=&quot;spy&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#spy&quot; aria-label=&quot;Anchor link for: spy&quot;&gt;#&lt;&#x2F;a&gt;
-Spy&lt;&#x2F;h4&gt;
-&lt;h3 id=&quot;integration-component&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#integration-component&quot; aria-label=&quot;Anchor link for: integration-component&quot;&gt;#&lt;&#x2F;a&gt;
-Integration Component&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;automated-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#automated-tests&quot; aria-label=&quot;Anchor link for: automated-tests&quot;&gt;#&lt;&#x2F;a&gt;
-Automated tests&lt;&#x2F;h4&gt;
-&lt;h4 id=&quot;test-reports&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#test-reports&quot; aria-label=&quot;Anchor link for: test-reports&quot;&gt;#&lt;&#x2F;a&gt;
-Test reports&lt;&#x2F;h4&gt;
-</content>
-        
-    </entry>
     <entry xml:lang="en">
         <title>Unit Tests: The Point of Unit Tests</title>
         <published>2023-10-07T00:00:00+00:00</published>
