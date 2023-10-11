@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-    <title> - best-practices</title>
-    <link href="https://blog.wavvel.com/tags/best-practices/atom.xml" rel="self" type="application/atom+xml"/>
+    <title> - unit-testing</title>
+    <link href="https://blog.wavvel.com/tags/unit-testing/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-10-08T00:00:00+00:00</updated>
-    <id>https://blog.wavvel.com/tags/best-practices/atom.xml</id>
+    <id>https://blog.wavvel.com/tags/unit-testing/atom.xml</id>
     <entry xml:lang="en">
         <title>Unit Testing: Your first step in unit testing, what to expect</title>
         <published>2023-10-08T00:00:00+00:00</published>
@@ -191,141 +191,6 @@ and it&#x27;s used in almost all microservices in the company.&lt;&#x2F;p&gt;
 we&#x27;ve already &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;cermati&#x2F;satpam&#x2F;tree&#x2F;master&#x2F;test&#x2F;validators&quot;&gt;invested in unit tests&lt;&#x2F;a&gt; for each of the validation rules both for negative and positive cases.
 Upgrading a dependency is a matter of bumping the dependency version number and running the unit tests,
 once it&#x27;s all green we can proceed to push the dependency upgrade to the main codebase.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>War Story: Accidentally Ran A Database Update Without Where Clause</title>
-        <published>2023-09-30T00:00:00+00:00</published>
-        <updated>2023-09-30T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/" type="text/html"/>
-        <id>https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/</id>
-        
-        <content type="html">&lt;h2 id=&quot;what-happened&quot;&gt;What Happened&lt;&#x2F;h2&gt;
-&lt;p&gt;Back in 2019 I was in a very good mood that the product launch was quite smooth in the past months.
-I got report that there were calculation bugs affecting some of the data. The bug was reproducible locally, I skimmed at the code and just kind of knew where the miscalculation happened in the code,
-my confident was high and my coffee tasted good on that day!&lt;&#x2F;p&gt;
-&lt;p&gt;Long story short, I submitted the bug fix to be reviewed and then deployed
-the fix to our testing environment. I tested it manually in concurrent to the QA testing process, the fix worked
-well on test environment and I deployed it directly to the prod, the fix was confirmed to work on production as well,
-I could see incoming data was calculated correctly.&lt;&#x2F;p&gt;
-&lt;p&gt;As the finisher, I move forward to update the old data that was incorrect prior the fix.
-I was already in the company network, so I connected to the database through psql
-and start writing the update statement. I couldn&#x27;t remember what was going on in my mind but
-I typed the closing semicolon as soon as I reached the update statement, I had not typed the filter, it was the
-worst thing that could happen.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;update a_table set x = x * 1.1; -- &amp;lt;enter&amp;gt;
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;I didn&#x27;t even notice, looking at my sql statement that I ran, it was kind of hanging there on psql 🤨. It&#x27;s just like your typical query when it&#x27;s processing a lot of data then
-it returned the updated rows, showing tens of thousands of data had been updated, this was a small DB, but still tens of thousands is a lot to
-fix.&lt;&#x2F;p&gt;
-&lt;p&gt;Thankfully I was able to pull a quick sql to update all the data again, I was lucky that I applied DML that&#x27;s easy to reverse.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;update a_table set x = x &amp;#x2F; 1.1; -- &amp;lt;enter&amp;gt;
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Putting cherry on the top, there was no new data coming in. The query worked and
-I can still keep my job, also big thanks to my coffee that I made for myself.
-Completing the day, I wrote the query with the filter (where clause) first then the DML to complete the day
-with a very good lesson that I keep up until now.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;what-went-wrong-and-lesson-learned&quot;&gt;What Went Wrong and Lesson Learned&lt;&#x2F;h2&gt;
-&lt;p&gt;For the reflection, what I can think of that went wrong:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;I should&#x27;ve asked for sql review from my peers.&lt;&#x2F;li&gt;
-&lt;li&gt;I should&#x27;ve written the filter first before doing any mutations.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;From that day on, I always ask for a sql review and always write filter,
-this is a very good lesson and I&#x27;m very grateful for it.
-I hope you learn something from the war story.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Software Engineering Day to Day Best Practices</title>
-        <published>2023-09-19T00:00:00+00:00</published>
-        <updated>2023-09-19T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/" type="text/html"/>
-        <id>https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/</id>
-        
-        <content type="html">&lt;h2 id=&quot;background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#background&quot; aria-label=&quot;Anchor link for: background&quot;&gt;#&lt;&#x2F;a&gt;
-Background&lt;&#x2F;h2&gt;
-&lt;p&gt;The software engineering day to day practice is not related directly to programming, there are
-many programming best practices out there, but not many sharing the day to day best practices.&lt;&#x2F;p&gt;
-&lt;p&gt;I&#x27;m opinionated on how engineer should do things, the list is mostly based on my personal and professional
-experience either good or bad (usually related with engineering incidents), the list
-will be maintained.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;database-operation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#database-operation&quot; aria-label=&quot;Anchor link for: database-operation&quot;&gt;#&lt;&#x2F;a&gt;
-Database Operation&lt;&#x2F;h2&gt;
-&lt;h4 id=&quot;always-ask-your-collague-to-review&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#always-ask-your-collague-to-review&quot; aria-label=&quot;Anchor link for: always-ask-your-collague-to-review&quot;&gt;#&lt;&#x2F;a&gt;
-Always ask your collague to review&lt;&#x2F;h4&gt;
-&lt;p&gt;Anytime you need to update&#x2F;delete data, make sure that someone has reviewed your sql query,
-based on my experience it prevents many bad things to happen on prod.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;write-where-statement-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#write-where-statement-first&quot; aria-label=&quot;Anchor link for: write-where-statement-first&quot;&gt;#&lt;&#x2F;a&gt;
-Write &lt;code&gt;where&lt;&#x2F;code&gt; statement first&lt;&#x2F;h4&gt;
-&lt;p&gt;Always write the &lt;code&gt;where&lt;&#x2F;code&gt; clause (filtering) first whenever you&#x27;re in a situation where there&#x27;s no one reviewing your query,
-this will prevent you accidentally executing query without filter.
-You might also interested in reading my personal &lt;a href=&quot;&#x2F;posts&#x2F;war-stories&#x2F;accidentally-ran-a-database-update-without-where-clause&#x2F;&quot;&gt;war story&lt;&#x2F;a&gt; on this matter.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sql&quot; class=&quot;language-sql &quot;&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;-- Write this first
-... where id = x
-
--- Instead of
-update users set email = &amp;#x27;yyyyy&amp;#x27; ....
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;development&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#development&quot; aria-label=&quot;Anchor link for: development&quot;&gt;#&lt;&#x2F;a&gt;
-Development&lt;&#x2F;h2&gt;
-&lt;h4 id=&quot;unit-test-is-a-good-investment-if-done-properly&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#unit-test-is-a-good-investment-if-done-properly&quot; aria-label=&quot;Anchor link for: unit-test-is-a-good-investment-if-done-properly&quot;&gt;#&lt;&#x2F;a&gt;
-Unit test is a good investment if done properly&lt;&#x2F;h4&gt;
-&lt;p&gt;Investing in unit tests will eventually save your time if done properly, but not all
-unit tests are worth to invest. Considering the limited time, I would prioritize to invest
-in unit tests that fulfilled these first:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Unit tests that proved my code has fulfilled the product requirements.&lt;&#x2F;li&gt;
-&lt;li&gt;Unit tests related with security check.&lt;&#x2F;li&gt;
-&lt;li&gt;Unit tests that cover negative cases that are most likely to happen.&lt;&#x2F;li&gt;
-&lt;li&gt;The rest are low-normal priority unit tests so it depends on how much I&#x27;m willing to invest.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h4 id=&quot;do-not-aim-perfect-unit-test-coverage&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#do-not-aim-perfect-unit-test-coverage&quot; aria-label=&quot;Anchor link for: do-not-aim-perfect-unit-test-coverage&quot;&gt;#&lt;&#x2F;a&gt;
-Do not aim perfect unit test coverage&lt;&#x2F;h4&gt;
-&lt;p&gt;100% test coverage doesn&#x27;t mean your code is bug-free, it depends whether you have the correct
-logic and branchinng (&lt;code&gt;if else&lt;&#x2F;code&gt;, &lt;code&gt;switch&lt;&#x2F;code&gt;, etc). Trying to be perfect in unit test coverage generally
-will yield a diminishing returns, your time might be better used to invest in other
-development.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;measure-your-feature&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#measure-your-feature&quot; aria-label=&quot;Anchor link for: measure-your-feature&quot;&gt;#&lt;&#x2F;a&gt;
-Measure your feature&lt;&#x2F;h4&gt;
-&lt;p&gt;Make sure you know how to measure your feature &#x2F; test your code in remote environment (staging, production),
-especially in production. I have seen many software engineers that deliver things fast but
-they never check their feature on prod, they don&#x27;t even know whether the feature
-works or not ☹️.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;code-review&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#code-review&quot; aria-label=&quot;Anchor link for: code-review&quot;&gt;#&lt;&#x2F;a&gt;
-Code Review&lt;&#x2F;h2&gt;
-&lt;h4 id=&quot;test-your-code&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#test-your-code&quot; aria-label=&quot;Anchor link for: test-your-code&quot;&gt;#&lt;&#x2F;a&gt;
-Test your code&lt;&#x2F;h4&gt;
-&lt;p&gt;Always test your code before submitting for code review, even in a hurry. Not many
-people have time to do detailed code review, so it&#x27;s your main responsibility to
-make sure that it works and doesn&#x27;t make any problem.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;re-review-your-code&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#re-review-your-code&quot; aria-label=&quot;Anchor link for: re-review-your-code&quot;&gt;#&lt;&#x2F;a&gt;
-Re-review your code&lt;&#x2F;h4&gt;
-&lt;p&gt;Please always review your code before asking someone to review it. Suppose you have
-a PR that&#x27;s ready to be reviewed and it takes around 20 minutes to review,
-imagine if there are 2 people reviewing your code, it&#x27;ll take 40 minutes of man hour,
-best case is your code is approved, but what if it&#x27;s not, it&#x27;ll take more man hour right?&lt;&#x2F;p&gt;
-&lt;p&gt;What you can do is to review your code first, make sure it fulfills the requirements and
-have followed the team standard practice.&lt;&#x2F;p&gt;
 </content>
         
     </entry>

@@ -4,17 +4,127 @@
     <link href="https://blog.wavvel.com/tags/software-engineering/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-10-07T00:00:00+00:00</updated>
+    <updated>2023-10-08T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/software-engineering/atom.xml</id>
     <entry xml:lang="en">
-        <title>Unit Tests: The Point of Unit Tests</title>
+        <title>Unit Testing: Your first step in unit testing, what to expect</title>
+        <published>2023-10-08T00:00:00+00:00</published>
+        <updated>2023-10-08T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/</id>
+        
+        <content type="html">&lt;h1 id=&quot;set-your-mindset-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#set-your-mindset-first&quot; aria-label=&quot;Anchor link for: set-your-mindset-first&quot;&gt;#&lt;&#x2F;a&gt;
+Set your mindset first&lt;&#x2F;h1&gt;
+&lt;p&gt;I would like to remind you that you need to understand the motivation behind unit tests,
+why are you doing it? It&#x27;s important that you&#x27;re convinced because writing unit tests is an investment,
+you will spend time doing it and you want to make sure that you invest properly to get the yield that you want.
+If you&#x27;re convinced that it&#x27;s going to be worth it then read on.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;concept&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#concept&quot; aria-label=&quot;Anchor link for: concept&quot;&gt;#&lt;&#x2F;a&gt;
+Concept&lt;&#x2F;h1&gt;
+&lt;p&gt;Unit testing is a practice of the bigger testing component. In terms of isolation there are generally 2 types of testing:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unit testing, a testing practice that focuses on the function unit. Suppose there&#x27;s function &lt;code&gt;f&lt;&#x2F;code&gt; and it depends on &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt;,
+when unit testing &lt;code&gt;f&lt;&#x2F;code&gt; we will assume other dependencies &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; will behave correctly, this is done through &amp;quot;faking&amp;quot; &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior in
+an isolated unit testing environment.&lt;&#x2F;li&gt;
+&lt;li&gt;Functional testing, a testing practice that focuses on testing the end user features and flows to behave as expected, it does not fake &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior
+but rather will expect &lt;code&gt;f&lt;&#x2F;code&gt;, &lt;code&gt;g&lt;&#x2F;code&gt;, and &lt;code&gt;h&lt;&#x2F;code&gt; to work well together as a feature&#x2F;flow.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Unit testing is generally easier to implement and run faster because you&#x27;re testing your code in an isolated environment
+where you can fake external service dependencies (database, redis, HTTP API dependencies, etc).&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;first-expectation-and-setup&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#first-expectation-and-setup&quot; aria-label=&quot;Anchor link for: first-expectation-and-setup&quot;&gt;#&lt;&#x2F;a&gt;
+First Expectation and Setup&lt;&#x2F;h1&gt;
+&lt;p&gt;Just like programming, you&#x27;ll be slow at first time writing unit tests but eventually,
+you&#x27;ll get better at choosing which unit tests are worth investing in and able to do it faster hence your unit test investment will start paying dividends in terms of
+saving your &#x2F; team time. Unit test is programming language agnostic, you can apply the practice in all languages, so
+mastering unit test is a long-term investment, repeat the process over and over again and you’ll get better.&lt;&#x2F;p&gt;
+&lt;p&gt;Your first step is to find a test library that supports unit tests, some examples&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rust 👉 the testing component is &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;rust-by-example&#x2F;testing&#x2F;unit_testing.html&quot;&gt;baked into the language&lt;&#x2F;a&gt;, so you can just write unit tests right away without an external library.&lt;&#x2F;li&gt;
+&lt;li&gt;Javascript 👉 you could install &lt;a href=&quot;https:&#x2F;&#x2F;mochajs.org&quot;&gt;mocha&lt;&#x2F;a&gt; as the test runner and &lt;a href=&quot;https:&#x2F;&#x2F;www.chaijs.com&quot;&gt;chai&lt;&#x2F;a&gt; to set assertions&#x2F;expectations&lt;&#x2F;li&gt;
+&lt;li&gt;Swift 👉 there&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;www.swift.org&#x2F;server&#x2F;guides&#x2F;testing.html&quot;&gt;XCtest&lt;&#x2F;a&gt; bundled with the official Swift Package Manager.&lt;&#x2F;li&gt;
+&lt;li&gt;PHP 👉 the most popular one is &lt;a href=&quot;https:&#x2F;&#x2F;phpunit.de&quot;&gt;PHP Unit&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;common-components-in-unit-testing&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#common-components-in-unit-testing&quot; aria-label=&quot;Anchor link for: common-components-in-unit-testing&quot;&gt;#&lt;&#x2F;a&gt;
+Common Components in unit testing&lt;&#x2F;h1&gt;
+&lt;p&gt;Just mastering the common components will get you far in unit testing,
+most of them are quite basic and should cover most of your use cases in software engineering,
+expect that you&#x27;ll deal mostly with these components in your unit testing journey.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;test-doubles-fake-dependencies&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#test-doubles-fake-dependencies&quot; aria-label=&quot;Anchor link for: test-doubles-fake-dependencies&quot;&gt;#&lt;&#x2F;a&gt;
+Test Doubles &#x2F; Fake Dependencies&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;stub&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#stub&quot; aria-label=&quot;Anchor link for: stub&quot;&gt;#&lt;&#x2F;a&gt;
+Stub&lt;&#x2F;h4&gt;
+&lt;p&gt;A stub is a dependency replacement that has been pre-programmed with a set of expectations,
+they are intended to be used as test double. For a simple explanation, imagine that you have a method &lt;code&gt;calculateTax&lt;&#x2F;code&gt; that
+depends on some configuration in a database&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;calculateTax(TaxConfigQuery taxConfigQuery, double salary) {
+  Set&amp;lt;TaxConfig&amp;gt; configs = taxConfigQuery.fetchAll();
+
+  &amp;#x2F;&amp;#x2F; calculate tax based on configs and salary
+  &amp;#x2F;&amp;#x2F; ....
+
+  return tax;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In unit testing, we&#x27;ll focus on testing just the logic to calculate salary, this is done by simulating the surrounding environment,
+we would create an instance of pre-programmed &lt;code&gt;TaxConfigQuery&lt;&#x2F;code&gt; that will return predefined tax configs and inject it (pass as argument)
+to the &lt;code&gt;calculateTax&lt;&#x2F;code&gt; method.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;mock&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#mock&quot; aria-label=&quot;Anchor link for: mock&quot;&gt;#&lt;&#x2F;a&gt;
+Mock&lt;&#x2F;h4&gt;
+&lt;p&gt;Mock is a stricter version of stub, you can set more advanced expectations on mock objects. For example
+you could check how many times a method has been called or whether it&#x27;s been called with specific arguments.&lt;&#x2F;p&gt;
+&lt;p&gt;Based on my experience it&#x27;s useful when you have expectations that some critical functions should&#x2F;should not have
+been called for &lt;code&gt;n&lt;&#x2F;code&gt; times (could be 0, 1, and so on), such expectations are critical to be verified
+when testing idempotent operations or testing a logic with a retry mechanism.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;spy&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#spy&quot; aria-label=&quot;Anchor link for: spy&quot;&gt;#&lt;&#x2F;a&gt;
+Spy&lt;&#x2F;h4&gt;
+&lt;p&gt;Spy is a test double that acts like a wrapper&#x2F;proxy to the real instance, it&#x27;s typically used
+when we want to monitor or intercept a method call and then record something before calling the real method.
+I usually use them for logging and debugging purposes.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;integration-component&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#integration-component&quot; aria-label=&quot;Anchor link for: integration-component&quot;&gt;#&lt;&#x2F;a&gt;
+Integration Component&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;test-reports&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#test-reports&quot; aria-label=&quot;Anchor link for: test-reports&quot;&gt;#&lt;&#x2F;a&gt;
+Test reports&lt;&#x2F;h4&gt;
+&lt;p&gt;Test report is used to analyze and generate statistics on test results,
+you would need to install an external dependency because it&#x27;s usually a separate component of the test framework&#x2F;library. Most common usage of test reports:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Standard test results output, but rendered more aesthetically pleasing ✨&lt;&#x2F;li&gt;
+&lt;li&gt;Calculate how much % test coverage in your codebase&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;automated-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#automated-tests&quot; aria-label=&quot;Anchor link for: automated-tests&quot;&gt;#&lt;&#x2F;a&gt;
+Automated tests&lt;&#x2F;h4&gt;
+&lt;p&gt;Usually unit testing framework has a CLI command to run it,
+it&#x27;s a common  practice to  setup a CI pipeline to run unit tests on certain events,
+the most common ones:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run unit tests when there&#x27;s a pull request.&lt;&#x2F;li&gt;
+&lt;li&gt;Run unit tests when a pull request is merged into the master&#x2F;main&#x2F;testing&#x2F;production branch.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Unit Testing: The Point of Unit Tests</title>
         <published>2023-10-07T00:00:00+00:00</published>
         <updated>2023-10-07T00:00:00+00:00</updated>
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/the-point-of-unit-tests/" type="text/html"/>
-        <id>https://blog.wavvel.com/posts/software-engineering/the-point-of-unit-tests/</id>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/</id>
         
         <content type="html">&lt;p&gt;Most likely you&#x27;ve heard the term &lt;code&gt;unit tests&lt;&#x2F;code&gt; if you&#x27;re in software engineering or fields related to it.
 This post is intended as a short introduction to the practice, starting with what is it and what&#x27;s the point

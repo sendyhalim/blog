@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Sendy Halim">
+  <meta name="description" content="Sendy Halim&#39;s blog">
+  <title>
+    
+      Unit Testing: Your first step in unit testing, what to expect
+    
+  </title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/navigation.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/highlight-js.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/image.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/post.css" />
+</head>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80328765-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-80328765-1');
+  </script>
+
+
+
+  <body>
+    <div id="content">
+      <nav>
+  <a href="https://blog.wavvel.com">
+    <span class="arrow">←</span> Home
+  </a>
+</nav>
+
+
+
+<div class="post">
+  <h1 class="title">Unit Testing: Your first step in unit testing, what to expect</h1>
+
+  <div class="headline">
+    <div>
+      2023-10-08
+
+    </div>
+    <div>
+      <div class="tag-list-container">
+  
+  <span class="tag">
+    #software-engineering
+  </span>
+  
+  <span class="tag">
+    #best-practices
+  </span>
+  
+  <span class="tag">
+    #unit-testing
+  </span>
+  
+</div>
+
+    </div>
+  </div>
+
+  <div class="post-body">
+    <h1 id="set-your-mindset-first"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#set-your-mindset-first" aria-label="Anchor link for: set-your-mindset-first">#</a>
+Set your mindset first</h1>
+<p>I would like to remind you that you need to understand the motivation behind unit tests,
+why are you doing it? It's important that you're convinced because writing unit tests is an investment,
+you will spend time doing it and you want to make sure that you invest properly to get the yield that you want.
+If you're convinced that it's going to be worth it then read on.</p>
+<h1 id="concept"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#concept" aria-label="Anchor link for: concept">#</a>
+Concept</h1>
+<p>Unit testing is a practice of the bigger testing component. In terms of isolation there are generally 2 types of testing:</p>
+<ul>
+<li>Unit testing, a testing practice that focuses on the function unit. Suppose there's function <code>f</code> and it depends on <code>g</code> and <code>h</code>,
+when unit testing <code>f</code> we will assume other dependencies <code>g</code> and <code>h</code> will behave correctly, this is done through &quot;faking&quot; <code>g</code> and <code>h</code> behavior in
+an isolated unit testing environment.</li>
+<li>Functional testing, a testing practice that focuses on testing the end user features and flows to behave as expected, it does not fake <code>g</code> and <code>h</code> behavior
+but rather will expect <code>f</code>, <code>g</code>, and <code>h</code> to work well together as a feature/flow.</li>
+</ul>
+<p>Unit testing is generally easier to implement and run faster because you're testing your code in an isolated environment
+where you can fake external service dependencies (database, redis, HTTP API dependencies, etc).</p>
+<h1 id="first-expectation-and-setup"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#first-expectation-and-setup" aria-label="Anchor link for: first-expectation-and-setup">#</a>
+First Expectation and Setup</h1>
+<p>Just like programming, you'll be slow at first time writing unit tests but eventually,
+you'll get better at choosing which unit tests are worth investing in and able to do it faster hence your unit test investment will start paying dividends in terms of
+saving your / team time. Unit test is programming language agnostic, you can apply the practice in all languages, so
+mastering unit test is a long-term investment, repeat the process over and over again and you’ll get better.</p>
+<p>Your first step is to find a test library that supports unit tests, some examples</p>
+<ul>
+<li>Rust 👉 the testing component is <a href="https://doc.rust-lang.org/rust-by-example/testing/unit_testing.html">baked into the language</a>, so you can just write unit tests right away without an external library.</li>
+<li>Javascript 👉 you could install <a href="https://mochajs.org">mocha</a> as the test runner and <a href="https://www.chaijs.com">chai</a> to set assertions/expectations</li>
+<li>Swift 👉 there's <a href="https://www.swift.org/server/guides/testing.html">XCtest</a> bundled with the official Swift Package Manager.</li>
+<li>PHP 👉 the most popular one is <a href="https://phpunit.de">PHP Unit</a></li>
+</ul>
+<h1 id="common-components-in-unit-testing"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#common-components-in-unit-testing" aria-label="Anchor link for: common-components-in-unit-testing">#</a>
+Common Components in unit testing</h1>
+<p>Just mastering the common components will get you far in unit testing,
+most of them are quite basic and should cover most of your use cases in software engineering,
+expect that you'll deal mostly with these components in your unit testing journey.</p>
+<h3 id="test-doubles-fake-dependencies"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#test-doubles-fake-dependencies" aria-label="Anchor link for: test-doubles-fake-dependencies">#</a>
+Test Doubles / Fake Dependencies</h3>
+<h4 id="stub"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#stub" aria-label="Anchor link for: stub">#</a>
+Stub</h4>
+<p>A stub is a dependency replacement that has been pre-programmed with a set of expectations,
+they are intended to be used as test double. For a simple explanation, imagine that you have a method <code>calculateTax</code> that
+depends on some configuration in a database</p>
+<pre data-lang="java" class="language-java "><code class="language-java" data-lang="java">calculateTax(TaxConfigQuery taxConfigQuery, double salary) {
+  Set&lt;TaxConfig&gt; configs = taxConfigQuery.fetchAll();
+
+  &#x2F;&#x2F; calculate tax based on configs and salary
+  &#x2F;&#x2F; ....
+
+  return tax;
+}
+</code></pre>
+<p>In unit testing, we'll focus on testing just the logic to calculate salary, this is done by simulating the surrounding environment,
+we would create an instance of pre-programmed <code>TaxConfigQuery</code> that will return predefined tax configs and inject it (pass as argument)
+to the <code>calculateTax</code> method.</p>
+<h4 id="mock"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#mock" aria-label="Anchor link for: mock">#</a>
+Mock</h4>
+<p>Mock is a stricter version of stub, you can set more advanced expectations on mock objects. For example
+you could check how many times a method has been called or whether it's been called with specific arguments.</p>
+<p>Based on my experience it's useful when you have expectations that some critical functions should/should not have
+been called for <code>n</code> times (could be 0, 1, and so on), such expectations are critical to be verified
+when testing idempotent operations or testing a logic with a retry mechanism.</p>
+<h4 id="spy"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#spy" aria-label="Anchor link for: spy">#</a>
+Spy</h4>
+<p>Spy is a test double that acts like a wrapper/proxy to the real instance, it's typically used
+when we want to monitor or intercept a method call and then record something before calling the real method.
+I usually use them for logging and debugging purposes.</p>
+<h3 id="integration-component"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#integration-component" aria-label="Anchor link for: integration-component">#</a>
+Integration Component</h3>
+<h4 id="test-reports"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#test-reports" aria-label="Anchor link for: test-reports">#</a>
+Test reports</h4>
+<p>Test report is used to analyze and generate statistics on test results,
+you would need to install an external dependency because it's usually a separate component of the test framework/library. Most common usage of test reports:</p>
+<ul>
+<li>Standard test results output, but rendered more aesthetically pleasing ✨</li>
+<li>Calculate how much % test coverage in your codebase</li>
+</ul>
+<h4 id="automated-tests"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#automated-tests" aria-label="Anchor link for: automated-tests">#</a>
+Automated tests</h4>
+<p>Usually unit testing framework has a CLI command to run it,
+it's a common  practice to  setup a CI pipeline to run unit tests on certain events,
+the most common ones:</p>
+<ol>
+<li>Run unit tests when there's a pull request.</li>
+<li>Run unit tests when a pull request is merged into the master/main/testing/production branch.</li>
+</ol>
+
+  </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wavvel'; // Required - Replace '<example>' with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+    </div>
+
+    <footer id="footer">
+  <p class="small">
+    © Copyright 2023 Sendy Halim
+  </p>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://blog.wavvel.com/assets/js/highlight.js" type="text/javascript"></script>
+<script type="text/javascript">
+  hljs.initHighlightingOnLoad();
+</script>
+
+  </body>
+</html>

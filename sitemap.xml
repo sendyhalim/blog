@@ -61,12 +61,19 @@
         <lastmod>2023-09-19</lastmod>
     </url>
     <url>
-        <loc>https://blog.wavvel.com/posts/software-engineering/the-point-of-unit-tests/</loc>
+        <loc>https://blog.wavvel.com/posts/software-engineering/tools-that-i-use-for-software-engineering/</loc>
+        <lastmod>2023-08-24T00:00:00+07:00</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.wavvel.com/posts/software-engineering/unit-testing/</loc>
+    </url>
+    <url>
+        <loc>https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/</loc>
         <lastmod>2023-10-07</lastmod>
     </url>
     <url>
-        <loc>https://blog.wavvel.com/posts/software-engineering/tools-that-i-use-for-software-engineering/</loc>
-        <lastmod>2023-08-24T00:00:00+07:00</lastmod>
+        <loc>https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/</loc>
+        <lastmod>2023-10-08</lastmod>
     </url>
     <url>
         <loc>https://blog.wavvel.com/posts/software-engineering/why-documentation-matters/</loc>
@@ -263,7 +270,7 @@
         <loc>https://blog.wavvel.com/tags/uiview/</loc>
     </url>
     <url>
-        <loc>https://blog.wavvel.com/tags/unit-test/</loc>
+        <loc>https://blog.wavvel.com/tags/unit-testing/</loc>
     </url>
     <url>
         <loc>https://blog.wavvel.com/tags/vim/</loc>
