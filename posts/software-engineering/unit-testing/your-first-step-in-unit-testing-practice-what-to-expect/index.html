@@ -82,7 +82,7 @@ If you're convinced that it's going to be worth it then read on.</p>
 Concept</h1>
 <p>Unit testing is a practice of the bigger testing component. In terms of isolation there are generally 2 types of testing:</p>
 <ul>
-<li>Unit testing, a testing practice that focuses on the function unit. Suppose there's function <code>f</code> and it depends on <code>g</code> and <code>h</code>,
+<li>Unit testing, a testing practice that focuses only on the function logic, the other dependencies are simulated. Suppose there's a function <code>f</code> and it depends on <code>g</code> and <code>h</code>,
 when unit testing <code>f</code> we will assume other dependencies <code>g</code> and <code>h</code> will behave correctly, this is done through &quot;faking&quot; <code>g</code> and <code>h</code> behavior in
 an isolated unit testing environment.</li>
 <li>Functional testing, a testing practice that focuses on testing the end user features and flows to behave as expected, it does not fake <code>g</code> and <code>h</code> behavior
@@ -151,8 +151,9 @@ Integration Component</h3>
 <h4 id="test-reports"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#test-reports" aria-label="Anchor link for: test-reports">#</a>
 Test reports</h4>
-<p>Test report is used to analyze and generate statistics on test results,
-you would need to install an external dependency because it's usually a separate component of the test framework/library. Most common usage of test reports:</p>
+<p>Test report generate test results statistics that you can analyze,
+you would need to install an external dependency because it's usually a separate component of the test framework/library.
+Most common usage of test reports:</p>
 <ul>
 <li>Standard test results output, but rendered more aesthetically pleasing ✨</li>
 <li>Calculate how much % test coverage in your codebase</li>

@@ -28,7 +28,7 @@ If you&#x27;re convinced that it&#x27;s going to be worth it then read on.&lt;&#
 Concept&lt;&#x2F;h1&gt;
 &lt;p&gt;Unit testing is a practice of the bigger testing component. In terms of isolation there are generally 2 types of testing:&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;Unit testing, a testing practice that focuses on the function unit. Suppose there&#x27;s function &lt;code&gt;f&lt;&#x2F;code&gt; and it depends on &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt;,
+&lt;li&gt;Unit testing, a testing practice that focuses only on the function logic, the other dependencies are simulated. Suppose there&#x27;s a function &lt;code&gt;f&lt;&#x2F;code&gt; and it depends on &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt;,
 when unit testing &lt;code&gt;f&lt;&#x2F;code&gt; we will assume other dependencies &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; will behave correctly, this is done through &amp;quot;faking&amp;quot; &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior in
 an isolated unit testing environment.&lt;&#x2F;li&gt;
 &lt;li&gt;Functional testing, a testing practice that focuses on testing the end user features and flows to behave as expected, it does not fake &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior
@@ -97,8 +97,9 @@ Integration Component&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;test-reports&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#test-reports&quot; aria-label=&quot;Anchor link for: test-reports&quot;&gt;#&lt;&#x2F;a&gt;
 Test reports&lt;&#x2F;h4&gt;
-&lt;p&gt;Test report is used to analyze and generate statistics on test results,
-you would need to install an external dependency because it&#x27;s usually a separate component of the test framework&#x2F;library. Most common usage of test reports:&lt;&#x2F;p&gt;
+&lt;p&gt;Test report generate test results statistics that you can analyze,
+you would need to install an external dependency because it&#x27;s usually a separate component of the test framework&#x2F;library.
+Most common usage of test reports:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Standard test results output, but rendered more aesthetically pleasing ✨&lt;&#x2F;li&gt;
 &lt;li&gt;Calculate how much % test coverage in your codebase&lt;&#x2F;li&gt;
