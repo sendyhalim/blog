@@ -1,10 +1,10 @@
 +++
-title = "Unit Tests: The Point of Unit Tests"
+title = "Unit Testing: The Point of Unit Tests"
 date = 2023-10-07
 description = "We often heard of writing unit tests as part of the best practices, doing unit tests will save your time and helps you to write modular code"
 
 [taxonomies]
-tags = ["software-engineering", "unit-test", "best-practices"]
+tags = ["software-engineering", "best-practices", "unit-testing"]
 +++
 
 Most likely you've heard the term `unit tests` if you're in software engineering or fields related to it.
