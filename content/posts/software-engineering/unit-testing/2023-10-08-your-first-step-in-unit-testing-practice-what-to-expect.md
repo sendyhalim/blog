@@ -16,7 +16,7 @@ If you're convinced that it's going to be worth it then read on.
 
 # Concept
 Unit testing is a practice of the bigger testing component. In terms of isolation there are generally 2 types of testing:
-* Unit testing, a testing practice that focuses on the function unit. Suppose there's function `f` and it depends on `g` and `h`,
+* Unit testing, a testing practice that focuses only on the function logic, the other dependencies are simulated. Suppose there's a function `f` and it depends on `g` and `h`,
 when unit testing `f` we will assume other dependencies `g` and `h` will behave correctly, this is done through "faking" `g` and `h` behavior in
 an isolated unit testing environment.
 * Functional testing, a testing practice that focuses on testing the end user features and flows to behave as expected, it does not fake `g` and `h` behavior
@@ -80,8 +80,9 @@ I usually use them for logging and debugging purposes.
 
 ### Integration Component
 #### Test reports
-Test report is used to analyze and generate statistics on test results,
-you would need to install an external dependency because it's usually a separate component of the test framework/library. Most common usage of test reports:
+Test report generate test results statistics that you can analyze,
+you would need to install an external dependency because it's usually a separate component of the test framework/library.
+Most common usage of test reports:
 * Standard test results output, but rendered more aesthetically pleasing ✨
 * Calculate how much % test coverage in your codebase
 
