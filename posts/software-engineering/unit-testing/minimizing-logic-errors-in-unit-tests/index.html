@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Sendy Halim">
+  <meta name="description" content="Sendy Halim&#39;s blog">
+  <title>
+    
+      Unit Testing: Minimizing Logic Errors In Unit Tests
+    
+  </title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/navigation.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/highlight-js.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/image.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/post.css" />
+</head>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80328765-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-80328765-1');
+  </script>
+
+
+
+  <body>
+    <div id="content">
+      <nav>
+  <a href="https://blog.wavvel.com">
+    <span class="arrow">←</span> Home
+  </a>
+</nav>
+
+
+
+<div class="post">
+  <h1 class="title">Unit Testing: Minimizing Logic Errors In Unit Tests</h1>
+
+  <div class="headline">
+    <div>
+      2023-10-14
+
+    </div>
+    <div>
+      <div class="tag-list-container">
+  
+  <span class="tag">
+    #software-engineering
+  </span>
+  
+  <span class="tag">
+    #best-practices
+  </span>
+  
+  <span class="tag">
+    #unit-testing
+  </span>
+  
+</div>
+
+    </div>
+  </div>
+
+  <div class="post-body">
+    <h1 id="buggy-unit-tests"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#buggy-unit-tests" aria-label="Anchor link for: buggy-unit-tests">#</a>
+Buggy unit tests</h1>
+<p>Unit tests can be buggy, similar to how we write business logic code, there could be logic error in the unit tests.
+Logic error is very hard to spot because it comes mostly from different expectations in business logic,
+usually we find logic error by testing the feature and match the output with the feature requirements,
+the other times it's found when you get bug report from QA team or from end users.</p>
+<p>A buggy unit test is just on different layer, it's not directly visible in terms of feature requirements,
+the end users and &quot;QA&quot; for unit tests are yourself, your teammates, and your engineering lead/manager.</p>
+<p>Most of the logic errors in unit tests are categorized into 2 components in terms of where do we spot it:</p>
+<ol>
+<li>In unit test results. It is easy to detect because the unit tests would be red (not passing), typically it'll look like failing unit tests, you can just fix it rightaway and rerun the test cases.</li>
+<li>During end to end testing. Logic errors in unit tests are typically similar to a situation where you do not write unit tests thus if there's a bug in one of the function
+it would be detected at end to end testing, it is more costly to retest end-to-end compared to reruning unit test.</li>
+</ol>
+<h1 id="how-to-prevent-it"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#how-to-prevent-it" aria-label="Anchor link for: how-to-prevent-it">#</a>
+How to prevent it</h1>
+<p>There's no solution that will prevent logic errors by 100%, but I can recommend 2 things to incorporate in your unit testing workflow so you can minimize it:</p>
+<ol>
+<li>
+<p>Similar when doing a feature development task, in the task you need to understand the requirements first and start thinking from user's perspective and how
+would the feature will be used. In unit tests you're testing a function (smaller unit) that's part of the feature, so you could list down the function requirements (what
+do you expect from the function), write down the positive cases, negative cases, and possible edge cases, then review and write the unit tests based on the cases.
+This mindset will help you write better unit tests and complete your function implementation faster.</p>
+</li>
+<li>
+<p>I highly recommend to deliberately make your newly written unit tests fail first, this will ensure that your unit tests are asserting properly. I had experience where
+the unit tests are green but it's not running assertion properly, I was lucky that I found out about it after testing the end to end feature manually.
+I did like 3-4 times of end to end testing, probably I would only need to do 1-2 end to end testing if the unit tests assertions were not buggy.</p>
+</li>
+</ol>
+
+  </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wavvel'; // Required - Replace '<example>' with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+    </div>
+
+    <footer id="footer">
+  <p class="small">
+    © Copyright 2023 Sendy Halim
+  </p>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://blog.wavvel.com/assets/js/highlight.js" type="text/javascript"></script>
+<script type="text/javascript">
+  hljs.initHighlightingOnLoad();
+</script>
+
+  </body>
+</html>

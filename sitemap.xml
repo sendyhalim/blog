@@ -68,6 +68,10 @@
         <loc>https://blog.wavvel.com/posts/software-engineering/unit-testing/</loc>
     </url>
     <url>
+        <loc>https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/</loc>
+        <lastmod>2023-10-14</lastmod>
+    </url>
+    <url>
         <loc>https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/</loc>
         <lastmod>2023-10-07</lastmod>
     </url>

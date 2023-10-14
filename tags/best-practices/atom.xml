@@ -4,8 +4,53 @@
     <link href="https://blog.wavvel.com/tags/best-practices/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-10-08T00:00:00+00:00</updated>
+    <updated>2023-10-14T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/best-practices/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Unit Testing: Minimizing Logic Errors In Unit Tests</title>
+        <published>2023-10-14T00:00:00+00:00</published>
+        <updated>2023-10-14T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/</id>
+        
+        <content type="html">&lt;h1 id=&quot;buggy-unit-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#buggy-unit-tests&quot; aria-label=&quot;Anchor link for: buggy-unit-tests&quot;&gt;#&lt;&#x2F;a&gt;
+Buggy unit tests&lt;&#x2F;h1&gt;
+&lt;p&gt;Unit tests can be buggy, similar to how we write business logic code, there could be logic error in the unit tests.
+Logic error is very hard to spot because it comes mostly from different expectations in business logic,
+usually we find logic error by testing the feature and match the output with the feature requirements,
+the other times it&#x27;s found when you get bug report from QA team or from end users.&lt;&#x2F;p&gt;
+&lt;p&gt;A buggy unit test is just on different layer, it&#x27;s not directly visible in terms of feature requirements,
+the end users and &amp;quot;QA&amp;quot; for unit tests are yourself, your teammates, and your engineering lead&#x2F;manager.&lt;&#x2F;p&gt;
+&lt;p&gt;Most of the logic errors in unit tests are categorized into 2 components in terms of where do we spot it:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;In unit test results. It is easy to detect because the unit tests would be red (not passing), typically it&#x27;ll look like failing unit tests, you can just fix it rightaway and rerun the test cases.&lt;&#x2F;li&gt;
+&lt;li&gt;During end to end testing. Logic errors in unit tests are typically similar to a situation where you do not write unit tests thus if there&#x27;s a bug in one of the function
+it would be detected at end to end testing, it is more costly to retest end-to-end compared to reruning unit test.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h1 id=&quot;how-to-prevent-it&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-to-prevent-it&quot; aria-label=&quot;Anchor link for: how-to-prevent-it&quot;&gt;#&lt;&#x2F;a&gt;
+How to prevent it&lt;&#x2F;h1&gt;
+&lt;p&gt;There&#x27;s no solution that will prevent logic errors by 100%, but I can recommend 2 things to incorporate in your unit testing workflow so you can minimize it:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Similar when doing a feature development task, in the task you need to understand the requirements first and start thinking from user&#x27;s perspective and how
+would the feature will be used. In unit tests you&#x27;re testing a function (smaller unit) that&#x27;s part of the feature, so you could list down the function requirements (what
+do you expect from the function), write down the positive cases, negative cases, and possible edge cases, then review and write the unit tests based on the cases.
+This mindset will help you write better unit tests and complete your function implementation faster.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I highly recommend to deliberately make your newly written unit tests fail first, this will ensure that your unit tests are asserting properly. I had experience where
+the unit tests are green but it&#x27;s not running assertion properly, I was lucky that I found out about it after testing the end to end feature manually.
+I did like 3-4 times of end to end testing, probably I would only need to do 1-2 end to end testing if the unit tests assertions were not buggy.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Unit Testing: Your first step in unit testing, what to expect</title>
         <published>2023-10-08T00:00:00+00:00</published>
@@ -128,22 +173,22 @@ the most common ones:&lt;&#x2F;p&gt;
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/</id>
         
         <content type="html">&lt;p&gt;Most likely you&#x27;ve heard the term &lt;code&gt;unit tests&lt;&#x2F;code&gt; if you&#x27;re in software engineering or fields related to it.
-This post is intended as a short introduction to the practice, starting with what is it and what&#x27;s the point
+This post is a short introduction to the unit testing practice, starting with what is it and what&#x27;s the point
 of doing it from my view, it&#x27;s not meant to be super technical.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;what-is-unit-testing&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-unit-testing&quot; aria-label=&quot;Anchor link for: what-is-unit-testing&quot;&gt;#&lt;&#x2F;a&gt;
 What is Unit Testing&lt;&#x2F;h1&gt;
-&lt;p&gt;Just like the term, unit testing is basically &lt;em&gt;writing code&lt;&#x2F;em&gt; to test &lt;em&gt;your code&lt;&#x2F;em&gt; as a &amp;quot;unit&amp;quot;,
-it focuses only just the unit logic and &lt;em&gt;mocks&lt;&#x2F;em&gt; the I&#x2F;O operations and the side effects.&lt;&#x2F;p&gt;
-&lt;p&gt;For simplicity, suppose you have a function &lt;code&gt;calculateInvoiceAmount(order)&lt;&#x2F;code&gt;, it will calculate the invoice amount based on
-the given order and delivery fee data from a database. The code would look something along the lines of this&lt;&#x2F;p&gt;
+&lt;p&gt;Like the term itself, unit testing is a practice of &lt;em&gt;writing code&lt;&#x2F;em&gt; to test &lt;em&gt;your code&lt;&#x2F;em&gt; as a &amp;quot;unit&amp;quot;,
+it focuses on the unit logic and &lt;em&gt;mocks&lt;&#x2F;em&gt; the I&#x2F;O operations and the side effects.&lt;&#x2F;p&gt;
+&lt;p&gt;For simplicity, suppose you have a function &lt;code&gt;calculateInvoiceAmount(order)&lt;&#x2F;code&gt; that calculates the invoice amount based on
+the given order and delivery fee data from a database. The code would look something like this&lt;&#x2F;p&gt;
 &lt;pre&gt;&lt;code&gt;double calculateInvoiceAmount(Order order) {
   deliveryFee = this.fetchDeliveryFeeFromDb();
 
   return order amount + delivery fee;
 }
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;In unit testing, we&#x27;ll mock (fake) &lt;code&gt;fetchDeliveryFeeFromDb&lt;&#x2F;code&gt; so it returns  predefined data because we just want to test the calculation logic and trust
+&lt;p&gt;In unit testing, we&#x27;ll mock (fake) &lt;code&gt;fetchDeliveryFeeFromDb&lt;&#x2F;code&gt; so it returns predefined data because we want to test the calculation logic and trust
 the DB that it will always be reliable, this way your unit tests only focus on the invoice amount calculation logic &lt;code&gt;order amount + delivery fee&lt;&#x2F;code&gt;.
 Focusing on the logic helps us to simplify unit testing because your unit tests do not depend on the database.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;what-s-the-point-of-unit-tests-and-why-it-matters&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;

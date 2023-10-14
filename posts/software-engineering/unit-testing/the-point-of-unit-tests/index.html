@@ -71,22 +71,22 @@
 
   <div class="post-body">
     <p>Most likely you've heard the term <code>unit tests</code> if you're in software engineering or fields related to it.
-This post is intended as a short introduction to the practice, starting with what is it and what's the point
+This post is a short introduction to the unit testing practice, starting with what is it and what's the point
 of doing it from my view, it's not meant to be super technical.</p>
 <h1 id="what-is-unit-testing"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#what-is-unit-testing" aria-label="Anchor link for: what-is-unit-testing">#</a>
 What is Unit Testing</h1>
-<p>Just like the term, unit testing is basically <em>writing code</em> to test <em>your code</em> as a &quot;unit&quot;,
-it focuses only just the unit logic and <em>mocks</em> the I/O operations and the side effects.</p>
-<p>For simplicity, suppose you have a function <code>calculateInvoiceAmount(order)</code>, it will calculate the invoice amount based on
-the given order and delivery fee data from a database. The code would look something along the lines of this</p>
+<p>Like the term itself, unit testing is a practice of <em>writing code</em> to test <em>your code</em> as a &quot;unit&quot;,
+it focuses on the unit logic and <em>mocks</em> the I/O operations and the side effects.</p>
+<p>For simplicity, suppose you have a function <code>calculateInvoiceAmount(order)</code> that calculates the invoice amount based on
+the given order and delivery fee data from a database. The code would look something like this</p>
 <pre><code>double calculateInvoiceAmount(Order order) {
   deliveryFee = this.fetchDeliveryFeeFromDb();
 
   return order amount + delivery fee;
 }
 </code></pre>
-<p>In unit testing, we'll mock (fake) <code>fetchDeliveryFeeFromDb</code> so it returns  predefined data because we just want to test the calculation logic and trust
+<p>In unit testing, we'll mock (fake) <code>fetchDeliveryFeeFromDb</code> so it returns predefined data because we want to test the calculation logic and trust
 the DB that it will always be reliable, this way your unit tests only focus on the invoice amount calculation logic <code>order amount + delivery fee</code>.
 Focusing on the logic helps us to simplify unit testing because your unit tests do not depend on the database.</p>
 <h1 id="what-s-the-point-of-unit-tests-and-why-it-matters"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
