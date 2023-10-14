@@ -7,6 +7,7 @@ deploy:
 	git checkout -b gh-pages origin/gh-pages
 	cp -r public/* .
 	rm -rf public/
+	rm -rf extra-functionalities/
 	git add .
 	git commit -m "Redeploy blog"
 	git push origin gh-pages
