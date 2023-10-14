@@ -8,16 +8,16 @@ tags = ["software-engineering", "best-practices", "unit-testing"]
 +++
 
 Most likely you've heard the term `unit tests` if you're in software engineering or fields related to it.
-This post is intended as a short introduction to the practice, starting with what is it and what's the point
+This post is a short introduction to the unit testing practice, starting with what is it and what's the point
 of doing it from my view, it's not meant to be super technical.
 
 
 # What is Unit Testing
-Just like the term, unit testing is basically _writing code_ to test _your code_ as a "unit",
-it focuses only just the unit logic and _mocks_ the I/O operations and the side effects.
+Like the term itself, unit testing is a practice of _writing code_ to test _your code_ as a "unit",
+it focuses on the unit logic and _mocks_ the I/O operations and the side effects.
 
-For simplicity, suppose you have a function `calculateInvoiceAmount(order)`, it will calculate the invoice amount based on
-the given order and delivery fee data from a database. The code would look something along the lines of this
+For simplicity, suppose you have a function `calculateInvoiceAmount(order)` that calculates the invoice amount based on
+the given order and delivery fee data from a database. The code would look something like this
 ```
 double calculateInvoiceAmount(Order order) {
   deliveryFee = this.fetchDeliveryFeeFromDb();
@@ -26,7 +26,7 @@ double calculateInvoiceAmount(Order order) {
 }
 ```
 
-In unit testing, we'll mock (fake) `fetchDeliveryFeeFromDb` so it returns  predefined data because we just want to test the calculation logic and trust
+In unit testing, we'll mock (fake) `fetchDeliveryFeeFromDb` so it returns predefined data because we want to test the calculation logic and trust
 the DB that it will always be reliable, this way your unit tests only focus on the invoice amount calculation logic `order amount + delivery fee`.
 Focusing on the logic helps us to simplify unit testing because your unit tests do not depend on the database.
 
