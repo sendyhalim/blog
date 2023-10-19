@@ -4,8 +4,79 @@
     <link href="https://blog.wavvel.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-10-14T00:00:00+00:00</updated>
+    <updated>2023-10-19T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Unit Testing: Prioritizing Unit Test Cases</title>
+        <published>2023-10-19T00:00:00+00:00</published>
+        <updated>2023-10-19T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/</id>
+        
+        <content type="html">&lt;h1 id=&quot;writing-unit-tests-takes-times&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#writing-unit-tests-takes-times&quot; aria-label=&quot;Anchor link for: writing-unit-tests-takes-times&quot;&gt;#&lt;&#x2F;a&gt;
+Writing unit tests takes times&lt;&#x2F;h1&gt;
+&lt;p&gt;Writing unit tests take time, achieving 100% unit test coverage
+sometimes we have a very limited time thus it’s usually worth it to prioritize the cases that the unit test will cover,
+I recommend to implement the 80&#x2F;20 rules (Pareto principle) in prioritizing unit tests.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;unit-test-coverage-and-bug-free-code&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#unit-test-coverage-and-bug-free-code&quot; aria-label=&quot;Anchor link for: unit-test-coverage-and-bug-free-code&quot;&gt;#&lt;&#x2F;a&gt;
+Unit test coverage and bug-free code&lt;&#x2F;h1&gt;
+&lt;p&gt;Unit test coverage measures how much % of the codebase that your unit tests have covered.
+Achieving 100% unit test coverage does not guarantee a bug-free code and requires tremendous effort to maintain especially when the codebase is evolving over time.
+I do not recommend putting &lt;em&gt;too much effort&lt;&#x2F;em&gt; into achieving 100% unit test coverage, instead, it&#x27;s better to spend
+your time on other test cases that are more worthy of investing or spend time on other low-hanging fruit engineering work like code reviews, feature
+brainstorming, you could always consult with your supervisor if you&#x27;re unsure what to do next.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;high-priority-unit-test-cases&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#high-priority-unit-test-cases&quot; aria-label=&quot;Anchor link for: high-priority-unit-test-cases&quot;&gt;#&lt;&#x2F;a&gt;
+High-priority unit test cases&lt;&#x2F;h1&gt;
+&lt;p&gt;In contrast to trying to achieve and maintain perfect unit test coverage, it&#x27;s better to prioritize unit test cases that are more worth investing in:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Positive cases are mandatory to invest, prioritize this first because positive cases will be part of the main feature requirements.&lt;&#x2F;li&gt;
+&lt;li&gt;Negative cases, there are 2 types of negative cases.
+&lt;ul&gt;
+&lt;li&gt;Negative cases that are more likely to happen, this one should be prioritized.&lt;&#x2F;li&gt;
+&lt;li&gt;Negative cases that are less likely to happen, we should divide it first in terms of impact.
+&lt;ul&gt;
+&lt;li&gt;If it happens and the negative impact is big then u need to cover it first. For example, it&#x27;s a must to check the prevention of duplicate bank transfers.&lt;&#x2F;li&gt;
+&lt;li&gt;If it happens and has low impact and you don’t have the time to cover it then this should have lower priority than other test cases.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;unit-test-cases-prioritization-examples&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#unit-test-cases-prioritization-examples&quot; aria-label=&quot;Anchor link for: unit-test-cases-prioritization-examples&quot;&gt;#&lt;&#x2F;a&gt;
+Unit test cases prioritization examples&lt;&#x2F;h1&gt;
+&lt;p&gt;We&#x27;re going to use oversimplified requirements as an example. Suppose that you&#x27;re working on a task
+to write a tax calculation function, given a salary, it will calculate the tax with rules:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;If salary is below than 10k then use tax rate 15%.&lt;&#x2F;li&gt;
+&lt;li&gt;If salary is within 10k-20k (&lt;code&gt;10k &amp;lt;= salary &amp;lt; 20k&lt;&#x2F;code&gt;) then use tax rate 20%.&lt;&#x2F;li&gt;
+&lt;li&gt;Else use tax rate 30%.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The easiest implementation is to cover negative cases when given a negative salary, and then continue to follow the requirements.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;Double calculateTax(Double salary) {
+  if (salary &amp;lt; 0) {
+    &amp;#x2F;&amp;#x2F; Throw validation error
+  } else if (salary &amp;lt; 10k) {
+    return salary * 0.15;
+  } else if (salary &amp;lt; 20k) {
+    return salary * 0.2;
+  } else {
+    return salary * 0.3;
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The negative case should have unit tests as well in an ideal situation, but suppose that you&#x27;re in a very tight deadline,
+what I recommend is to cover the main requirements first then you could cover the unit test for the &lt;code&gt;salary &amp;lt; 0&lt;&#x2F;code&gt; branching because
+intuitively it&#x27;s unlikely the end users would input a negative salary and if they do so accidentally they would notice it and can re-input the correct salary.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Unit Testing: Minimizing Logic Errors In Unit Tests</title>
         <published>2023-10-14T00:00:00+00:00</published>
