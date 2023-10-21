@@ -10,18 +10,19 @@ tags = ["software-engineering", "best-practices", "unit-testing"]
 
 # Motivation
 It's common for a function to have many positive and negative cases,
-which means it demands more testing code. Testing code can grow large until it's hard to read and navigate your unit test codebase.
-Organizing unit tests will help you to read and navigate through the codebase,
+which means it demands more testing code.
+Testing code will grow large, at some point it will be challenging to navigate and read the testing codebase.
+Organizing unit tests will help you to maintain the testing code,
 it also lowers the mental effort maintaining the codebase, this is true
 not only for unit tests but also applies generally.
 
 These are the common goals that you can use to organize your unit tests:
-1. Visibility. Visibility means it's easy to search and navigate through the test files.
+1. Visibility. Visibility means it's easy to search and navigate through the testing files.
 2. Readability. Readability focuses on the testing file content and structure.
 
 
 # Visibility: Directory and File path structure
-Some modern programming languages have conventions on organizing test directories and files, you just need to follow the conventions.
+Some modern programming languages have conventions on organizing test directories and files, following the standard conventions should be the best thing to do.
 * Go has a convention to put test code in a different file under [the same source code directory](https://go.dev/doc/tutorial/add-a-test) e.g. `foo.go` will have test file `foo_test.go`
 * Rust has a convention to put the tests together in the file [source code](https://doc.rust-lang.org/book/ch11-03-test-organization.html#:~:text=You'll%20put%20unit%20tests,code%20that%20they're%20testing.)
 
