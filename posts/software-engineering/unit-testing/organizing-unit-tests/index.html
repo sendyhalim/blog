@@ -70,9 +70,9 @@
   </div>
 
   <div class="post-body">
-    <h1 id="motivation"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+    <h3 id="motivation"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#motivation" aria-label="Anchor link for: motivation">#</a>
-Motivation</h1>
+Motivation</h3>
 <p>It's common for a function to have many positive and negative cases,
 which means it demands more testing code.
 Testing code will grow large, at some point it will be challenging to navigate and read the testing codebase.
@@ -84,9 +84,9 @@ not only for unit tests but also applies generally.</p>
 <li>Visibility. Visibility means it's easy to search and navigate through the testing files.</li>
 <li>Readability. Readability focuses on the testing file content and structure.</li>
 </ol>
-<h1 id="visibility-directory-and-file-path-structure"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<h3 id="visibility-directory-and-file-path-structure"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#visibility-directory-and-file-path-structure" aria-label="Anchor link for: visibility-directory-and-file-path-structure">#</a>
-Visibility: Directory and File path structure</h1>
+Visibility: Directory and file path structure</h3>
 <p>Some modern programming languages have conventions on organizing test directories and files, following the standard conventions should be the best thing to do.</p>
 <ul>
 <li>Go has a convention to put test code in a different file under <a href="https://go.dev/doc/tutorial/add-a-test">the same source code directory</a> e.g. <code>foo.go</code> will have test file <code>foo_test.go</code></li>
@@ -103,9 +103,56 @@ this is a convention that I follow because it's easier to search and keep the ma
   ▾ finance&#x2F;
       tax-calculator.spec.js
 </code></pre>
-<h1 id="readability-splitting-large-testing-code-file"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<h3 id="readability-testing-code-file-structure"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#readability-testing-code-file-structure" aria-label="Anchor link for: readability-testing-code-file-structure">#</a>
+Readability: Testing code file structure</h3>
+<p>Testing code file structure is meant to ease navigation within the testing codebase.
+A straightforward approach that I take is to represent 1 module/class with 1 testing code file.
+Within the file I group test cases per module function/class method, the grouping is done based on the test
+framework that you use. Grouping test cases per module function will help you to extract out
+the test cases for that specific function, here are the examples in JS &amp; Java</p>
+<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">&#x2F;&#x2F; file: test&#x2F;finance&#x2F;tax-calculator.spec.js
+&#x2F;&#x2F; The example uses mocha as the most popular test framework in nodejs.
+&#x2F;&#x2F; This test file contains test cases under tax-calculator module,
+&#x2F;&#x2F; each function will have test cases grouped together within a describe block.
+describe(&#x27;&#x2F;finance&#x2F;tax-calculator&#x27;, () =&gt; {
+  describe(&#x27;.calculateTaxForExpat()&#x27;, () =&gt; {
+    context(&#x27;when given 100k salary&#x27;, ...);
+    context(&#x27;when given 200k salary&#x27;, ...);
+  });
+
+  describe(&#x27;.calculateTaxForCitizen()&#x27;, () =&gt; {
+    ...
+  });
+
+  describe(&#x27;.calculateTaxForSmallBusiness()&#x27;, () =&gt; {
+    ...
+  });
+});
+</code></pre>
+<pre data-lang="java" class="language-java "><code class="language-java" data-lang="java">&#x2F;&#x2F; This is the Java equivalent of the JS example above
+&#x2F;&#x2F; file: TaxCalculatorSpec.java
+class TaxCalculatorSpec {
+  &#x2F;&#x2F; In Java we group test cases by leveraging nested classes,
+  &#x2F;&#x2F; CalculateTaxForExpat class will have test cases
+  &#x2F;&#x2F; for TaxCalculator::calculateTaxForExpat() method
+  class CalculateTaxForExpat {
+    ..
+  }
+
+  class CalculateTaxForCitizen {
+    ..
+  }
+
+  class CalculateTaxForSmallBusiness {
+    ..
+  }
+}
+
+</code></pre>
+<h3 id="readability-splitting-large-testing-code-file"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#readability-splitting-large-testing-code-file" aria-label="Anchor link for: readability-splitting-large-testing-code-file">#</a>
-Readability: Splitting large testing code file</h1>
+Readability: Splitting large testing code file</h3>
 <p>Maintaining a large testing file is challenging, it's like maintaining a code file that has thousands of lines of code,</p>
 <p>There are 3 test file components that can be separated quite easily:</p>
 <ul>

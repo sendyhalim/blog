@@ -16,9 +16,9 @@
         <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/</id>
         
-        <content type="html">&lt;h1 id=&quot;motivation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h3 id=&quot;motivation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#motivation&quot; aria-label=&quot;Anchor link for: motivation&quot;&gt;#&lt;&#x2F;a&gt;
-Motivation&lt;&#x2F;h1&gt;
+Motivation&lt;&#x2F;h3&gt;
 &lt;p&gt;It&#x27;s common for a function to have many positive and negative cases,
 which means it demands more testing code.
 Testing code will grow large, at some point it will be challenging to navigate and read the testing codebase.
@@ -30,9 +30,9 @@ not only for unit tests but also applies generally.&lt;&#x2F;p&gt;
 &lt;li&gt;Visibility. Visibility means it&#x27;s easy to search and navigate through the testing files.&lt;&#x2F;li&gt;
 &lt;li&gt;Readability. Readability focuses on the testing file content and structure.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;h1 id=&quot;visibility-directory-and-file-path-structure&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;h3 id=&quot;visibility-directory-and-file-path-structure&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#visibility-directory-and-file-path-structure&quot; aria-label=&quot;Anchor link for: visibility-directory-and-file-path-structure&quot;&gt;#&lt;&#x2F;a&gt;
-Visibility: Directory and File path structure&lt;&#x2F;h1&gt;
+Visibility: Directory and file path structure&lt;&#x2F;h3&gt;
 &lt;p&gt;Some modern programming languages have conventions on organizing test directories and files, following the standard conventions should be the best thing to do.&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Go has a convention to put test code in a different file under &lt;a href=&quot;https:&#x2F;&#x2F;go.dev&#x2F;doc&#x2F;tutorial&#x2F;add-a-test&quot;&gt;the same source code directory&lt;&#x2F;a&gt; e.g. &lt;code&gt;foo.go&lt;&#x2F;code&gt; will have test file &lt;code&gt;foo_test.go&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
@@ -49,9 +49,56 @@ this is a convention that I follow because it&#x27;s easier to search and keep t
   ▾ finance&amp;#x2F;
       tax-calculator.spec.js
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h1 id=&quot;readability-splitting-large-testing-code-file&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;h3 id=&quot;readability-testing-code-file-structure&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-testing-code-file-structure&quot; aria-label=&quot;Anchor link for: readability-testing-code-file-structure&quot;&gt;#&lt;&#x2F;a&gt;
+Readability: Testing code file structure&lt;&#x2F;h3&gt;
+&lt;p&gt;Testing code file structure is meant to ease navigation within the testing codebase.
+A straightforward approach that I take is to represent 1 module&#x2F;class with 1 testing code file.
+Within the file I group test cases per module function&#x2F;class method, the grouping is done based on the test
+framework that you use. Grouping test cases per module function will help you to extract out
+the test cases for that specific function, here are the examples in JS &amp;amp; Java&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&amp;#x2F;&amp;#x2F; file: test&amp;#x2F;finance&amp;#x2F;tax-calculator.spec.js
+&amp;#x2F;&amp;#x2F; The example uses mocha as the most popular test framework in nodejs.
+&amp;#x2F;&amp;#x2F; This test file contains test cases under tax-calculator module,
+&amp;#x2F;&amp;#x2F; each function will have test cases grouped together within a describe block.
+describe(&amp;#x27;&amp;#x2F;finance&amp;#x2F;tax-calculator&amp;#x27;, () =&amp;gt; {
+  describe(&amp;#x27;.calculateTaxForExpat()&amp;#x27;, () =&amp;gt; {
+    context(&amp;#x27;when given 100k salary&amp;#x27;, ...);
+    context(&amp;#x27;when given 200k salary&amp;#x27;, ...);
+  });
+
+  describe(&amp;#x27;.calculateTaxForCitizen()&amp;#x27;, () =&amp;gt; {
+    ...
+  });
+
+  describe(&amp;#x27;.calculateTaxForSmallBusiness()&amp;#x27;, () =&amp;gt; {
+    ...
+  });
+});
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;java&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&amp;#x2F;&amp;#x2F; This is the Java equivalent of the JS example above
+&amp;#x2F;&amp;#x2F; file: TaxCalculatorSpec.java
+class TaxCalculatorSpec {
+  &amp;#x2F;&amp;#x2F; In Java we group test cases by leveraging nested classes,
+  &amp;#x2F;&amp;#x2F; CalculateTaxForExpat class will have test cases
+  &amp;#x2F;&amp;#x2F; for TaxCalculator::calculateTaxForExpat() method
+  class CalculateTaxForExpat {
+    ..
+  }
+
+  class CalculateTaxForCitizen {
+    ..
+  }
+
+  class CalculateTaxForSmallBusiness {
+    ..
+  }
+}
+
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;readability-splitting-large-testing-code-file&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-splitting-large-testing-code-file&quot; aria-label=&quot;Anchor link for: readability-splitting-large-testing-code-file&quot;&gt;#&lt;&#x2F;a&gt;
-Readability: Splitting large testing code file&lt;&#x2F;h1&gt;
+Readability: Splitting large testing code file&lt;&#x2F;h3&gt;
 &lt;p&gt;Maintaining a large testing file is challenging, it&#x27;s like maintaining a code file that has thousands of lines of code,&lt;&#x2F;p&gt;
 &lt;p&gt;There are 3 test file components that can be separated quite easily:&lt;&#x2F;p&gt;
 &lt;ul&gt;
