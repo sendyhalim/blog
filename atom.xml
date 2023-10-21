@@ -4,8 +4,130 @@
     <link href="https://blog.wavvel.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-10-19T00:00:00+00:00</updated>
+    <updated>2023-10-21T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Unit Testing: Organizing Test Directories and Files</title>
+        <published>2023-10-21T00:00:00+00:00</published>
+        <updated>2023-10-21T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/</id>
+        
+        <content type="html">&lt;h1 id=&quot;motivation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#motivation&quot; aria-label=&quot;Anchor link for: motivation&quot;&gt;#&lt;&#x2F;a&gt;
+Motivation&lt;&#x2F;h1&gt;
+&lt;p&gt;It&#x27;s common for a function to have many positive and negative cases,
+which means it demands more testing code. Testing code can grow large until it&#x27;s hard to read and navigate your unit test codebase.
+Organizing unit tests will help you to read and navigate through the codebase,
+it also lowers the mental effort maintaining the codebase, this is true
+not only for unit tests but also applies generally.&lt;&#x2F;p&gt;
+&lt;p&gt;These are the common goals that you can use to organize your unit tests:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Visibility. Visibility means it&#x27;s easy to search and navigate through the test files.&lt;&#x2F;li&gt;
+&lt;li&gt;Readability. Readability focuses on the testing file content and structure.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h1 id=&quot;visibility-directory-and-file-path-structure&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#visibility-directory-and-file-path-structure&quot; aria-label=&quot;Anchor link for: visibility-directory-and-file-path-structure&quot;&gt;#&lt;&#x2F;a&gt;
+Visibility: Directory and File path structure&lt;&#x2F;h1&gt;
+&lt;p&gt;Some modern programming languages have conventions on organizing test directories and files, you just need to follow the conventions.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go has a convention to put test code in a different file under &lt;a href=&quot;https:&#x2F;&#x2F;go.dev&#x2F;doc&#x2F;tutorial&#x2F;add-a-test&quot;&gt;the same source code directory&lt;&#x2F;a&gt; e.g. &lt;code&gt;foo.go&lt;&#x2F;code&gt; will have test file &lt;code&gt;foo_test.go&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Rust has a convention to put the tests together in the file &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;ch11-03-test-organization.html#:~:text=You&amp;#x27;ll%20put%20unit%20tests,code%20that%20they&amp;#x27;re%20testing.&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If the language has no convention, I usually mirror the test file path to the source code file path.
+Suppose that you have &lt;code&gt;src&#x2F;finance&#x2F;tax-calculator.js&lt;&#x2F;code&gt;, there will be a test file with path &lt;code&gt;test&#x2F;unit&#x2F;finance&#x2F;tax-calculator.spec.js&lt;&#x2F;code&gt;,
+notice that the test file path has a different prefix and file extension with the source code file (&lt;code&gt;src&#x2F;*&lt;&#x2F;code&gt; vs &lt;code&gt;test&#x2F;unit&#x2F;*&lt;&#x2F;code&gt;, &lt;code&gt;.js&lt;&#x2F;code&gt; vs &lt;code&gt;.spec.js&lt;&#x2F;code&gt;),
+this is a convention that I follow because it&#x27;s easier to search and keep the main codebase source directory clean.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;▾ src&amp;#x2F;
+  ▾ finance&amp;#x2F;
+      tax-calculator.js
+▾ test&amp;#x2F;
+  ▾ finance&amp;#x2F;
+      tax-calculator.spec.js
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;readability-splitting-large-testing-code-file&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-splitting-large-testing-code-file&quot; aria-label=&quot;Anchor link for: readability-splitting-large-testing-code-file&quot;&gt;#&lt;&#x2F;a&gt;
+Readability: Splitting large testing code file&lt;&#x2F;h1&gt;
+&lt;p&gt;Maintaining a large testing file is challenging, it&#x27;s like maintaining a code file that has thousands of lines of code,&lt;&#x2F;p&gt;
+&lt;p&gt;There are 3 test file components that can be separated quite easily:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Target functions that are being tested.&lt;&#x2F;li&gt;
+&lt;li&gt;Testing data (fixtures).&lt;&#x2F;li&gt;
+&lt;li&gt;Common test utilities.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;separating-unit-tests-per-target-function&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#separating-unit-tests-per-target-function&quot; aria-label=&quot;Anchor link for: separating-unit-tests-per-target-function&quot;&gt;#&lt;&#x2F;a&gt;
+Separating unit tests per target function&lt;&#x2F;h4&gt;
+&lt;p&gt;It&#x27;s generally a good idea to start splitting a large test file into multiple test files, 1 test file should cover only 1 target function&#x2F;method.
+The definition of a large test file should be similar to the definition of a large business logic module&#x2F;class in your engineering team.
+I personally use 2k lines of code threshold to start the splitting.&lt;&#x2F;p&gt;
+&lt;p&gt;Suppose &lt;code&gt;test&#x2F;unit&#x2F;finance&#x2F;tax-calculator.spec.js&lt;&#x2F;code&gt; is more than 2k lines of code and it contains 3 target functions: &lt;code&gt;calculateTaxForExpat()&lt;&#x2F;code&gt;, &lt;code&gt;calculateTaxForCitizen()&lt;&#x2F;code&gt;, and &lt;code&gt;calculateTaxForSmallBusiness()&lt;&#x2F;code&gt;. We would have 3 test files after splitting:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;▾ src&amp;#x2F;
+  ▾ finance&amp;#x2F;
+      tax-calculator.js
+▾ test&amp;#x2F;
+  ▾ finance&amp;#x2F;
+    ▾ tax-calculator&amp;#x2F;
+        calculate-tax-for-expat.spec.js
+        calculate-tax-for-citizen.spec.js
+        calculate-tax-for-small-business.spec.js
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;separating-unit-test-data-fixtures&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#separating-unit-test-data-fixtures&quot; aria-label=&quot;Anchor link for: separating-unit-test-data-fixtures&quot;&gt;#&lt;&#x2F;a&gt;
+Separating unit test data (fixtures)&lt;&#x2F;h4&gt;
+&lt;p&gt;When test input data are more than 10% of the testing code, I recommend moving
+the test data into a separate fixture file. It&#x27;s easier to navigate through the testing code if the testing logic is concise.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;▾ test&amp;#x2F;
+  ▾ finance&amp;#x2F;
+    ▾ tax-calculator&amp;#x2F;
+        calculate-tax-for-expat.spec.js
+        calculate-tax-for-expat.fixture.js
+        calculate-tax-for-citizen.spec.js
+        calculate-tax-for-citizen.fixture.js
+        calculate-tax-for-small-business.spec.js
+        calculate-tax-for-small-business.fixture.js
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;separating-common-test-utilities&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#separating-common-test-utilities&quot; aria-label=&quot;Anchor link for: separating-common-test-utilities&quot;&gt;#&lt;&#x2F;a&gt;
+Separating common test utilities&lt;&#x2F;h4&gt;
+&lt;p&gt;We can separate common test logic into a separate code module&#x2F;class so it&#x27;s easier to reuse it.
+If the reused test common logic is only a couple of lines and rarely reused across test cases then better to keep it within the same test file,
+otherwise, we can group common logic further based on where it&#x27;s reused:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Reused common logic in many unit test cases in the same testing file. We can put it in the same directory as the test class&#x2F;module:&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre&gt;&lt;code&gt;▾ test&amp;#x2F;
+  ▾ finance&amp;#x2F;
+    ▾ tax-calculator&amp;#x2F;
+        ...
+        calculate-tax-for-expat.utilities.js
+        ...
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Reused common logic in the same target class&#x2F;module will have a separate file in the class&#x2F;module directory.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre&gt;&lt;code&gt;▾ test&amp;#x2F;
+  ▾ finance&amp;#x2F;
+    ▾ tax-calculator&amp;#x2F;
+        common.utilities.js
+        ...
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Reused common logic in the across target class&#x2F;module will have a separate common directory and files in root test directory.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre&gt;&lt;code&gt;▾ test&amp;#x2F;
+  ▾ common-utilities&amp;#x2F;
+      test-loop.js
+      fake-db.js
+  ▾ finance&amp;#x2F;
+      ...
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Unit Testing: Prioritizing Unit Test Cases</title>
         <published>2023-10-19T00:00:00+00:00</published>
