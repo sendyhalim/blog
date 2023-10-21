@@ -8,7 +8,7 @@ tags = ["software-engineering", "best-practices", "unit-testing"]
 +++
 
 
-# Motivation
+### Motivation
 It's common for a function to have many positive and negative cases,
 which means it demands more testing code.
 Testing code will grow large, at some point it will be challenging to navigate and read the testing codebase.
@@ -21,7 +21,7 @@ These are the common goals that you can use to organize your unit tests:
 2. Readability. Readability focuses on the testing file content and structure.
 
 
-# Visibility: Directory and File path structure
+### Visibility: Directory and file path structure
 Some modern programming languages have conventions on organizing test directories and files, following the standard conventions should be the best thing to do.
 * Go has a convention to put test code in a different file under [the same source code directory](https://go.dev/doc/tutorial/add-a-test) e.g. `foo.go` will have test file `foo_test.go`
 * Rust has a convention to put the tests together in the file [source code](https://doc.rust-lang.org/book/ch11-03-test-organization.html#:~:text=You'll%20put%20unit%20tests,code%20that%20they're%20testing.)
@@ -40,8 +40,58 @@ this is a convention that I follow because it's easier to search and keep the ma
       tax-calculator.spec.js
 ```
 
+### Readability: Testing code file structure
+Testing code file structure is meant to ease navigation within the testing codebase.
+A straightforward approach that I take is to represent 1 module/class with 1 testing code file.
+Within the file I group test cases per module function/class method, the grouping is done based on the test
+framework that you use. Grouping test cases per module function will help you to extract out
+the test cases for that specific function, here are the examples in JS & Java
 
-# Readability: Splitting large testing code file
+```javascript
+// file: test/finance/tax-calculator.spec.js
+// The example uses mocha as the most popular test framework in nodejs.
+// This test file contains test cases under tax-calculator module,
+// each function will have test cases grouped together within a describe block.
+describe('/finance/tax-calculator', () => {
+  describe('.calculateTaxForExpat()', () => {
+    context('when given 100k salary', ...);
+    context('when given 200k salary', ...);
+  });
+
+  describe('.calculateTaxForCitizen()', () => {
+    ...
+  });
+
+  describe('.calculateTaxForSmallBusiness()', () => {
+    ...
+  });
+});
+```
+
+```java
+// This is the Java equivalent of the JS example above
+// file: TaxCalculatorSpec.java
+class TaxCalculatorSpec {
+  // In Java we group test cases by leveraging nested classes,
+  // CalculateTaxForExpat class will have test cases
+  // for TaxCalculator::calculateTaxForExpat() method
+  class CalculateTaxForExpat {
+    ..
+  }
+
+  class CalculateTaxForCitizen {
+    ..
+  }
+
+  class CalculateTaxForSmallBusiness {
+    ..
+  }
+}
+
+```
+
+
+### Readability: Splitting large testing code file
 Maintaining a large testing file is challenging, it's like maintaining a code file that has thousands of lines of code,
 
 There are 3 test file components that can be separated quite easily:
