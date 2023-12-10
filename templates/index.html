@@ -3,7 +3,7 @@
   {% include 'header.html' %}
 
   <body>
-    <div id="centent">
+    <div id="content">
       <div class="post">
         <div class="post-body">
           <img class="avatar" src="{{ config.base_url | safe }}/assets/images/avatar.png">
@@ -34,33 +34,6 @@
             {% include "post-list.html" %}
 
             <p>... more on the <a href="{{ config.base_url | safe }}/posts">posts</a> section.</p>
-          </div>
-
-          <div>
-            <h3>
-              Grouped Posts
-              </span>
-            </h3>
-
-            <ul class="post-list mt-3">
-              <li>
-                <a href="/tags/reading-checklist">
-                  📚 Reading Checklist
-                </a>
-              </li>
-
-              <li>
-                <a href="/tags/best-practices">
-                  👌 Best Practices
-                </a>
-              </li>
-
-              <li>
-                <a href="/tags/war-stories">
-                  🔥 War Stories
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
