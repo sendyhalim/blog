@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Sendy Halim">
+  <meta name="description" content="Sendy Halim&#39;s blog">
+  <title>
+    
+      Code Review: Code Author Best Practices
+    
+  </title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/navigation.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/highlight-js.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/image.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/post.css" />
+</head>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80328765-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-80328765-1');
+  </script>
+
+
+
+  <body>
+    <div id="content">
+      <nav>
+  <a href="https://blog.wavvel.com">
+    <span class="arrow">←</span> Home
+  </a>
+</nav>
+
+
+
+<div class="post">
+  <h1 class="title">Code Review: Code Author Best Practices</h1>
+
+  <div class="headline">
+    <div>
+      2023-12-10
+
+    </div>
+    <div>
+      <div class="tag-list-container">
+  
+  <span class="tag">
+    #software-engineering
+  </span>
+  
+  <span class="tag">
+    #best-practices
+  </span>
+  
+  <span class="tag">
+    #code-review
+  </span>
+  
+</div>
+
+    </div>
+  </div>
+
+  <div class="post-body">
+    <h1 id="code-author"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#code-author" aria-label="Anchor link for: code-author">#</a>
+Code Author</h1>
+<p>The code author or pull request(PR) author is the person who makes the changes.
+Almost every engineer that I know prefer building software than doing code review,
+I personally feel more productive shipping features than doing reviews.</p>
+<p>It's in the PR author's best interest to improve the PR quality so other engineers are motivated to review the changes,
+in other words, we're focusing on improving the code review UX.
+The impact that we're looking for:</p>
+<ul>
+<li>Improve the code review feedback quality, good feedback quality would improve the overall feature impact as well.</li>
+<li>Get reviewers motivated to review your PR, ideally it's better to get feedback from more than 1 engineer.</li>
+</ul>
+<h1 id="submit-small-incremental-and-meaningful-changes"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#submit-small-incremental-and-meaningful-changes" aria-label="Anchor link for: submit-small-incremental-and-meaningful-changes">#</a>
+Submit small incremental and meaningful changes</h1>
+<p>Try to split PR into small meaningful changes. Pretty much similar to
+breaking a big task into smaller tasks so it's easier to complete because we focus on smaller changes, it's also easier to review a small PR.</p>
+<p>There are many ways to organize the PR into small and meaningful changes, some of the common ones that I've seen:</p>
+<ul>
+<li>A PR is considered small enough at max around 100 lines of code. This is completely up to team standard, set a number that the team can accept that it's small enough.</li>
+<li>Consider splitting a PR containing more than 100 lines of code into multiple PRs, the split could be based on:
+<ul>
+<li>Functionality. For example, the PR contains 2 new HTTP APIs to create a new user and get user details, we can split the flow to create a new user and get user details into separate 2 PRs.</li>
+<li>Implementation Layer. For example, the PR contains 1 new HTTP API layer with long validation logic and a new business logic layer, we can split it into a separate PR for the new business logic layer with unit tests and another PR that contains the new API and validation logic.</li>
+</ul>
+</li>
+</ul>
+<p>Rule of thumb: the more code that needs to be reviewed, the less the code review quality.
+People tend to miss some important details (including me!) when reviewing a long PR.</p>
+<h1 id="review-your-own-changes"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#review-your-own-changes" aria-label="Anchor link for: review-your-own-changes">#</a>
+Review your own changes</h1>
+<p>Reviewing your own PR/changes before requesting for review brings a lot of benefits:</p>
+<ul>
+<li>You can spot mistakes earlier and it saves a lot of time for the team, supposedly we can review our own changes quickly because we have the most context of how the code works. Suppose it takes 10 minutes for each engineer to review a PR, the author probably would take only ~4 minutes to review the PR, if self-reviewing the PR could reduce peer review time to 6 minutes then in total it would only take 16 minutes of review time. Imagine if it's summed up for all code reviews in a year! All of those numbers are assumed, I'm sure you get the idea, you can plug whatever the average review time that's spent in your company.</li>
+</ul>
+<div class="row mb-4">
+  <div class="image-container col-12 col-md-6 mb-4">
+    <i><b>Typical code review time illustration</b></i>
+    <img
+      src="https://blog.wavvel.com/assets/images/software-engineering/code-review/code-review-code-author-best-practices/code-review-without-self-review.jpg
+"
+      alt="Code review time without self review would be longer"
+    />
+  </div>
+<div class="image-container col-12 col-md-6">
+    <i><b>Code review time illustration with self review</b></i>
+    <img
+      src="https://blog.wavvel.com/assets/images/software-engineering/code-review/code-review-code-author-best-practices/code-review-with-self-review.jpg
+"
+      alt="Code review time with self review would be faster"
+    />
+  </div>
+</div>
+<ul>
+<li>Engineers would be more motivated (been there) to review a PR from someone who has the reputation to always re-check PR before submission because it's more likely to be in a better review state. You get your PR reviewed quicker in turn which also means you get to ship your feature faster. Having a self-code review checklist could also help to spot your own mistakes earlier, you can follow this common checklist:
+<ul>
+<li>Make sure the PR fulfills task requirements.</li>
+<li>Spot any potential security issues e.g. is there any resource that shouldn't be accessed publicly? are you using deprecated crypto algo?</li>
+<li>Make sure the PR follows the team code convention and is ideally free of linter warnings.</li>
+<li>Make sure complex code is documented properly.</li>
+<li>Make sure hackish code is documented properly, explain why it's necessary.</li>
+</ul>
+</li>
+</ul>
+<h1 id="write-and-update-unit-tests"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#write-and-update-unit-tests" aria-label="Anchor link for: write-and-update-unit-tests">#</a>
+Write and update unit tests</h1>
+<p>Always write or update unit tests for any additions or changes at the business logic level.
+Unit tests are intended to catch bugs earlier and they also help reviewers to understand and simulate how the PR code works. Read more about unit tests best practices <a href="/tags/unit-testing">here</a></p>
+<h1 id="write-a-quick-simple-tutorial-how-to-test-your-changes"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#write-a-quick-simple-tutorial-how-to-test-your-changes" aria-label="Anchor link for: write-a-quick-simple-tutorial-how-to-test-your-changes">#</a>
+Write a quick/simple tutorial how to test your changes</h1>
+<p>If you can write tutorials on how to test your changes means you're testing your changes. Tutorials can be as simple as follows.</p>
+<ul>
+<li>PR containing HTTP API changes, you can provide curl examples for some of the most common cases.</li>
+<li>For PR containing script/worker, you can provide examples of how to run it and what's the expected high-level side effects.</li>
+</ul>
+<p>Personally, manual testing helps me psychologically (read: will help you to sleep better at night) by knowing that it works and it improves confidence as well. Reviewers could also apply the PR locally and the test tutorial will help them to test it manually.</p>
+
+  </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wavvel'; // Required - Replace '<example>' with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+    </div>
+
+    <div class="post grouped-posts mt-3">
+  <h3>
+    Topics that might interest you
+    <hr />
+  </h3>
+
+  <ul class="post-list mt-3">
+    <li>
+      <a href="/tags/unit-testing">
+        🔬 Unit Testing
+      </a>
+    </li>
+
+    <li>
+      <a href="/tags/code-review">
+        🧐 Code Review
+      </a>
+    </li>
+
+    <li>
+      <a href="/tags/war-stories">
+        🔥 War Stories
+      </a>
+    </li>
+  </ul>
+</div>
+
+<footer id="footer">
+  <p class="small">
+    © Copyright 2023 Sendy Halim
+  </p>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://blog.wavvel.com/assets/js/highlight.js" type="text/javascript"></script>
+<script type="text/javascript">
+  hljs.initHighlightingOnLoad();
+</script>
+
+  </body>
+</html>

@@ -4,8 +4,101 @@
     <link href="https://blog.wavvel.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-10-21T00:00:00+00:00</updated>
+    <updated>2023-12-10T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Code Review: Code Author Best Practices</title>
+        <published>2023-12-10T00:00:00+00:00</published>
+        <updated>2023-12-10T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/</id>
+        
+        <content type="html">&lt;h1 id=&quot;code-author&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#code-author&quot; aria-label=&quot;Anchor link for: code-author&quot;&gt;#&lt;&#x2F;a&gt;
+Code Author&lt;&#x2F;h1&gt;
+&lt;p&gt;The code author or pull request(PR) author is the person who makes the changes.
+Almost every engineer that I know prefer building software than doing code review,
+I personally feel more productive shipping features than doing reviews.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s in the PR author&#x27;s best interest to improve the PR quality so other engineers are motivated to review the changes,
+in other words, we&#x27;re focusing on improving the code review UX.
+The impact that we&#x27;re looking for:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Improve the code review feedback quality, good feedback quality would improve the overall feature impact as well.&lt;&#x2F;li&gt;
+&lt;li&gt;Get reviewers motivated to review your PR, ideally it&#x27;s better to get feedback from more than 1 engineer.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;submit-small-incremental-and-meaningful-changes&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#submit-small-incremental-and-meaningful-changes&quot; aria-label=&quot;Anchor link for: submit-small-incremental-and-meaningful-changes&quot;&gt;#&lt;&#x2F;a&gt;
+Submit small incremental and meaningful changes&lt;&#x2F;h1&gt;
+&lt;p&gt;Try to split PR into small meaningful changes. Pretty much similar to
+breaking a big task into smaller tasks so it&#x27;s easier to complete because we focus on smaller changes, it&#x27;s also easier to review a small PR.&lt;&#x2F;p&gt;
+&lt;p&gt;There are many ways to organize the PR into small and meaningful changes, some of the common ones that I&#x27;ve seen:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;A PR is considered small enough at max around 100 lines of code. This is completely up to team standard, set a number that the team can accept that it&#x27;s small enough.&lt;&#x2F;li&gt;
+&lt;li&gt;Consider splitting a PR containing more than 100 lines of code into multiple PRs, the split could be based on:
+&lt;ul&gt;
+&lt;li&gt;Functionality. For example, the PR contains 2 new HTTP APIs to create a new user and get user details, we can split the flow to create a new user and get user details into separate 2 PRs.&lt;&#x2F;li&gt;
+&lt;li&gt;Implementation Layer. For example, the PR contains 1 new HTTP API layer with long validation logic and a new business logic layer, we can split it into a separate PR for the new business logic layer with unit tests and another PR that contains the new API and validation logic.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Rule of thumb: the more code that needs to be reviewed, the less the code review quality.
+People tend to miss some important details (including me!) when reviewing a long PR.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;review-your-own-changes&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#review-your-own-changes&quot; aria-label=&quot;Anchor link for: review-your-own-changes&quot;&gt;#&lt;&#x2F;a&gt;
+Review your own changes&lt;&#x2F;h1&gt;
+&lt;p&gt;Reviewing your own PR&#x2F;changes before requesting for review brings a lot of benefits:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can spot mistakes earlier and it saves a lot of time for the team, supposedly we can review our own changes quickly because we have the most context of how the code works. Suppose it takes 10 minutes for each engineer to review a PR, the author probably would take only ~4 minutes to review the PR, if self-reviewing the PR could reduce peer review time to 6 minutes then in total it would only take 16 minutes of review time. Imagine if it&#x27;s summed up for all code reviews in a year! All of those numbers are assumed, I&#x27;m sure you get the idea, you can plug whatever the average review time that&#x27;s spent in your company.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div class=&quot;row mb-4&quot;&gt;
+  &lt;div class=&quot;image-container col-12 col-md-6 mb-4&quot;&gt;
+    &lt;i&gt;&lt;b&gt;Typical code review time illustration&lt;&#x2F;b&gt;&lt;&#x2F;i&gt;
+    &lt;img
+      src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;software-engineering&#x2F;code-review&#x2F;code-review-code-author-best-practices&#x2F;code-review-without-self-review.jpg
+&quot;
+      alt=&quot;Code review time without self review would be longer&quot;
+    &#x2F;&gt;
+  &lt;&#x2F;div&gt;
+&lt;div class=&quot;image-container col-12 col-md-6&quot;&gt;
+    &lt;i&gt;&lt;b&gt;Code review time illustration with self review&lt;&#x2F;b&gt;&lt;&#x2F;i&gt;
+    &lt;img
+      src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;software-engineering&#x2F;code-review&#x2F;code-review-code-author-best-practices&#x2F;code-review-with-self-review.jpg
+&quot;
+      alt=&quot;Code review time with self review would be faster&quot;
+    &#x2F;&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;ul&gt;
+&lt;li&gt;Engineers would be more motivated (been there) to review a PR from someone who has the reputation to always re-check PR before submission because it&#x27;s more likely to be in a better review state. You get your PR reviewed quicker in turn which also means you get to ship your feature faster. Having a self-code review checklist could also help to spot your own mistakes earlier, you can follow this common checklist:
+&lt;ul&gt;
+&lt;li&gt;Make sure the PR fulfills task requirements.&lt;&#x2F;li&gt;
+&lt;li&gt;Spot any potential security issues e.g. is there any resource that shouldn&#x27;t be accessed publicly? are you using deprecated crypto algo?&lt;&#x2F;li&gt;
+&lt;li&gt;Make sure the PR follows the team code convention and is ideally free of linter warnings.&lt;&#x2F;li&gt;
+&lt;li&gt;Make sure complex code is documented properly.&lt;&#x2F;li&gt;
+&lt;li&gt;Make sure hackish code is documented properly, explain why it&#x27;s necessary.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;write-and-update-unit-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#write-and-update-unit-tests&quot; aria-label=&quot;Anchor link for: write-and-update-unit-tests&quot;&gt;#&lt;&#x2F;a&gt;
+Write and update unit tests&lt;&#x2F;h1&gt;
+&lt;p&gt;Always write or update unit tests for any additions or changes at the business logic level.
+Unit tests are intended to catch bugs earlier and they also help reviewers to understand and simulate how the PR code works. Read more about unit tests best practices &lt;a href=&quot;&#x2F;tags&#x2F;unit-testing&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;write-a-quick-simple-tutorial-how-to-test-your-changes&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#write-a-quick-simple-tutorial-how-to-test-your-changes&quot; aria-label=&quot;Anchor link for: write-a-quick-simple-tutorial-how-to-test-your-changes&quot;&gt;#&lt;&#x2F;a&gt;
+Write a quick&#x2F;simple tutorial how to test your changes&lt;&#x2F;h1&gt;
+&lt;p&gt;If you can write tutorials on how to test your changes means you&#x27;re testing your changes. Tutorials can be as simple as follows.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;PR containing HTTP API changes, you can provide curl examples for some of the most common cases.&lt;&#x2F;li&gt;
+&lt;li&gt;For PR containing script&#x2F;worker, you can provide examples of how to run it and what&#x27;s the expected high-level side effects.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Personally, manual testing helps me psychologically (read: will help you to sleep better at night) by knowing that it works and it improves confidence as well. Reviewers could also apply the PR locally and the test tutorial will help them to test it manually.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Unit Testing: Organizing Test Directories and Files</title>
         <published>2023-10-21T00:00:00+00:00</published>
