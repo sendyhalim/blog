@@ -3,7 +3,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Sendy Halim">
-  <meta name="description" content="Sendy Halim&#39;s blog">
+
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% else %}
+    <meta name="description" content="Sendy Halim&#39;s blog">
+  {% endif %}
+
   <title>
     {% if section.title %}
       {{ section.title }}
