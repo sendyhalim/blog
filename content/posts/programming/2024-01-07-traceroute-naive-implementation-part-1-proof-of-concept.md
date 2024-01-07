@@ -41,11 +41,12 @@ other network packet sniffing tools such as Wireshark though.
 
 
 # Implementation
-
-<img
-  src="{{ asset_path(path="/assets/images/traceroute-implementation/traceroute-poc.jpg") }}"
-  alt="Traceroute PoC implementation overview"
-/>
+<div class="image-container">
+    <img
+      src="{{ asset_path(path="/assets/images/traceroute-implementation/traceroute-poc.jpg") }}"
+      alt="Traceroute PoC implementation overview"
+    />
+</div>
 
 ## Setup
 #### Dependencies
