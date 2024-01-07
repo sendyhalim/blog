@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Sendy Halim">
+
+  
+    <meta name="description" content="An attempt to implement traceroute proof of concept functionality naively in rust">
+  
+
+  <title>
+    
+      Traceroute Naive Implementation Part 1: Proof of Concept
+    
+  </title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/navigation.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/highlight-js.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/image.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/post.css" />
+</head>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80328765-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-80328765-1');
+  </script>
+
+
+
+  <body>
+    <div id="content">
+      <nav>
+  <a href="https://blog.wavvel.com">
+    <span class="arrow">←</span> Home
+  </a>
+</nav>
+
+
+
+<div class="post">
+  <h1 class="title">Traceroute Naive Implementation Part 1: Proof of Concept</h1>
+
+  <div class="headline">
+    <div>
+      2024-01-07
+
+    </div>
+    <div>
+      <div class="tag-list-container">
+  
+  <span class="tag">
+    #programming
+  </span>
+  
+  <span class="tag">
+    #networking-utilities
+  </span>
+  
+</div>
+
+    </div>
+  </div>
+
+  <div class="post-body">
+    <h1 id="what-we-will-do"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#what-we-will-do" aria-label="Anchor link for: what-we-will-do">#</a>
+What we will do</h1>
+<p>Traceroute is a utility that will print packet router path (trace) and measure the delay of packets sent to a destination.
+It works by sending packet probes to a destination with increasing (by 1) IP TTL/IP hop limit starting from 1,
+hop limit will be decreased by 1 every time the packet reaches a router and the router will send back an ICMP Time Exceeded error when the IP hop limit reaches 0.</p>
+<p>In this post, we'll try to cover the basic key components of traceroute
+implementation and try to implement the proof of concept (PoC) from the key components.
+The goal of the post is to learn by doing so expect bad error handling and bad UX.</p>
+<h1 id="key-components-in-the-poc"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#key-components-in-the-poc" aria-label="Anchor link for: key-components-in-the-poc">#</a>
+Key components in the PoC</h1>
+<p>Key components in our proof of concept:</p>
+<ul>
+<li>We will create a socket that listens to ICMP messages. As a starter,
+we will try to capture all ICMP packets sent to our IP and print it.
+We'll just try to see manually whether there's any ICMP Time Exceeded error sent from
+one of the routers in the path. We can try to run the <code>traceroute</code> command to the same destination (google.com) before running
+the program so we can compare the router IP at a specific hop.</li>
+<li>We will send the packet probe when the ICMP listener is ready,
+we'll just send 1 probe to the 6th router along the path to reach google.com since we're focusing
+only for a proof of concept, this way we know what's the router IP at the 6th hop.</li>
+<li>The program will only handle IPv4.</li>
+<li>We will not do proper error handling, we'll just print debug messages for simplicity.</li>
+</ul>
+<p>We will revisit and iterate the limitations in future posts.</p>
+<h1 id="debugging"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#debugging" aria-label="Anchor link for: debugging">#</a>
+Debugging</h1>
+<p>We use <code>tcpdump</code> to print out the UDP packet that we send to the destination IP,
+we should be able to see the IP TTL that we set through <code>tcpdump</code>. You could use
+other network packet sniffing tools such as Wireshark though.</p>
+<h1 id="implementation"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#implementation" aria-label="Anchor link for: implementation">#</a>
+Implementation</h1>
+<p><img
+  src="https://blog.wavvel.com/assets/images/traceroute-implementation/traceroute-poc.jpg
+"
+  alt="Traceroute PoC implementation overview"
+/></p>
+<h2 id="setup"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#setup" aria-label="Anchor link for: setup">#</a>
+Setup</h2>
+<h4 id="dependencies"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#dependencies" aria-label="Anchor link for: dependencies">#</a>
+Dependencies</h4>
+<p>I'm using rust in the example because it provides extensive low-level tooling and
+I just want to have a refresher on rust, you can write the implementation using any programming language that you're comfortable with
+as long as it has access to low-level socket programming.</p>
+<p>We will install these dependencies:</p>
+<ul>
+<li><a href="https://github.com/rust-lang/socket2">socket2</a> - Utility to work with low-level networking socket.</li>
+<li><a href="https://github.com/JulianSchmid/etherparse">etherparse</a> - Library that provides low level network packet parsing logic (IPv4, UDP, ICMP, etc).</li>
+</ul>
+<pre><code>&#x2F;&#x2F; Cargo.toml
+&#x2F;&#x2F; -----------------------
+....
+[dependencies]
+etherparse = &quot;0.13.0&quot;
+socket2 = { version = &quot;0.5.5&quot;, features = [&quot;all&quot;] }
+
+[lib]
+name = &quot;lib&quot;
+path = &quot;src&#x2F;lib&#x2F;lib.rs&quot;
+
+[[bin]]
+name = &quot;traceroute-poc&quot;
+path = &quot;src&#x2F;bin&#x2F;traceroute_poc.rs&quot;
+</code></pre>
+<h4 id="directory-structure"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#directory-structure" aria-label="Anchor link for: directory-structure">#</a>
+Directory Structure</h4>
+<p>Our directory structure will look like this</p>
+<pre><code>├── Cargo.lock
+├── Cargo.toml
+├── rustfmt.toml &#x2F;&#x2F; Cosmetics, configuration for code formatting
+└── src
+    ├── bin &#x2F;&#x2F; Runnables
+    │   ├── ....
+    │   └── traceroute_poc.rs
+    └── lib &#x2F;&#x2F; Reusable functions
+        ├── icmp_listener.rs
+        └── lib.rs
+</code></pre>
+<h2 id="icmp-listener"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#icmp-listener" aria-label="Anchor link for: icmp-listener">#</a>
+ICMP listener</h2>
+<h4 id="create-icmp-socket"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#create-icmp-socket" aria-label="Anchor link for: create-icmp-socket">#</a>
+Create ICMP socket</h4>
+<p>We will create a function to start an ICMP listener,
+it will create a socket to capture the incoming messages later on.</p>
+<pre><code>&#x2F;&#x2F; src&#x2F;lib&#x2F;icmp_listener.rs
+&#x2F;&#x2F; ------------------------------
+use socket2::{Domain, Socket};
+use std::mem::MaybeUninit;
+use std::time::Duration;
+
+pub fn start_icmp_listener() {
+  let icmp_socket = Socket::new(
+    Domain::IPV4,
+    socket2::Type::RAW,
+    Some(socket2::Protocol::ICMPV4),
+  )
+  .unwrap();
+
+  icmp_socket
+    .set_read_timeout(Some(Duration::from_secs(1)))
+    .unwrap();
+
+  ... will be continued
+}
+</code></pre>
+<h4 id="capturing-icmp-packets"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#capturing-icmp-packets" aria-label="Anchor link for: capturing-icmp-packets">#</a>
+Capturing ICMP packets</h4>
+<p>We need to prepare the ICMP response placeholder first, the ICMP response will include IPv4 so we will need
+28 bytes considering the minimum <a href="https://en.wikipedia.org/wiki/Internet_Protocol_version_4#Packet_structure">IPv4 header</a> is 20 bytes and all ICMP packets have an <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Datagram_structure">8-byte header</a>.</p>
+<p>Then we initiate an infinite loop and short polling to the ICMP socket by calling <code>icmp_socket.recv_from(..)</code>,
+the method will block until there's a response or it's reaching 1 second -- the read timeout that we set earlier.
+On every incoming packet, we use etherparse to parse bytes into an IPv4 header and assume the rest of the unused bytes to be ICMP payload.</p>
+<pre><code>&#x2F;&#x2F; src&#x2F;lib&#x2F;icmp_listener.rs
+&#x2F;&#x2F; ------------------------------
+pub fn start_icmp_listener() {
+  ... create icmp socket
+  ...
+
+  let mut icmp_resp: [MaybeUninit&lt;u8&gt;; 28] = unsafe { MaybeUninit::uninit().assume_init() };
+
+  loop {
+    match icmp_socket.recv_from(&amp;mut icmp_resp) {
+      Ok((size, addr)) =&gt; {
+        let resp_bytes = icmp_resp
+          .into_iter()
+          .map(|byte| unsafe { byte.assume_init() })
+          .collect::&lt;Vec&lt;u8&gt;&gt;();
+
+        let (ipv4_header, icmpv4_payload_bytes) =
+          etherparse::Ipv4Header::from_slice(&amp;resp_bytes).unwrap();
+        let icmpv4_payload = etherparse::Icmpv4Slice::from_slice(icmpv4_payload_bytes).unwrap();
+
+        println!(
+            &quot;Got some response size: {}\nipv4 raw resp: {:?}\nip address:{}\nICMP type: {:?}, ICMP code: {}&quot;,
+            size,
+            ipv4_header,
+            addr.as_socket_ipv4().unwrap().to_string(),
+            icmpv4_payload.icmp_type(),
+            icmpv4_payload.code_u8()
+          );
+      }
+      Err(err) =&gt; {
+        println!(&quot;Error when waiting for icmp socket {:?}&quot;, err);
+      }
+    }
+  }
+}
+</code></pre>
+<h2 id="send-udp-probe"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#send-udp-probe" aria-label="Anchor link for: send-udp-probe">#</a>
+Send UDP probe</h2>
+<p>Next, we go to the main function. Let's just assume we want to know the router at 6th hop going to <code>google.com</code>,
+we use <a href="https://doc.rust-lang.org/std/net/trait.ToSocketAddrs.html#tymethod.to_socket_addrs"><code>ToSocketAddrs</code></a> trait that gives us the extra capability to convert the domain name to IP address (it will do DNS lookup in the background).</p>
+<pre><code>&#x2F;&#x2F; src&#x2F;bin&#x2F;traceroute_poc.rs
+&#x2F;&#x2F; ------------------------------
+use std::net::{SocketAddr, ToSocketAddrs, UdpSocket};
+
+fn main() -&gt; std::io::Result&lt;()&gt; {
+  &#x2F;&#x2F; Preparing the IPv4 UDP socket
+  &#x2F;&#x2F; ----------------------------------------
+  let udp_socket_client_port: u16 = 33474;
+  let udp_socket_dest_port: u16 = 33475;
+  let udp_socket_addr_client: SocketAddr = format!(&quot;0.0.0.0:{}&quot;, udp_socket_client_port)
+    .parse()
+    .unwrap();
+
+  let udp_socket_addr_dest: SocketAddr = (&quot;google.com&quot;, udp_socket_dest_port)
+    .to_socket_addrs() &#x2F;&#x2F; It will do dnslookup in the background
+    .unwrap()
+    .into_iter()
+    .filter(|socket_addr: &amp;SocketAddr| {
+      return socket_addr.is_ipv4();
+    })
+    .collect::&lt;Vec&lt;_&gt;&gt;()
+    .first()
+    .unwrap()
+    .to_owned();
+
+  let udp_socket: UdpSocket;
+  let hop_limit: u32 = 6;
+
+  udp_socket = UdpSocket::bind(udp_socket_addr_client).unwrap();
+  udp_socket.set_ttl(hop_limit).unwrap();
+
+
+  &#x2F;&#x2F; Start the icmp listener before sending the UDP probe
+  &#x2F;&#x2F; ----------------------------------------
+  let icmp_listener_handle = std::thread::spawn(|| {
+    println!(&quot;Starting icmp listener in the background...&quot;);
+
+    lib::icmp_listener::start_icmp_listener();
+  });
+
+
+  &#x2F;&#x2F; Sending the UDP probe
+  &#x2F;&#x2F; ----------------------------------------
+  let udp_payload: [u8; 2] = [0, 0]; &#x2F;&#x2F; Dummy payload
+
+  println!(&quot;Sending {:?} to {:?}&quot;, udp_payload, udp_socket_addr_dest);
+let sent_count = udp_socket
+    .send_to(&amp;udp_payload, udp_socket_addr_dest)
+    .unwrap();
+
+  println!(&quot;Sent {} bytes of payload&quot;, sent_count);
+
+  &#x2F;&#x2F; Block for icmp listener;
+  &#x2F;&#x2F; ----------------------------------------
+  icmp_listener_handle.join().unwrap();
+
+  return Ok(());
+}
+</code></pre>
+<h3 id="testing-it-out"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#testing-it-out" aria-label="Anchor link for: testing-it-out">#</a>
+Testing it out</h3>
+<p>We'll start a <code>tcpdump</code> to sniff the IP packet that we send, we should expect
+the right IP address and IP TTL to be 6 (hardcoded earlier).</p>
+<pre><code>sudo tcpdump udp port 33474 -n -vvv
+</code></pre>
+<p>Now build and run the program</p>
+<pre><code>cargo build &amp;&amp; sudo RUST_BACKTRACE=1 .&#x2F;target&#x2F;debug&#x2F;traceroute_poc
+</code></pre>
+<p>From the tcpdump you should see something like this</p>
+<pre><code># Notice that IP ttl is set to 6, that&#x27;s a good sign!
+# ---------------------
+tcpdump: data link type PKTAP
+tcpdump: listening on pktap, link-type PKTAP, capture size 262144 bytes
+23:01:44.812806 IP (tos 0x0, ttl 6, id 28731, offset 0, flags [none], proto UDP (17), length 30)
+    192.168.1.6.33474 &gt; 216.239.38.120.33475: [udp sum ok] UDP, length 2
+</code></pre>
+<p>The sample program output</p>
+<pre><code>Sending [0, 0] to 216.239.38.120:33475
+Starting icmp listener in the background...
+Sent 2 bytes of payload
+Got some response size: 28
+IPv4 raw resp: Ipv4Header { ihl: 5, differentiated_services_code_point: 0, explicit_congestion_notification: 0, payload_len: 19436, identification: 59500, dont_fragment: false, more_fragments: false, fragments_offset: 0, time_to_live: 249, protocol: 1, header_checksum: 38208, source: [180, 240, 205, 80], destination: [192, 168, 1, 6], options: [] }
+ip address:180.240.205.80:0
+ICMP type: TimeExceeded(TtlExceededInTransit), ICMP code: 0
+</code></pre>
+<p>You can compare it by running traceroute and checking whether the router at the 6th hop has the
+same IP as our program or not. It's normal that the packet path is different from time to time
+routing might change dynamically as well.</p>
+<pre><code>traceroute google.com
+</code></pre>
+
+  </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wavvel'; // Required - Replace '<example>' with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+    </div>
+
+    <div class="post grouped-posts mt-3">
+  <h3>
+    Topics that might interest you
+    <hr />
+  </h3>
+
+  <ul class="post-list mt-3">
+    <li>
+      <a href="/tags/unit-testing">
+        🔬 Unit Testing
+      </a>
+    </li>
+
+    <li>
+      <a href="/tags/code-review">
+        🧐 Code Review
+      </a>
+    </li>
+
+    <li>
+      <a href="/tags/war-stories">
+        🔥 War Stories
+      </a>
+    </li>
+  </ul>
+</div>
+
+<footer id="footer">
+  <p class="small">
+    © Copyright 2023 Sendy Halim
+  </p>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://blog.wavvel.com/assets/js/highlight.js" type="text/javascript"></script>
+<script type="text/javascript">
+  hljs.initHighlightingOnLoad();
+</script>
+
+  </body>
+</html>

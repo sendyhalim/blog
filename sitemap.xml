@@ -43,6 +43,13 @@
         <lastmod>2023-08-05T14:39:00+07:00</lastmod>
     </url>
     <url>
+        <loc>https://blog.wavvel.com/posts/programming/</loc>
+    </url>
+    <url>
+        <loc>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/</loc>
+        <lastmod>2024-01-07</lastmod>
+    </url>
+    <url>
         <loc>https://blog.wavvel.com/posts/reading-checklist/</loc>
     </url>
     <url>
@@ -227,6 +234,9 @@
     </url>
     <url>
         <loc>https://blog.wavvel.com/tags/mimetype/</loc>
+    </url>
+    <url>
+        <loc>https://blog.wavvel.com/tags/networking-utilities/</loc>
     </url>
     <url>
         <loc>https://blog.wavvel.com/tags/nscollectionview/</loc>
