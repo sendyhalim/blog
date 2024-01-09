@@ -11,11 +11,10 @@ tags = ["programming", "networking-utilities"]
 # What we will do
 Traceroute is a utility that will print packet router path (trace) and measure the delay of packets sent to a destination.
 It works by sending packet probes to a destination with increasing (by 1) IP TTL/IP hop limit starting from 1,
-hop limit will be decreased by 1 every time the packet reaches a router and the router will send back an ICMP Time Exceeded error when the IP hop limit reaches 0.
+TTL will be reduced by 1 every time the packet reaches a router. The router will discard the packet and send back an ICMP Time Exceeded error when it receives IP packet with TTL 1 because it's going to be 0 (expired).
 
-In this post, we'll try to cover the basic key components of traceroute
-implementation and try to implement the proof of concept (PoC) from the key components.
-The goal of the post is to learn by doing so expect bad error handling and bad UX.
+In this post, we'll try to experiment with IP TTL as a basic component of traceroute implementation. We start with a proof of concept (PoC) implementation.
+The goal is to learn by doing so expect bad error handling and bad UX.
 
 
 # Key components in the PoC
@@ -226,7 +225,7 @@ let sent_count = udp_socket
 
   println!("Sent {} bytes of payload", sent_count);
 
-  // Block for icmp listener;
+  // Block icmp listener thread.
   // ----------------------------------------
   icmp_listener_handle.join().unwrap();
 
@@ -267,10 +266,11 @@ ip address:180.240.205.80:0
 ICMP type: TimeExceeded(TtlExceededInTransit), ICMP code: 0
 ```
 
-You can compare it by running traceroute and checking whether the router at the 6th hop has the
-same IP as our program or not. It's normal that the packet path is different from time to time
-routing might change dynamically as well.
+We can compare it by running traceroute and checking whether the router at the 6th hop has the same router IP that we have captured (output above). It's normal that the packet path is different from time to time routing might change dynamically as well.
 ```
 traceroute google.com
 ```
 
+
+# What's next
+In this post we have completed the PoC and see it ourselves that when IP packet TTL is 1 then the router will send ICMP Time Exceeded error to our IP. In the next post we will try to send multiple UDP probes and print them out.
