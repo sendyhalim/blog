@@ -75,7 +75,7 @@ name = "traceroute-poc"
 path = "src/bin/traceroute_poc.rs"
 ```
 
-#### Directory Structure
+#### Directory structure
 Our directory structure will look like this
 
 ```
@@ -93,9 +93,9 @@ Our directory structure will look like this
 
 
 ## ICMP listener
-#### Create ICMP socket
-We will create a function to start an ICMP listener,
-it will create a socket to capture the incoming messages later on.
+#### Create an ICMP socket
+There will be  a function to start an ICMP listener,
+it's basically creating a socket that we can use to capture the incoming messages later on.
 
 
 ```
@@ -169,7 +169,7 @@ pub fn start_icmp_listener() {
 ```
 
 
-## Send UDP probe
+## Send a UDP probe
 Next, we go to the main function. Let's just assume we want to know the router at 6th hop going to `google.com`,
 we use [`ToSocketAddrs`](https://doc.rust-lang.org/std/net/trait.ToSocketAddrs.html#tymethod.to_socket_addrs) trait that gives us the extra capability to convert the domain name to IP address (it will do DNS lookup in the background).
 
