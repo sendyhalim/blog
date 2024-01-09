@@ -75,10 +75,9 @@
 What we will do</h1>
 <p>Traceroute is a utility that will print packet router path (trace) and measure the delay of packets sent to a destination.
 It works by sending packet probes to a destination with increasing (by 1) IP TTL/IP hop limit starting from 1,
-hop limit will be decreased by 1 every time the packet reaches a router and the router will send back an ICMP Time Exceeded error when the IP hop limit reaches 0.</p>
-<p>In this post, we'll try to cover the basic key components of traceroute
-implementation and try to implement the proof of concept (PoC) from the key components.
-The goal of the post is to learn by doing so expect bad error handling and bad UX.</p>
+TTL will be reduced by 1 every time the packet reaches a router. The router will discard the packet and send back an ICMP Time Exceeded error when it receives IP packet with TTL 1 because it's going to be 0 (expired).</p>
+<p>In this post, we'll try to experiment with IP TTL as a basic component of traceroute implementation. We start with a proof of concept (PoC) implementation.
+The goal is to learn by doing so expect bad error handling and bad UX.</p>
 <h1 id="key-components-in-the-poc"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#key-components-in-the-poc" aria-label="Anchor link for: key-components-in-the-poc">#</a>
 Key components in the PoC</h1>
@@ -105,11 +104,13 @@ other network packet sniffing tools such as Wireshark though.</p>
 <h1 id="implementation"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#implementation" aria-label="Anchor link for: implementation">#</a>
 Implementation</h1>
-<p><img
-  src="https://blog.wavvel.com/assets/images/traceroute-implementation/traceroute-poc.jpg
+<div class="image-container">
+    <img
+      src="https://blog.wavvel.com/assets/images/traceroute-implementation/traceroute-poc.jpg
 "
-  alt="Traceroute PoC implementation overview"
-/></p>
+      alt="Traceroute PoC implementation overview"
+    />
+</div>
 <h2 id="setup"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#setup" aria-label="Anchor link for: setup">#</a>
 Setup</h2>
@@ -141,7 +142,7 @@ path = &quot;src&#x2F;bin&#x2F;traceroute_poc.rs&quot;
 </code></pre>
 <h4 id="directory-structure"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#directory-structure" aria-label="Anchor link for: directory-structure">#</a>
-Directory Structure</h4>
+Directory structure</h4>
 <p>Our directory structure will look like this</p>
 <pre><code>├── Cargo.lock
 ├── Cargo.toml
@@ -157,11 +158,11 @@ Directory Structure</h4>
 <h2 id="icmp-listener"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#icmp-listener" aria-label="Anchor link for: icmp-listener">#</a>
 ICMP listener</h2>
-<h4 id="create-icmp-socket"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#create-icmp-socket" aria-label="Anchor link for: create-icmp-socket">#</a>
-Create ICMP socket</h4>
-<p>We will create a function to start an ICMP listener,
-it will create a socket to capture the incoming messages later on.</p>
+<h4 id="create-an-icmp-socket"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#create-an-icmp-socket" aria-label="Anchor link for: create-an-icmp-socket">#</a>
+Create an ICMP socket</h4>
+<p>There will be  a function to start an ICMP listener,
+it's basically creating a socket that we can use to capture the incoming messages later on.</p>
 <pre><code>&#x2F;&#x2F; src&#x2F;lib&#x2F;icmp_listener.rs
 &#x2F;&#x2F; ------------------------------
 use socket2::{Domain, Socket};
@@ -227,9 +228,9 @@ pub fn start_icmp_listener() {
   }
 }
 </code></pre>
-<h2 id="send-udp-probe"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#send-udp-probe" aria-label="Anchor link for: send-udp-probe">#</a>
-Send UDP probe</h2>
+<h2 id="send-a-udp-probe"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#send-a-udp-probe" aria-label="Anchor link for: send-a-udp-probe">#</a>
+Send a UDP probe</h2>
 <p>Next, we go to the main function. Let's just assume we want to know the router at 6th hop going to <code>google.com</code>,
 we use <a href="https://doc.rust-lang.org/std/net/trait.ToSocketAddrs.html#tymethod.to_socket_addrs"><code>ToSocketAddrs</code></a> trait that gives us the extra capability to convert the domain name to IP address (it will do DNS lookup in the background).</p>
 <pre><code>&#x2F;&#x2F; src&#x2F;bin&#x2F;traceroute_poc.rs
@@ -284,7 +285,7 @@ let sent_count = udp_socket
 
   println!(&quot;Sent {} bytes of payload&quot;, sent_count);
 
-  &#x2F;&#x2F; Block for icmp listener;
+  &#x2F;&#x2F; Block icmp listener thread.
   &#x2F;&#x2F; ----------------------------------------
   icmp_listener_handle.join().unwrap();
 
@@ -318,11 +319,13 @@ IPv4 raw resp: Ipv4Header { ihl: 5, differentiated_services_code_point: 0, expli
 ip address:180.240.205.80:0
 ICMP type: TimeExceeded(TtlExceededInTransit), ICMP code: 0
 </code></pre>
-<p>You can compare it by running traceroute and checking whether the router at the 6th hop has the
-same IP as our program or not. It's normal that the packet path is different from time to time
-routing might change dynamically as well.</p>
+<p>We can compare it by running traceroute and checking whether the router at the 6th hop has the same router IP that we have captured (output above). It's normal that the packet path is different from time to time routing might change dynamically as well.</p>
 <pre><code>traceroute google.com
 </code></pre>
+<h1 id="what-s-next"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#what-s-next" aria-label="Anchor link for: what-s-next">#</a>
+What's next</h1>
+<p>In this post we have completed the PoC and see it ourselves that when IP packet TTL is 1 then the router will send ICMP Time Exceeded error to our IP. In the next post we will try to send multiple UDP probes and print them out.</p>
 
   </div>
 </div>

@@ -21,10 +21,9 @@
 What we will do&lt;&#x2F;h1&gt;
 &lt;p&gt;Traceroute is a utility that will print packet router path (trace) and measure the delay of packets sent to a destination.
 It works by sending packet probes to a destination with increasing (by 1) IP TTL&#x2F;IP hop limit starting from 1,
-hop limit will be decreased by 1 every time the packet reaches a router and the router will send back an ICMP Time Exceeded error when the IP hop limit reaches 0.&lt;&#x2F;p&gt;
-&lt;p&gt;In this post, we&#x27;ll try to cover the basic key components of traceroute
-implementation and try to implement the proof of concept (PoC) from the key components.
-The goal of the post is to learn by doing so expect bad error handling and bad UX.&lt;&#x2F;p&gt;
+TTL will be reduced by 1 every time the packet reaches a router. The router will discard the packet and send back an ICMP Time Exceeded error when it receives IP packet with TTL 1 because it&#x27;s going to be 0 (expired).&lt;&#x2F;p&gt;
+&lt;p&gt;In this post, we&#x27;ll try to experiment with IP TTL as a basic component of traceroute implementation. We start with a proof of concept (PoC) implementation.
+The goal is to learn by doing so expect bad error handling and bad UX.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;key-components-in-the-poc&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#key-components-in-the-poc&quot; aria-label=&quot;Anchor link for: key-components-in-the-poc&quot;&gt;#&lt;&#x2F;a&gt;
 Key components in the PoC&lt;&#x2F;h1&gt;
@@ -51,11 +50,13 @@ other network packet sniffing tools such as Wireshark though.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;implementation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#implementation&quot; aria-label=&quot;Anchor link for: implementation&quot;&gt;#&lt;&#x2F;a&gt;
 Implementation&lt;&#x2F;h1&gt;
-&lt;p&gt;&lt;img
-  src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;traceroute-implementation&#x2F;traceroute-poc.jpg
+&lt;div class=&quot;image-container&quot;&gt;
+    &lt;img
+      src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;traceroute-implementation&#x2F;traceroute-poc.jpg
 &quot;
-  alt=&quot;Traceroute PoC implementation overview&quot;
-&#x2F;&gt;&lt;&#x2F;p&gt;
+      alt=&quot;Traceroute PoC implementation overview&quot;
+    &#x2F;&gt;
+&lt;&#x2F;div&gt;
 &lt;h2 id=&quot;setup&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#setup&quot; aria-label=&quot;Anchor link for: setup&quot;&gt;#&lt;&#x2F;a&gt;
 Setup&lt;&#x2F;h2&gt;
@@ -87,7 +88,7 @@ path = &amp;quot;src&amp;#x2F;bin&amp;#x2F;traceroute_poc.rs&amp;quot;
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;directory-structure&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#directory-structure&quot; aria-label=&quot;Anchor link for: directory-structure&quot;&gt;#&lt;&#x2F;a&gt;
-Directory Structure&lt;&#x2F;h4&gt;
+Directory structure&lt;&#x2F;h4&gt;
 &lt;p&gt;Our directory structure will look like this&lt;&#x2F;p&gt;
 &lt;pre&gt;&lt;code&gt;├── Cargo.lock
 ├── Cargo.toml
@@ -103,11 +104,11 @@ Directory Structure&lt;&#x2F;h4&gt;
 &lt;h2 id=&quot;icmp-listener&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#icmp-listener&quot; aria-label=&quot;Anchor link for: icmp-listener&quot;&gt;#&lt;&#x2F;a&gt;
 ICMP listener&lt;&#x2F;h2&gt;
-&lt;h4 id=&quot;create-icmp-socket&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#create-icmp-socket&quot; aria-label=&quot;Anchor link for: create-icmp-socket&quot;&gt;#&lt;&#x2F;a&gt;
-Create ICMP socket&lt;&#x2F;h4&gt;
-&lt;p&gt;We will create a function to start an ICMP listener,
-it will create a socket to capture the incoming messages later on.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;create-an-icmp-socket&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#create-an-icmp-socket&quot; aria-label=&quot;Anchor link for: create-an-icmp-socket&quot;&gt;#&lt;&#x2F;a&gt;
+Create an ICMP socket&lt;&#x2F;h4&gt;
+&lt;p&gt;There will be  a function to start an ICMP listener,
+it&#x27;s basically creating a socket that we can use to capture the incoming messages later on.&lt;&#x2F;p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;#x2F;&amp;#x2F; src&amp;#x2F;lib&amp;#x2F;icmp_listener.rs
 &amp;#x2F;&amp;#x2F; ------------------------------
 use socket2::{Domain, Socket};
@@ -173,9 +174,9 @@ pub fn start_icmp_listener() {
   }
 }
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;send-udp-probe&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#send-udp-probe&quot; aria-label=&quot;Anchor link for: send-udp-probe&quot;&gt;#&lt;&#x2F;a&gt;
-Send UDP probe&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;send-a-udp-probe&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#send-a-udp-probe&quot; aria-label=&quot;Anchor link for: send-a-udp-probe&quot;&gt;#&lt;&#x2F;a&gt;
+Send a UDP probe&lt;&#x2F;h2&gt;
 &lt;p&gt;Next, we go to the main function. Let&#x27;s just assume we want to know the router at 6th hop going to &lt;code&gt;google.com&lt;&#x2F;code&gt;,
 we use &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;net&#x2F;trait.ToSocketAddrs.html#tymethod.to_socket_addrs&quot;&gt;&lt;code&gt;ToSocketAddrs&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; trait that gives us the extra capability to convert the domain name to IP address (it will do DNS lookup in the background).&lt;&#x2F;p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;#x2F;&amp;#x2F; src&amp;#x2F;bin&amp;#x2F;traceroute_poc.rs
@@ -230,7 +231,7 @@ let sent_count = udp_socket
 
   println!(&amp;quot;Sent {} bytes of payload&amp;quot;, sent_count);
 
-  &amp;#x2F;&amp;#x2F; Block for icmp listener;
+  &amp;#x2F;&amp;#x2F; Block icmp listener thread.
   &amp;#x2F;&amp;#x2F; ----------------------------------------
   icmp_listener_handle.join().unwrap();
 
@@ -264,11 +265,13 @@ IPv4 raw resp: Ipv4Header { ihl: 5, differentiated_services_code_point: 0, expli
 ip address:180.240.205.80:0
 ICMP type: TimeExceeded(TtlExceededInTransit), ICMP code: 0
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;You can compare it by running traceroute and checking whether the router at the 6th hop has the
-same IP as our program or not. It&#x27;s normal that the packet path is different from time to time
-routing might change dynamically as well.&lt;&#x2F;p&gt;
+&lt;p&gt;We can compare it by running traceroute and checking whether the router at the 6th hop has the same router IP that we have captured (output above). It&#x27;s normal that the packet path is different from time to time routing might change dynamically as well.&lt;&#x2F;p&gt;
 &lt;pre&gt;&lt;code&gt;traceroute google.com
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;what-s-next&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-s-next&quot; aria-label=&quot;Anchor link for: what-s-next&quot;&gt;#&lt;&#x2F;a&gt;
+What&#x27;s next&lt;&#x2F;h1&gt;
+&lt;p&gt;In this post we have completed the PoC and see it ourselves that when IP packet TTL is 1 then the router will send ICMP Time Exceeded error to our IP. In the next post we will try to send multiple UDP probes and print them out.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
