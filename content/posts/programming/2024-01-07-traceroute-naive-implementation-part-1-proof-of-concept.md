@@ -271,6 +271,7 @@ We can compare it by running traceroute and checking whether the router at the 6
 traceroute google.com
 ```
 
+You can find the implementation in this post [here](https://github.com/sendyhalim/network-utilities/blob/master/src/bin/traceroute-poc.rs).
 
 # What's next
 In this post we have completed the PoC and see it ourselves that when IP packet TTL is 1 then the router will send ICMP Time Exceeded error to our IP. In the next post we will try to send multiple UDP probes and print them out.
