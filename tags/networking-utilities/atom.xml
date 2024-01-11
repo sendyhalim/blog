@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - networking-utilities</title>
-    <link href="https://blog.wavvel.com/tags/networking-utilities/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/networking-utilities/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2024-01-07T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/networking-utilities/atom.xml</id>
@@ -10,13 +10,19 @@
         <title>Traceroute Naive Implementation Part 1: Proof of Concept</title>
         <published>2024-01-07T00:00:00+00:00</published>
         <updated>2024-01-07T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/"/>
         <id>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/</id>
         
-        <content type="html">&lt;h1 id=&quot;what-we-will-do&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/">&lt;h1 id=&quot;what-we-will-do&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-we-will-do&quot; aria-label=&quot;Anchor link for: what-we-will-do&quot;&gt;#&lt;&#x2F;a&gt;
 What we will do&lt;&#x2F;h1&gt;
 &lt;p&gt;Traceroute is a utility that will print packet router path (trace) and measure the delay of packets sent to a destination.
@@ -268,6 +274,7 @@ ICMP type: TimeExceeded(TtlExceededInTransit), ICMP code: 0
 &lt;p&gt;We can compare it by running traceroute and checking whether the router at the 6th hop has the same router IP that we have captured (output above). It&#x27;s normal that the packet path is different from time to time routing might change dynamically as well.&lt;&#x2F;p&gt;
 &lt;pre&gt;&lt;code&gt;traceroute google.com
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You can find the implementation in this post &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;network-utilities&#x2F;blob&#x2F;master&#x2F;src&#x2F;bin&#x2F;traceroute-poc.rs&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;what-s-next&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-s-next&quot; aria-label=&quot;Anchor link for: what-s-next&quot;&gt;#&lt;&#x2F;a&gt;
 What&#x27;s next&lt;&#x2F;h1&gt;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - unit-testing</title>
-    <link href="https://blog.wavvel.com/tags/unit-testing/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/unit-testing/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-10-21T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/unit-testing/atom.xml</id>
@@ -10,13 +10,19 @@
         <title>Unit Testing: Organizing Test Directories and Files</title>
         <published>2023-10-21T00:00:00+00:00</published>
         <updated>2023-10-21T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/</id>
         
-        <content type="html">&lt;h3 id=&quot;motivation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/">&lt;h3 id=&quot;motivation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#motivation&quot; aria-label=&quot;Anchor link for: motivation&quot;&gt;#&lt;&#x2F;a&gt;
 Motivation&lt;&#x2F;h3&gt;
 &lt;p&gt;It&#x27;s common for a function to have many positive and negative cases,
@@ -180,13 +186,19 @@ otherwise, we can group common logic further based on where it&#x27;s reused:&lt
         <title>Unit Testing: Prioritizing Unit Test Cases</title>
         <published>2023-10-19T00:00:00+00:00</published>
         <updated>2023-10-19T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/</id>
         
-        <content type="html">&lt;h1 id=&quot;writing-unit-tests-takes-times&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/">&lt;h1 id=&quot;writing-unit-tests-takes-times&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#writing-unit-tests-takes-times&quot; aria-label=&quot;Anchor link for: writing-unit-tests-takes-times&quot;&gt;#&lt;&#x2F;a&gt;
 Writing unit tests takes times&lt;&#x2F;h1&gt;
 &lt;p&gt;Writing unit tests take time, achieving 100% unit test coverage
@@ -251,13 +263,19 @@ intuitively it&#x27;s unlikely the end users would input a negative salary and i
         <title>Unit Testing: Minimizing Logic Errors In Unit Tests</title>
         <published>2023-10-14T00:00:00+00:00</published>
         <updated>2023-10-14T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/</id>
         
-        <content type="html">&lt;h1 id=&quot;buggy-unit-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/">&lt;h1 id=&quot;buggy-unit-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#buggy-unit-tests&quot; aria-label=&quot;Anchor link for: buggy-unit-tests&quot;&gt;#&lt;&#x2F;a&gt;
 Buggy unit tests&lt;&#x2F;h1&gt;
 &lt;p&gt;Unit tests can be buggy, similar to how we write business logic code, there could be logic error in the unit tests.
@@ -296,13 +314,19 @@ I did like 3-4 times of end to end testing, probably I would only need to do 1-2
         <title>Unit Testing: Your first step in unit testing, what to expect</title>
         <published>2023-10-08T00:00:00+00:00</published>
         <updated>2023-10-08T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/</id>
         
-        <content type="html">&lt;h1 id=&quot;set-your-mindset-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/">&lt;h1 id=&quot;set-your-mindset-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#set-your-mindset-first&quot; aria-label=&quot;Anchor link for: set-your-mindset-first&quot;&gt;#&lt;&#x2F;a&gt;
 Set your mindset first&lt;&#x2F;h1&gt;
 &lt;p&gt;I would like to remind you that you need to understand the motivation behind unit tests,
@@ -407,13 +431,19 @@ the most common ones:&lt;&#x2F;p&gt;
         <title>Unit Testing: The Point of Unit Tests</title>
         <published>2023-10-07T00:00:00+00:00</published>
         <updated>2023-10-07T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/</id>
         
-        <content type="html">&lt;p&gt;Most likely you&#x27;ve heard the term &lt;code&gt;unit tests&lt;&#x2F;code&gt; if you&#x27;re in software engineering or fields related to it.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/">&lt;p&gt;Most likely you&#x27;ve heard the term &lt;code&gt;unit tests&lt;&#x2F;code&gt; if you&#x27;re in software engineering or fields related to it.
 This post is a short introduction to the unit testing practice, starting with what is it and what&#x27;s the point
 of doing it from my view, it&#x27;s not meant to be super technical.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;what-is-unit-testing&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;

@@ -322,6 +322,7 @@ ICMP type: TimeExceeded(TtlExceededInTransit), ICMP code: 0
 <p>We can compare it by running traceroute and checking whether the router at the 6th hop has the same router IP that we have captured (output above). It's normal that the packet path is different from time to time routing might change dynamically as well.</p>
 <pre><code>traceroute google.com
 </code></pre>
+<p>You can find the implementation in this post <a href="https://github.com/sendyhalim/network-utilities/blob/master/src/bin/traceroute-poc.rs">here</a>.</p>
 <h1 id="what-s-next"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
 <a class="zola-anchor" href="#what-s-next" aria-label="Anchor link for: what-s-next">#</a>
 What's next</h1>
