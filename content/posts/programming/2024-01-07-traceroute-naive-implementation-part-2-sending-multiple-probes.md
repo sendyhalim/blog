@@ -10,18 +10,32 @@ tags = ["programming", "networking-utilities"]
 
 
 # What we will do
-This time we'll build on top of the previous traceroute PoC, this time we will
+We'll build on top of the previous traceroute PoC(TODO: Set link), this time we will
 implement functionality to send multiple probes and print the router IP (if they send us back the ICMP TimeExceeded error),
 we will not measure round-trip delay yet to keep things simple.
 
-# Raw Socket
+Step by step explanation:
+1. We will set max TTL / hop limit to 30
+2. We'll prepare an array filled with 3 placeholder that will be filled with UDP payload for every iteration of TTL starting from 1 - 30, so we would send at most 30 * 3 ud probes.
+3. For every TTL, we'll send each of the probe sequentially. We'll wait for an ICMP message before sending the next probe,
+   if we receive ICMP Time Exceeded error then we'll printout the sender (router) IP, if we do not receive it up until 5 seconds then we'll print `*` and continue the iteration
+
+# Using Raw Socket
 First we'll rewrite our udp socket to use raw socket instead, this will give us
-more flexibility to build raw IPv4 header, just in case we need to add flags or any other
+more flexibility to build raw IPv4 header if we need to add flags or any other
 IPv4 header value.
 
-# Sending multiple probes
-1. We'll prepare an array placeholder that will be filled with UDP payload.
-2. We'll iterate each UDP payload sequentially and send the probe, we'll wait for an ICMP message before sending each payload.
+....
 
-# Iterating through TTL and send multiple probes
+# Preparing the IP TTL value and placeholder
+
+
+
+
+# Iterating through TTL
+
+
+
+
+# Send the probes and print the result
 
