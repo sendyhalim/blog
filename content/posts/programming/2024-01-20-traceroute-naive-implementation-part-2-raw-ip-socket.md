@@ -8,11 +8,10 @@ tags = ["programming", "networking-utilities"]
 +++
 
 
-# What we will do
 We'll build on top of our [traceroute PoC](/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/),
 this time we will rewrite our UDP socket to use raw socket instead. Using raw IP socket will give us
 more flexibility to build raw IPv4 header just in case we need to add flags or any other
-IPv4 header value. The tradeoff is we need to construct the IPv4 header then fill IPv4 payload with UDP header and payload manually.
+IPv4 header value. The tradeoff is we need to construct the IPv4 header and then fill the IPv4 payload with a UDP header and payload manually.
 
 # Initiating Raw Socket
 We use `UdpSocket` in our previous implementation, we replace `UdpSocket` with `socket2::Socket` to
@@ -37,10 +36,10 @@ let ip_raw_socket = Socket::new(
 
 # Preparing the header and payload
 The consequence of using a raw socket is we need to construct the IP header and payload (contains UDP header and payload as well) on our own in exchange for flexibility,
-there are several keypoints in preparing the IP header and payload in this section:
+there are several key points in preparing the IP header and payload in this section:
 * We're still using a dummy UDP payload.
-* We need to construct UDP header and payload first, the UDP header and payload will be part of IP payload.
-* Then we construct IPv4 header then append UDP header and UDP payload as IP payload, it's depicted in the diagram below.
+* We need to construct a UDP header and payload first, the UDP header and payload will be part of the IP payload.
+* Then we construct an IPv4 header then append the UDP header and UDP payload as IP payload, it's depicted in the diagram below.
 
 <div class="image-container">
     <img
@@ -67,7 +66,7 @@ let mut udp_packet: Vec<u8> = vec![];
 udp_packet.extend_from_slice(&udp_header.to_bytes());
 udp_packet.extend_from_slice(&udp_payload);
 
-# Construct IPv4 header
+# Construct IP header
 # ---------------------
 let ipv4_addr: Ipv4Addr = udp_socket_addr_dest.ip().to_string().parse().unwrap();
 let mut ipv4_header = etherparse::Ipv4Header::new(
@@ -85,10 +84,10 @@ let mut ipv4_header = etherparse::Ipv4Header::new(
 
 // The default value is true inside etherparse::Ipv4Header::new() method.
 // The DF bit is not set when observing traceroute
-// through tcpdump, so we're just mimicking the behaviour here.
+// through tcpdump, so we're just mimicking the behavior here.
 ipv4_header.dont_fragment = false;
 
-// If set to true then `send` method will expect us to include IPv4 header
+// If set to true then `send` method will expect us to include an IP header
 // in the data that we pass into send_to method
 ip_raw_socket.set_header_included(true).unwrap();
 
@@ -111,8 +110,8 @@ sudo tcpdump udp port 33474 -n -vvv
 # ----------------------------------------
 cargo build && sudo RUST_BACKTRACE=1 ./target/debug/traceroute_poc_raw_socket
 
-... The rest are the same as part 1
+... The rest are the same as in part 1
 ```
 
 # What's next
-In the next post we will try to send multiple UDP probes and print responding router IPs.
+In the next post, we will try to send multiple UDP probes and print responding router IPs.
