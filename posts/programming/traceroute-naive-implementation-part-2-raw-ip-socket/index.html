@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Sendy Halim">
+
+  
+    <meta name="description" content="An attempt to implement traceroute proof of concept functionality naively in rust part 2">
+  
+
+  <title>
+    
+      Traceroute Naive Implementation Part 2: Raw IP Socket
+    
+  </title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/navigation.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/highlight-js.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/image.css" />
+  <link rel="stylesheet" type="text/css" href="https://blog.wavvel.com/assets/css/post.css" />
+</head>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80328765-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-80328765-1');
+  </script>
+
+
+
+  <body>
+    <div id="content">
+      <nav>
+  <a href="https://blog.wavvel.com">
+    <span class="arrow">←</span> Home
+  </a>
+</nav>
+
+
+
+<div class="post">
+  <h1 class="title">Traceroute Naive Implementation Part 2: Raw IP Socket</h1>
+
+  <div class="headline">
+    <div>
+      2024-01-20
+
+    </div>
+    <div>
+      <div class="tag-list-container">
+  
+  <span class="tag">
+    #programming
+  </span>
+  
+  <span class="tag">
+    #networking-utilities
+  </span>
+  
+</div>
+
+    </div>
+  </div>
+
+  <div class="post-body">
+    <p>We'll build on top of our <a href="/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/">traceroute PoC</a>,
+this time we will rewrite our UDP socket to use raw socket instead. Using raw IP socket will give us
+more flexibility to build raw IPv4 header just in case we need to add flags or any other
+IPv4 header value. The tradeoff is we need to construct the IPv4 header and then fill the IPv4 payload with a UDP header and payload manually.</p>
+<h1 id="initiating-raw-socket"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#initiating-raw-socket" aria-label="Anchor link for: initiating-raw-socket">#</a>
+Initiating Raw Socket</h1>
+<p>We use <code>UdpSocket</code> in our previous implementation, we replace <code>UdpSocket</code> with <code>socket2::Socket</code> to
+allow us to use raw socket where internally it will create a system socket with <code>SOCK_RAW</code> type.</p>
+<pre><code>## Before
+## ------------
+udp_socket = UdpSocket::bind(udp_socket_addr_client).unwrap();
+
+
+## After
+## ------------
+let ip_raw_socket = Socket::new(
+  Domain::IPV4,
+  socket2::Type::RAW,
+  Some(socket2::Protocol::UDP),
+)
+.unwrap();
+</code></pre>
+<h1 id="preparing-the-header-and-payload"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#preparing-the-header-and-payload" aria-label="Anchor link for: preparing-the-header-and-payload">#</a>
+Preparing the header and payload</h1>
+<p>The consequence of using a raw socket is we need to construct the IP header and payload (contains UDP header and payload as well) on our own in exchange for flexibility,
+there are several key points in preparing the IP header and payload in this section:</p>
+<ul>
+<li>We're still using a dummy UDP payload.</li>
+<li>We need to construct a UDP header and payload first, the UDP header and payload will be part of the IP payload.</li>
+<li>Then we construct an IPv4 header then append the UDP header and UDP payload as IP payload, it's depicted in the diagram below.</li>
+</ul>
+<div class="image-container">
+    <img
+      src="https://blog.wavvel.com/assets/images/traceroute-implementation/ip-datagram.jpg
+"
+      alt="IP Datagram containing UDP header and payload"
+    />
+</div>
+<pre><code># Construct UDP header and payload
+# ---------------------
+let udp_header = etherparse::UdpHeader::without_ipv4_checksum(
+  udp_socket_client_port,
+  udp_socket_dest_port,
+  udp_payload.len(), &#x2F;&#x2F; Later will be sum-med with udp_header len
+)
+.unwrap();
+
+let udp_payload: [u8; 2] = [0, 0];
+
+let mut udp_packet: Vec&lt;u8&gt; = vec![];
+udp_packet.extend_from_slice(&amp;udp_header.to_bytes());
+udp_packet.extend_from_slice(&amp;udp_payload);
+
+# Construct IP header
+# ---------------------
+let ipv4_addr: Ipv4Addr = udp_socket_addr_dest.ip().to_string().parse().unwrap();
+let mut ipv4_header = etherparse::Ipv4Header::new(
+  udp_packet.len() as u16, &#x2F;&#x2F; IP Payload length, IP payload will contain the whole UDP packet (header and payload)
+  hop_limit as u8,
+  17, &#x2F;&#x2F; UDP protocol
+  udp_socket_addr_client
+    .ip()
+    .to_string()
+    .parse::&lt;Ipv4Addr&gt;()
+    .unwrap()
+    .octets(), &#x2F;&#x2F; Source IP
+  ipv4_addr.octets(), &#x2F;&#x2F; Destination IP
+);
+
+&#x2F;&#x2F; The default value is true inside etherparse::Ipv4Header::new() method.
+&#x2F;&#x2F; The DF bit is not set when observing traceroute
+&#x2F;&#x2F; through tcpdump, so we&#x27;re just mimicking the behavior here.
+ipv4_header.dont_fragment = false;
+
+&#x2F;&#x2F; If set to true then `send` method will expect us to include an IP header
+&#x2F;&#x2F; in the data that we pass into send_to method
+ip_raw_socket.set_header_included(true).unwrap();
+
+&#x2F;&#x2F; Construct IP datagram
+# ---------------------
+let mut ip_datagram: Vec&lt;u8&gt; = vec![];
+
+ipv4_header.write(&amp;mut ip_datagram).unwrap();
+ip_datagram.extend_from_slice(&amp;udp_packet);
+</code></pre>
+<h1 id="build-and-test"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#build-and-test" aria-label="Anchor link for: build-and-test">#</a>
+Build and test</h1>
+<p>The complete code can be found on my <a href="https://github.com/sendyhalim/network-utilities/blob/master/src/bin/traceroute_poc_raw_socket.rs">github</a>.</p>
+<pre><code># Start tcpdump first to sniff our packet
+# ----------------------------------------
+sudo tcpdump udp port 33474 -n -vvv
+
+# Build and run
+# ----------------------------------------
+cargo build &amp;&amp; sudo RUST_BACKTRACE=1 .&#x2F;target&#x2F;debug&#x2F;traceroute_poc_raw_socket
+
+... The rest are the same as in part 1
+</code></pre>
+<h1 id="what-s-next"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#what-s-next" aria-label="Anchor link for: what-s-next">#</a>
+What's next</h1>
+<p>In the next post, we will try to send multiple UDP probes and print responding router IPs.</p>
+
+  </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wavvel'; // Required - Replace '<example>' with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+    </div>
+
+    <div class="post grouped-posts mt-3">
+  <h3>
+    Topics that might interest you
+    <hr />
+  </h3>
+
+  <ul class="post-list mt-3">
+    <li>
+      <a href="/tags/unit-testing">
+        🔬 Unit Testing
+      </a>
+    </li>
+
+    <li>
+      <a href="/tags/code-review">
+        🧐 Code Review
+      </a>
+    </li>
+
+    <li>
+      <a href="/tags/war-stories">
+        🔥 War Stories
+      </a>
+    </li>
+  </ul>
+</div>
+
+<footer id="footer">
+  <p class="small">
+    © Copyright 2023 Sendy Halim
+  </p>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://blog.wavvel.com/assets/js/highlight.js" type="text/javascript"></script>
+<script type="text/javascript">
+  hljs.initHighlightingOnLoad();
+</script>
+
+  </body>
+</html>

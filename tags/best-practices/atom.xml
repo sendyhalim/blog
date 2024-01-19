@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - best-practices</title>
-    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/best-practices/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <link href="https://blog.wavvel.com/tags/best-practices/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-12-10T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/best-practices/atom.xml</id>
@@ -10,19 +10,13 @@
         <title>Code Review: Code Author Best Practices</title>
         <published>2023-12-10T00:00:00+00:00</published>
         <updated>2023-12-10T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/">&lt;h1 id=&quot;code-author&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h1 id=&quot;code-author&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#code-author&quot; aria-label=&quot;Anchor link for: code-author&quot;&gt;#&lt;&#x2F;a&gt;
 Code Author&lt;&#x2F;h1&gt;
 &lt;p&gt;The code author or pull request(PR) author is the person who makes the changes.
@@ -109,19 +103,13 @@ Write a quick&#x2F;simple tutorial how to test your changes&lt;&#x2F;h1&gt;
         <title>Unit Testing: Organizing Test Directories and Files</title>
         <published>2023-10-21T00:00:00+00:00</published>
         <updated>2023-10-21T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/">&lt;h3 id=&quot;motivation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h3 id=&quot;motivation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#motivation&quot; aria-label=&quot;Anchor link for: motivation&quot;&gt;#&lt;&#x2F;a&gt;
 Motivation&lt;&#x2F;h3&gt;
 &lt;p&gt;It&#x27;s common for a function to have many positive and negative cases,
@@ -285,19 +273,13 @@ otherwise, we can group common logic further based on where it&#x27;s reused:&lt
         <title>Unit Testing: Prioritizing Unit Test Cases</title>
         <published>2023-10-19T00:00:00+00:00</published>
         <updated>2023-10-19T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/">&lt;h1 id=&quot;writing-unit-tests-takes-times&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h1 id=&quot;writing-unit-tests-takes-times&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#writing-unit-tests-takes-times&quot; aria-label=&quot;Anchor link for: writing-unit-tests-takes-times&quot;&gt;#&lt;&#x2F;a&gt;
 Writing unit tests takes times&lt;&#x2F;h1&gt;
 &lt;p&gt;Writing unit tests take time, achieving 100% unit test coverage
@@ -362,19 +344,13 @@ intuitively it&#x27;s unlikely the end users would input a negative salary and i
         <title>Unit Testing: Minimizing Logic Errors In Unit Tests</title>
         <published>2023-10-14T00:00:00+00:00</published>
         <updated>2023-10-14T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/">&lt;h1 id=&quot;buggy-unit-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h1 id=&quot;buggy-unit-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#buggy-unit-tests&quot; aria-label=&quot;Anchor link for: buggy-unit-tests&quot;&gt;#&lt;&#x2F;a&gt;
 Buggy unit tests&lt;&#x2F;h1&gt;
 &lt;p&gt;Unit tests can be buggy, similar to how we write business logic code, there could be logic error in the unit tests.
@@ -413,19 +389,13 @@ I did like 3-4 times of end to end testing, probably I would only need to do 1-2
         <title>Unit Testing: Your first step in unit testing, what to expect</title>
         <published>2023-10-08T00:00:00+00:00</published>
         <updated>2023-10-08T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/">&lt;h1 id=&quot;set-your-mindset-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h1 id=&quot;set-your-mindset-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#set-your-mindset-first&quot; aria-label=&quot;Anchor link for: set-your-mindset-first&quot;&gt;#&lt;&#x2F;a&gt;
 Set your mindset first&lt;&#x2F;h1&gt;
 &lt;p&gt;I would like to remind you that you need to understand the motivation behind unit tests,
@@ -530,19 +500,13 @@ the most common ones:&lt;&#x2F;p&gt;
         <title>Unit Testing: The Point of Unit Tests</title>
         <published>2023-10-07T00:00:00+00:00</published>
         <updated>2023-10-07T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/">&lt;p&gt;Most likely you&#x27;ve heard the term &lt;code&gt;unit tests&lt;&#x2F;code&gt; if you&#x27;re in software engineering or fields related to it.
+        <content type="html">&lt;p&gt;Most likely you&#x27;ve heard the term &lt;code&gt;unit tests&lt;&#x2F;code&gt; if you&#x27;re in software engineering or fields related to it.
 This post is a short introduction to the unit testing practice, starting with what is it and what&#x27;s the point
 of doing it from my view, it&#x27;s not meant to be super technical.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;what-is-unit-testing&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
@@ -614,19 +578,13 @@ once it&#x27;s all green we can proceed to push the dependency upgrade to the ma
         <title>War Story: Accidentally Ran A Database Update Without Where Clause</title>
         <published>2023-09-30T00:00:00+00:00</published>
         <updated>2023-09-30T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/">&lt;h2 id=&quot;what-happened&quot;&gt;What Happened&lt;&#x2F;h2&gt;
+        <content type="html">&lt;h2 id=&quot;what-happened&quot;&gt;What Happened&lt;&#x2F;h2&gt;
 &lt;p&gt;Back in 2019 I was in a very good mood that the product launch was quite smooth in the past months.
 I got report that there were calculation bugs affecting some of the data. The bug was reproducible locally, I skimmed at the code and just kind of knew where the miscalculation happened in the code,
 my confident was high and my coffee tasted good on that day!&lt;&#x2F;p&gt;
@@ -667,19 +625,13 @@ I hope you learn something from the war story.&lt;&#x2F;p&gt;
         <title>Software Engineering Day to Day Best Practices</title>
         <published>2023-09-19T00:00:00+00:00</published>
         <updated>2023-09-19T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/">&lt;h2 id=&quot;background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h2 id=&quot;background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#background&quot; aria-label=&quot;Anchor link for: background&quot;&gt;#&lt;&#x2F;a&gt;
 Background&lt;&#x2F;h2&gt;
 &lt;p&gt;The software engineering day to day practice is not related directly to programming, there are

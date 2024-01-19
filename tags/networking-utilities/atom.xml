@@ -1,28 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - networking-utilities</title>
-    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/networking-utilities/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <link href="https://blog.wavvel.com/tags/networking-utilities/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-01-07T00:00:00+00:00</updated>
+    <updated>2024-01-20T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/networking-utilities/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Traceroute Naive Implementation Part 2: Raw IP Socket</title>
+        <published>2024-01-20T00:00:00+00:00</published>
+        <updated>2024-01-20T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/</id>
+        
+        <content type="html">&lt;p&gt;We&#x27;ll build on top of our &lt;a href=&quot;&#x2F;posts&#x2F;programming&#x2F;traceroute-naive-implementation-part-1-proof-of-concept&#x2F;&quot;&gt;traceroute PoC&lt;&#x2F;a&gt;,
+this time we will rewrite our UDP socket to use raw socket instead. Using raw IP socket will give us
+more flexibility to build raw IPv4 header just in case we need to add flags or any other
+IPv4 header value. The tradeoff is we need to construct the IPv4 header and then fill the IPv4 payload with a UDP header and payload manually.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;initiating-raw-socket&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#initiating-raw-socket&quot; aria-label=&quot;Anchor link for: initiating-raw-socket&quot;&gt;#&lt;&#x2F;a&gt;
+Initiating Raw Socket&lt;&#x2F;h1&gt;
+&lt;p&gt;We use &lt;code&gt;UdpSocket&lt;&#x2F;code&gt; in our previous implementation, we replace &lt;code&gt;UdpSocket&lt;&#x2F;code&gt; with &lt;code&gt;socket2::Socket&lt;&#x2F;code&gt; to
+allow us to use raw socket where internally it will create a system socket with &lt;code&gt;SOCK_RAW&lt;&#x2F;code&gt; type.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;## Before
+## ------------
+udp_socket = UdpSocket::bind(udp_socket_addr_client).unwrap();
+
+
+## After
+## ------------
+let ip_raw_socket = Socket::new(
+  Domain::IPV4,
+  socket2::Type::RAW,
+  Some(socket2::Protocol::UDP),
+)
+.unwrap();
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;preparing-the-header-and-payload&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#preparing-the-header-and-payload&quot; aria-label=&quot;Anchor link for: preparing-the-header-and-payload&quot;&gt;#&lt;&#x2F;a&gt;
+Preparing the header and payload&lt;&#x2F;h1&gt;
+&lt;p&gt;The consequence of using a raw socket is we need to construct the IP header and payload (contains UDP header and payload as well) on our own in exchange for flexibility,
+there are several key points in preparing the IP header and payload in this section:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;We&#x27;re still using a dummy UDP payload.&lt;&#x2F;li&gt;
+&lt;li&gt;We need to construct a UDP header and payload first, the UDP header and payload will be part of the IP payload.&lt;&#x2F;li&gt;
+&lt;li&gt;Then we construct an IPv4 header then append the UDP header and UDP payload as IP payload, it&#x27;s depicted in the diagram below.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div class=&quot;image-container&quot;&gt;
+    &lt;img
+      src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;traceroute-implementation&#x2F;ip-datagram.jpg
+&quot;
+      alt=&quot;IP Datagram containing UDP header and payload&quot;
+    &#x2F;&gt;
+&lt;&#x2F;div&gt;
+&lt;pre&gt;&lt;code&gt;# Construct UDP header and payload
+# ---------------------
+let udp_header = etherparse::UdpHeader::without_ipv4_checksum(
+  udp_socket_client_port,
+  udp_socket_dest_port,
+  udp_payload.len(), &amp;#x2F;&amp;#x2F; Later will be sum-med with udp_header len
+)
+.unwrap();
+
+let udp_payload: [u8; 2] = [0, 0];
+
+let mut udp_packet: Vec&amp;lt;u8&amp;gt; = vec![];
+udp_packet.extend_from_slice(&amp;amp;udp_header.to_bytes());
+udp_packet.extend_from_slice(&amp;amp;udp_payload);
+
+# Construct IP header
+# ---------------------
+let ipv4_addr: Ipv4Addr = udp_socket_addr_dest.ip().to_string().parse().unwrap();
+let mut ipv4_header = etherparse::Ipv4Header::new(
+  udp_packet.len() as u16, &amp;#x2F;&amp;#x2F; IP Payload length, IP payload will contain the whole UDP packet (header and payload)
+  hop_limit as u8,
+  17, &amp;#x2F;&amp;#x2F; UDP protocol
+  udp_socket_addr_client
+    .ip()
+    .to_string()
+    .parse::&amp;lt;Ipv4Addr&amp;gt;()
+    .unwrap()
+    .octets(), &amp;#x2F;&amp;#x2F; Source IP
+  ipv4_addr.octets(), &amp;#x2F;&amp;#x2F; Destination IP
+);
+
+&amp;#x2F;&amp;#x2F; The default value is true inside etherparse::Ipv4Header::new() method.
+&amp;#x2F;&amp;#x2F; The DF bit is not set when observing traceroute
+&amp;#x2F;&amp;#x2F; through tcpdump, so we&amp;#x27;re just mimicking the behavior here.
+ipv4_header.dont_fragment = false;
+
+&amp;#x2F;&amp;#x2F; If set to true then `send` method will expect us to include an IP header
+&amp;#x2F;&amp;#x2F; in the data that we pass into send_to method
+ip_raw_socket.set_header_included(true).unwrap();
+
+&amp;#x2F;&amp;#x2F; Construct IP datagram
+# ---------------------
+let mut ip_datagram: Vec&amp;lt;u8&amp;gt; = vec![];
+
+ipv4_header.write(&amp;amp;mut ip_datagram).unwrap();
+ip_datagram.extend_from_slice(&amp;amp;udp_packet);
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;build-and-test&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#build-and-test&quot; aria-label=&quot;Anchor link for: build-and-test&quot;&gt;#&lt;&#x2F;a&gt;
+Build and test&lt;&#x2F;h1&gt;
+&lt;p&gt;The complete code can be found on my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;network-utilities&#x2F;blob&#x2F;master&#x2F;src&#x2F;bin&#x2F;traceroute_poc_raw_socket.rs&quot;&gt;github&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;# Start tcpdump first to sniff our packet
+# ----------------------------------------
+sudo tcpdump udp port 33474 -n -vvv
+
+# Build and run
+# ----------------------------------------
+cargo build &amp;amp;&amp;amp; sudo RUST_BACKTRACE=1 .&amp;#x2F;target&amp;#x2F;debug&amp;#x2F;traceroute_poc_raw_socket
+
+... The rest are the same as in part 1
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;what-s-next&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-s-next&quot; aria-label=&quot;Anchor link for: what-s-next&quot;&gt;#&lt;&#x2F;a&gt;
+What&#x27;s next&lt;&#x2F;h1&gt;
+&lt;p&gt;In the next post, we will try to send multiple UDP probes and print responding router IPs.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Traceroute Naive Implementation Part 1: Proof of Concept</title>
         <published>2024-01-07T00:00:00+00:00</published>
         <updated>2024-01-07T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/">&lt;h1 id=&quot;what-we-will-do&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h1 id=&quot;what-we-will-do&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-we-will-do&quot; aria-label=&quot;Anchor link for: what-we-will-do&quot;&gt;#&lt;&#x2F;a&gt;
 What we will do&lt;&#x2F;h1&gt;
 &lt;p&gt;Traceroute is a utility that will print packet router path (trace) and measure the delay of packets sent to a destination.
@@ -278,7 +390,9 @@ ICMP type: TimeExceeded(TtlExceededInTransit), ICMP code: 0
 &lt;h1 id=&quot;what-s-next&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-s-next&quot; aria-label=&quot;Anchor link for: what-s-next&quot;&gt;#&lt;&#x2F;a&gt;
 What&#x27;s next&lt;&#x2F;h1&gt;
-&lt;p&gt;In this post we have completed the PoC and see it ourselves that when IP packet TTL is 1 then the router will send ICMP Time Exceeded error to our IP. In the next post we will try to send multiple UDP probes and print them out.&lt;&#x2F;p&gt;
+&lt;p&gt;In this post we have completed the PoC and see it ourselves that when IP packet TTL is 1
+then the router will send ICMP Time Exceeded error to our IP. In the &lt;a href=&quot;&#x2F;posts&#x2F;programming&#x2F;traceroute-naive-implementation-part-2-raw-ip-socket&#x2F;&quot;&gt;next post&lt;&#x2F;a&gt;
+we&#x27;ll rewrite our UDP socket to use IP raw socket to give us room for flexibility.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
