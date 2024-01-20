@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - traceroute-implementation</title>
+    <link href="https://blog.wavvel.com/tags/traceroute-implementation/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-01-20T00:00:00+00:00</updated>
+    <id>https://blog.wavvel.com/tags/traceroute-implementation/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Traceroute Naive Implementation Part 2: Raw IP Socket</title>
+        <published>2024-01-20T00:00:00+00:00</published>
+        <updated>2024-01-20T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/</id>
+        
+        <content type="html">&lt;p&gt;We&#x27;ll build on top of our &lt;a href=&quot;&#x2F;posts&#x2F;programming&#x2F;traceroute-naive-implementation-part-1-proof-of-concept&#x2F;&quot;&gt;traceroute PoC&lt;&#x2F;a&gt;,
+this time we will rewrite our UDP socket to use raw socket instead. Using raw IP socket will give us
+more flexibility to build raw IPv4 header just in case we need to add flags or any other
+IPv4 header value. The tradeoff is we need to construct the IPv4 header and then fill the IPv4 payload with a UDP header and payload manually.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;initiating-raw-socket&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#initiating-raw-socket&quot; aria-label=&quot;Anchor link for: initiating-raw-socket&quot;&gt;#&lt;&#x2F;a&gt;
+Initiating Raw Socket&lt;&#x2F;h1&gt;
+&lt;p&gt;We use &lt;code&gt;UdpSocket&lt;&#x2F;code&gt; in our previous implementation, we replace &lt;code&gt;UdpSocket&lt;&#x2F;code&gt; with &lt;code&gt;socket2::Socket&lt;&#x2F;code&gt; to
+allow us to use raw socket where internally it will create a system socket with &lt;code&gt;SOCK_RAW&lt;&#x2F;code&gt; type.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;## Before
+## ------------
+udp_socket = UdpSocket::bind(udp_socket_addr_client).unwrap();
+
+
+## After
+## ------------
+let ip_raw_socket = Socket::new(
+  Domain::IPV4,
+  socket2::Type::RAW,
+  Some(socket2::Protocol::UDP),
+)
+.unwrap();
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;preparing-the-header-and-payload&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#preparing-the-header-and-payload&quot; aria-label=&quot;Anchor link for: preparing-the-header-and-payload&quot;&gt;#&lt;&#x2F;a&gt;
+Preparing the header and payload&lt;&#x2F;h1&gt;
+&lt;p&gt;The consequence of using a raw socket is we need to construct the IP header and payload (contains UDP header and payload as well) on our own in exchange for flexibility,
+there are several key points in preparing the IP header and payload in this section:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;We&#x27;re still using a dummy UDP payload.&lt;&#x2F;li&gt;
+&lt;li&gt;We need to construct a UDP header and payload first, the UDP header and payload will be part of the IP payload.&lt;&#x2F;li&gt;
+&lt;li&gt;Then we construct an IPv4 header then append the UDP header and UDP payload as IP payload, it&#x27;s depicted in the diagram below.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div class=&quot;image-container&quot;&gt;
+    &lt;img
+      src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;traceroute-implementation&#x2F;ip-datagram.jpg
+&quot;
+      alt=&quot;IP Datagram containing UDP header and payload&quot;
+    &#x2F;&gt;
+&lt;&#x2F;div&gt;
+&lt;pre&gt;&lt;code&gt;# Construct UDP header and payload
+# ---------------------
+let udp_header = etherparse::UdpHeader::without_ipv4_checksum(
+  udp_socket_client_port,
+  udp_socket_dest_port,
+  udp_payload.len(), &amp;#x2F;&amp;#x2F; Later will be sum-med with udp_header len
+)
+.unwrap();
+
+let udp_payload: [u8; 2] = [0, 0];
+
+let mut udp_packet: Vec&amp;lt;u8&amp;gt; = vec![];
+udp_packet.extend_from_slice(&amp;amp;udp_header.to_bytes());
+udp_packet.extend_from_slice(&amp;amp;udp_payload);
+
+# Construct IP header
+# ---------------------
+let ipv4_addr: Ipv4Addr = udp_socket_addr_dest.ip().to_string().parse().unwrap();
+let mut ipv4_header = etherparse::Ipv4Header::new(
+  udp_packet.len() as u16, &amp;#x2F;&amp;#x2F; IP Payload length, IP payload will contain the whole UDP packet (header and payload)
+  hop_limit as u8,
+  17, &amp;#x2F;&amp;#x2F; UDP protocol
+  udp_socket_addr_client
+    .ip()
+    .to_string()
+    .parse::&amp;lt;Ipv4Addr&amp;gt;()
+    .unwrap()
+    .octets(), &amp;#x2F;&amp;#x2F; Source IP
+  ipv4_addr.octets(), &amp;#x2F;&amp;#x2F; Destination IP
+);
+
+&amp;#x2F;&amp;#x2F; The default value is true inside etherparse::Ipv4Header::new() method.
+&amp;#x2F;&amp;#x2F; The DF bit is not set when observing traceroute
+&amp;#x2F;&amp;#x2F; through tcpdump, so we&amp;#x27;re just mimicking the behavior here.
+ipv4_header.dont_fragment = false;
+
+&amp;#x2F;&amp;#x2F; If set to true then `send` method will expect us to include an IP header
+&amp;#x2F;&amp;#x2F; in the data that we pass into send_to method
+ip_raw_socket.set_header_included(true).unwrap();
+
+&amp;#x2F;&amp;#x2F; Construct IP datagram
+# ---------------------
+let mut ip_datagram: Vec&amp;lt;u8&amp;gt; = vec![];
+
+ipv4_header.write(&amp;amp;mut ip_datagram).unwrap();
+ip_datagram.extend_from_slice(&amp;amp;udp_packet);
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;build-and-test&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#build-and-test&quot; aria-label=&quot;Anchor link for: build-and-test&quot;&gt;#&lt;&#x2F;a&gt;
+Build and test&lt;&#x2F;h1&gt;
+&lt;p&gt;The complete code can be found on my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;network-utilities&#x2F;blob&#x2F;master&#x2F;src&#x2F;bin&#x2F;traceroute_poc_raw_socket.rs&quot;&gt;github&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;# Start tcpdump first to sniff our packet
+# ----------------------------------------
+sudo tcpdump udp port 33474 -n -vvv
+
+# Build and run
+# ----------------------------------------
+cargo build &amp;amp;&amp;amp; sudo RUST_BACKTRACE=1 .&amp;#x2F;target&amp;#x2F;debug&amp;#x2F;traceroute_poc_raw_socket
+
+... The rest are the same as in part 1
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;what-s-next&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-s-next&quot; aria-label=&quot;Anchor link for: what-s-next&quot;&gt;#&lt;&#x2F;a&gt;
+What&#x27;s next&lt;&#x2F;h1&gt;
+&lt;p&gt;In the next post, we will try to send multiple UDP probes and print responding router IPs.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Traceroute Naive Implementation Part 1: Proof of Concept</title>
+        <published>2024-01-07T00:00:00+00:00</published>
+        <updated>2024-01-07T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/" type="text/html"/>
+        <id>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/</id>
+        
+        <content type="html">&lt;h1 id=&quot;what-we-will-do&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-we-will-do&quot; aria-label=&quot;Anchor link for: what-we-will-do&quot;&gt;#&lt;&#x2F;a&gt;
+What we will do&lt;&#x2F;h1&gt;
+&lt;p&gt;Traceroute is a utility that will print packet router path (trace) and measure the delay of packets sent to a destination.
+It works by sending packet probes to a destination with increasing (by 1) IP TTL&#x2F;IP hop limit starting from 1,
+TTL will be reduced by 1 every time the packet reaches a router. The router will discard the packet and send back an ICMP Time Exceeded error when it receives IP packet with TTL 1 because it&#x27;s going to be 0 (expired).&lt;&#x2F;p&gt;
+&lt;p&gt;In this post, we&#x27;ll try to experiment with IP TTL as a basic component of traceroute implementation. We start with a proof of concept (PoC) implementation.
+The goal is to learn by doing so expect bad error handling and bad UX.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;key-components-in-the-poc&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#key-components-in-the-poc&quot; aria-label=&quot;Anchor link for: key-components-in-the-poc&quot;&gt;#&lt;&#x2F;a&gt;
+Key components in the PoC&lt;&#x2F;h1&gt;
+&lt;p&gt;Key components in our proof of concept:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;We will create a socket that listens to ICMP messages. As a starter,
+we will try to capture all ICMP packets sent to our IP and print it.
+We&#x27;ll just try to see manually whether there&#x27;s any ICMP Time Exceeded error sent from
+one of the routers in the path. We can try to run the &lt;code&gt;traceroute&lt;&#x2F;code&gt; command to the same destination (google.com) before running
+the program so we can compare the router IP at a specific hop.&lt;&#x2F;li&gt;
+&lt;li&gt;We will send the packet probe when the ICMP listener is ready,
+we&#x27;ll just send 1 probe to the 6th router along the path to reach google.com since we&#x27;re focusing
+only for a proof of concept, this way we know what&#x27;s the router IP at the 6th hop.&lt;&#x2F;li&gt;
+&lt;li&gt;The program will only handle IPv4.&lt;&#x2F;li&gt;
+&lt;li&gt;We will not do proper error handling, we&#x27;ll just print debug messages for simplicity.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;We will revisit and iterate the limitations in future posts.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;debugging&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#debugging&quot; aria-label=&quot;Anchor link for: debugging&quot;&gt;#&lt;&#x2F;a&gt;
+Debugging&lt;&#x2F;h1&gt;
+&lt;p&gt;We use &lt;code&gt;tcpdump&lt;&#x2F;code&gt; to print out the UDP packet that we send to the destination IP,
+we should be able to see the IP TTL that we set through &lt;code&gt;tcpdump&lt;&#x2F;code&gt;. You could use
+other network packet sniffing tools such as Wireshark though.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;implementation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#implementation&quot; aria-label=&quot;Anchor link for: implementation&quot;&gt;#&lt;&#x2F;a&gt;
+Implementation&lt;&#x2F;h1&gt;
+&lt;div class=&quot;image-container&quot;&gt;
+    &lt;img
+      src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;traceroute-implementation&#x2F;traceroute-poc.jpg
+&quot;
+      alt=&quot;Traceroute PoC implementation overview&quot;
+    &#x2F;&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;setup&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#setup&quot; aria-label=&quot;Anchor link for: setup&quot;&gt;#&lt;&#x2F;a&gt;
+Setup&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;dependencies&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#dependencies&quot; aria-label=&quot;Anchor link for: dependencies&quot;&gt;#&lt;&#x2F;a&gt;
+Dependencies&lt;&#x2F;h4&gt;
+&lt;p&gt;I&#x27;m using rust in the example because it provides extensive low-level tooling and
+I just want to have a refresher on rust, you can write the implementation using any programming language that you&#x27;re comfortable with
+as long as it has access to low-level socket programming.&lt;&#x2F;p&gt;
+&lt;p&gt;We will install these dependencies:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;socket2&quot;&gt;socket2&lt;&#x2F;a&gt; - Utility to work with low-level networking socket.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;JulianSchmid&#x2F;etherparse&quot;&gt;etherparse&lt;&#x2F;a&gt; - Library that provides low level network packet parsing logic (IPv4, UDP, ICMP, etc).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#x2F;&amp;#x2F; Cargo.toml
+&amp;#x2F;&amp;#x2F; -----------------------
+....
+[dependencies]
+etherparse = &amp;quot;0.13.0&amp;quot;
+socket2 = { version = &amp;quot;0.5.5&amp;quot;, features = [&amp;quot;all&amp;quot;] }
+
+[lib]
+name = &amp;quot;lib&amp;quot;
+path = &amp;quot;src&amp;#x2F;lib&amp;#x2F;lib.rs&amp;quot;
+
+[[bin]]
+name = &amp;quot;traceroute-poc&amp;quot;
+path = &amp;quot;src&amp;#x2F;bin&amp;#x2F;traceroute_poc.rs&amp;quot;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;directory-structure&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#directory-structure&quot; aria-label=&quot;Anchor link for: directory-structure&quot;&gt;#&lt;&#x2F;a&gt;
+Directory structure&lt;&#x2F;h4&gt;
+&lt;p&gt;Our directory structure will look like this&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;├── Cargo.lock
+├── Cargo.toml
+├── rustfmt.toml &amp;#x2F;&amp;#x2F; Cosmetics, configuration for code formatting
+└── src
+    ├── bin &amp;#x2F;&amp;#x2F; Runnables
+    │   ├── ....
+    │   └── traceroute_poc.rs
+    └── lib &amp;#x2F;&amp;#x2F; Reusable functions
+        ├── icmp_listener.rs
+        └── lib.rs
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;icmp-listener&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#icmp-listener&quot; aria-label=&quot;Anchor link for: icmp-listener&quot;&gt;#&lt;&#x2F;a&gt;
+ICMP listener&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;create-an-icmp-socket&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#create-an-icmp-socket&quot; aria-label=&quot;Anchor link for: create-an-icmp-socket&quot;&gt;#&lt;&#x2F;a&gt;
+Create an ICMP socket&lt;&#x2F;h4&gt;
+&lt;p&gt;There will be  a function to start an ICMP listener,
+it&#x27;s basically creating a socket that we can use to capture the incoming messages later on.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#x2F;&amp;#x2F; src&amp;#x2F;lib&amp;#x2F;icmp_listener.rs
+&amp;#x2F;&amp;#x2F; ------------------------------
+use socket2::{Domain, Socket};
+use std::mem::MaybeUninit;
+use std::time::Duration;
+
+pub fn start_icmp_listener() {
+  let icmp_socket = Socket::new(
+    Domain::IPV4,
+    socket2::Type::RAW,
+    Some(socket2::Protocol::ICMPV4),
+  )
+  .unwrap();
+
+  icmp_socket
+    .set_read_timeout(Some(Duration::from_secs(1)))
+    .unwrap();
+
+  ... will be continued
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;capturing-icmp-packets&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#capturing-icmp-packets&quot; aria-label=&quot;Anchor link for: capturing-icmp-packets&quot;&gt;#&lt;&#x2F;a&gt;
+Capturing ICMP packets&lt;&#x2F;h4&gt;
+&lt;p&gt;We need to prepare the ICMP response placeholder first, the ICMP response will include IPv4 so we will need
+28 bytes considering the minimum &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Internet_Protocol_version_4#Packet_structure&quot;&gt;IPv4 header&lt;&#x2F;a&gt; is 20 bytes and all ICMP packets have an &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Internet_Control_Message_Protocol#Datagram_structure&quot;&gt;8-byte header&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Then we initiate an infinite loop and short polling to the ICMP socket by calling &lt;code&gt;icmp_socket.recv_from(..)&lt;&#x2F;code&gt;,
+the method will block until there&#x27;s a response or it&#x27;s reaching 1 second -- the read timeout that we set earlier.
+On every incoming packet, we use etherparse to parse bytes into an IPv4 header and assume the rest of the unused bytes to be ICMP payload.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#x2F;&amp;#x2F; src&amp;#x2F;lib&amp;#x2F;icmp_listener.rs
+&amp;#x2F;&amp;#x2F; ------------------------------
+pub fn start_icmp_listener() {
+  ... create icmp socket
+  ...
+
+  let mut icmp_resp: [MaybeUninit&amp;lt;u8&amp;gt;; 28] = unsafe { MaybeUninit::uninit().assume_init() };
+
+  loop {
+    match icmp_socket.recv_from(&amp;amp;mut icmp_resp) {
+      Ok((size, addr)) =&amp;gt; {
+        let resp_bytes = icmp_resp
+          .into_iter()
+          .map(|byte| unsafe { byte.assume_init() })
+          .collect::&amp;lt;Vec&amp;lt;u8&amp;gt;&amp;gt;();
+
+        let (ipv4_header, icmpv4_payload_bytes) =
+          etherparse::Ipv4Header::from_slice(&amp;amp;resp_bytes).unwrap();
+        let icmpv4_payload = etherparse::Icmpv4Slice::from_slice(icmpv4_payload_bytes).unwrap();
+
+        println!(
+            &amp;quot;Got some response size: {}\nipv4 raw resp: {:?}\nip address:{}\nICMP type: {:?}, ICMP code: {}&amp;quot;,
+            size,
+            ipv4_header,
+            addr.as_socket_ipv4().unwrap().to_string(),
+            icmpv4_payload.icmp_type(),
+            icmpv4_payload.code_u8()
+          );
+      }
+      Err(err) =&amp;gt; {
+        println!(&amp;quot;Error when waiting for icmp socket {:?}&amp;quot;, err);
+      }
+    }
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;send-a-udp-probe&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#send-a-udp-probe&quot; aria-label=&quot;Anchor link for: send-a-udp-probe&quot;&gt;#&lt;&#x2F;a&gt;
+Send a UDP probe&lt;&#x2F;h2&gt;
+&lt;p&gt;Next, we go to the main function. Let&#x27;s just assume we want to know the router at 6th hop going to &lt;code&gt;google.com&lt;&#x2F;code&gt;,
+we use &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;net&#x2F;trait.ToSocketAddrs.html#tymethod.to_socket_addrs&quot;&gt;&lt;code&gt;ToSocketAddrs&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; trait that gives us the extra capability to convert the domain name to IP address (it will do DNS lookup in the background).&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#x2F;&amp;#x2F; src&amp;#x2F;bin&amp;#x2F;traceroute_poc.rs
+&amp;#x2F;&amp;#x2F; ------------------------------
+use std::net::{SocketAddr, ToSocketAddrs, UdpSocket};
+
+fn main() -&amp;gt; std::io::Result&amp;lt;()&amp;gt; {
+  &amp;#x2F;&amp;#x2F; Preparing the IPv4 UDP socket
+  &amp;#x2F;&amp;#x2F; ----------------------------------------
+  let udp_socket_client_port: u16 = 33474;
+  let udp_socket_dest_port: u16 = 33475;
+  let udp_socket_addr_client: SocketAddr = format!(&amp;quot;0.0.0.0:{}&amp;quot;, udp_socket_client_port)
+    .parse()
+    .unwrap();
+
+  let udp_socket_addr_dest: SocketAddr = (&amp;quot;google.com&amp;quot;, udp_socket_dest_port)
+    .to_socket_addrs() &amp;#x2F;&amp;#x2F; It will do dnslookup in the background
+    .unwrap()
+    .into_iter()
+    .filter(|socket_addr: &amp;amp;SocketAddr| {
+      return socket_addr.is_ipv4();
+    })
+    .collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;()
+    .first()
+    .unwrap()
+    .to_owned();
+
+  let udp_socket: UdpSocket;
+  let hop_limit: u32 = 6;
+
+  udp_socket = UdpSocket::bind(udp_socket_addr_client).unwrap();
+  udp_socket.set_ttl(hop_limit).unwrap();
+
+
+  &amp;#x2F;&amp;#x2F; Start the icmp listener before sending the UDP probe
+  &amp;#x2F;&amp;#x2F; ----------------------------------------
+  let icmp_listener_handle = std::thread::spawn(|| {
+    println!(&amp;quot;Starting icmp listener in the background...&amp;quot;);
+
+    lib::icmp_listener::start_icmp_listener();
+  });
+
+
+  &amp;#x2F;&amp;#x2F; Sending the UDP probe
+  &amp;#x2F;&amp;#x2F; ----------------------------------------
+  let udp_payload: [u8; 2] = [0, 0]; &amp;#x2F;&amp;#x2F; Dummy payload
+
+  println!(&amp;quot;Sending {:?} to {:?}&amp;quot;, udp_payload, udp_socket_addr_dest);
+let sent_count = udp_socket
+    .send_to(&amp;amp;udp_payload, udp_socket_addr_dest)
+    .unwrap();
+
+  println!(&amp;quot;Sent {} bytes of payload&amp;quot;, sent_count);
+
+  &amp;#x2F;&amp;#x2F; Block icmp listener thread.
+  &amp;#x2F;&amp;#x2F; ----------------------------------------
+  icmp_listener_handle.join().unwrap();
+
+  return Ok(());
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;testing-it-out&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#testing-it-out&quot; aria-label=&quot;Anchor link for: testing-it-out&quot;&gt;#&lt;&#x2F;a&gt;
+Testing it out&lt;&#x2F;h3&gt;
+&lt;p&gt;We&#x27;ll start a &lt;code&gt;tcpdump&lt;&#x2F;code&gt; to sniff the IP packet that we send, we should expect
+the right IP address and IP TTL to be 6 (hardcoded earlier).&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;sudo tcpdump udp port 33474 -n -vvv
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now build and run the program&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;cargo build &amp;amp;&amp;amp; sudo RUST_BACKTRACE=1 .&amp;#x2F;target&amp;#x2F;debug&amp;#x2F;traceroute_poc
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;From the tcpdump you should see something like this&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;# Notice that IP ttl is set to 6, that&amp;#x27;s a good sign!
+# ---------------------
+tcpdump: data link type PKTAP
+tcpdump: listening on pktap, link-type PKTAP, capture size 262144 bytes
+23:01:44.812806 IP (tos 0x0, ttl 6, id 28731, offset 0, flags [none], proto UDP (17), length 30)
+    192.168.1.6.33474 &amp;gt; 216.239.38.120.33475: [udp sum ok] UDP, length 2
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The sample program output&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;Sending [0, 0] to 216.239.38.120:33475
+Starting icmp listener in the background...
+Sent 2 bytes of payload
+Got some response size: 28
+IPv4 raw resp: Ipv4Header { ihl: 5, differentiated_services_code_point: 0, explicit_congestion_notification: 0, payload_len: 19436, identification: 59500, dont_fragment: false, more_fragments: false, fragments_offset: 0, time_to_live: 249, protocol: 1, header_checksum: 38208, source: [180, 240, 205, 80], destination: [192, 168, 1, 6], options: [] }
+ip address:180.240.205.80:0
+ICMP type: TimeExceeded(TtlExceededInTransit), ICMP code: 0
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We can compare it by running traceroute and checking whether the router at the 6th hop has the same router IP that we have captured (output above). It&#x27;s normal that the packet path is different from time to time routing might change dynamically as well.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;traceroute google.com
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You can find the implementation in this post &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;network-utilities&#x2F;blob&#x2F;master&#x2F;src&#x2F;bin&#x2F;traceroute-poc.rs&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-s-next&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-s-next&quot; aria-label=&quot;Anchor link for: what-s-next&quot;&gt;#&lt;&#x2F;a&gt;
+What&#x27;s next&lt;&#x2F;h1&gt;
+&lt;p&gt;In this post we have completed the PoC and see it ourselves that when IP packet TTL is 1
+then the router will send ICMP Time Exceeded error to our IP. In the &lt;a href=&quot;&#x2F;posts&#x2F;programming&#x2F;traceroute-naive-implementation-part-2-raw-ip-socket&#x2F;&quot;&gt;next post&lt;&#x2F;a&gt;
+we&#x27;ll rewrite our UDP socket to use IP raw socket to give us room for flexibility.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
