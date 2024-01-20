@@ -2,9 +2,10 @@
 title = "Traceroute Naive Implementation Part 2: Raw IP Socket"
 date = 2024-01-20
 description = "An attempt to implement traceroute proof of concept functionality naively in rust part 2"
+weight = 2
 
 [taxonomies]
-tags = ["programming", "networking-utilities"]
+tags = ["programming", "networking-utilities", "traceroute-implementation"]
 +++
 
 

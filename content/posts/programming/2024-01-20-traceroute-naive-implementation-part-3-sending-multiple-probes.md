@@ -1,11 +1,12 @@
 +++
 title = "Traceroute Naive Implementation Part 3: Sending Multiple Probes"
-date = 2024-01-10
+date = 2024-01-20
 description = "An attempt to implement traceroute proof of concept functionality naively in rust "
 draft = true
+weight = 3
 
 [taxonomies]
-tags = ["programming", "networking-utilities"]
+tags = ["programming", "networking-utilities", "traceroute-implementation"]
 +++
 
 

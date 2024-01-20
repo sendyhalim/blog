@@ -3,8 +3,11 @@ title = "Traceroute Naive Implementation Part 1: Proof of Concept"
 date = 2024-01-07
 description = "An attempt to implement traceroute proof of concept functionality naively in rust"
 
+[extra]
+weight = 1
+
 [taxonomies]
-tags = ["programming", "networking-utilities"]
+tags = ["programming", "networking-utilities", "traceroute-implementation"]
 +++
 
 
