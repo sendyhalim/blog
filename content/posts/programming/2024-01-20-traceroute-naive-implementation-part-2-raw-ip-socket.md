@@ -100,7 +100,7 @@ ipv4_header.write(&mut ip_datagram).unwrap();
 ip_datagram.extend_from_slice(&udp_packet);
 ```
 # Build and test
-The complete code can be found on my [github](https://github.com/sendyhalim/network-utilities/blob/master/src/bin/traceroute_poc_raw_socket.rs).
+The complete code can be found on my [github](https://github.com/sendyhalim/network-utilities/blob/traceroute-part-2-raw-socket/src/bin/traceroute_poc_raw_socket.rs).
 
 ```
 # Start tcpdump first to sniff our packet
