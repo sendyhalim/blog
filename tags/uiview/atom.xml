@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - uiview</title>
-    <link href="https://blog.wavvel.com/tags/uiview/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/uiview/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2018-02-10T03:19:00+07:00</updated>
     <id>https://blog.wavvel.com/tags/uiview/atom.xml</id>
@@ -10,13 +10,19 @@
         <title>Customizing UISearchBar</title>
         <published>2018-02-10T03:19:00+07:00</published>
         <updated>2018-02-10T03:19:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/customizing-uisearchbar/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/swift/customizing-uisearchbar/"/>
         <id>https://blog.wavvel.com/posts/swift/customizing-uisearchbar/</id>
         
-        <content type="html">&lt;p&gt;The default view of &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; is kind of boring, one way to customize it is by subclassing &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; and put the customization code in &lt;code&gt;willMove(toSuperView:)&lt;&#x2F;code&gt; method.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/swift/customizing-uisearchbar/">&lt;p&gt;The default view of &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; is kind of boring, one way to customize it is by subclassing &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; and put the customization code in &lt;code&gt;willMove(toSuperView:)&lt;&#x2F;code&gt; method.
 In this post, we&#x27;ll try to do 2 things&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Set border radius for &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;

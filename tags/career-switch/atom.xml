@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - career-switch</title>
-    <link href="https://blog.wavvel.com/tags/career-switch/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/career-switch/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-08-12T23:30:30+07:00</updated>
     <id>https://blog.wavvel.com/tags/career-switch/atom.xml</id>
@@ -10,13 +10,19 @@
         <title>Learning Path to Software Engineering Role From a Self Taught</title>
         <published>2023-08-12T23:30:30+07:00</published>
         <updated>2023-08-12T23:30:30+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/</id>
         
-        <content type="html">&lt;h1 id=&quot;my-view-on-the-learning-path&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/">&lt;h1 id=&quot;my-view-on-the-learning-path&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#my-view-on-the-learning-path&quot; aria-label=&quot;Anchor link for: my-view-on-the-learning-path&quot;&gt;#&lt;&#x2F;a&gt;
 My view on the learning path&lt;&#x2F;h1&gt;
 &lt;p&gt;I have friends that want to get into tech, some of them are looking into the software engineering field,
