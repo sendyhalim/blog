@@ -104,14 +104,13 @@ I can still keep my job, also big thanks to my coffee that I made for myself.
 Completing the day, I wrote the query with the filter (where clause) first then the DML to complete the day
 with a very good lesson that I keep up until now.</p>
 <h2 id="what-went-wrong-and-lesson-learned">What Went Wrong and Lesson Learned</h2>
-<p>For the reflection, what I can think of that went wrong:</p>
+<p>For reflection, here are the list that could've been done better:</p>
 <ul>
-<li>I should've asked for sql review from my peers.</li>
-<li>I should've written the filter first before doing any mutations.</li>
+<li>Data update should run in a database transaction so we can rollback in case unexpected things happen, in my case it should be possible because we're using Postgres.</li>
+<li>It's not gonna hurt to ask peers to review the SQL statement before running it.</li>
+<li>Test the SQL query in local machine or in testing environment.</li>
+<li>If for whatever reason we need to write the SQL statement directly in production then it's a lot safer to filter/where statement first.</li>
 </ul>
-<p>From that day on, I always ask for a sql review and always write filter,
-this is a very good lesson and I'm very grateful for it.
-I hope you learn something from the war story.</p>
 
   </div>
 </div>

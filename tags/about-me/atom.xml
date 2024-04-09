@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - about-me</title>
-    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/about-me/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <link href="https://blog.wavvel.com/tags/about-me/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-08-12T23:30:30+07:00</updated>
     <id>https://blog.wavvel.com/tags/about-me/atom.xml</id>
@@ -10,19 +10,13 @@
         <title>About Me</title>
         <published>2023-08-12T23:30:30+07:00</published>
         <updated>2023-08-12T23:30:30+07:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/pages/about-me/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/pages/about-me/" type="text/html"/>
         <id>https://blog.wavvel.com/pages/about-me/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/pages/about-me/">&lt;p&gt;Hi, I&#x27;m Sendy Halim, I&#x27;m passionate about solving problems with tech, specifically
+        <content type="html">&lt;p&gt;Hi, I&#x27;m Sendy Halim, I&#x27;m passionate about solving problems with tech, specifically
 through software engineering. I randomly came across to software enginering when I was looking for
 a new hobby during my 1st semester of my accounting degree, I completed my major though.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;about-software-engineering&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;

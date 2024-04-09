@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - vim</title>
-    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/vim/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <link href="https://blog.wavvel.com/tags/vim/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2018-02-13T00:11:00+07:00</updated>
     <id>https://blog.wavvel.com/tags/vim/atom.xml</id>
@@ -10,19 +10,13 @@
         <title>Vim Copy File Path From Project Root</title>
         <published>2018-02-13T00:11:00+07:00</published>
         <updated>2018-02-13T00:11:00+07:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/">&lt;p&gt;I often found myself typing file path manually when explaining code implementation and its use cases to my teammates.
+        <content type="html">&lt;p&gt;I often found myself typing file path manually when explaining code implementation and its use cases to my teammates.
 The task to type file path manually is very daunting and I hate it so much when I mistyped.
 The file path I mentioned is relative from project root. Let&#x27;s say you have this structure&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;▾ Yomu&amp;#x2F;
@@ -69,19 +63,13 @@ in buffer to your system clipboard.&lt;&#x2F;p&gt;
         <title>Coding Productivity Over 9000</title>
         <published>2016-07-10T00:49:40+07:00</published>
         <updated>2016-07-10T00:49:40+07:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/tools/productivity-over-9000/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/tools/productivity-over-9000/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/tools/productivity-over-9000/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/tools/productivity-over-9000/">&lt;p class=&quot;image-container&quot;&gt;
+        <content type="html">&lt;p class=&quot;image-container&quot;&gt;
   &lt;img
     src=&quot;https:&#x2F;&#x2F;media.giphy.com&#x2F;media&#x2F;XIqCQx02E1U9W&#x2F;giphy.gif&quot; alt=&quot;Over 9000&quot;
     class=&quot;medium-size&quot;&gt;

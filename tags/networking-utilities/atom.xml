@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - networking-utilities</title>
-    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/networking-utilities/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <link href="https://blog.wavvel.com/tags/networking-utilities/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2024-01-20T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/networking-utilities/atom.xml</id>
@@ -10,19 +10,13 @@
         <title>Traceroute Naive Implementation Part 2: Raw IP Socket</title>
         <published>2024-01-20T00:00:00+00:00</published>
         <updated>2024-01-20T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/">&lt;p&gt;We&#x27;ll build on top of our &lt;a href=&quot;&#x2F;posts&#x2F;programming&#x2F;traceroute-naive-implementation-part-1-proof-of-concept&#x2F;&quot;&gt;traceroute PoC&lt;&#x2F;a&gt;,
+        <content type="html">&lt;p&gt;We&#x27;ll build on top of our &lt;a href=&quot;&#x2F;posts&#x2F;programming&#x2F;traceroute-naive-implementation-part-1-proof-of-concept&#x2F;&quot;&gt;traceroute PoC&lt;&#x2F;a&gt;,
 this time we will rewrite our UDP socket to use raw socket instead. Using raw IP socket will give us
 more flexibility to build raw IPv4 header just in case we need to add flags or any other
 IPv4 header value. The tradeoff is we need to construct the IPv4 header and then fill the IPv4 payload with a UDP header and payload manually.&lt;&#x2F;p&gt;
@@ -134,19 +128,13 @@ What&#x27;s next&lt;&#x2F;h1&gt;
         <title>Traceroute Naive Implementation Part 1: Proof of Concept</title>
         <published>2024-01-07T00:00:00+00:00</published>
         <updated>2024-01-07T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/">&lt;h1 id=&quot;what-we-will-do&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h1 id=&quot;what-we-will-do&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-we-will-do&quot; aria-label=&quot;Anchor link for: what-we-will-do&quot;&gt;#&lt;&#x2F;a&gt;
 What we will do&lt;&#x2F;h1&gt;
 &lt;p&gt;Traceroute is a utility that will print packet router path (trace) and measure the delay of packets sent to a destination.
