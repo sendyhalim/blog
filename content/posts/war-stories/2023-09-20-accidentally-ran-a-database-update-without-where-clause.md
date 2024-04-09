@@ -42,10 +42,8 @@ with a very good lesson that I keep up until now.
 
 
 ## What Went Wrong and Lesson Learned
-For the reflection, what I can think of that went wrong:
-* I should've asked for sql review from my peers.
-* I should've written the filter first before doing any mutations.
-
-From that day on, I always ask for a sql review and always write filter,
-this is a very good lesson and I'm very grateful for it.
-I hope you learn something from the war story.
+For reflection, here are the list that could've been done better:
+* Data update should run in a database transaction so we can rollback in case unexpected things happen, in my case it should be possible because we're using Postgres.
+* It's not gonna hurt to ask peers to review the SQL statement before running it.
+* Test the SQL query in local machine or in testing environment.
+* If for whatever reason we need to write the SQL statement directly in production then it's a lot safer to filter/where statement first.
