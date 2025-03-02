@@ -1,22 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - life</title>
-    <link href="https://blog.wavvel.com/tags/life/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/life/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-08-05T14:39:00+07:00</updated>
+    <updated>2025-02-27T00:00:00+07:00</updated>
     <id>https://blog.wavvel.com/tags/life/atom.xml</id>
+    <entry xml:lang="en">
+        <title>The 2nd MacBook Purchase</title>
+        <published>2025-02-27T00:00:00+07:00</published>
+        <updated>2025-02-27T00:00:00+07:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/"/>
+        <id>https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/</id>
+        
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/">&lt;h2 id=&quot;my-first-macbook&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#my-first-macbook&quot; aria-label=&quot;Anchor link for: my-first-macbook&quot;&gt;#&lt;&#x2F;a&gt;
+My first MacBook&lt;&#x2F;h2&gt;
+&lt;p&gt;I was at the office lift waiting to reach level 12, my wife sent me a chat that my MacBook suddenly died, she was using it for some boring administration stuffs.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s my first Macbook that I had in March 2015, a 15-inch Retina MacBook Pro model that was launched in 2014.
+Bought it at iBox &lt;a href=&quot;https:&#x2F;&#x2F;g.co&#x2F;kgs&#x2F;eocczGp&quot;&gt;Central Park Mall Jakarta&lt;&#x2F;a&gt;. I&#x27;ve been using it quite extensively for learning and programming for almost 10 years, what a memory.&lt;&#x2F;p&gt;
+&lt;p&gt;Nothing beats MacBook in terms of trackpad and programming experience, smooth typing experience and most things just works in macOS.
+Most of the time it&#x27;s plugged into a charger paired with a cheap $200 Dell external monitor through HDMI cable.
+The MacBook almost had no issues and the system almost never freezes, the only recurring issue was related with MagSafe.
+The original MagSafe was broken because I accidentally pulled the thin cable in 2020 which I replaced with a cheap $20 MagSafe knockoff.&lt;&#x2F;p&gt;
+&lt;p&gt;The MacBook only got the macOS update up until Big Sur before Apple dropped OS support for 2014 MacBook, so 2020 is the final year that it gets the latest macOS.
+I didn&#x27;t mind having an outdated macOS as long as it&#x27;s still functioning well,  my frugal lifestyle would&#x27;ve never thought to buy a new one up until it&#x27;s broken.&lt;&#x2F;p&gt;
+&lt;p&gt;Around 2022, my MacBook battery started to swole a bit, typical indication of aging battery.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;buying-a-new-one&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#buying-a-new-one&quot; aria-label=&quot;Anchor link for: buying-a-new-one&quot;&gt;#&lt;&#x2F;a&gt;
+Buying a new one&lt;&#x2F;h2&gt;
+&lt;p&gt;On 13 February 2025 suddenly it stops charging, by just looking at the MagSafe charging pin you can tell it&#x27;s most likely because of the MagSafe, not the MacBook. I&#x27;ve been using it for almost 10 years so I like the option to buy a new one or I can just buy a new MagSafe.&lt;&#x2F;p&gt;
+&lt;p&gt;Apple just launched a new MacBook pro with M4 processor and 16GB RAM as the base model, it&#x27;s the first time they made it a standard.🍻
+The price point for 14 inch base model one is similar to my MacBook, quite a good deal. I inquired official Apple resellers Digimap and iBox for the space black color but it&#x27;s out of stock.&lt;&#x2F;p&gt;
+&lt;p&gt;Other option is to buy another knockoff MagSafe to cover some of the work that needed to be completed at the end of the month, I&#x27;m willing to wait for a day or two maybe it will be back in stock. 2 days later it&#x27;s still out of stock, I convinced myself to buy a new MagSafe at weekend.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;aligned-stars&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#aligned-stars&quot; aria-label=&quot;Anchor link for: aligned-stars&quot;&gt;#&lt;&#x2F;a&gt;
+Aligned Stars ⭐️ ⭐️ ⭐️ ⭐️ ⭐️&lt;&#x2F;h2&gt;
+&lt;p&gt;On Thursday 16 February 2025, I went to work normally in the morning, the office is at Plaza Bank Index.
+There was a road closure near the office, I could not get directly into the office building. I decided to park in Plaza Indonesia (PI) which right across the office building,
+went through the PI gate at 09:30 but unfortunately the parking gate into the mall was closed. So I went straight to Grand Indonesia (GI) and was able to park there at level 7.&lt;&#x2F;p&gt;
+&lt;p&gt;I took lift down to the ground level thinking that later I can exit the mall quicker then walk and cross the street straight to the office. The lift opened and as I was approaching the exit door suddenly I needed to go to the toilet, there&#x27;s no toilet nearby so I took the lift up to level 1. Most of the tenants staffs were still preparing to open the store. I saw a janitor getting ready to start the mopping machine, I asked him where&#x27;s the nearest toilet and he pointed to the toilet inside the Central Department Store. After toilet, I went out of the department store and somehow I chose the lane that led to Digimap (Apple Official Reseller).&lt;&#x2F;p&gt;
+&lt;p&gt;I got a gut feeling that I should ask about the MacBook availability, putting risk to be late to the office.
+Apparently they have one MacBook Pro M4 Space Black base model in stock, I was running late so I requested to reserve the MacBook for me until
+lunch time. Looking at previous events, the stars are aligned, I have zero doubt to buy a new one. I wrote this post with my new MacBook, hoping it would last for another long years 🍻 up until
+Apple dropped macOS supports for the machine.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;some-lessons-learned-from-the-first-macbook&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#some-lessons-learned-from-the-first-macbook&quot; aria-label=&quot;Anchor link for: some-lessons-learned-from-the-first-macbook&quot;&gt;#&lt;&#x2F;a&gt;
+Some lessons learned from the first MacBook&lt;&#x2F;h2&gt;
+&lt;p&gt;These are the things that I learned that supposedly improved MacBook lifespan:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No hardcase&lt;&#x2F;strong&gt;: Dust quickly accumulated in the hardcase, the case also blocks some of the heat released from the aluminum case.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;No screen protector&lt;&#x2F;strong&gt;: MacBook is not a touch screen, also adding a screen protector will risk screen to crack because there&#x27;s additional pressure when closing the lid.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;No keyboard protector&lt;&#x2F;strong&gt;: Keyboard protector blocks the air flow from the keyboard.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Buy a new macbook Apple stops supporting macOS updates on the Mac Model&lt;&#x2F;strong&gt;: Every new macOS release only supports a certain machine type and some of the updates will include security patches, it&#x27;s in my best interest to be always up to date with the most recent security patches.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Everything has a structure, thoughts on problem solving structure</title>
         <published>2023-08-05T14:39:00+07:00</published>
         <updated>2023-08-05T14:39:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/"/>
         <id>https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/</id>
         
-        <content type="html">&lt;h2 id=&quot;structure-in-general&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/">&lt;h2 id=&quot;structure-in-general&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#structure-in-general&quot; aria-label=&quot;Anchor link for: structure-in-general&quot;&gt;#&lt;&#x2F;a&gt;
 Structure in general&lt;&#x2F;h2&gt;
 &lt;p&gt;Almost everything in our daily life has structure 😲!

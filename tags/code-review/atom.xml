@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - code-review</title>
-    <link href="https://blog.wavvel.com/tags/code-review/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/code-review/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-12-10T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/code-review/atom.xml</id>
@@ -10,13 +10,19 @@
         <title>Code Review: Code Author Best Practices</title>
         <published>2023-12-10T00:00:00+00:00</published>
         <updated>2023-12-10T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/</id>
         
-        <content type="html">&lt;h1 id=&quot;code-author&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/">&lt;h1 id=&quot;code-author&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#code-author&quot; aria-label=&quot;Anchor link for: code-author&quot;&gt;#&lt;&#x2F;a&gt;
 Code Author&lt;&#x2F;h1&gt;
 &lt;p&gt;The code author or pull request(PR) author is the person who makes the changes.
@@ -62,7 +68,7 @@ Review your own changes&lt;&#x2F;h1&gt;
       alt=&quot;Code review time without self review would be longer&quot;
     &#x2F;&gt;
   &lt;&#x2F;div&gt;
-&lt;div class=&quot;image-container col-12 col-md-6&quot;&gt;
+  &lt;div class=&quot;image-container col-12 col-md-6&quot;&gt;
     &lt;i&gt;&lt;b&gt;Code review time illustration with self review&lt;&#x2F;b&gt;&lt;&#x2F;i&gt;
     &lt;img
       src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;software-engineering&#x2F;code-review&#x2F;code-review-code-author-best-practices&#x2F;code-review-with-self-review.jpg

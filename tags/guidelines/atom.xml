@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - guidelines</title>
-    <link href="https://blog.wavvel.com/tags/guidelines/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/guidelines/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2021-06-20T00:00:25+07:00</updated>
     <id>https://blog.wavvel.com/tags/guidelines/atom.xml</id>
@@ -10,13 +10,19 @@
         <title>Technical Design Doc Guidelines</title>
         <published>2021-06-20T00:00:25+07:00</published>
         <updated>2021-06-20T00:00:25+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/development-practices/technical-design-doc-guidelines/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/development-practices/technical-design-doc-guidelines/"/>
         <id>https://blog.wavvel.com/posts/development-practices/technical-design-doc-guidelines/</id>
         
-        <content type="html">&lt;p&gt;Writing a technical design doc(TDD) is a prerequisite of a medium-high feature development&#x2F;refactoring initiative, it&#x27;s a crucial part of the development process.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/development-practices/technical-design-doc-guidelines/">&lt;p&gt;Writing a technical design doc(TDD) is a prerequisite of a medium-high feature development&#x2F;refactoring initiative, it&#x27;s a crucial part of the development process.
 TDD can ease the process to get everyone on board with the plan, the doc should be reviewed by your CTO&#x2F;Managers and stakeholders.
 It&#x27;s an essential part of the planning process because &lt;b&gt;it brings people together, especially to get buy-in from the team and stakeholders&lt;&#x2F;b&gt; so they can provide support along the way 🍪!&lt;&#x2F;p&gt;
 &lt;p&gt;The post will cover some of the general guidelines that hopefully can assist you to prepare the TDD.
@@ -40,7 +46,7 @@ Problem statement&lt;&#x2F;h4&gt;
 &lt;p&gt;Some key points that maybe can guide you:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Are you solving a specific user problem where there are N users that are impacted?&lt;&#x2F;li&gt;
-&lt;li&gt;The current process might have pain points and sometimes users are just numb to the &amp;quot;pain&amp;quot; up until someone points it out.&lt;&#x2F;li&gt;
+&lt;li&gt;The current process might have pain points and sometimes users are just numb to the &quot;pain&quot; up until someone points it out.&lt;&#x2F;li&gt;
 &lt;li&gt;Will it increase the company&#x27;s business metric either directly or indirectly? If it can save cost, any estimation by what %?&lt;&#x2F;li&gt;
 &lt;li&gt;Are you investing for future needs? Why does that specific investment matter?&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;

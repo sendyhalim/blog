@@ -1,22 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title></title>
-    <link href="https://blog.wavvel.com/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-01-20T00:00:00+00:00</updated>
+    <updated>2025-02-27T00:00:00+07:00</updated>
     <id>https://blog.wavvel.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>The 2nd MacBook Purchase</title>
+        <published>2025-02-27T00:00:00+07:00</published>
+        <updated>2025-02-27T00:00:00+07:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/"/>
+        <id>https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/</id>
+        
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/">&lt;h2 id=&quot;my-first-macbook&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#my-first-macbook&quot; aria-label=&quot;Anchor link for: my-first-macbook&quot;&gt;#&lt;&#x2F;a&gt;
+My first MacBook&lt;&#x2F;h2&gt;
+&lt;p&gt;I was at the office lift waiting to reach level 12, my wife sent me a chat that my MacBook suddenly died, she was using it for some boring administration stuffs.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s my first Macbook that I had in March 2015, a 15-inch Retina MacBook Pro model that was launched in 2014.
+Bought it at iBox &lt;a href=&quot;https:&#x2F;&#x2F;g.co&#x2F;kgs&#x2F;eocczGp&quot;&gt;Central Park Mall Jakarta&lt;&#x2F;a&gt;. I&#x27;ve been using it quite extensively for learning and programming for almost 10 years, what a memory.&lt;&#x2F;p&gt;
+&lt;p&gt;Nothing beats MacBook in terms of trackpad and programming experience, smooth typing experience and most things just works in macOS.
+Most of the time it&#x27;s plugged into a charger paired with a cheap $200 Dell external monitor through HDMI cable.
+The MacBook almost had no issues and the system almost never freezes, the only recurring issue was related with MagSafe.
+The original MagSafe was broken because I accidentally pulled the thin cable in 2020 which I replaced with a cheap $20 MagSafe knockoff.&lt;&#x2F;p&gt;
+&lt;p&gt;The MacBook only got the macOS update up until Big Sur before Apple dropped OS support for 2014 MacBook, so 2020 is the final year that it gets the latest macOS.
+I didn&#x27;t mind having an outdated macOS as long as it&#x27;s still functioning well,  my frugal lifestyle would&#x27;ve never thought to buy a new one up until it&#x27;s broken.&lt;&#x2F;p&gt;
+&lt;p&gt;Around 2022, my MacBook battery started to swole a bit, typical indication of aging battery.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;buying-a-new-one&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#buying-a-new-one&quot; aria-label=&quot;Anchor link for: buying-a-new-one&quot;&gt;#&lt;&#x2F;a&gt;
+Buying a new one&lt;&#x2F;h2&gt;
+&lt;p&gt;On 13 February 2025 suddenly it stops charging, by just looking at the MagSafe charging pin you can tell it&#x27;s most likely because of the MagSafe, not the MacBook. I&#x27;ve been using it for almost 10 years so I like the option to buy a new one or I can just buy a new MagSafe.&lt;&#x2F;p&gt;
+&lt;p&gt;Apple just launched a new MacBook pro with M4 processor and 16GB RAM as the base model, it&#x27;s the first time they made it a standard.🍻
+The price point for 14 inch base model one is similar to my MacBook, quite a good deal. I inquired official Apple resellers Digimap and iBox for the space black color but it&#x27;s out of stock.&lt;&#x2F;p&gt;
+&lt;p&gt;Other option is to buy another knockoff MagSafe to cover some of the work that needed to be completed at the end of the month, I&#x27;m willing to wait for a day or two maybe it will be back in stock. 2 days later it&#x27;s still out of stock, I convinced myself to buy a new MagSafe at weekend.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;aligned-stars&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#aligned-stars&quot; aria-label=&quot;Anchor link for: aligned-stars&quot;&gt;#&lt;&#x2F;a&gt;
+Aligned Stars ⭐️ ⭐️ ⭐️ ⭐️ ⭐️&lt;&#x2F;h2&gt;
+&lt;p&gt;On Thursday 16 February 2025, I went to work normally in the morning, the office is at Plaza Bank Index.
+There was a road closure near the office, I could not get directly into the office building. I decided to park in Plaza Indonesia (PI) which right across the office building,
+went through the PI gate at 09:30 but unfortunately the parking gate into the mall was closed. So I went straight to Grand Indonesia (GI) and was able to park there at level 7.&lt;&#x2F;p&gt;
+&lt;p&gt;I took lift down to the ground level thinking that later I can exit the mall quicker then walk and cross the street straight to the office. The lift opened and as I was approaching the exit door suddenly I needed to go to the toilet, there&#x27;s no toilet nearby so I took the lift up to level 1. Most of the tenants staffs were still preparing to open the store. I saw a janitor getting ready to start the mopping machine, I asked him where&#x27;s the nearest toilet and he pointed to the toilet inside the Central Department Store. After toilet, I went out of the department store and somehow I chose the lane that led to Digimap (Apple Official Reseller).&lt;&#x2F;p&gt;
+&lt;p&gt;I got a gut feeling that I should ask about the MacBook availability, putting risk to be late to the office.
+Apparently they have one MacBook Pro M4 Space Black base model in stock, I was running late so I requested to reserve the MacBook for me until
+lunch time. Looking at previous events, the stars are aligned, I have zero doubt to buy a new one. I wrote this post with my new MacBook, hoping it would last for another long years 🍻 up until
+Apple dropped macOS supports for the machine.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;some-lessons-learned-from-the-first-macbook&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#some-lessons-learned-from-the-first-macbook&quot; aria-label=&quot;Anchor link for: some-lessons-learned-from-the-first-macbook&quot;&gt;#&lt;&#x2F;a&gt;
+Some lessons learned from the first MacBook&lt;&#x2F;h2&gt;
+&lt;p&gt;These are the things that I learned that supposedly improved MacBook lifespan:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No hardcase&lt;&#x2F;strong&gt;: Dust quickly accumulated in the hardcase, the case also blocks some of the heat released from the aluminum case.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;No screen protector&lt;&#x2F;strong&gt;: MacBook is not a touch screen, also adding a screen protector will risk screen to crack because there&#x27;s additional pressure when closing the lid.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;No keyboard protector&lt;&#x2F;strong&gt;: Keyboard protector blocks the air flow from the keyboard.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Buy a new macbook Apple stops supporting macOS updates on the Mac Model&lt;&#x2F;strong&gt;: Every new macOS release only supports a certain machine type and some of the updates will include security patches, it&#x27;s in my best interest to be always up to date with the most recent security patches.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Traceroute Naive Implementation Part 2: Raw IP Socket</title>
         <published>2024-01-20T00:00:00+00:00</published>
         <updated>2024-01-20T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/"/>
         <id>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/</id>
         
-        <content type="html">&lt;p&gt;We&#x27;ll build on top of our &lt;a href=&quot;&#x2F;posts&#x2F;programming&#x2F;traceroute-naive-implementation-part-1-proof-of-concept&#x2F;&quot;&gt;traceroute PoC&lt;&#x2F;a&gt;,
+        <content type="html" xml:base="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/">&lt;p&gt;We&#x27;ll build on top of our &lt;a href=&quot;&#x2F;posts&#x2F;programming&#x2F;traceroute-naive-implementation-part-1-proof-of-concept&#x2F;&quot;&gt;traceroute PoC&lt;&#x2F;a&gt;,
 this time we will rewrite our UDP socket to use raw socket instead. Using raw IP socket will give us
 more flexibility to build raw IPv4 header just in case we need to add flags or any other
 IPv4 header value. The tradeoff is we need to construct the IPv4 header and then fill the IPv4 payload with a UDP header and payload manually.&lt;&#x2F;p&gt;
@@ -128,13 +194,19 @@ What&#x27;s next&lt;&#x2F;h1&gt;
         <title>Traceroute Naive Implementation Part 1: Proof of Concept</title>
         <published>2024-01-07T00:00:00+00:00</published>
         <updated>2024-01-07T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/"/>
         <id>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/</id>
         
-        <content type="html">&lt;h1 id=&quot;what-we-will-do&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/">&lt;h1 id=&quot;what-we-will-do&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-we-will-do&quot; aria-label=&quot;Anchor link for: what-we-will-do&quot;&gt;#&lt;&#x2F;a&gt;
 What we will do&lt;&#x2F;h1&gt;
 &lt;p&gt;Traceroute is a utility that will print packet router path (trace) and measure the delay of packets sent to a destination.
@@ -400,13 +472,19 @@ we&#x27;ll rewrite our UDP socket to use IP raw socket to give us room for flexi
         <title>Code Review: Code Author Best Practices</title>
         <published>2023-12-10T00:00:00+00:00</published>
         <updated>2023-12-10T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/</id>
         
-        <content type="html">&lt;h1 id=&quot;code-author&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/code-review/code-review-code-author-best-practices/">&lt;h1 id=&quot;code-author&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#code-author&quot; aria-label=&quot;Anchor link for: code-author&quot;&gt;#&lt;&#x2F;a&gt;
 Code Author&lt;&#x2F;h1&gt;
 &lt;p&gt;The code author or pull request(PR) author is the person who makes the changes.
@@ -452,7 +530,7 @@ Review your own changes&lt;&#x2F;h1&gt;
       alt=&quot;Code review time without self review would be longer&quot;
     &#x2F;&gt;
   &lt;&#x2F;div&gt;
-&lt;div class=&quot;image-container col-12 col-md-6&quot;&gt;
+  &lt;div class=&quot;image-container col-12 col-md-6&quot;&gt;
     &lt;i&gt;&lt;b&gt;Code review time illustration with self review&lt;&#x2F;b&gt;&lt;&#x2F;i&gt;
     &lt;img
       src=&quot;https:&#x2F;&#x2F;blog.wavvel.com&#x2F;assets&#x2F;images&#x2F;software-engineering&#x2F;code-review&#x2F;code-review-code-author-best-practices&#x2F;code-review-with-self-review.jpg
@@ -493,13 +571,19 @@ Write a quick&#x2F;simple tutorial how to test your changes&lt;&#x2F;h1&gt;
         <title>Unit Testing: Organizing Test Directories and Files</title>
         <published>2023-10-21T00:00:00+00:00</published>
         <updated>2023-10-21T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/</id>
         
-        <content type="html">&lt;h3 id=&quot;motivation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/">&lt;h3 id=&quot;motivation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#motivation&quot; aria-label=&quot;Anchor link for: motivation&quot;&gt;#&lt;&#x2F;a&gt;
 Motivation&lt;&#x2F;h3&gt;
 &lt;p&gt;It&#x27;s common for a function to have many positive and negative cases,
@@ -663,13 +747,19 @@ otherwise, we can group common logic further based on where it&#x27;s reused:&lt
         <title>Unit Testing: Prioritizing Unit Test Cases</title>
         <published>2023-10-19T00:00:00+00:00</published>
         <updated>2023-10-19T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/</id>
         
-        <content type="html">&lt;h1 id=&quot;writing-unit-tests-takes-times&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/">&lt;h1 id=&quot;writing-unit-tests-takes-times&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#writing-unit-tests-takes-times&quot; aria-label=&quot;Anchor link for: writing-unit-tests-takes-times&quot;&gt;#&lt;&#x2F;a&gt;
 Writing unit tests takes times&lt;&#x2F;h1&gt;
 &lt;p&gt;Writing unit tests take time, achieving 100% unit test coverage
@@ -734,13 +824,19 @@ intuitively it&#x27;s unlikely the end users would input a negative salary and i
         <title>Unit Testing: Minimizing Logic Errors In Unit Tests</title>
         <published>2023-10-14T00:00:00+00:00</published>
         <updated>2023-10-14T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/</id>
         
-        <content type="html">&lt;h1 id=&quot;buggy-unit-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/">&lt;h1 id=&quot;buggy-unit-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#buggy-unit-tests&quot; aria-label=&quot;Anchor link for: buggy-unit-tests&quot;&gt;#&lt;&#x2F;a&gt;
 Buggy unit tests&lt;&#x2F;h1&gt;
 &lt;p&gt;Unit tests can be buggy, similar to how we write business logic code, there could be logic error in the unit tests.
@@ -748,7 +844,7 @@ Logic error is very hard to spot because it comes mostly from different expectat
 usually we find logic error by testing the feature and match the output with the feature requirements,
 the other times it&#x27;s found when you get bug report from QA team or from end users.&lt;&#x2F;p&gt;
 &lt;p&gt;A buggy unit test is just on different layer, it&#x27;s not directly visible in terms of feature requirements,
-the end users and &amp;quot;QA&amp;quot; for unit tests are yourself, your teammates, and your engineering lead&#x2F;manager.&lt;&#x2F;p&gt;
+the end users and &quot;QA&quot; for unit tests are yourself, your teammates, and your engineering lead&#x2F;manager.&lt;&#x2F;p&gt;
 &lt;p&gt;Most of the logic errors in unit tests are categorized into 2 components in terms of where do we spot it:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;In unit test results. It is easy to detect because the unit tests would be red (not passing), typically it&#x27;ll look like failing unit tests, you can just fix it rightaway and rerun the test cases.&lt;&#x2F;li&gt;
@@ -779,13 +875,19 @@ I did like 3-4 times of end to end testing, probably I would only need to do 1-2
         <title>Unit Testing: Your first step in unit testing, what to expect</title>
         <published>2023-10-08T00:00:00+00:00</published>
         <updated>2023-10-08T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/</id>
         
-        <content type="html">&lt;h1 id=&quot;set-your-mindset-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/">&lt;h1 id=&quot;set-your-mindset-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#set-your-mindset-first&quot; aria-label=&quot;Anchor link for: set-your-mindset-first&quot;&gt;#&lt;&#x2F;a&gt;
 Set your mindset first&lt;&#x2F;h1&gt;
 &lt;p&gt;I would like to remind you that you need to understand the motivation behind unit tests,
@@ -798,7 +900,7 @@ Concept&lt;&#x2F;h1&gt;
 &lt;p&gt;Unit testing is a practice of the bigger testing component. In terms of isolation there are generally 2 types of testing:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Unit testing, a testing practice that focuses only on the function logic, the other dependencies are simulated. Suppose there&#x27;s a function &lt;code&gt;f&lt;&#x2F;code&gt; and it depends on &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt;,
-when unit testing &lt;code&gt;f&lt;&#x2F;code&gt; we will assume other dependencies &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; will behave correctly, this is done through &amp;quot;faking&amp;quot; &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior in
+when unit testing &lt;code&gt;f&lt;&#x2F;code&gt; we will assume other dependencies &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; will behave correctly, this is done through &quot;faking&quot; &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior in
 an isolated unit testing environment.&lt;&#x2F;li&gt;
 &lt;li&gt;Functional testing, a testing practice that focuses on testing the end user features and flows to behave as expected, it does not fake &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior
 but rather will expect &lt;code&gt;f&lt;&#x2F;code&gt;, &lt;code&gt;g&lt;&#x2F;code&gt;, and &lt;code&gt;h&lt;&#x2F;code&gt; to work well together as a feature&#x2F;flow.&lt;&#x2F;li&gt;
@@ -890,19 +992,25 @@ the most common ones:&lt;&#x2F;p&gt;
         <title>Unit Testing: The Point of Unit Tests</title>
         <published>2023-10-07T00:00:00+00:00</published>
         <updated>2023-10-07T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/</id>
         
-        <content type="html">&lt;p&gt;Most likely you&#x27;ve heard the term &lt;code&gt;unit tests&lt;&#x2F;code&gt; if you&#x27;re in software engineering or fields related to it.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/">&lt;p&gt;Most likely you&#x27;ve heard the term &lt;code&gt;unit tests&lt;&#x2F;code&gt; if you&#x27;re in software engineering or fields related to it.
 This post is a short introduction to the unit testing practice, starting with what is it and what&#x27;s the point
 of doing it from my view, it&#x27;s not meant to be super technical.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;what-is-unit-testing&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-unit-testing&quot; aria-label=&quot;Anchor link for: what-is-unit-testing&quot;&gt;#&lt;&#x2F;a&gt;
 What is Unit Testing&lt;&#x2F;h1&gt;
-&lt;p&gt;Like the term itself, unit testing is a practice of &lt;em&gt;writing code&lt;&#x2F;em&gt; to test &lt;em&gt;your code&lt;&#x2F;em&gt; as a &amp;quot;unit&amp;quot;,
+&lt;p&gt;Like the term itself, unit testing is a practice of &lt;em&gt;writing code&lt;&#x2F;em&gt; to test &lt;em&gt;your code&lt;&#x2F;em&gt; as a &quot;unit&quot;,
 it focuses on the unit logic and &lt;em&gt;mocks&lt;&#x2F;em&gt; the I&#x2F;O operations and the side effects.&lt;&#x2F;p&gt;
 &lt;p&gt;For simplicity, suppose you have a function &lt;code&gt;calculateInvoiceAmount(order)&lt;&#x2F;code&gt; that calculates the invoice amount based on
 the given order and delivery fee data from a database. The code would look something like this&lt;&#x2F;p&gt;
@@ -968,13 +1076,19 @@ once it&#x27;s all green we can proceed to push the dependency upgrade to the ma
         <title>War Story: Accidentally Ran A Database Update Without Where Clause</title>
         <published>2023-09-30T00:00:00+00:00</published>
         <updated>2023-09-30T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/"/>
         <id>https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/</id>
         
-        <content type="html">&lt;h2 id=&quot;what-happened&quot;&gt;What Happened&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/">&lt;h2 id=&quot;what-happened&quot;&gt;What Happened&lt;&#x2F;h2&gt;
 &lt;p&gt;Back in 2019 I was in a very good mood that the product launch was quite smooth in the past months.
 I got report that there were calculation bugs affecting some of the data. The bug was reproducible locally, I skimmed at the code and just kind of knew where the miscalculation happened in the code,
 my confident was high and my coffee tasted good on that day!&lt;&#x2F;p&gt;
@@ -1014,13 +1128,19 @@ with a very good lesson that I keep up until now.&lt;&#x2F;p&gt;
         <title>Software Engineering Day to Day Best Practices</title>
         <published>2023-09-19T00:00:00+00:00</published>
         <updated>2023-09-19T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/</id>
         
-        <content type="html">&lt;h2 id=&quot;background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/">&lt;h2 id=&quot;background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#background&quot; aria-label=&quot;Anchor link for: background&quot;&gt;#&lt;&#x2F;a&gt;
 Background&lt;&#x2F;h2&gt;
 &lt;p&gt;The software engineering day to day practice is not related directly to programming, there are
@@ -1102,13 +1222,19 @@ have followed the team standard practice.&lt;&#x2F;p&gt;
         <title>Why Documentation Matters</title>
         <published>2023-09-13T00:00:00+00:00</published>
         <updated>2023-09-13T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/why-documentation-matters/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/why-documentation-matters/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/why-documentation-matters/</id>
         
-        <content type="html">&lt;p&gt;Imagine buying a washing machine but it has no manual book, would you be happy?
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/why-documentation-matters/">&lt;p&gt;Imagine buying a washing machine but it has no manual book, would you be happy?
 You&#x27;d do fine if you have prior experience with a similar machine, but what if you don&#x27;t?&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;software-engineering-documentation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#software-engineering-documentation&quot; aria-label=&quot;Anchor link for: software-engineering-documentation&quot;&gt;#&lt;&#x2F;a&gt;
@@ -1163,13 +1289,19 @@ and something in the past is constant.&lt;&#x2F;li&gt;
         <title>PostgreSQL Reading Checklist</title>
         <published>2023-09-10T00:00:00+00:00</published>
         <updated>2023-09-10T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/reading-checklist/postgresql/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/reading-checklist/postgresql/"/>
         <id>https://blog.wavvel.com/posts/reading-checklist/postgresql/</id>
         
-        <content type="html">&lt;p&gt;I&#x27;m not a database expert, in my career I&#x27;ve faced so many issues and bottlenecks,
+        <content type="html" xml:base="https://blog.wavvel.com/posts/reading-checklist/postgresql/">&lt;p&gt;I&#x27;m not a database expert, in my career I&#x27;ve faced so many issues and bottlenecks,
 most of the come from database. My crystal ball 🔮 told me that it&#x27;s just a matter of time
 until the next database issues occur, so I decided to gather as much practical
 database learning sources as I can in the past years, especially the ones that I think (based on experience)
@@ -1248,13 +1380,19 @@ Other References&lt;&#x2F;h2&gt;
         <title>Tools That I Use For Software Engineering</title>
         <published>2023-08-24T00:00:00+07:00</published>
         <updated>2023-08-24T00:00:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/tools-that-i-use-for-software-engineering/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/tools-that-i-use-for-software-engineering/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/tools-that-i-use-for-software-engineering/</id>
         
-        <content type="html">&lt;p&gt;This post is structured into 3 big components&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/tools-that-i-use-for-software-engineering/">&lt;p&gt;This post is structured into 3 big components&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Tools Requirements&lt;&#x2F;li&gt;
 &lt;li&gt;Hardware&lt;&#x2F;li&gt;
@@ -1326,13 +1464,19 @@ Others&lt;&#x2F;h4&gt;
         <title>About Me</title>
         <published>2023-08-12T23:30:30+07:00</published>
         <updated>2023-08-12T23:30:30+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/pages/about-me/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/pages/about-me/"/>
         <id>https://blog.wavvel.com/pages/about-me/</id>
         
-        <content type="html">&lt;p&gt;Hi, I&#x27;m Sendy Halim, I&#x27;m passionate about solving problems with tech, specifically
+        <content type="html" xml:base="https://blog.wavvel.com/pages/about-me/">&lt;p&gt;Hi, I&#x27;m Sendy Halim, I&#x27;m passionate about solving problems with tech, specifically
 through software engineering. I randomly came across to software enginering when I was looking for
 a new hobby during my 1st semester of my accounting degree, I completed my major though.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;about-software-engineering&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
@@ -1359,13 +1503,19 @@ About Blogging&lt;&#x2F;h1&gt;
         <title>Learning Path to Software Engineering Role From a Self Taught</title>
         <published>2023-08-12T23:30:30+07:00</published>
         <updated>2023-08-12T23:30:30+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/"/>
         <id>https://blog.wavvel.com/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/</id>
         
-        <content type="html">&lt;h1 id=&quot;my-view-on-the-learning-path&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/learning-path-to-software-engineering-role-from-a-self-taught/">&lt;h1 id=&quot;my-view-on-the-learning-path&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#my-view-on-the-learning-path&quot; aria-label=&quot;Anchor link for: my-view-on-the-learning-path&quot;&gt;#&lt;&#x2F;a&gt;
 My view on the learning path&lt;&#x2F;h1&gt;
 &lt;p&gt;I have friends that want to get into tech, some of them are looking into the software engineering field,
@@ -1379,7 +1529,7 @@ Learning Keypoints&lt;&#x2F;h1&gt;
 &lt;ul&gt;
 &lt;li&gt;It&#x27;s a lot easier to pick a specific learning path if you know what you want. It ranges from wanting to build a tech startup, switching career to tech or just finding a new hobby.&lt;&#x2F;li&gt;
 &lt;li&gt;If you just want to try things out whether software engineering fits you or not, then I would recommend finding a problem that you think can be solved with software. Typically, repetitive tedious tasks can be solved or automated by software, keep the problem in your mental notes so it&#x27;s easier to relate to it during learning. Try to think whether it’s possible to solve your problem with your current tech skills, if not then try to find the missing learning components.&lt;&#x2F;li&gt;
-&lt;li&gt;Focus on the fundamentals. There are many engineering tools and frameworks, it&#x27;s a common pattern to come across a &amp;quot;new cool thing&amp;quot; in software engineering. The tools you learn today could be obsolete anytime in the future, the fundamentals however typically can be applied to most of the tools. Be curious, always ask why? Why things work that way, why things are built that way.&lt;&#x2F;li&gt;
+&lt;li&gt;Focus on the fundamentals. There are many engineering tools and frameworks, it&#x27;s a common pattern to come across a &quot;new cool thing&quot; in software engineering. The tools you learn today could be obsolete anytime in the future, the fundamentals however typically can be applied to most of the tools. Be curious, always ask why? Why things work that way, why things are built that way.&lt;&#x2F;li&gt;
 &lt;li&gt;It’s expected to not understand subjects from the learning source you&#x27;re currently on, don’t give up yet! My tip is to search other learning sources on the same topic and try to learn from different perspectives, you can do it by googling or youtube or just asking ChatGPT, beware though it might not be 100% on point, you need to reverify the answer by re-reading the subject from other sources.&lt;&#x2F;li&gt;
 &lt;li&gt;I’m recommending to read books as your main learning source, it’s structured and easy to search by text. At the very minimum, books with 100+ reviews and 4.5+ stars on Amazon.com should be ok. Watching videos are ok but I think it’s hard to search for a specific explanation by keyword. You could also do bootcamps, but it seems most of them put more emphasis on the frameworks&#x2F;tools instead of the fundamentals though.&lt;&#x2F;li&gt;
 &lt;li&gt;Software engineering is a craft, the more you put in the hours to write software the more you’ll get better.&lt;&#x2F;li&gt;
@@ -1476,13 +1626,19 @@ What’s next?&lt;&#x2F;h1&gt;
         <title>Everything has a structure, thoughts on problem solving structure</title>
         <published>2023-08-05T14:39:00+07:00</published>
         <updated>2023-08-05T14:39:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/"/>
         <id>https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/</id>
         
-        <content type="html">&lt;h2 id=&quot;structure-in-general&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/">&lt;h2 id=&quot;structure-in-general&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#structure-in-general&quot; aria-label=&quot;Anchor link for: structure-in-general&quot;&gt;#&lt;&#x2F;a&gt;
 Structure in general&lt;&#x2F;h2&gt;
 &lt;p&gt;Almost everything in our daily life has structure 😲!
@@ -1591,20 +1747,26 @@ Key takeaways&lt;&#x2F;h2&gt;
         <title>Practical Programming Principles</title>
         <published>2021-09-18T00:00:25+07:00</published>
         <updated>2021-09-18T00:00:25+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/development-practices/practical-programming-principles/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/development-practices/practical-programming-principles/"/>
         <id>https://blog.wavvel.com/posts/development-practices/practical-programming-principles/</id>
         
-        <content type="html">&lt;p&gt;There are many programming paradigms, many approaches to code, new tools and frameworks, well things are moving fast 🏎 💨!&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/development-practices/practical-programming-principles/">&lt;p&gt;There are many programming paradigms, many approaches to code, new tools and frameworks, well things are moving fast 🏎 💨!&lt;&#x2F;p&gt;
 &lt;p&gt;I hope this post can be something to be held on when considering programming and development standard.
 Usually the considerations will be useful when starting a new project, when there are arguments on
 how to approach things in development,, which tool&#x2F;framework to use. Pick whatever you think is suitable for your project &amp;amp; team, take it with a grain of salt.&lt;&#x2F;p&gt;
 &lt;p&gt;Having these principles in mind has helped my team to:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Make programming decisions: how to structure code, how to handle errors.&lt;&#x2F;li&gt;
-&lt;li&gt;Decide when should we opt-in for a hack and what&#x27;s the minimum proper way to apply a &amp;quot;quickfix&amp;quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;Decide when should we opt-in for a hack and what&#x27;s the minimum proper way to apply a &quot;quickfix&quot;.&lt;&#x2F;li&gt;
 &lt;li&gt;Decide when to invest more in documentations.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;readability&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
@@ -1622,12 +1784,12 @@ you don&#x27;t need to test data type unless your project requires you to do a l
 &lt;h5 id=&quot;readability-invest-in-code-comments&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-invest-in-code-comments&quot; aria-label=&quot;Anchor link for: readability-invest-in-code-comments&quot;&gt;#&lt;&#x2F;a&gt;
 [Readability] Invest in code comments&lt;&#x2F;h5&gt;
-&lt;p&gt;Code comments can be used to explain &amp;quot;why&amp;quot; certain logic is set that way, this will cut communication cost and make debugging a lot easier.
-The goal is to help your peers and &amp;quot;future you&amp;quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:&lt;&#x2F;p&gt;
+&lt;p&gt;Code comments can be used to explain &quot;why&quot; certain logic is set that way, this will cut communication cost and make debugging a lot easier.
+The goal is to help your peers and &quot;future you&quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Complex logic.&lt;&#x2F;li&gt;
 &lt;li&gt;Motivation regarding unorthodox approach.&lt;&#x2F;li&gt;
-&lt;li&gt;Hack&#x2F;quick fix, this would reduce confusion a lot and make it explicit that the approach that&#x27;s considered a &amp;quot;hack&amp;quot; is intended.&lt;&#x2F;li&gt;
+&lt;li&gt;Hack&#x2F;quick fix, this would reduce confusion a lot and make it explicit that the approach that&#x27;s considered a &quot;hack&quot; is intended.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h5 id=&quot;readability-standard-on-variable-names&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-standard-on-variable-names&quot; aria-label=&quot;Anchor link for: readability-standard-on-variable-names&quot;&gt;#&lt;&#x2F;a&gt;
@@ -1696,7 +1858,7 @@ mostly on building products&#x2F;software instead of debugging.&lt;&#x2F;p&gt;
 &lt;p&gt;Some of the key points to measure your debuggability:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;How easy is it to prioritize errors? We should be able to separate errors by their severity, errors that block users to complete payment should be more important than errors related to the feature to change the username.&lt;&#x2F;li&gt;
-&lt;li&gt;Error message, do we construct meaningful error messages? or is it just printing &lt;code&gt;&amp;quot;System Error&amp;quot;&lt;&#x2F;code&gt;?&lt;&#x2F;li&gt;
+&lt;li&gt;Error message, do we construct meaningful error messages? or is it just printing &lt;code&gt;&quot;System Error&quot;&lt;&#x2F;code&gt;?&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         
@@ -1705,13 +1867,19 @@ mostly on building products&#x2F;software instead of debugging.&lt;&#x2F;p&gt;
         <title>Technical Design Doc Guidelines</title>
         <published>2021-06-20T00:00:25+07:00</published>
         <updated>2021-06-20T00:00:25+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/development-practices/technical-design-doc-guidelines/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/development-practices/technical-design-doc-guidelines/"/>
         <id>https://blog.wavvel.com/posts/development-practices/technical-design-doc-guidelines/</id>
         
-        <content type="html">&lt;p&gt;Writing a technical design doc(TDD) is a prerequisite of a medium-high feature development&#x2F;refactoring initiative, it&#x27;s a crucial part of the development process.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/development-practices/technical-design-doc-guidelines/">&lt;p&gt;Writing a technical design doc(TDD) is a prerequisite of a medium-high feature development&#x2F;refactoring initiative, it&#x27;s a crucial part of the development process.
 TDD can ease the process to get everyone on board with the plan, the doc should be reviewed by your CTO&#x2F;Managers and stakeholders.
 It&#x27;s an essential part of the planning process because &lt;b&gt;it brings people together, especially to get buy-in from the team and stakeholders&lt;&#x2F;b&gt; so they can provide support along the way 🍪!&lt;&#x2F;p&gt;
 &lt;p&gt;The post will cover some of the general guidelines that hopefully can assist you to prepare the TDD.
@@ -1735,7 +1903,7 @@ Problem statement&lt;&#x2F;h4&gt;
 &lt;p&gt;Some key points that maybe can guide you:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Are you solving a specific user problem where there are N users that are impacted?&lt;&#x2F;li&gt;
-&lt;li&gt;The current process might have pain points and sometimes users are just numb to the &amp;quot;pain&amp;quot; up until someone points it out.&lt;&#x2F;li&gt;
+&lt;li&gt;The current process might have pain points and sometimes users are just numb to the &quot;pain&quot; up until someone points it out.&lt;&#x2F;li&gt;
 &lt;li&gt;Will it increase the company&#x27;s business metric either directly or indirectly? If it can save cost, any estimation by what %?&lt;&#x2F;li&gt;
 &lt;li&gt;Are you investing for future needs? Why does that specific investment matter?&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -1783,13 +1951,19 @@ for example the flow that you read has changed after you prepared the plan.&lt;&
         <title>Engineering Lead - Achieving Team Goals</title>
         <published>2021-02-23T20:00:00+07:00</published>
         <updated>2021-02-23T20:00:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/team/engineering-lead-achieving-team-goals/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/team/engineering-lead-achieving-team-goals/"/>
         <id>https://blog.wavvel.com/posts/team/engineering-lead-achieving-team-goals/</id>
         
-        <content type="html">&lt;p&gt;Some people (or most people) might find the stress level going up in respect with the uncertainty of success in this people management role.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/team/engineering-lead-achieving-team-goals/">&lt;p&gt;Some people (or most people) might find the stress level going up in respect with the uncertainty of success in this people management role.
 It is important to keep in mind that &lt;b&gt;your performance is not evaluated based on your &lt;em&gt;individual contributions&lt;&#x2F;em&gt; but the &lt;em&gt;team contributions&lt;&#x2F;em&gt;&lt;&#x2F;b&gt;,
 it&#x27;s not your performance anymore, &lt;b&gt;it&#x27;s &lt;em&gt;the team performance&lt;&#x2F;em&gt;&lt;&#x2F;b&gt;! In general, team performance will be tied to team achievements&#x2F;goals completion.&lt;&#x2F;p&gt;
 &lt;p&gt;This post is based on my personal experiences &amp;amp; past mistakes, please take it with a grain of salt.
@@ -1828,7 +2002,7 @@ You can use software for subtasking or just use excel should be ok as long as it
 &lt;h6 id=&quot;eggggggggggxecute-and-reporting&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#eggggggggggxecute-and-reporting&quot; aria-label=&quot;Anchor link for: eggggggggggxecute-and-reporting&quot;&gt;#&lt;&#x2F;a&gt;
 Eggggggggggxecute and reporting&lt;&#x2F;h6&gt;
-&lt;p&gt;This is the grinding part, the PIC will execute the plan and team lead is expected to &amp;quot;guard&amp;quot; the execution a.k.a make sure it&#x27;s done properly, be ready to get your hands dirty as well, remember to unblock your team member.
+&lt;p&gt;This is the grinding part, the PIC will execute the plan and team lead is expected to &quot;guard&quot; the execution a.k.a make sure it&#x27;s done properly, be ready to get your hands dirty as well, remember to unblock your team member.
 Let the PIC know explicitly that there might be changes along the road, just remember to revise the plan &amp;amp; report back to stakeholders.&lt;&#x2F;p&gt;
 &lt;p&gt;There are 3 kind of reports that I usually find myself do:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -1855,13 +2029,19 @@ In most cases your manager will require a report of what failed and what can be 
         <title>Partnership System Integration Tips</title>
         <published>2020-08-22T00:00:00+07:00</published>
         <updated>2020-08-22T00:00:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/development-practices/partnership-system-integration-tips/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/development-practices/partnership-system-integration-tips/"/>
         <id>https://blog.wavvel.com/posts/development-practices/partnership-system-integration-tips/</id>
         
-        <content type="html">&lt;p&gt;Recently we just had intense integrations with our business partners.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/development-practices/partnership-system-integration-tips/">&lt;p&gt;Recently we just had intense integrations with our business partners.
 We have a whitelabel product where registered whitelabel partners can use our core engine
 and put their brand as the label.&lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
@@ -1892,7 +2072,7 @@ e.g. &lt;code&gt;someField&lt;&#x2F;code&gt; -&amp;gt; &lt;code&gt;somefield&lt;
 of the problem thus would save your client&#x27;s time and your time when doing integration.&lt;&#x2F;p&gt;
 &lt;h5 id=&quot;use-sprint-as-the-development-estimation-time-unit&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#use-sprint-as-the-development-estimation-time-unit&quot; aria-label=&quot;Anchor link for: use-sprint-as-the-development-estimation-time-unit&quot;&gt;#&lt;&#x2F;a&gt;
-Use &amp;quot;sprint&amp;quot; as the development estimation time unit&lt;&#x2F;h5&gt;
+Use &quot;sprint&quot; as the development estimation time unit&lt;&#x2F;h5&gt;
 &lt;p&gt;There will be times where both parties agrees on to develop new features, depending on the urgency,
 if it&#x27;s a &lt;b&gt;&lt;em&gt;not a critical&lt;&#x2F;em&gt;&lt;&#x2F;b&gt; feature then I&#x27;d advise to always use &lt;code&gt;n&lt;&#x2F;code&gt; sprint as the time estimation.
 The new non-critical feature takes 4 hours to complete? Set the estimation to 1 sprint,
@@ -1917,13 +2097,19 @@ and achieve great things together. Having this mindset will help your emotion an
         <title>Phabricator: developing feature on top of other feature</title>
         <published>2020-04-12T22:37:00+07:00</published>
         <updated>2020-04-12T22:37:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/"/>
         <id>https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/</id>
         
-        <content type="html">&lt;p&gt;NOTES: This post assumes that you&#x27;re familiar with &lt;code&gt;git rebase&lt;&#x2F;code&gt; and &lt;code&gt;phabricator&lt;&#x2F;code&gt; terms.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/">&lt;p&gt;NOTES: This post assumes that you&#x27;re familiar with &lt;code&gt;git rebase&lt;&#x2F;code&gt; and &lt;code&gt;phabricator&lt;&#x2F;code&gt; terms.&lt;&#x2F;p&gt;
 &lt;p&gt;We use phabricator as our code review tool. A typical workflow for submitting &amp;amp; merging your feature:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;Create a new feature branch based on &lt;code&gt;master&lt;&#x2F;code&gt; branch, develop and &lt;code&gt;git commit&lt;&#x2F;code&gt; locally from there.&lt;&#x2F;li&gt;
@@ -1983,7 +2169,7 @@ mx1---mx2---mx3---ax---&amp;gt; [M]
                \
                 ax1---ax2---bx1---bx2---bx3---&amp;gt; [FB]
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;code&gt;feature-b&lt;&#x2F;code&gt; doesn&#x27;t need &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt; because it&#x27;s already represented by &lt;code&gt;ax&lt;&#x2F;code&gt;. It will fail if you&#x27;ve submitted &lt;code&gt;feature-b&lt;&#x2F;code&gt; for code review and do &lt;code&gt;arc land&lt;&#x2F;code&gt;, the reason is because it could not merge &amp;quot;cleanly&amp;quot;. The fix is actually pretty easy, you need to point commit &lt;code&gt;bx1&lt;&#x2F;code&gt; to &lt;code&gt;ax&lt;&#x2F;code&gt;. We will do &lt;code&gt;git rebase&lt;&#x2F;code&gt; to rewrite the history, &lt;strong&gt;PLEASE BACKUP&lt;&#x2F;strong&gt; &lt;code&gt;feature-b&lt;&#x2F;code&gt; first before you do this, you can do it by checking-out out from &lt;code&gt;feature-b&lt;&#x2F;code&gt; to another branch.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;feature-b&lt;&#x2F;code&gt; doesn&#x27;t need &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt; because it&#x27;s already represented by &lt;code&gt;ax&lt;&#x2F;code&gt;. It will fail if you&#x27;ve submitted &lt;code&gt;feature-b&lt;&#x2F;code&gt; for code review and do &lt;code&gt;arc land&lt;&#x2F;code&gt;, the reason is because it could not merge &quot;cleanly&quot;. The fix is actually pretty easy, you need to point commit &lt;code&gt;bx1&lt;&#x2F;code&gt; to &lt;code&gt;ax&lt;&#x2F;code&gt;. We will do &lt;code&gt;git rebase&lt;&#x2F;code&gt; to rewrite the history, &lt;strong&gt;PLEASE BACKUP&lt;&#x2F;strong&gt; &lt;code&gt;feature-b&lt;&#x2F;code&gt; first before you do this, you can do it by checking-out out from &lt;code&gt;feature-b&lt;&#x2F;code&gt; to another branch.&lt;&#x2F;p&gt;
 &lt;pre&gt;&lt;code&gt;git checkout feature-b
 
 # Backup for safety
@@ -2042,13 +2228,19 @@ Post Updates&lt;&#x2F;h3&gt;
         <title>Vim Copy File Path From Project Root</title>
         <published>2018-02-13T00:11:00+07:00</published>
         <updated>2018-02-13T00:11:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/"/>
         <id>https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/</id>
         
-        <content type="html">&lt;p&gt;I often found myself typing file path manually when explaining code implementation and its use cases to my teammates.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/vim/copy-file-path-from-project-root/">&lt;p&gt;I often found myself typing file path manually when explaining code implementation and its use cases to my teammates.
 The task to type file path manually is very daunting and I hate it so much when I mistyped.
 The file path I mentioned is relative from project root. Let&#x27;s say you have this structure&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;▾ Yomu&amp;#x2F;
@@ -2095,13 +2287,19 @@ in buffer to your system clipboard.&lt;&#x2F;p&gt;
         <title>Customizing UISearchBar</title>
         <published>2018-02-10T03:19:00+07:00</published>
         <updated>2018-02-10T03:19:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/customizing-uisearchbar/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/swift/customizing-uisearchbar/"/>
         <id>https://blog.wavvel.com/posts/swift/customizing-uisearchbar/</id>
         
-        <content type="html">&lt;p&gt;The default view of &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; is kind of boring, one way to customize it is by subclassing &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; and put the customization code in &lt;code&gt;willMove(toSuperView:)&lt;&#x2F;code&gt; method.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/swift/customizing-uisearchbar/">&lt;p&gt;The default view of &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; is kind of boring, one way to customize it is by subclassing &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; and put the customization code in &lt;code&gt;willMove(toSuperView:)&lt;&#x2F;code&gt; method.
 In this post, we&#x27;ll try to do 2 things&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Set border radius for &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
@@ -2242,13 +2440,19 @@ Customizing Search Icon&lt;&#x2F;h2&gt;
         <title>Swift MIME Type Detection with Swime</title>
         <published>2017-04-26T23:00:44+07:00</published>
         <updated>2017-04-26T23:00:44+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/detect-mime-type-with-swime/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/swift/detect-mime-type-with-swime/"/>
         <id>https://blog.wavvel.com/posts/swift/detect-mime-type-with-swime/</id>
         
-        <content type="html">&lt;p&gt;A month ago I found myself scouring GitHub for a Swift plugin
+        <content type="html" xml:base="https://blog.wavvel.com/posts/swift/detect-mime-type-with-swime/">&lt;p&gt;A month ago I found myself scouring GitHub for a Swift plugin
 to detect mime type based on magic bytes. I did find &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;onevcat&#x2F;MimeType&quot;&gt;MimeType&lt;&#x2F;a&gt;,
 unfortunately it extracts the mime type from a file path or url extension.
 Knowing that no one hadn&#x27;t created a mime type checking library for Swift, I set
@@ -2312,13 +2516,19 @@ that would be a great addition to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&
         <title>Living In The Terminal</title>
         <published>2017-03-11T14:56:17+07:00</published>
         <updated>2017-03-11T14:56:17+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/terminal/living-in-the-terminal/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/terminal/living-in-the-terminal/"/>
         <id>https://blog.wavvel.com/posts/terminal/living-in-the-terminal/</id>
         
-        <content type="html">&lt;p&gt;Most of my time is spent in the terminal and I love working within it,
+        <content type="html" xml:base="https://blog.wavvel.com/posts/terminal/living-in-the-terminal/">&lt;p&gt;Most of my time is spent in the terminal and I love working within it,
 so I invest a lot for the best terminal setup to make sure that I&#x27;m productive and happy when I&#x27;m using it.
 Here&#x27;s a couple of screenshots of my terminal&lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
@@ -2358,13 +2568,19 @@ need to clone it and run my setup script to get my ideal work environment 🍻.&
         <title>Make NSCollectionViewItem Responsive Width and Height</title>
         <published>2017-03-04T23:48:35+07:00</published>
         <updated>2017-03-04T23:48:35+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/"/>
         <id>https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/</id>
         
-        <content type="html">&lt;p&gt;I had a hard time figuring out how to make &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; width to be responsive.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/">&lt;p&gt;I had a hard time figuring out how to make &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; width to be responsive.
 The problem was that I wanted my &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; to follow its parent width.
 Maybe I didn&#x27;t google the right keywords, I didn&#x27;t find any solution on the internet.
 I found the solution after reading &lt;code&gt;NSCollectionViewDelegateFlowLayout&lt;&#x2F;code&gt;, it wasn&#x27;t straight forward.
@@ -2405,13 +2621,19 @@ Turns out that we need to invalidate the cells layout manually and tell &lt;code
         <title>NSImageView Unproportional Zoom</title>
         <published>2017-02-10T20:47:23+07:00</published>
         <updated>2017-02-10T20:47:23+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/macos/unproportional-zoom/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/swift/macos/unproportional-zoom/"/>
         <id>https://blog.wavvel.com/posts/swift/macos/unproportional-zoom/</id>
         
-        <content type="html">&lt;p&gt;I had this weird problem when I tried to implement a zoom functionality
+        <content type="html" xml:base="https://blog.wavvel.com/posts/swift/macos/unproportional-zoom/">&lt;p&gt;I had this weird problem when I tried to implement a zoom functionality
 in my hobby project, a manga reader called &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;yomu&quot;&gt;Yomu&lt;&#x2F;a&gt;.
 When I tried to zoom an &lt;code&gt;NSImageView&lt;&#x2F;code&gt; programmatically
 it&#x27;s being zoomed unproportionally, my expectation was the image should be stretched horizontally
@@ -2457,13 +2679,19 @@ changing it to proportionally up or down will fix the problem.&lt;&#x2F;p&gt;
         <title>Coding Productivity Over 9000</title>
         <published>2016-07-10T00:49:40+07:00</published>
         <updated>2016-07-10T00:49:40+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/tools/productivity-over-9000/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/tools/productivity-over-9000/"/>
         <id>https://blog.wavvel.com/posts/tools/productivity-over-9000/</id>
         
-        <content type="html">&lt;p class=&quot;image-container&quot;&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/tools/productivity-over-9000/">&lt;p class=&quot;image-container&quot;&gt;
   &lt;img
     src=&quot;https:&#x2F;&#x2F;media.giphy.com&#x2F;media&#x2F;XIqCQx02E1U9W&#x2F;giphy.gif&quot; alt=&quot;Over 9000&quot;
     class=&quot;medium-size&quot;&gt;
@@ -2551,13 +2779,19 @@ Feel free to see&#x2F;copy my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F
         <title>RxSwift Race Condition on Cells</title>
         <published>2016-07-04T22:58:59+07:00</published>
         <updated>2016-07-04T22:58:59+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/race-condition-on-cells/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/swift/race-condition-on-cells/"/>
         <id>https://blog.wavvel.com/posts/swift/race-condition-on-cells/</id>
         
-        <content type="html">&lt;p&gt;A few days ago I wrote a simple code to asynchronously load an image using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya#rxswift&quot;&gt;&lt;code&gt;RxMoya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/swift/race-condition-on-cells/">&lt;p&gt;A few days ago I wrote a simple code to asynchronously load an image using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya#rxswift&quot;&gt;&lt;code&gt;RxMoya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.
 &lt;code&gt;RxMoya&lt;&#x2F;code&gt; is an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ReactiveX&#x2F;RxSwift&quot;&gt;&lt;code&gt;RxSwift&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; wrapper
 for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya&quot;&gt;&lt;code&gt;Moya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;. The flow is simple,
 everytime collection view asks for &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; (yes, I&#x27;m building a macOS app),
