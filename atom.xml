@@ -61,7 +61,7 @@ Some lessons learned from the first MacBook&lt;&#x2F;h2&gt;
 &lt;li&gt;&lt;strong&gt;No hardcase&lt;&#x2F;strong&gt;: Dust quickly accumulated in the hardcase, the case also blocks some of the heat released from the aluminum case.&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;No screen protector&lt;&#x2F;strong&gt;: MacBook is not a touch screen, also adding a screen protector will risk screen to crack because there&#x27;s additional pressure when closing the lid.&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;No keyboard protector&lt;&#x2F;strong&gt;: Keyboard protector blocks the air flow from the keyboard.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Buy a new macbook Apple stops supporting macOS updates on the Mac Model&lt;&#x2F;strong&gt;: Every new macOS release only supports a certain machine type and some of the updates will include security patches, it&#x27;s in my best interest to be always up to date with the most recent security patches.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Buy a new macbook when Apple stops supporting macOS updates&lt;&#x2F;strong&gt;: Every new macOS release only supports a certain machine type and some of the updates will include security patches, it&#x27;s in my best interest to be always up to date with the most recent security patches.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         
@@ -1496,6 +1496,36 @@ About Blogging&lt;&#x2F;h1&gt;
 &lt;li&gt;I want to document my thoughts based on my life, hobby projects, and profesional experience working in the software engineering field.&lt;&#x2F;li&gt;
 &lt;li&gt;I want to improve my writing skills.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Default macoS setup</title>
+        <published>2023-08-12T23:30:30+07:00</published>
+        <updated>2023-08-12T23:30:30+07:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/pages/macos-setup/"/>
+        <id>https://blog.wavvel.com/pages/macos-setup/</id>
+        
+        <content type="html" xml:base="https://blog.wavvel.com/pages/macos-setup/">&lt;h1 id=&quot;default-macos-setup&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#default-macos-setup&quot; aria-label=&quot;Anchor link for: default-macos-setup&quot;&gt;#&lt;&#x2F;a&gt;
+Default macoS setup&lt;&#x2F;h1&gt;
+&lt;p&gt;Run install.sh https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;dotfiles&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;git&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#git&quot; aria-label=&quot;Anchor link for: git&quot;&gt;#&lt;&#x2F;a&gt;
+Git&lt;&#x2F;h2&gt;
+&lt;p&gt;Input git password once per session&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;Host *
+    UseKeychain yes
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
         
     </entry>
