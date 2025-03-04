@@ -49,5 +49,5 @@ These are the things that I learned that supposedly improved MacBook lifespan:
 * **No hardcase**: Dust quickly accumulated in the hardcase, the case also blocks some of the heat released from the aluminum case.
 * **No screen protector**: MacBook is not a touch screen, also adding a screen protector will risk screen to crack because there's additional pressure when closing the lid.
 * **No keyboard protector**: Keyboard protector blocks the air flow from the keyboard.
-* **Buy a new macbook Apple stops supporting macOS updates on the Mac Model**: Every new macOS release only supports a certain machine type and some of the updates will include security patches, it's in my best interest to be always up to date with the most recent security patches.
+* **Buy a new macbook when Apple stops supporting macOS updates**: Every new macOS release only supports a certain machine type and some of the updates will include security patches, it's in my best interest to be always up to date with the most recent security patches.
 
