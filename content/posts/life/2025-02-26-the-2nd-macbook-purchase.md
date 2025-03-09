@@ -8,7 +8,8 @@ tags = ["life", "macbook", "macos"]
 +++
 
 ## My first MacBook
-I was at the office lift waiting to reach level 12, my wife sent me a chat that my MacBook suddenly died, she was using it for some boring administration stuffs.
+I was at the office lift waiting to reach level 12, my wife sent me a chat that my MacBook suddenly could not be charged, she was using it for some boring administration stuffs.
+By just looking at the MagSafe charging pin you can tell it's most likely because of the MagSafe, not the MacBook.
 
 It's my first Macbook that I had in March 2015, a 15-inch Retina MacBook Pro model that was launched in 2014.
 Bought it at iBox [Central Park Mall Jakarta](https://g.co/kgs/eocczGp). I've been using it quite extensively for learning and programming for almost 10 years, what a memory.
@@ -21,11 +22,9 @@ The original MagSafe was broken because I accidentally pulled the thin cable in 
 The MacBook only got the macOS update up until Big Sur before Apple dropped OS support for 2014 MacBook, so 2020 is the final year that it gets the latest macOS.
 I didn't mind having an outdated macOS as long as it's still functioning well,  my frugal lifestyle would've never thought to buy a new one up until it's broken.
 
-Around 2022, my MacBook battery started to swole a bit, typical indication of aging battery.
+Around 2022, my MacBook battery started to swole a bit, typical indication of aging battery. And when the time it stopped charging on Feb 2025, I've been using it for almost 10 years so I like the option to buy a new one or I can just buy a new MagSafe.
 
 ## Buying a new one
-On 13 February 2025 suddenly it stops charging, by just looking at the MagSafe charging pin you can tell it's most likely because of the MagSafe, not the MacBook. I've been using it for almost 10 years so I like the option to buy a new one or I can just buy a new MagSafe.
-
 Apple just launched a new MacBook pro with M4 processor and 16GB RAM as the base model, it's the first time they made it a standard.🍻
 The price point for 14 inch base model one is similar to my MacBook, quite a good deal. I inquired official Apple resellers Digimap and iBox for the space black color but it's out of stock.
 
