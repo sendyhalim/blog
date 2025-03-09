@@ -2,6 +2,7 @@
 title = "Cara Saya Melaporkan Asset Rumah dan KPR di SPT Pajak Tahunan"
 date = 2025-03-10T00:00:00+07:00
 description = "Berikut cara saya melaporkan asset rumah dan cicilan hutang KPR di SPT Pajak Tahunan"
+draft = true
 
 [taxonomies]
 tags = ["life", "financial", "tax"]
