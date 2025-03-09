@@ -12,7 +12,7 @@
 
   <title>
     
-      Default macoS setup
+      Setting a new Mac
     
   </title>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
@@ -46,11 +46,11 @@
 
 
 <div class="post">
-  <h1 class="title">Default macoS setup</h1>
+  <h1 class="title">Setting a new Mac</h1>
 
   <div class="headline">
     <div>
-      2023-08-12
+      2025-03-05
 
     </div>
     <div>
@@ -66,17 +66,92 @@
   </div>
 
   <div class="post-body">
-    <h1 id="default-macos-setup"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#default-macos-setup" aria-label="Anchor link for: default-macos-setup">#</a>
-Default macoS setup</h1>
-<p>Run install.sh https://github.com/sendyhalim/dotfiles</p>
-<h2 id="git"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
-<a class="zola-anchor" href="#git" aria-label="Anchor link for: git">#</a>
-Git</h2>
-<p>Input git password once per session</p>
-<pre><code>Host *
-    UseKeychain yes
+    <p>A document to setup a new Mac.</p>
+<h3 id="development-environment"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#development-environment" aria-label="Anchor link for: development-environment">#</a>
+Development Environment</h3>
+<h4 id="applications"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#applications" aria-label="Anchor link for: applications">#</a>
+Applications</h4>
+<pre><code># Install homebrew
+&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;HEAD&#x2F;install.sh)&quot;
+
+# Install applications
+brew install --cask iterm2
+brew install --cask google-chrome
+brew install --cask scroll-reverser  # Reverse scroll on mouse (more natural)
+brew install --cask hammerspoon      # Tiling window manager
+brew install --cask dropbox
+brew install neovim
+
+# Install pynvim
+pip3 install &#x27;pynvim @ git+https:&#x2F;&#x2F;github.com&#x2F;neovim&#x2F;pynvim&#x27; --break-system-packages
+
+# Install vim-plug
+sh -c &#x27;curl -fLo &quot;${XDG_DATA_HOME:-$HOME&#x2F;.local&#x2F;share}&quot;&#x2F;nvim&#x2F;site&#x2F;autoload&#x2F;plug.vim --create-dirs \
+       https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;junegunn&#x2F;vim-plug&#x2F;master&#x2F;plug.vim&#x27;
+
+# Install Rust
+curl --proto &#x27;=https&#x27; --tlsv1.2 -sSf https:&#x2F;&#x2F;sh.rustup.rs | sh
+rustup install stable
 </code></pre>
+<h4 id="git"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#git" aria-label="Anchor link for: git">#</a>
+Git</h4>
+<h5 id="generate-ssh"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#generate-ssh" aria-label="Anchor link for: generate-ssh">#</a>
+Generate SSH</h5>
+<pre><code># Generate new ssh key
+ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;
+
+# Add ssh key to ssh agent
+eval &quot;$(ssh-agent -s)&quot;
+</code></pre>
+<h5 id="input-git-password-once-per-session"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#input-git-password-once-per-session" aria-label="Anchor link for: input-git-password-once-per-session">#</a>
+Input git password once per session</h5>
+<ul>
+<li>Open <code>~/.ssh/config</code></li>
+<li>Set:</li>
+</ul>
+<pre><code>Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~&#x2F;.ssh&#x2F;id_ed25519
+</code></pre>
+<h5 id="dotfiles"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#dotfiles" aria-label="Anchor link for: dotfiles">#</a>
+Dotfiles</h5>
+<pre><code>git clone https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;dotfiles
+cd dotfiles &amp;&amp; .&#x2F;install.sh
+</code></pre>
+<h3 id="macos-system-settings"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#macos-system-settings" aria-label="Anchor link for: macos-system-settings">#</a>
+MacOS System Settings</h3>
+<h4 id="three-finger-drag"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#three-finger-drag" aria-label="Anchor link for: three-finger-drag">#</a>
+Three Finger Drag</h4>
+<ul>
+<li>Navigate: Settings &gt; Accessibility &gt; Pointer Control &gt; Trackpad Options</li>
+<li>Set: Enable <code>Use trackpad for dragging</code></li>
+<li>Set: Dragging style <code>Three Finger Drag</code></li>
+</ul>
+<h4 id="control-quick-access"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#control-quick-access" aria-label="Anchor link for: control-quick-access">#</a>
+Control Quick Access</h4>
+<ul>
+<li>Navigate: Settings &gt; Desktop &amp; Dock &gt; Hot Corners</li>
+<li>Set: Set bottom right <code>Mission Control</code></li>
+</ul>
+<h4 id="screenshot"><!-- Customize https://github.com/getzola/zola/blob/master/components/templates/src/builtins/anchor-link.html -->
+<a class="zola-anchor" href="#screenshot" aria-label="Anchor link for: screenshot">#</a>
+Screenshot</h4>
+<p>Put screenshot into clipboard by default:</p>
+<ul>
+<li>Navigate: System Settings &gt; Keyboard shortcuts &gt; Screenshots</li>
+<li>Set: Copy picture of screen to the clipboard: <code>Shift + CMD + 3</code></li>
+<li>Set: Copy picture of selected are to the clipboard: <code>Shift + CMD + 4</code></li>
+</ul>
 
   </div>
 </div>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - financial</title>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/financial/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-03-10T00:00:00+07:00</updated>
+    <id>https://blog.wavvel.com/tags/financial/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Cara Saya Melaporkan Asset Rumah dan KPR di SPT Pajak Tahunan</title>
+        <published>2025-03-10T00:00:00+07:00</published>
+        <updated>2025-03-10T00:00:00+07:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/cara-saya-melaporkan-kpr-di-spt-pajak-tahunan/"/>
+        <id>https://blog.wavvel.com/posts/life/cara-saya-melaporkan-kpr-di-spt-pajak-tahunan/</id>
+        
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/cara-saya-melaporkan-kpr-di-spt-pajak-tahunan/">&lt;p&gt;Post ini akan ditulis dalam bahasa Indonesia karena memang target audiencenya adalah orang Indonesia.
+&lt;strong&gt;Perlu dicatat bahwa jangan mengikuti langkah-langkah yang saya lakukan tanpa berkonsultasi dengan ahli pajak Anda!&lt;&#x2F;strong&gt; Saya hanya ingin berbagi pengalaman saya saja
+dalam melaporkan asset Rumah dan cicilan hutang KPR di SPT Pajak Tahunan.
+Saya sudah berkonsultasi dengan konsultan pajak saya sebelumnya dan saya ingin sharing saja, semoga informasinya bisa bermanfaat.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rumah-dan-kpr-di-spt-pajak-tahunan&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#rumah-dan-kpr-di-spt-pajak-tahunan&quot; aria-label=&quot;Anchor link for: rumah-dan-kpr-di-spt-pajak-tahunan&quot;&gt;#&lt;&#x2F;a&gt;
+Rumah dan KPR di SPT Pajak Tahunan&lt;&#x2F;h2&gt;
+&lt;p&gt;Secara high level yang perlu dilaporkan di SPT Pajak Tahunan ada 2 component:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Rumah dilaporkan pada bagian Harta, dengan kode ZZZ&lt;&#x2F;li&gt;
+&lt;li&gt;Hutang KPR dilaporkan pada bagian Hutang, dengan kode YYY&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Nilai asset rumah dilaporkan dengan harga perolehan yang artinya harga&#x2F;uang yang Anda bayarkan untuk mendapatkan asset tersebut.
+Nilai hutang KPR bisa dilaporkan mengikuti sisa hutang yang harus dibayarkan ke bank per akhir tahun pajak.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;contoh&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#contoh&quot; aria-label=&quot;Anchor link for: contoh&quot;&gt;#&lt;&#x2F;a&gt;
+Contoh&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;kpr-tahun-pertama&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#kpr-tahun-pertama&quot; aria-label=&quot;Anchor link for: kpr-tahun-pertama&quot;&gt;#&lt;&#x2F;a&gt;
+KPR: Tahun pertama&lt;&#x2F;h4&gt;
+&lt;p&gt;Misalnya asumsi sekarang bulan Maret 2025 dan di April 2024 tahun lalu Anda membeli rumah seharga 1 Milyar dengan uang muka 200 juta, sisanya 800 juta dari pinjaman KPR.
+Semisal saja didalam KPR terdapat komponen&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Biaya administrasi: 10juta&lt;&#x2F;li&gt;
+&lt;li&gt;Biaya provisi: 30juta&lt;&#x2F;li&gt;
+&lt;li&gt;Biaya bunga (secara total): asumsikan saja 300juta kalau diakumulasi sepanjang tenor pinjaman&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Kita bisa hitung jumlah yang harus anda bayarkan ke bank sampai KPR lunas adalah sebesar 800juta + 10juta + 30juta + 300juta = 1.14 Milyar,
+asumsi cicilan 15 juta perbulan mulai dari April 2024, berarti di akhir tahun 2024 sudah membayar total 135 juta.
+Maka sisa hutang KPR di akhir tahun 2024 1.14 milyar - 135 juta = 1.005 milyar, umlah ini dilaporkan di bagian Hutang dengan kode YYY.&lt;&#x2F;p&gt;
+&lt;p&gt;Untuk rumah karena menggunakan konsep harga perolehan, ingat ini jumlah yang dikeluarkan untuk mendapatkan asset tersebut, berarti dilaporkan sebesar DP + nilai KPR = 200juta + 1.14 milyar = 1.34 milyar di bagian Harta dengan kode ZZZ.
+Dengan begini jumlah penambahan harta rumah, pengurangan cash (karena DP rumah), dan penambahan hutang menjadi seimbang:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Harta rumah +1.34 milyar&lt;&#x2F;li&gt;
+&lt;li&gt;Harta cash: sesuai posisi cash di akhir tahun, harusnya sudah termasuk DP 200 juta dan cicilan yang dibayarkan 135 juta (Apr - Dec 2024)&lt;&#x2F;li&gt;
+&lt;li&gt;Hutang KPR +1.005 Milyar&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Secara total, pergerakan nilai harta seimbang dengan pergerakan hutang.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;kpr-tahun-ke-2-dan-seterusnya&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#kpr-tahun-ke-2-dan-seterusnya&quot; aria-label=&quot;Anchor link for: kpr-tahun-ke-2-dan-seterusnya&quot;&gt;#&lt;&#x2F;a&gt;
+KPR: Tahun ke-2 dan seterusnya&lt;&#x2F;h4&gt;
+&lt;p&gt;Tahun selanjutnya pelaporan di SPT Pajak Tahunan cukup mudah, karena kalau tidak ada renovasi besar maka yang dilaporkan&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Harta rumah 1.34 milyar (tidak bergerak)&lt;&#x2F;li&gt;
+&lt;li&gt;Nilai hutang KPR = 1.005 milyar - (12 x 15 juta) = 825juta&lt;&#x2F;li&gt;
+&lt;li&gt;Cash, untuk cash ya gunakan posisi cash di akhir tahun, karena memang selalu bergerak karena pembayaran cicilan KPR dan pastinya ada hal lain juga yang mempengaruhi cashflow.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

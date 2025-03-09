@@ -4,8 +4,74 @@
     <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/life/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-02-27T00:00:00+07:00</updated>
+    <updated>2025-03-10T00:00:00+07:00</updated>
     <id>https://blog.wavvel.com/tags/life/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Cara Saya Melaporkan Asset Rumah dan KPR di SPT Pajak Tahunan</title>
+        <published>2025-03-10T00:00:00+07:00</published>
+        <updated>2025-03-10T00:00:00+07:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/cara-saya-melaporkan-kpr-di-spt-pajak-tahunan/"/>
+        <id>https://blog.wavvel.com/posts/life/cara-saya-melaporkan-kpr-di-spt-pajak-tahunan/</id>
+        
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/cara-saya-melaporkan-kpr-di-spt-pajak-tahunan/">&lt;p&gt;Post ini akan ditulis dalam bahasa Indonesia karena memang target audiencenya adalah orang Indonesia.
+&lt;strong&gt;Perlu dicatat bahwa jangan mengikuti langkah-langkah yang saya lakukan tanpa berkonsultasi dengan ahli pajak Anda!&lt;&#x2F;strong&gt; Saya hanya ingin berbagi pengalaman saya saja
+dalam melaporkan asset Rumah dan cicilan hutang KPR di SPT Pajak Tahunan.
+Saya sudah berkonsultasi dengan konsultan pajak saya sebelumnya dan saya ingin sharing saja, semoga informasinya bisa bermanfaat.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rumah-dan-kpr-di-spt-pajak-tahunan&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#rumah-dan-kpr-di-spt-pajak-tahunan&quot; aria-label=&quot;Anchor link for: rumah-dan-kpr-di-spt-pajak-tahunan&quot;&gt;#&lt;&#x2F;a&gt;
+Rumah dan KPR di SPT Pajak Tahunan&lt;&#x2F;h2&gt;
+&lt;p&gt;Secara high level yang perlu dilaporkan di SPT Pajak Tahunan ada 2 component:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Rumah dilaporkan pada bagian Harta, dengan kode ZZZ&lt;&#x2F;li&gt;
+&lt;li&gt;Hutang KPR dilaporkan pada bagian Hutang, dengan kode YYY&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Nilai asset rumah dilaporkan dengan harga perolehan yang artinya harga&#x2F;uang yang Anda bayarkan untuk mendapatkan asset tersebut.
+Nilai hutang KPR bisa dilaporkan mengikuti sisa hutang yang harus dibayarkan ke bank per akhir tahun pajak.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;contoh&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#contoh&quot; aria-label=&quot;Anchor link for: contoh&quot;&gt;#&lt;&#x2F;a&gt;
+Contoh&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;kpr-tahun-pertama&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#kpr-tahun-pertama&quot; aria-label=&quot;Anchor link for: kpr-tahun-pertama&quot;&gt;#&lt;&#x2F;a&gt;
+KPR: Tahun pertama&lt;&#x2F;h4&gt;
+&lt;p&gt;Misalnya asumsi sekarang bulan Maret 2025 dan di April 2024 tahun lalu Anda membeli rumah seharga 1 Milyar dengan uang muka 200 juta, sisanya 800 juta dari pinjaman KPR.
+Semisal saja didalam KPR terdapat komponen&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Biaya administrasi: 10juta&lt;&#x2F;li&gt;
+&lt;li&gt;Biaya provisi: 30juta&lt;&#x2F;li&gt;
+&lt;li&gt;Biaya bunga (secara total): asumsikan saja 300juta kalau diakumulasi sepanjang tenor pinjaman&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Kita bisa hitung jumlah yang harus anda bayarkan ke bank sampai KPR lunas adalah sebesar 800juta + 10juta + 30juta + 300juta = 1.14 Milyar,
+asumsi cicilan 15 juta perbulan mulai dari April 2024, berarti di akhir tahun 2024 sudah membayar total 135 juta.
+Maka sisa hutang KPR di akhir tahun 2024 1.14 milyar - 135 juta = 1.005 milyar, umlah ini dilaporkan di bagian Hutang dengan kode YYY.&lt;&#x2F;p&gt;
+&lt;p&gt;Untuk rumah karena menggunakan konsep harga perolehan, ingat ini jumlah yang dikeluarkan untuk mendapatkan asset tersebut, berarti dilaporkan sebesar DP + nilai KPR = 200juta + 1.14 milyar = 1.34 milyar di bagian Harta dengan kode ZZZ.
+Dengan begini jumlah penambahan harta rumah, pengurangan cash (karena DP rumah), dan penambahan hutang menjadi seimbang:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Harta rumah +1.34 milyar&lt;&#x2F;li&gt;
+&lt;li&gt;Harta cash: sesuai posisi cash di akhir tahun, harusnya sudah termasuk DP 200 juta dan cicilan yang dibayarkan 135 juta (Apr - Dec 2024)&lt;&#x2F;li&gt;
+&lt;li&gt;Hutang KPR +1.005 Milyar&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Secara total, pergerakan nilai harta seimbang dengan pergerakan hutang.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;kpr-tahun-ke-2-dan-seterusnya&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#kpr-tahun-ke-2-dan-seterusnya&quot; aria-label=&quot;Anchor link for: kpr-tahun-ke-2-dan-seterusnya&quot;&gt;#&lt;&#x2F;a&gt;
+KPR: Tahun ke-2 dan seterusnya&lt;&#x2F;h4&gt;
+&lt;p&gt;Tahun selanjutnya pelaporan di SPT Pajak Tahunan cukup mudah, karena kalau tidak ada renovasi besar maka yang dilaporkan&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Harta rumah 1.34 milyar (tidak bergerak)&lt;&#x2F;li&gt;
+&lt;li&gt;Nilai hutang KPR = 1.005 milyar - (12 x 15 juta) = 825juta&lt;&#x2F;li&gt;
+&lt;li&gt;Cash, untuk cash ya gunakan posisi cash di akhir tahun, karena memang selalu bergerak karena pembayaran cicilan KPR dan pastinya ada hal lain juga yang mempengaruhi cashflow.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>The 2nd MacBook Purchase</title>
         <published>2025-02-27T00:00:00+07:00</published>
@@ -25,7 +91,8 @@
         <content type="html" xml:base="https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/">&lt;h2 id=&quot;my-first-macbook&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#my-first-macbook&quot; aria-label=&quot;Anchor link for: my-first-macbook&quot;&gt;#&lt;&#x2F;a&gt;
 My first MacBook&lt;&#x2F;h2&gt;
-&lt;p&gt;I was at the office lift waiting to reach level 12, my wife sent me a chat that my MacBook suddenly died, she was using it for some boring administration stuffs.&lt;&#x2F;p&gt;
+&lt;p&gt;I was at the office lift waiting to reach level 12, my wife sent me a chat that my MacBook suddenly could not be charged, she was using it for some boring administration stuffs.
+By just looking at the MagSafe charging pin you can tell it&#x27;s most likely because of the MagSafe, not the MacBook.&lt;&#x2F;p&gt;
 &lt;p&gt;It&#x27;s my first Macbook that I had in March 2015, a 15-inch Retina MacBook Pro model that was launched in 2014.
 Bought it at iBox &lt;a href=&quot;https:&#x2F;&#x2F;g.co&#x2F;kgs&#x2F;eocczGp&quot;&gt;Central Park Mall Jakarta&lt;&#x2F;a&gt;. I&#x27;ve been using it quite extensively for learning and programming for almost 10 years, what a memory.&lt;&#x2F;p&gt;
 &lt;p&gt;Nothing beats MacBook in terms of trackpad and programming experience, smooth typing experience and most things just works in macOS.
@@ -34,11 +101,10 @@ The MacBook almost had no issues and the system almost never freezes, the only r
 The original MagSafe was broken because I accidentally pulled the thin cable in 2020 which I replaced with a cheap $20 MagSafe knockoff.&lt;&#x2F;p&gt;
 &lt;p&gt;The MacBook only got the macOS update up until Big Sur before Apple dropped OS support for 2014 MacBook, so 2020 is the final year that it gets the latest macOS.
 I didn&#x27;t mind having an outdated macOS as long as it&#x27;s still functioning well,  my frugal lifestyle would&#x27;ve never thought to buy a new one up until it&#x27;s broken.&lt;&#x2F;p&gt;
-&lt;p&gt;Around 2022, my MacBook battery started to swole a bit, typical indication of aging battery.&lt;&#x2F;p&gt;
+&lt;p&gt;Around 2022, my MacBook battery started to swole a bit, typical indication of aging battery. And when the time it stopped charging on Feb 2025, I&#x27;ve been using it for almost 10 years so I like the option to buy a new one or I can just buy a new MagSafe.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;buying-a-new-one&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#buying-a-new-one&quot; aria-label=&quot;Anchor link for: buying-a-new-one&quot;&gt;#&lt;&#x2F;a&gt;
 Buying a new one&lt;&#x2F;h2&gt;
-&lt;p&gt;On 13 February 2025 suddenly it stops charging, by just looking at the MagSafe charging pin you can tell it&#x27;s most likely because of the MagSafe, not the MacBook. I&#x27;ve been using it for almost 10 years so I like the option to buy a new one or I can just buy a new MagSafe.&lt;&#x2F;p&gt;
 &lt;p&gt;Apple just launched a new MacBook pro with M4 processor and 16GB RAM as the base model, it&#x27;s the first time they made it a standard.🍻
 The price point for 14 inch base model one is similar to my MacBook, quite a good deal. I inquired official Apple resellers Digimap and iBox for the space black color but it&#x27;s out of stock.&lt;&#x2F;p&gt;
 &lt;p&gt;Other option is to buy another knockoff MagSafe to cover some of the work that needed to be completed at the end of the month, I&#x27;m willing to wait for a day or two maybe it will be back in stock. 2 days later it&#x27;s still out of stock, I convinced myself to buy a new MagSafe at weekend.&lt;&#x2F;p&gt;
