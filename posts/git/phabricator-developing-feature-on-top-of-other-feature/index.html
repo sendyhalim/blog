@@ -130,7 +130,7 @@ mx1---mx2---mx3---ax---&gt; [M]
                \
                 ax1---ax2---bx1---bx2---bx3---&gt; [FB]
 </code></pre>
-<p><code>feature-b</code> doesn't need <code>ax1</code> and <code>ax2</code> because it's already represented by <code>ax</code>. It will fail if you've submitted <code>feature-b</code> for code review and do <code>arc land</code>, the reason is because it could not merge "cleanly". The fix is actually pretty easy, you need to point commit <code>bx1</code> to <code>ax</code>. We will do <code>git rebase</code> to rewrite the history, <strong>PLEASE BACKUP</strong> <code>feature-b</code> first before you do this, you can do it by checking-out out from <code>feature-b</code> to another branch.</p>
+<p><code>feature-b</code> doesn't need <code>ax1</code> and <code>ax2</code> because it's already represented by <code>ax</code>. It will fail if you've submitted <code>feature-b</code> for code review and do <code>arc land</code>, the reason is because it could not merge &quot;cleanly&quot;. The fix is actually pretty easy, you need to point commit <code>bx1</code> to <code>ax</code>. We will do <code>git rebase</code> to rewrite the history, <strong>PLEASE BACKUP</strong> <code>feature-b</code> first before you do this, you can do it by checking-out out from <code>feature-b</code> to another branch.</p>
 <pre><code>git checkout feature-b
 
 # Backup for safety

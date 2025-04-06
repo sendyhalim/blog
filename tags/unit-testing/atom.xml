@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - unit-testing</title>
-    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/unit-testing/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <link href="https://blog.wavvel.com/tags/unit-testing/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-10-21T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/unit-testing/atom.xml</id>
@@ -10,19 +10,13 @@
         <title>Unit Testing: Organizing Test Directories and Files</title>
         <published>2023-10-21T00:00:00+00:00</published>
         <updated>2023-10-21T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/organizing-unit-tests/">&lt;h3 id=&quot;motivation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h3 id=&quot;motivation&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#motivation&quot; aria-label=&quot;Anchor link for: motivation&quot;&gt;#&lt;&#x2F;a&gt;
 Motivation&lt;&#x2F;h3&gt;
 &lt;p&gt;It&#x27;s common for a function to have many positive and negative cases,
@@ -186,19 +180,13 @@ otherwise, we can group common logic further based on where it&#x27;s reused:&lt
         <title>Unit Testing: Prioritizing Unit Test Cases</title>
         <published>2023-10-19T00:00:00+00:00</published>
         <updated>2023-10-19T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/prioritizing-unit-test-cases/">&lt;h1 id=&quot;writing-unit-tests-takes-times&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h1 id=&quot;writing-unit-tests-takes-times&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#writing-unit-tests-takes-times&quot; aria-label=&quot;Anchor link for: writing-unit-tests-takes-times&quot;&gt;#&lt;&#x2F;a&gt;
 Writing unit tests takes times&lt;&#x2F;h1&gt;
 &lt;p&gt;Writing unit tests take time, achieving 100% unit test coverage
@@ -263,19 +251,13 @@ intuitively it&#x27;s unlikely the end users would input a negative salary and i
         <title>Unit Testing: Minimizing Logic Errors In Unit Tests</title>
         <published>2023-10-14T00:00:00+00:00</published>
         <updated>2023-10-14T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/minimizing-logic-errors-in-unit-tests/">&lt;h1 id=&quot;buggy-unit-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h1 id=&quot;buggy-unit-tests&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#buggy-unit-tests&quot; aria-label=&quot;Anchor link for: buggy-unit-tests&quot;&gt;#&lt;&#x2F;a&gt;
 Buggy unit tests&lt;&#x2F;h1&gt;
 &lt;p&gt;Unit tests can be buggy, similar to how we write business logic code, there could be logic error in the unit tests.
@@ -283,7 +265,7 @@ Logic error is very hard to spot because it comes mostly from different expectat
 usually we find logic error by testing the feature and match the output with the feature requirements,
 the other times it&#x27;s found when you get bug report from QA team or from end users.&lt;&#x2F;p&gt;
 &lt;p&gt;A buggy unit test is just on different layer, it&#x27;s not directly visible in terms of feature requirements,
-the end users and &quot;QA&quot; for unit tests are yourself, your teammates, and your engineering lead&#x2F;manager.&lt;&#x2F;p&gt;
+the end users and &amp;quot;QA&amp;quot; for unit tests are yourself, your teammates, and your engineering lead&#x2F;manager.&lt;&#x2F;p&gt;
 &lt;p&gt;Most of the logic errors in unit tests are categorized into 2 components in terms of where do we spot it:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;In unit test results. It is easy to detect because the unit tests would be red (not passing), typically it&#x27;ll look like failing unit tests, you can just fix it rightaway and rerun the test cases.&lt;&#x2F;li&gt;
@@ -314,19 +296,13 @@ I did like 3-4 times of end to end testing, probably I would only need to do 1-2
         <title>Unit Testing: Your first step in unit testing, what to expect</title>
         <published>2023-10-08T00:00:00+00:00</published>
         <updated>2023-10-08T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/your-first-step-in-unit-testing-practice-what-to-expect/">&lt;h1 id=&quot;set-your-mindset-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h1 id=&quot;set-your-mindset-first&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#set-your-mindset-first&quot; aria-label=&quot;Anchor link for: set-your-mindset-first&quot;&gt;#&lt;&#x2F;a&gt;
 Set your mindset first&lt;&#x2F;h1&gt;
 &lt;p&gt;I would like to remind you that you need to understand the motivation behind unit tests,
@@ -339,7 +315,7 @@ Concept&lt;&#x2F;h1&gt;
 &lt;p&gt;Unit testing is a practice of the bigger testing component. In terms of isolation there are generally 2 types of testing:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Unit testing, a testing practice that focuses only on the function logic, the other dependencies are simulated. Suppose there&#x27;s a function &lt;code&gt;f&lt;&#x2F;code&gt; and it depends on &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt;,
-when unit testing &lt;code&gt;f&lt;&#x2F;code&gt; we will assume other dependencies &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; will behave correctly, this is done through &quot;faking&quot; &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior in
+when unit testing &lt;code&gt;f&lt;&#x2F;code&gt; we will assume other dependencies &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; will behave correctly, this is done through &amp;quot;faking&amp;quot; &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior in
 an isolated unit testing environment.&lt;&#x2F;li&gt;
 &lt;li&gt;Functional testing, a testing practice that focuses on testing the end user features and flows to behave as expected, it does not fake &lt;code&gt;g&lt;&#x2F;code&gt; and &lt;code&gt;h&lt;&#x2F;code&gt; behavior
 but rather will expect &lt;code&gt;f&lt;&#x2F;code&gt;, &lt;code&gt;g&lt;&#x2F;code&gt;, and &lt;code&gt;h&lt;&#x2F;code&gt; to work well together as a feature&#x2F;flow.&lt;&#x2F;li&gt;
@@ -431,25 +407,19 @@ the most common ones:&lt;&#x2F;p&gt;
         <title>Unit Testing: The Point of Unit Tests</title>
         <published>2023-10-07T00:00:00+00:00</published>
         <updated>2023-10-07T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/unit-testing/the-point-of-unit-tests/">&lt;p&gt;Most likely you&#x27;ve heard the term &lt;code&gt;unit tests&lt;&#x2F;code&gt; if you&#x27;re in software engineering or fields related to it.
+        <content type="html">&lt;p&gt;Most likely you&#x27;ve heard the term &lt;code&gt;unit tests&lt;&#x2F;code&gt; if you&#x27;re in software engineering or fields related to it.
 This post is a short introduction to the unit testing practice, starting with what is it and what&#x27;s the point
 of doing it from my view, it&#x27;s not meant to be super technical.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;what-is-unit-testing&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-unit-testing&quot; aria-label=&quot;Anchor link for: what-is-unit-testing&quot;&gt;#&lt;&#x2F;a&gt;
 What is Unit Testing&lt;&#x2F;h1&gt;
-&lt;p&gt;Like the term itself, unit testing is a practice of &lt;em&gt;writing code&lt;&#x2F;em&gt; to test &lt;em&gt;your code&lt;&#x2F;em&gt; as a &quot;unit&quot;,
+&lt;p&gt;Like the term itself, unit testing is a practice of &lt;em&gt;writing code&lt;&#x2F;em&gt; to test &lt;em&gt;your code&lt;&#x2F;em&gt; as a &amp;quot;unit&amp;quot;,
 it focuses on the unit logic and &lt;em&gt;mocks&lt;&#x2F;em&gt; the I&#x2F;O operations and the side effects.&lt;&#x2F;p&gt;
 &lt;p&gt;For simplicity, suppose you have a function &lt;code&gt;calculateInvoiceAmount(order)&lt;&#x2F;code&gt; that calculates the invoice amount based on
 the given order and delivery fee data from a database. The code would look something like this&lt;&#x2F;p&gt;

@@ -1,62 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - financial</title>
-    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/financial/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <link href="https://blog.wavvel.com/tags/financial/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-04-08T00:00:00+07:00</updated>
+    <updated>2025-04-06T00:00:00+07:00</updated>
     <id>https://blog.wavvel.com/tags/financial/atom.xml</id>
-    <entry xml:lang="en">
-        <title>Emergency Fund Components</title>
-        <published>2025-04-08T00:00:00+07:00</published>
-        <updated>2025-04-08T00:00:00+07:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/emergency-fund-components/"/>
-        <id>https://blog.wavvel.com/posts/life/emergency-fund-components/</id>
-        
-        <content type="html" xml:base="https://blog.wavvel.com/posts/life/emergency-fund-components/">&lt;p&gt;This is not a financial advice, please consult with your financial advisor before making any financial decisions.
-This is a living post about how I maintain emergency funds and considerations around it, the why, hopefully later it can be useful for my kids, family, and for other people reading it.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;what-is-emergency-fund&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-emergency-fund&quot; aria-label=&quot;Anchor link for: what-is-emergency-fund&quot;&gt;#&lt;&#x2F;a&gt;
-What Is Emergency Fund&lt;&#x2F;h2&gt;
-&lt;h2 id=&quot;extra-safety-net-indonesia&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#extra-safety-net-indonesia&quot; aria-label=&quot;Anchor link for: extra-safety-net-indonesia&quot;&gt;#&lt;&#x2F;a&gt;
-Extra Safety Net - Indonesia&lt;&#x2F;h2&gt;
-&lt;p&gt;There&#x27;s an instance in Indonesia that gurantees a saving account and deposit, as of this writing Apr 2025 it&#x27;s  up to 2 billion IDR if the interest rate is under N%.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;my-emergency-fund-components&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#my-emergency-fund-components&quot; aria-label=&quot;Anchor link for: my-emergency-fund-components&quot;&gt;#&lt;&#x2F;a&gt;
-My Emergency Fund Components&lt;&#x2F;h2&gt;
-&lt;h2 id=&quot;how-to-maintain&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-to-maintain&quot; aria-label=&quot;Anchor link for: how-to-maintain&quot;&gt;#&lt;&#x2F;a&gt;
-How to Maintain&lt;&#x2F;h2&gt;
-</content>
-        
-    </entry>
     <entry xml:lang="en">
         <title>What Is Wealth?</title>
         <published>2025-04-06T00:00:00+07:00</published>
         <updated>2025-04-06T00:00:00+07:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/what-is-wealth/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/life/what-is-wealth/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/life/what-is-wealth/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/life/what-is-wealth/">&lt;p&gt;This is not a financial advice, please consult with your financial advisor before making any financial decisions.
+        <content type="html">&lt;p&gt;This is not a financial advice, please consult with your financial advisor before making any financial decisions.
 This is a living post and will be updated over-time, it&#x27;s about my perception of wealth. The angle where and how I look at wealth and how to maintain it. I&#x27;m still far away from being wealthy, I&#x27;m grateful that I&#x27;m making progress towards it.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-is-wealth&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-wealth&quot; aria-label=&quot;Anchor link for: what-is-wealth&quot;&gt;#&lt;&#x2F;a&gt;
@@ -106,19 +66,13 @@ I personally believe time management is relatively simple though not easy, as si
         <title>Debt Free, Is It Worth It?</title>
         <published>2025-03-17T00:00:00+07:00</published>
         <updated>2025-03-17T00:00:00+07:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/debt-free-is-it-worth-it/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/life/debt-free-is-it-worth-it/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/life/debt-free-is-it-worth-it/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/life/debt-free-is-it-worth-it/">&lt;p&gt;This is not a financial advice, please consult with your financial advisor before making any financial decisions.&lt;&#x2F;p&gt;
+        <content type="html">&lt;p&gt;This is not a financial advice, please consult with your financial advisor before making any financial decisions.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;thinking-about-it&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#thinking-about-it&quot; aria-label=&quot;Anchor link for: thinking-about-it&quot;&gt;#&lt;&#x2F;a&gt;
 Thinking About It&lt;&#x2F;h2&gt;
@@ -164,19 +118,13 @@ Debt can give a false sense of security, it can easily confuse you to think that
         <title>Melaporkan Asset Rumah dan KPR di SPT Pajak Tahunan Orang Pribadi</title>
         <published>2025-03-10T00:00:00+07:00</published>
         <updated>2025-03-10T00:00:00+07:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/melaporkan-kpr-di-spt-pajak-tahunan-orang-pribadi/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/life/melaporkan-kpr-di-spt-pajak-tahunan-orang-pribadi/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/life/melaporkan-kpr-di-spt-pajak-tahunan-orang-pribadi/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/life/melaporkan-kpr-di-spt-pajak-tahunan-orang-pribadi/">&lt;p&gt;Post ini akan ditulis dalam bahasa Indonesia karena memang target audiencenya adalah orang Indonesia.
+        <content type="html">&lt;p&gt;Post ini akan ditulis dalam bahasa Indonesia karena memang target audiencenya adalah orang Indonesia.
 &lt;strong&gt;Perlu dicatat bahwa jangan mengikuti langkah-langkah yang saya lakukan tanpa berkonsultasi dengan ahli pajak Anda!&lt;&#x2F;strong&gt; Saya hanya ingin berbagi pengalaman saya saja
 dalam melaporkan asset Rumah dan cicilan hutang KPR di SPT Pajak Tahunan Orang Pribadi.
 Saya sudah berkonsultasi dengan konsultan pajak saya sebelumnya dan saya ingin sharing saja, semoga informasinya bisa bermanfaat.&lt;&#x2F;p&gt;

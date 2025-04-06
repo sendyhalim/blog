@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - day-to-day</title>
-    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/day-to-day/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <link href="https://blog.wavvel.com/tags/day-to-day/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-09-30T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/day-to-day/atom.xml</id>
@@ -10,19 +10,13 @@
         <title>War Story: Accidentally Ran A Database Update Without Where Clause</title>
         <published>2023-09-30T00:00:00+00:00</published>
         <updated>2023-09-30T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/war-stories/accidentally-ran-a-database-update-without-where-clause/">&lt;h2 id=&quot;what-happened&quot;&gt;What Happened&lt;&#x2F;h2&gt;
+        <content type="html">&lt;h2 id=&quot;what-happened&quot;&gt;What Happened&lt;&#x2F;h2&gt;
 &lt;p&gt;Back in 2019 I was in a very good mood that the product launch was quite smooth in the past months.
 I got report that there were calculation bugs affecting some of the data. The bug was reproducible locally, I skimmed at the code and just kind of knew where the miscalculation happened in the code,
 my confident was high and my coffee tasted good on that day!&lt;&#x2F;p&gt;
@@ -62,19 +56,13 @@ with a very good lesson that I keep up until now.&lt;&#x2F;p&gt;
         <title>Software Engineering Day to Day Best Practices</title>
         <published>2023-09-19T00:00:00+00:00</published>
         <updated>2023-09-19T00:00:00+00:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/software-engineering/software-engineering-day-to-day-best-practices/">&lt;h2 id=&quot;background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h2 id=&quot;background&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#background&quot; aria-label=&quot;Anchor link for: background&quot;&gt;#&lt;&#x2F;a&gt;
 Background&lt;&#x2F;h2&gt;
 &lt;p&gt;The software engineering day to day practice is not related directly to programming, there are

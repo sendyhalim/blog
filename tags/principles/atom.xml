@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - principles</title>
-    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/principles/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <link href="https://blog.wavvel.com/tags/principles/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2021-09-18T00:00:25+07:00</updated>
     <id>https://blog.wavvel.com/tags/principles/atom.xml</id>
@@ -10,26 +10,20 @@
         <title>Practical Programming Principles</title>
         <published>2021-09-18T00:00:25+07:00</published>
         <updated>2021-09-18T00:00:25+07:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/development-practices/practical-programming-principles/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/development-practices/practical-programming-principles/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/development-practices/practical-programming-principles/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/development-practices/practical-programming-principles/">&lt;p&gt;There are many programming paradigms, many approaches to code, new tools and frameworks, well things are moving fast 🏎 💨!&lt;&#x2F;p&gt;
+        <content type="html">&lt;p&gt;There are many programming paradigms, many approaches to code, new tools and frameworks, well things are moving fast 🏎 💨!&lt;&#x2F;p&gt;
 &lt;p&gt;I hope this post can be something to be held on when considering programming and development standard.
 Usually the considerations will be useful when starting a new project, when there are arguments on
 how to approach things in development,, which tool&#x2F;framework to use. Pick whatever you think is suitable for your project &amp;amp; team, take it with a grain of salt.&lt;&#x2F;p&gt;
 &lt;p&gt;Having these principles in mind has helped my team to:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Make programming decisions: how to structure code, how to handle errors.&lt;&#x2F;li&gt;
-&lt;li&gt;Decide when should we opt-in for a hack and what&#x27;s the minimum proper way to apply a &quot;quickfix&quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;Decide when should we opt-in for a hack and what&#x27;s the minimum proper way to apply a &amp;quot;quickfix&amp;quot;.&lt;&#x2F;li&gt;
 &lt;li&gt;Decide when to invest more in documentations.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;readability&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
@@ -47,12 +41,12 @@ you don&#x27;t need to test data type unless your project requires you to do a l
 &lt;h5 id=&quot;readability-invest-in-code-comments&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-invest-in-code-comments&quot; aria-label=&quot;Anchor link for: readability-invest-in-code-comments&quot;&gt;#&lt;&#x2F;a&gt;
 [Readability] Invest in code comments&lt;&#x2F;h5&gt;
-&lt;p&gt;Code comments can be used to explain &quot;why&quot; certain logic is set that way, this will cut communication cost and make debugging a lot easier.
-The goal is to help your peers and &quot;future you&quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:&lt;&#x2F;p&gt;
+&lt;p&gt;Code comments can be used to explain &amp;quot;why&amp;quot; certain logic is set that way, this will cut communication cost and make debugging a lot easier.
+The goal is to help your peers and &amp;quot;future you&amp;quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Complex logic.&lt;&#x2F;li&gt;
 &lt;li&gt;Motivation regarding unorthodox approach.&lt;&#x2F;li&gt;
-&lt;li&gt;Hack&#x2F;quick fix, this would reduce confusion a lot and make it explicit that the approach that&#x27;s considered a &quot;hack&quot; is intended.&lt;&#x2F;li&gt;
+&lt;li&gt;Hack&#x2F;quick fix, this would reduce confusion a lot and make it explicit that the approach that&#x27;s considered a &amp;quot;hack&amp;quot; is intended.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h5 id=&quot;readability-standard-on-variable-names&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-standard-on-variable-names&quot; aria-label=&quot;Anchor link for: readability-standard-on-variable-names&quot;&gt;#&lt;&#x2F;a&gt;
@@ -121,7 +115,7 @@ mostly on building products&#x2F;software instead of debugging.&lt;&#x2F;p&gt;
 &lt;p&gt;Some of the key points to measure your debuggability:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;How easy is it to prioritize errors? We should be able to separate errors by their severity, errors that block users to complete payment should be more important than errors related to the feature to change the username.&lt;&#x2F;li&gt;
-&lt;li&gt;Error message, do we construct meaningful error messages? or is it just printing &lt;code&gt;&quot;System Error&quot;&lt;&#x2F;code&gt;?&lt;&#x2F;li&gt;
+&lt;li&gt;Error message, do we construct meaningful error messages? or is it just printing &lt;code&gt;&amp;quot;System Error&amp;quot;&lt;&#x2F;code&gt;?&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - git</title>
-    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/git/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <link href="https://blog.wavvel.com/tags/git/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2020-04-12T22:37:00+07:00</updated>
     <id>https://blog.wavvel.com/tags/git/atom.xml</id>
@@ -10,19 +10,13 @@
         <title>Phabricator: developing feature on top of other feature</title>
         <published>2020-04-12T22:37:00+07:00</published>
         <updated>2020-04-12T22:37:00+07:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/git/phabricator-developing-feature-on-top-of-other-feature/">&lt;p&gt;NOTES: This post assumes that you&#x27;re familiar with &lt;code&gt;git rebase&lt;&#x2F;code&gt; and &lt;code&gt;phabricator&lt;&#x2F;code&gt; terms.&lt;&#x2F;p&gt;
+        <content type="html">&lt;p&gt;NOTES: This post assumes that you&#x27;re familiar with &lt;code&gt;git rebase&lt;&#x2F;code&gt; and &lt;code&gt;phabricator&lt;&#x2F;code&gt; terms.&lt;&#x2F;p&gt;
 &lt;p&gt;We use phabricator as our code review tool. A typical workflow for submitting &amp;amp; merging your feature:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;Create a new feature branch based on &lt;code&gt;master&lt;&#x2F;code&gt; branch, develop and &lt;code&gt;git commit&lt;&#x2F;code&gt; locally from there.&lt;&#x2F;li&gt;
@@ -82,7 +76,7 @@ mx1---mx2---mx3---ax---&amp;gt; [M]
                \
                 ax1---ax2---bx1---bx2---bx3---&amp;gt; [FB]
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;code&gt;feature-b&lt;&#x2F;code&gt; doesn&#x27;t need &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt; because it&#x27;s already represented by &lt;code&gt;ax&lt;&#x2F;code&gt;. It will fail if you&#x27;ve submitted &lt;code&gt;feature-b&lt;&#x2F;code&gt; for code review and do &lt;code&gt;arc land&lt;&#x2F;code&gt;, the reason is because it could not merge &quot;cleanly&quot;. The fix is actually pretty easy, you need to point commit &lt;code&gt;bx1&lt;&#x2F;code&gt; to &lt;code&gt;ax&lt;&#x2F;code&gt;. We will do &lt;code&gt;git rebase&lt;&#x2F;code&gt; to rewrite the history, &lt;strong&gt;PLEASE BACKUP&lt;&#x2F;strong&gt; &lt;code&gt;feature-b&lt;&#x2F;code&gt; first before you do this, you can do it by checking-out out from &lt;code&gt;feature-b&lt;&#x2F;code&gt; to another branch.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;feature-b&lt;&#x2F;code&gt; doesn&#x27;t need &lt;code&gt;ax1&lt;&#x2F;code&gt; and &lt;code&gt;ax2&lt;&#x2F;code&gt; because it&#x27;s already represented by &lt;code&gt;ax&lt;&#x2F;code&gt;. It will fail if you&#x27;ve submitted &lt;code&gt;feature-b&lt;&#x2F;code&gt; for code review and do &lt;code&gt;arc land&lt;&#x2F;code&gt;, the reason is because it could not merge &amp;quot;cleanly&amp;quot;. The fix is actually pretty easy, you need to point commit &lt;code&gt;bx1&lt;&#x2F;code&gt; to &lt;code&gt;ax&lt;&#x2F;code&gt;. We will do &lt;code&gt;git rebase&lt;&#x2F;code&gt; to rewrite the history, &lt;strong&gt;PLEASE BACKUP&lt;&#x2F;strong&gt; &lt;code&gt;feature-b&lt;&#x2F;code&gt; first before you do this, you can do it by checking-out out from &lt;code&gt;feature-b&lt;&#x2F;code&gt; to another branch.&lt;&#x2F;p&gt;
 &lt;pre&gt;&lt;code&gt;git checkout feature-b
 
 # Backup for safety

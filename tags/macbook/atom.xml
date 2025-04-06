@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - macbook</title>
-    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/macbook/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
+    <link href="https://blog.wavvel.com/tags/macbook/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-02-27T00:00:00+07:00</updated>
     <id>https://blog.wavvel.com/tags/macbook/atom.xml</id>
@@ -10,19 +10,13 @@
         <title>The 2nd MacBook Purchase</title>
         <published>2025-02-27T00:00:00+07:00</published>
         <updated>2025-02-27T00:00:00+07:00</updated>
-        
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/"/>
+        <link rel="alternate" href="https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/" type="text/html"/>
         <id>https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/</id>
         
-        <content type="html" xml:base="https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/">&lt;h2 id=&quot;my-first-macbook&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html">&lt;h2 id=&quot;my-first-macbook&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#my-first-macbook&quot; aria-label=&quot;Anchor link for: my-first-macbook&quot;&gt;#&lt;&#x2F;a&gt;
 My first MacBook&lt;&#x2F;h2&gt;
 &lt;p&gt;I was at the office lift waiting to reach level 12, my wife sent me a chat that my MacBook suddenly could not be charged, she was using it for some boring administration stuffs.
@@ -42,8 +36,8 @@ Buying a new one&lt;&#x2F;h2&gt;
 &lt;p&gt;Apple just launched a new MacBook pro with M4 processor and 16GB RAM as the base model, it&#x27;s the first time they made it a standard.🍻
 The price point for 14 inch base model one is similar to my MacBook, quite a good deal. I inquired official Apple resellers Digimap and iBox for the space black color but it&#x27;s out of stock.&lt;&#x2F;p&gt;
 &lt;p&gt;Other option is to buy another knockoff MagSafe to cover some of the work that needed to be completed at the end of the month, I&#x27;m willing to wait for a day or two maybe it will be back in stock. 2 days later it&#x27;s still out of stock, I convinced myself to buy a new MagSafe at weekend.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;aligned-stars&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#aligned-stars&quot; aria-label=&quot;Anchor link for: aligned-stars&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;h2 id=&quot;aligned-stars-six-p-six-p-six-p-six-p-six-p&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#aligned-stars-six-p-six-p-six-p-six-p-six-p&quot; aria-label=&quot;Anchor link for: aligned-stars-six-p-six-p-six-p-six-p-six-p&quot;&gt;#&lt;&#x2F;a&gt;
 Aligned Stars ⭐️ ⭐️ ⭐️ ⭐️ ⭐️&lt;&#x2F;h2&gt;
 &lt;p&gt;On Thursday 16 February 2025, I went to work normally in the morning, the office is at Plaza Bank Index.
 There was a road closure near the office, I could not get directly into the office building. I decided to park in Plaza Indonesia (PI) which right across the office building,
