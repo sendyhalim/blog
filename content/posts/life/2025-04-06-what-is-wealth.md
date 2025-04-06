@@ -8,7 +8,7 @@ tags = ["life", "financial"]
 +++
 
 This is not a financial advice, please consult with your financial advisor before making any financial decisions.
-This is a living post and will be updated over-time, it's about my perception of wealth. The angle where and how I look at wealth and how to maintain it. I'm still far away from being wealthy, I'm grateful that I'm making progress towards it.
+This is a living post and will be updated over-time, it's about my perception of wealth. The angle where and how I look at wealth and how to maintain it. I'm still far away from being wealthy in terms of ideal financial level, but I'm grateful that I'm making progress towards it and grateful that I have the other wealth components.
 
 
 ## What Is Wealth
@@ -39,7 +39,7 @@ In terms money generation, I have 3 main sources of income:
 Money allocation **structure** is unique for a specific person but important for you to define what suits you and not to be super rigid, vertically from the bottom up, mine is:
 1. Insurance: mainly for protection, covering life insurance, health insurance, critical illness insurance, car insurance.
 2. Emergency fund: protection for 12 months of family living expenses, top up regularly as needed. This is the safety net that I can fall back to in case there's a need for an urgent cash outflow. Other scenario in case of laid off from work, I can use this fund to cover my living expenses while looking for a new job. I don't want to be in a position where I have to take any job just to pay the bills, I want to be able to choose the job that I want with market rate or above salary.
-3. Investment: long term investment for retirement.
+3. Investment: long term investment for financial freedom.
 
 I believe it's not 100% bullet-proof, there will be cases where things go rough and can break the structure, what I'm aiming is to have time to recover, survive, and get back on my feet when shit happens.
 
