@@ -26,4 +26,5 @@ when I write code in my sparetime 🤞.
 # About Blogging
 There are a couple of reasons why I started this blog:
 * I want to document my thoughts based on my life, hobby projects, and profesional experience working in the software engineering field.
+* Specifically on thoughts and decision making, I would like to emphasize more on the **why**, there were a lot of dumb decisions on critical things that I made in the past and it's very challenging to recall why I made the decisions.
 * I want to improve my writing skills.
