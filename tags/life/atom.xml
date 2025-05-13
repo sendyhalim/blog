@@ -1,22 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - life</title>
-    <link href="https://blog.wavvel.com/tags/life/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/life/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-04-06T00:00:00+07:00</updated>
+    <updated>2025-05-13T00:00:00+07:00</updated>
     <id>https://blog.wavvel.com/tags/life/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Emergency Fund and Its Components: A Personal Perspective</title>
+        <published>2025-05-13T00:00:00+07:00</published>
+        <updated>2025-05-13T00:00:00+07:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/emergency-fund-and-its-components/"/>
+        <id>https://blog.wavvel.com/posts/life/emergency-fund-and-its-components/</id>
+        
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/emergency-fund-and-its-components/">&lt;p&gt;&lt;strong&gt;This is not a financial advice&lt;&#x2F;strong&gt;, please consult with your financial advisor before making any financial decisions.
+This is a living post about how I maintain emergency funds and considerations around it.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a _target=&quot;blank&quot; href=&quot;&#x2F;pages&#x2F;about-me#about-blogging&quot;&gt;Why I&#x27;m writing this?&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;moneybag-what-is-emergency-fund&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#moneybag-what-is-emergency-fund&quot; aria-label=&quot;Anchor link for: moneybag-what-is-emergency-fund&quot;&gt;#&lt;&#x2F;a&gt;
+💰 What Is Emergency Fund&lt;&#x2F;h2&gt;
+&lt;p&gt;Emergency fund is a cash&#x2F;fund that I can access quickly, it needs to be available to withdraw whenever I need it.
+The fund is meant to be used for unforeseen emergencies which happens all the time like sudden car repairs, hospital bills that are not covered by insurance, or even a sudden job loss.&lt;&#x2F;p&gt;
+&lt;p&gt;I separate emergency fund from my investment account to avoid mixing it up when there are good investment opportunities that I&#x27;m very eager to take.
+I&#x27;m quite confident in my ability to spot good oppoprtunities but I also have a historical 100% failure rate at timing the market, separating the emergency fund will
+help me to sleep better at night while I&#x27;m waiting for the market to go up.&lt;&#x2F;p&gt;
+&lt;p&gt;In the case of job loss, I want to take my time to search for jobs that I&#x27;m interested in, I don&#x27;t want to be in a position where I have to take any job just to pay the bills.
+My thought is if I have 12 months of emergency fund, then I would be quite comfortable to take around up to 6 months(half of the emergency fund spent) to search for jobs or try out new stuffs to make money.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;abacus-estimating-emergency-fund&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#abacus-estimating-emergency-fund&quot; aria-label=&quot;Anchor link for: abacus-estimating-emergency-fund&quot;&gt;#&lt;&#x2F;a&gt;
+🧮 Estimating Emergency Fund&lt;&#x2F;h2&gt;
+&lt;p&gt;Estimating how much fund I need to keep is quite simple, first calculate the &lt;em&gt;essential&lt;&#x2F;em&gt; monthly expenses, then after that
+multiply it with the number of months I want to be covered.&lt;&#x2F;p&gt;
+&lt;p&gt;Suppose my essential monthly expenses is around $2000 and I want to be covered for 12 months then I need to keep $24,000 in the emergency fund. Currently I can sleep well
+at night with 12 months of coverage. I keep it very flexible, whenever I see more uncertainty I would add more months of coverage into the fund.&lt;&#x2F;p&gt;
+&lt;p&gt;The super ideal state would be to keep the emergency fund to cover up to the longest recession period in history, so that there are enough fund coverage in case the worst happen again. I think the first &lt;a href=&quot;https:&#x2F;&#x2F;www.investopedia.com&#x2F;terms&#x2F;g&#x2F;great_depression.asp&quot;&gt;Great Depression&lt;&#x2F;a&gt; lasts around 12 years, my 12 months of emergency fund coverage is still miniscule.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;bank-where-to-keep-the-fund&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#bank-where-to-keep-the-fund&quot; aria-label=&quot;Anchor link for: bank-where-to-keep-the-fund&quot;&gt;#&lt;&#x2F;a&gt;
+🏦 Where to Keep The Fund&lt;&#x2F;h2&gt;
+&lt;p&gt;I keep 60-70% of the funds in a saving account, the rest goes to a deposit account.
+I split the saving account and deposit account to 2-3 banks top banks to avoid single point of failure, just in case shit happen
+and some of the bank goes down. It&#x27;s better if you have access to dollar saving account to balance currency risk as well.&lt;&#x2F;p&gt;
+&lt;p&gt;Specifically for deposit account in Indonesia, make sure the deposit amount and the deposit interest rate is under &lt;a href=&quot;https:&#x2F;&#x2F;apps.lps.go.id&#x2F;BankPesertaLPSRate&quot;&gt;the requirement of LPS (Lembaga Penjamin Simpanan)&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;nail-care-how-to-maintain-the-fund&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#nail-care-how-to-maintain-the-fund&quot; aria-label=&quot;Anchor link for: nail-care-how-to-maintain-the-fund&quot;&gt;#&lt;&#x2F;a&gt;
+💅 How to Maintain The Fund&lt;&#x2F;h2&gt;
+&lt;p&gt;I keep it simple, set a recurring calendar event to review emergency fund per 3 months. I put the variables to consider in the calendar:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;New average of essential monthly expense in the last 3-6 months&lt;&#x2F;li&gt;
+&lt;li&gt;Inflation rate&lt;&#x2F;li&gt;
+&lt;li&gt;List down uncertainties at review time, things might change a lot&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Then recalculate the fund as needed, ask a question to myself, does the current emergency fund still keep me sleep well at night? If not what do I need to do to help me sleep better?&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>What Is Wealth?</title>
         <published>2025-04-06T00:00:00+07:00</published>
         <updated>2025-04-06T00:00:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/life/what-is-wealth/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/what-is-wealth/"/>
         <id>https://blog.wavvel.com/posts/life/what-is-wealth/</id>
         
-        <content type="html">&lt;p&gt;This is not a financial advice, please consult with your financial advisor before making any financial decisions.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/what-is-wealth/">&lt;p&gt;This is not a financial advice, please consult with your financial advisor before making any financial decisions.
 This is a living post and will be updated over-time, it&#x27;s about my perception of wealth. The angle where and how I look at wealth and how to maintain it. I&#x27;m still far away from being wealthy in terms of ideal financial level, but I&#x27;m grateful that I&#x27;m making progress towards it and grateful that I have the other wealth components.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-is-wealth&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-wealth&quot; aria-label=&quot;Anchor link for: what-is-wealth&quot;&gt;#&lt;&#x2F;a&gt;
@@ -66,13 +129,19 @@ I personally believe time management is relatively simple though not easy, as si
         <title>Debt Free, Is It Worth It?</title>
         <published>2025-03-17T00:00:00+07:00</published>
         <updated>2025-03-17T00:00:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/life/debt-free-is-it-worth-it/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/debt-free-is-it-worth-it/"/>
         <id>https://blog.wavvel.com/posts/life/debt-free-is-it-worth-it/</id>
         
-        <content type="html">&lt;p&gt;This is not a financial advice, please consult with your financial advisor before making any financial decisions.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/debt-free-is-it-worth-it/">&lt;p&gt;This is not a financial advice, please consult with your financial advisor before making any financial decisions.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;thinking-about-it&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#thinking-about-it&quot; aria-label=&quot;Anchor link for: thinking-about-it&quot;&gt;#&lt;&#x2F;a&gt;
 Thinking About It&lt;&#x2F;h2&gt;
@@ -118,13 +187,19 @@ Debt can give a false sense of security, it can easily confuse you to think that
         <title>Melaporkan Asset Rumah dan KPR di SPT Pajak Tahunan Orang Pribadi</title>
         <published>2025-03-10T00:00:00+07:00</published>
         <updated>2025-03-10T00:00:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/life/melaporkan-kpr-di-spt-pajak-tahunan-orang-pribadi/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/melaporkan-kpr-di-spt-pajak-tahunan-orang-pribadi/"/>
         <id>https://blog.wavvel.com/posts/life/melaporkan-kpr-di-spt-pajak-tahunan-orang-pribadi/</id>
         
-        <content type="html">&lt;p&gt;Post ini akan ditulis dalam bahasa Indonesia karena memang target audiencenya adalah orang Indonesia.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/melaporkan-kpr-di-spt-pajak-tahunan-orang-pribadi/">&lt;p&gt;Post ini akan ditulis dalam bahasa Indonesia karena memang target audiencenya adalah orang Indonesia.
 &lt;strong&gt;Perlu dicatat bahwa jangan mengikuti langkah-langkah yang saya lakukan tanpa berkonsultasi dengan ahli pajak Anda!&lt;&#x2F;strong&gt; Saya hanya ingin berbagi pengalaman saya saja
 dalam melaporkan asset Rumah dan cicilan hutang KPR di SPT Pajak Tahunan Orang Pribadi.
 Saya sudah berkonsultasi dengan konsultan pajak saya sebelumnya dan saya ingin sharing saja, semoga informasinya bisa bermanfaat.&lt;&#x2F;p&gt;
@@ -178,13 +253,19 @@ KPR: Tahun ke-2 dan seterusnya&lt;&#x2F;h4&gt;
         <title>The 2nd MacBook Purchase</title>
         <published>2025-02-27T00:00:00+07:00</published>
         <updated>2025-02-27T00:00:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/"/>
         <id>https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/</id>
         
-        <content type="html">&lt;h2 id=&quot;my-first-macbook&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/the-2nd-macbook-purchase/">&lt;h2 id=&quot;my-first-macbook&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#my-first-macbook&quot; aria-label=&quot;Anchor link for: my-first-macbook&quot;&gt;#&lt;&#x2F;a&gt;
 My first MacBook&lt;&#x2F;h2&gt;
 &lt;p&gt;I was at the office lift waiting to reach level 12, my wife sent me a chat that my MacBook suddenly could not be charged, she was using it for some boring administration stuffs.
@@ -204,8 +285,8 @@ Buying a new one&lt;&#x2F;h2&gt;
 &lt;p&gt;Apple just launched a new MacBook pro with M4 processor and 16GB RAM as the base model, it&#x27;s the first time they made it a standard.🍻
 The price point for 14 inch base model one is similar to my MacBook, quite a good deal. I inquired official Apple resellers Digimap and iBox for the space black color but it&#x27;s out of stock.&lt;&#x2F;p&gt;
 &lt;p&gt;Other option is to buy another knockoff MagSafe to cover some of the work that needed to be completed at the end of the month, I&#x27;m willing to wait for a day or two maybe it will be back in stock. 2 days later it&#x27;s still out of stock, I convinced myself to buy a new MagSafe at weekend.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;aligned-stars-six-p-six-p-six-p-six-p-six-p&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
-&lt;a class=&quot;zola-anchor&quot; href=&quot;#aligned-stars-six-p-six-p-six-p-six-p-six-p&quot; aria-label=&quot;Anchor link for: aligned-stars-six-p-six-p-six-p-six-p-six-p&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;h2 id=&quot;aligned-stars&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+&lt;a class=&quot;zola-anchor&quot; href=&quot;#aligned-stars&quot; aria-label=&quot;Anchor link for: aligned-stars&quot;&gt;#&lt;&#x2F;a&gt;
 Aligned Stars ⭐️ ⭐️ ⭐️ ⭐️ ⭐️&lt;&#x2F;h2&gt;
 &lt;p&gt;On Thursday 16 February 2025, I went to work normally in the morning, the office is at Plaza Bank Index.
 There was a road closure near the office, I could not get directly into the office building. I decided to park in Plaza Indonesia (PI) which right across the office building,
@@ -232,13 +313,19 @@ Some lessons learned from the first MacBook&lt;&#x2F;h2&gt;
         <title>Everything has a structure, thoughts on problem solving structure</title>
         <published>2023-08-05T14:39:00+07:00</published>
         <updated>2023-08-05T14:39:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/"/>
         <id>https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/</id>
         
-        <content type="html">&lt;h2 id=&quot;structure-in-general&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/life/setting-up-a-structure-on-problem-solving-and-life/">&lt;h2 id=&quot;structure-in-general&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#structure-in-general&quot; aria-label=&quot;Anchor link for: structure-in-general&quot;&gt;#&lt;&#x2F;a&gt;
 Structure in general&lt;&#x2F;h2&gt;
 &lt;p&gt;Almost everything in our daily life has structure 😲!

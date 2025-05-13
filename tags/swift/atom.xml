@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - swift</title>
-    <link href="https://blog.wavvel.com/tags/swift/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/swift/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2018-02-10T03:19:00+07:00</updated>
     <id>https://blog.wavvel.com/tags/swift/atom.xml</id>
@@ -10,13 +10,19 @@
         <title>Customizing UISearchBar</title>
         <published>2018-02-10T03:19:00+07:00</published>
         <updated>2018-02-10T03:19:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/customizing-uisearchbar/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/swift/customizing-uisearchbar/"/>
         <id>https://blog.wavvel.com/posts/swift/customizing-uisearchbar/</id>
         
-        <content type="html">&lt;p&gt;The default view of &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; is kind of boring, one way to customize it is by subclassing &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; and put the customization code in &lt;code&gt;willMove(toSuperView:)&lt;&#x2F;code&gt; method.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/swift/customizing-uisearchbar/">&lt;p&gt;The default view of &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; is kind of boring, one way to customize it is by subclassing &lt;code&gt;UISearchBar&lt;&#x2F;code&gt; and put the customization code in &lt;code&gt;willMove(toSuperView:)&lt;&#x2F;code&gt; method.
 In this post, we&#x27;ll try to do 2 things&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Set border radius for &lt;code&gt;UISearchBar&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
@@ -157,13 +163,19 @@ Customizing Search Icon&lt;&#x2F;h2&gt;
         <title>Swift MIME Type Detection with Swime</title>
         <published>2017-04-26T23:00:44+07:00</published>
         <updated>2017-04-26T23:00:44+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/detect-mime-type-with-swime/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/swift/detect-mime-type-with-swime/"/>
         <id>https://blog.wavvel.com/posts/swift/detect-mime-type-with-swime/</id>
         
-        <content type="html">&lt;p&gt;A month ago I found myself scouring GitHub for a Swift plugin
+        <content type="html" xml:base="https://blog.wavvel.com/posts/swift/detect-mime-type-with-swime/">&lt;p&gt;A month ago I found myself scouring GitHub for a Swift plugin
 to detect mime type based on magic bytes. I did find &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;onevcat&#x2F;MimeType&quot;&gt;MimeType&lt;&#x2F;a&gt;,
 unfortunately it extracts the mime type from a file path or url extension.
 Knowing that no one hadn&#x27;t created a mime type checking library for Swift, I set
@@ -227,13 +239,19 @@ that would be a great addition to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&
         <title>Make NSCollectionViewItem Responsive Width and Height</title>
         <published>2017-03-04T23:48:35+07:00</published>
         <updated>2017-03-04T23:48:35+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/"/>
         <id>https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/</id>
         
-        <content type="html">&lt;p&gt;I had a hard time figuring out how to make &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; width to be responsive.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/swift/macos/full-width-ns-collection-view-item/">&lt;p&gt;I had a hard time figuring out how to make &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; width to be responsive.
 The problem was that I wanted my &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; to follow its parent width.
 Maybe I didn&#x27;t google the right keywords, I didn&#x27;t find any solution on the internet.
 I found the solution after reading &lt;code&gt;NSCollectionViewDelegateFlowLayout&lt;&#x2F;code&gt;, it wasn&#x27;t straight forward.
@@ -274,13 +292,19 @@ Turns out that we need to invalidate the cells layout manually and tell &lt;code
         <title>NSImageView Unproportional Zoom</title>
         <published>2017-02-10T20:47:23+07:00</published>
         <updated>2017-02-10T20:47:23+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/macos/unproportional-zoom/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/swift/macos/unproportional-zoom/"/>
         <id>https://blog.wavvel.com/posts/swift/macos/unproportional-zoom/</id>
         
-        <content type="html">&lt;p&gt;I had this weird problem when I tried to implement a zoom functionality
+        <content type="html" xml:base="https://blog.wavvel.com/posts/swift/macos/unproportional-zoom/">&lt;p&gt;I had this weird problem when I tried to implement a zoom functionality
 in my hobby project, a manga reader called &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sendyhalim&#x2F;yomu&quot;&gt;Yomu&lt;&#x2F;a&gt;.
 When I tried to zoom an &lt;code&gt;NSImageView&lt;&#x2F;code&gt; programmatically
 it&#x27;s being zoomed unproportionally, my expectation was the image should be stretched horizontally
@@ -326,13 +350,19 @@ changing it to proportionally up or down will fix the problem.&lt;&#x2F;p&gt;
         <title>RxSwift Race Condition on Cells</title>
         <published>2016-07-04T22:58:59+07:00</published>
         <updated>2016-07-04T22:58:59+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/swift/race-condition-on-cells/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/swift/race-condition-on-cells/"/>
         <id>https://blog.wavvel.com/posts/swift/race-condition-on-cells/</id>
         
-        <content type="html">&lt;p&gt;A few days ago I wrote a simple code to asynchronously load an image using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya#rxswift&quot;&gt;&lt;code&gt;RxMoya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/swift/race-condition-on-cells/">&lt;p&gt;A few days ago I wrote a simple code to asynchronously load an image using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya#rxswift&quot;&gt;&lt;code&gt;RxMoya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.
 &lt;code&gt;RxMoya&lt;&#x2F;code&gt; is an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ReactiveX&#x2F;RxSwift&quot;&gt;&lt;code&gt;RxSwift&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; wrapper
 for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Moya&#x2F;Moya&quot;&gt;&lt;code&gt;Moya&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;. The flow is simple,
 everytime collection view asks for &lt;code&gt;NSCollectionViewItem&lt;&#x2F;code&gt; (yes, I&#x27;m building a macOS app),

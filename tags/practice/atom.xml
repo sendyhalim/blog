@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - practice</title>
-    <link href="https://blog.wavvel.com/tags/practice/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/practice/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2020-08-22T00:00:00+07:00</updated>
     <id>https://blog.wavvel.com/tags/practice/atom.xml</id>
@@ -10,13 +10,19 @@
         <title>Partnership System Integration Tips</title>
         <published>2020-08-22T00:00:00+07:00</published>
         <updated>2020-08-22T00:00:00+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/development-practices/partnership-system-integration-tips/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/development-practices/partnership-system-integration-tips/"/>
         <id>https://blog.wavvel.com/posts/development-practices/partnership-system-integration-tips/</id>
         
-        <content type="html">&lt;p&gt;Recently we just had intense integrations with our business partners.
+        <content type="html" xml:base="https://blog.wavvel.com/posts/development-practices/partnership-system-integration-tips/">&lt;p&gt;Recently we just had intense integrations with our business partners.
 We have a whitelabel product where registered whitelabel partners can use our core engine
 and put their brand as the label.&lt;&#x2F;p&gt;
 &lt;p class=&quot;image-container&quot;&gt;
@@ -47,7 +53,7 @@ e.g. &lt;code&gt;someField&lt;&#x2F;code&gt; -&amp;gt; &lt;code&gt;somefield&lt;
 of the problem thus would save your client&#x27;s time and your time when doing integration.&lt;&#x2F;p&gt;
 &lt;h5 id=&quot;use-sprint-as-the-development-estimation-time-unit&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#use-sprint-as-the-development-estimation-time-unit&quot; aria-label=&quot;Anchor link for: use-sprint-as-the-development-estimation-time-unit&quot;&gt;#&lt;&#x2F;a&gt;
-Use &amp;quot;sprint&amp;quot; as the development estimation time unit&lt;&#x2F;h5&gt;
+Use &quot;sprint&quot; as the development estimation time unit&lt;&#x2F;h5&gt;
 &lt;p&gt;There will be times where both parties agrees on to develop new features, depending on the urgency,
 if it&#x27;s a &lt;b&gt;&lt;em&gt;not a critical&lt;&#x2F;em&gt;&lt;&#x2F;b&gt; feature then I&#x27;d advise to always use &lt;code&gt;n&lt;&#x2F;code&gt; sprint as the time estimation.
 The new non-critical feature takes 4 hours to complete? Set the estimation to 1 sprint,

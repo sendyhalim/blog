@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - programming</title>
-    <link href="https://blog.wavvel.com/tags/programming/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.wavvel.com"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.wavvel.com/tags/programming/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.wavvel.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2024-01-20T00:00:00+00:00</updated>
     <id>https://blog.wavvel.com/tags/programming/atom.xml</id>
@@ -10,13 +10,19 @@
         <title>Traceroute Naive Implementation Part 2: Raw IP Socket</title>
         <published>2024-01-20T00:00:00+00:00</published>
         <updated>2024-01-20T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/"/>
         <id>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/</id>
         
-        <content type="html">&lt;p&gt;We&#x27;ll build on top of our &lt;a href=&quot;&#x2F;posts&#x2F;programming&#x2F;traceroute-naive-implementation-part-1-proof-of-concept&#x2F;&quot;&gt;traceroute PoC&lt;&#x2F;a&gt;,
+        <content type="html" xml:base="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-2-raw-ip-socket/">&lt;p&gt;We&#x27;ll build on top of our &lt;a href=&quot;&#x2F;posts&#x2F;programming&#x2F;traceroute-naive-implementation-part-1-proof-of-concept&#x2F;&quot;&gt;traceroute PoC&lt;&#x2F;a&gt;,
 this time we will rewrite our UDP socket to use raw socket instead. Using raw IP socket will give us
 more flexibility to build raw IPv4 header just in case we need to add flags or any other
 IPv4 header value. The tradeoff is we need to construct the IPv4 header and then fill the IPv4 payload with a UDP header and payload manually.&lt;&#x2F;p&gt;
@@ -128,13 +134,19 @@ What&#x27;s next&lt;&#x2F;h1&gt;
         <title>Traceroute Naive Implementation Part 1: Proof of Concept</title>
         <published>2024-01-07T00:00:00+00:00</published>
         <updated>2024-01-07T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/"/>
         <id>https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/</id>
         
-        <content type="html">&lt;h1 id=&quot;what-we-will-do&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/programming/traceroute-naive-implementation-part-1-proof-of-concept/">&lt;h1 id=&quot;what-we-will-do&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#what-we-will-do&quot; aria-label=&quot;Anchor link for: what-we-will-do&quot;&gt;#&lt;&#x2F;a&gt;
 What we will do&lt;&#x2F;h1&gt;
 &lt;p&gt;Traceroute is a utility that will print packet router path (trace) and measure the delay of packets sent to a destination.
@@ -400,20 +412,26 @@ we&#x27;ll rewrite our UDP socket to use IP raw socket to give us room for flexi
         <title>Practical Programming Principles</title>
         <published>2021-09-18T00:00:25+07:00</published>
         <updated>2021-09-18T00:00:25+07:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.wavvel.com/posts/development-practices/practical-programming-principles/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.wavvel.com/posts/development-practices/practical-programming-principles/"/>
         <id>https://blog.wavvel.com/posts/development-practices/practical-programming-principles/</id>
         
-        <content type="html">&lt;p&gt;There are many programming paradigms, many approaches to code, new tools and frameworks, well things are moving fast 🏎 💨!&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://blog.wavvel.com/posts/development-practices/practical-programming-principles/">&lt;p&gt;There are many programming paradigms, many approaches to code, new tools and frameworks, well things are moving fast 🏎 💨!&lt;&#x2F;p&gt;
 &lt;p&gt;I hope this post can be something to be held on when considering programming and development standard.
 Usually the considerations will be useful when starting a new project, when there are arguments on
 how to approach things in development,, which tool&#x2F;framework to use. Pick whatever you think is suitable for your project &amp;amp; team, take it with a grain of salt.&lt;&#x2F;p&gt;
 &lt;p&gt;Having these principles in mind has helped my team to:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Make programming decisions: how to structure code, how to handle errors.&lt;&#x2F;li&gt;
-&lt;li&gt;Decide when should we opt-in for a hack and what&#x27;s the minimum proper way to apply a &amp;quot;quickfix&amp;quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;Decide when should we opt-in for a hack and what&#x27;s the minimum proper way to apply a &quot;quickfix&quot;.&lt;&#x2F;li&gt;
 &lt;li&gt;Decide when to invest more in documentations.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;readability&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
@@ -431,12 +449,12 @@ you don&#x27;t need to test data type unless your project requires you to do a l
 &lt;h5 id=&quot;readability-invest-in-code-comments&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-invest-in-code-comments&quot; aria-label=&quot;Anchor link for: readability-invest-in-code-comments&quot;&gt;#&lt;&#x2F;a&gt;
 [Readability] Invest in code comments&lt;&#x2F;h5&gt;
-&lt;p&gt;Code comments can be used to explain &amp;quot;why&amp;quot; certain logic is set that way, this will cut communication cost and make debugging a lot easier.
-The goal is to help your peers and &amp;quot;future you&amp;quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:&lt;&#x2F;p&gt;
+&lt;p&gt;Code comments can be used to explain &quot;why&quot; certain logic is set that way, this will cut communication cost and make debugging a lot easier.
+The goal is to help your peers and &quot;future you&quot; to understand the code either in code review or when we want to revisit the code in the future. Cases where code comment is beneficial:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Complex logic.&lt;&#x2F;li&gt;
 &lt;li&gt;Motivation regarding unorthodox approach.&lt;&#x2F;li&gt;
-&lt;li&gt;Hack&#x2F;quick fix, this would reduce confusion a lot and make it explicit that the approach that&#x27;s considered a &amp;quot;hack&amp;quot; is intended.&lt;&#x2F;li&gt;
+&lt;li&gt;Hack&#x2F;quick fix, this would reduce confusion a lot and make it explicit that the approach that&#x27;s considered a &quot;hack&quot; is intended.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h5 id=&quot;readability-standard-on-variable-names&quot;&gt;&lt;!-- Customize https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;components&#x2F;templates&#x2F;src&#x2F;builtins&#x2F;anchor-link.html --&gt;
 &lt;a class=&quot;zola-anchor&quot; href=&quot;#readability-standard-on-variable-names&quot; aria-label=&quot;Anchor link for: readability-standard-on-variable-names&quot;&gt;#&lt;&#x2F;a&gt;
@@ -505,7 +523,7 @@ mostly on building products&#x2F;software instead of debugging.&lt;&#x2F;p&gt;
 &lt;p&gt;Some of the key points to measure your debuggability:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;How easy is it to prioritize errors? We should be able to separate errors by their severity, errors that block users to complete payment should be more important than errors related to the feature to change the username.&lt;&#x2F;li&gt;
-&lt;li&gt;Error message, do we construct meaningful error messages? or is it just printing &lt;code&gt;&amp;quot;System Error&amp;quot;&lt;&#x2F;code&gt;?&lt;&#x2F;li&gt;
+&lt;li&gt;Error message, do we construct meaningful error messages? or is it just printing &lt;code&gt;&quot;System Error&quot;&lt;&#x2F;code&gt;?&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         
